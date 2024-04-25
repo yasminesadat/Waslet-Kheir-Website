@@ -1,0 +1,290 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar {
+  z-index: 100;
+  top: -100px;
+  transition: top 0.3s ease-in-out;
+  background-color: #61dafb;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  .navbar {
+    background-color: #61dafb;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display:flex;
+    align-items: center;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin: 0 10px;
+  }
+  
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .navbar-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.navbar-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.parallax-image{
+  background-image: url('https://i.ibb.co/sP9Srt7/happypoorchildren.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.centered-text{
+  text-align: center;
+  color: #fff;
+}
+.centered-text h1{
+  font-size: 3em;
+}
+.centered-text h2{
+  font-size: 2em;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fading-text {
+  animation: fadeIn 1s ease-in 1s forwards;
+}
+.spaces{
+  height: 200px;
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+ 
+}
+.navbar-hidden{
+  top:-100px;
+}
+.our-goal-section{
+  text-align: center;
+}
+.logo-image{
+  height: 50px;
+  width: auto;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.card-description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+}
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gray-background{
+  background-color: #f9f9f9;
+}
+.header {
+  position: relative;
+  display: inline-block;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #61dafb;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.header:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card-buttons {
+  margin-top:20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-button {
+  background-color: #61dafb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #4ec5f7;
+}
+
+.card-link {
+  color: #4ec5f7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: darkblue;
+}
+.footer {
+  background-color: #61dafb;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-section {
+  margin: 20px;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
