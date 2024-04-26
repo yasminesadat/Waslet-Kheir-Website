@@ -52,7 +52,7 @@ else{
      <Navbar className={navbarClass}/>
      <div className="parallax-image">
       <div className="centered-text">
-      <h1 className="fading-text">Waslet Kheir 2</h1>
+      <h1 className="fading-text">Waslet Kheir</h1>
       <h2 className="fading-text">Connecting the World</h2>
       </div>
      </div>
