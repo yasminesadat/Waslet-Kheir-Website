@@ -14,6 +14,12 @@
   color: white;
 }
 
+.greenButton {
+  background-color: green;
+  color: white;
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -25,12 +31,13 @@
   background-color: #61dafb;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+
   .navbar {
     background-color: #61dafb;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
   }
-  
+
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -39,32 +46,32 @@
     max-width: 1200px;
     margin: auto;
   }
-  
+
   .navbar-logo {
     color: #fff;
     text-decoration: none;
     font-size: 1.5em;
-    display:flex;
+    display: flex;
     align-items: center;
   }
-  
+
   .navbar-menu {
     display: flex;
     justify-content: space-between;
     list-style: none;
     padding: 0;
   }
-  
+
   .navbar-item {
     margin: 0 10px;
   }
-  
+
   .navbar-link {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
   }
-  
+
   .navbar-link:hover {
     color: #fff;
     text-decoration: underline;
@@ -107,7 +114,8 @@
   color: #fff;
   text-decoration: underline;
 }
-.parallax-image{
+
+.parallax-image {
   background-image: url('https://i.ibb.co/sP9Srt7/happypoorchildren.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -121,40 +129,54 @@
   font-size: 2em;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-.centered-text{
+
+.centered-text {
   text-align: center;
   color: #fff;
 }
-.centered-text h1{
+
+.centered-text h1 {
   font-size: 3em;
 }
-.centered-text h2{
+
+.centered-text h2 {
   font-size: 2em;
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .fading-text {
   animation: fadeIn 1s ease-in 1s forwards;
 }
-.spaces{
+
+.spaces {
   height: 200px;
 }
+
 .fixed-navbar {
   position: fixed;
   top: 0;
   width: 100%;
- 
+
 }
-.navbar-hidden{
-  top:-100px;
+
+.navbar-hidden {
+  top: -100px;
 }
-.our-goal-section{
+
+.our-goal-section {
   text-align: center;
 }
-.logo-image{
+
+.logo-image {
   height: 50px;
   width: auto;
 }
@@ -165,12 +187,12 @@
   border-radius: 4px;
   overflow: hidden;
   margin: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-img {
@@ -197,14 +219,17 @@
   line-height: 20px;
   color: #333;
 }
-.cardContainer{
+
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.gray-background{
+
+.gray-background {
   background-color: #f9f9f9;
 }
+
 .header {
   position: relative;
   display: inline-block;
@@ -229,7 +254,7 @@
 }
 
 .card-buttons {
-  margin-top:20px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -257,6 +282,7 @@
 .card-link:hover {
   color: darkblue;
 }
+
 .footer {
   background-color: #61dafb;
   color: #fff;
@@ -267,6 +293,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .footer-section {
   margin: 20px;
 }
@@ -293,7 +320,8 @@
 .loginPage {
   background-color: #61dafb;
   background-size: 100%;
-  height: 100vh; /* Ensure the container covers the entire viewport height */
+  height: 100vh;
+  /* Ensure the container covers the entire viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,4 +331,85 @@
 .error {
   color: red;
   font-size: 14px;
+}
+
+
+.RegisterDonor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.regform {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.formElement {
+  margin-bottom: 15px;
+}
+
+.profileicon {
+
+  height: 50px;
+  width: auto;
+
+}
+
+.genderOption {
+  display: flex;
+  align-items: center;
+}
+
+.genderOption input[type="radio"] {
+  width: auto;
+  /* Set width to auto to adjust to content */
+  margin-right: 5px;
+  /* Add some spacing between radio button and label */
+}
+
+.genderOption label {
+  margin-right: 5px;
+  /* Add some spacing between radio button and label */
+}
+
+
+/* 
+.genderOption {
+  display: flex;
+  align-items: center;
+} */
+
+
+
+
+.formElement input,
+.formElement select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+}
+
+.formElement button {
+  width: 100%;
+  padding: 10px;
+
+  background-color: #61dafb;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.formElement button:hover {
+  background-color: #0056b3;
 }
