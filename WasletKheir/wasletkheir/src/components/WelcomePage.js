@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, Link } from "react-router-dom";
 
 
 export default function WelcomePage() {
@@ -45,9 +45,11 @@ export default function WelcomePage() {
             </div>
 
             <div className="register-account">
-                Don't have an account? <a href="#">Register</a>
+
+                Don't have an account? <Link to="/RegisterDonor">Register</Link>
                 <div className="go-to-admin">
-                    <a href="/AdminLogin">Go to Admin</a>
+                    <Link to="/AdminLogin">Go to Admin</Link>
+                    {/* <a href="/AdminLogin">Go to Admin</a> */}
                 </div>
             </div>
 

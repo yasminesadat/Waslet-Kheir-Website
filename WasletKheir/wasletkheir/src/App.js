@@ -16,6 +16,8 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/OrgMain" element={<OrgMainPage />} />
         <Route path="/OrgProfile" element={<OrgProfile />} />
+        <Route path="/AdminLogin" element={<AdminLogin />} />
+        <Route path="/RegisterDonor" element={<RegisterDonor />} />
 
       </Routes>
     </Router>
