@@ -3,6 +3,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 
 import Footer from './Footer';
+import OrgNavBar2 from './NavbarOrg';
 
 
 
@@ -47,7 +48,8 @@ function OrgMainPage() {
     return (
         /* <Router>*/
         <div>
-            <NavbarOrg className={navbarClass} />
+            {/* <NavbarOrg className={navbarClass} />* */}
+            <OrgNavBar2 />
             <div className="parallax-image">
                 <div className="centered-text">
                     <h1 className="fading-text">Waslet Kheir</h1>
@@ -87,35 +89,54 @@ const NavbarOrg = ({ className }) => {
                 <Link to="/" className="navbar-logo">
                     <img src="https://i.ibb.co/gFxywzc/logo1Yes.png" alt="Waslet Kheir" className="logo-image" />
                     Waslet Kheir
-
                 </Link>
                 <ul className="navbar-menu">
+                    <li className="navbar-item dropdown">
+                        <Link to="/Org" className="navbar-link">
+                            Donations
+                        </Link>
+                        <ul className="dropdown-menu">
+                            <li>
+                                <Link to="/OrgReqDon" className="dropdown-link">
+                                    Request a donation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/Org" className="dropdown-link">
+                                    View All donations
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className="navbar-item dropdown">
+                        <Link to="/Org" className="navbar-link">
+                            Services
+                        </Link>
+                        <ul className="dropdown-menu">
+                            <li>
+                                <Link to="/Org" className="dropdown-link">
+                                    View offered services
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/Org" className="dropdown-link">
+                                    View fulfilled services
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
                     <li className="navbar-item">
-                        <Link to="/" className="navbar-link">
-                            Donation Requests
+                        <Link to="/Org" className="navbar-link">
+                            Notifications
                         </Link>
                     </li>
                     <li className="navbar-item">
-                        <Link to="/" className="navbar-link">
-                            Fulfilled requests
-                        </Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/about" className="navbar-link">
-                            View Offered Services
-                        </Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/donate" className="navbar-link">
+                        <Link to="/Org" className="navbar-link">
                             My Profile
                         </Link>
-                    </li>
-                    <li className="navbar-item">
-                        <img src="https://e7.pngegg.com/pngimages/1004/160/png-clipart-computer-icons-user-profile-social-web-others-blue-social-media.png" className="profileicon" />
                     </li>
                 </ul>
             </div>
         </nav>
     );
 };
-
