@@ -60,7 +60,7 @@ function RegisterDonor() {
             setIsRegistered(true);
             setIsLoading(false);
             setTimeout(() => {
-                navigate("/OrgMain");
+                navigate("/");
             }, 2000);
         }, 2000);
     };
@@ -122,13 +122,13 @@ function RegisterDonor() {
                 {showUploadDr && (
                     <div className="formElement">
                         <label htmlFor="fileInput"><b>Upload your Medical License</b></label>
-                        <input type="file" />
+                        <input type="file" required />
                     </div>
                 )}
                 {showUploadTeacher && (
                     <div className="formElement">
                         <label htmlFor="fileInput"><b>Upload your Teaching License</b></label>
-                        <input type="file" />
+                        <input type="file" required />
                     </div>
                 )}
                 <div className="formElement">

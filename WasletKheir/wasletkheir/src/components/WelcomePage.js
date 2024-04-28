@@ -13,7 +13,7 @@ export default function WelcomePage() {
         if (email === 'Donor@gmail.com' && password === '1234') {
             navigate("/Donor");
         } else if (email === 'Org@gmail.com' && password === '1234') {
-            navigate("/Org");
+            navigate("/OrgMain");
         } else {
             alert('Invalid username or password');
         }

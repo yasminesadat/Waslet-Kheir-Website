@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
 import OrgNavBar2 from './NavbarOrg';
+import { Link } from 'react-router-dom';
 export default function OrgProfile() {
     return (
         <div className='Page'>
@@ -47,7 +48,7 @@ export default function OrgProfile() {
                     <h2>Organization Details</h2>
                     <div className='Element'>
                         <label htmlFor='OrgType'>Organization Type:</label>
-                        <input type='text' id='OrgType' readOnly value='NGO' />
+                        <input type='text' id='OrgType' readOnly value='Charity' />
                     </div>
                     <div className='Element'>
                         <label htmlFor='Address'>Address:</label>
@@ -63,8 +64,9 @@ export default function OrgProfile() {
                     </div>
                 </div>
                 <div className='actions'>
-
-                    <button className='deleteButton'>Delete Account</button>
+                    <Link to='/'>
+                        <button className='deleteButton'>Delete Account</button>
+                    </Link>
                 </div>
                 <br></br>
                 <br></br>
