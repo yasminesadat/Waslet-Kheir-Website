@@ -4,6 +4,7 @@ body {
   background: #f2f2f2;
 }
 
+
 .clearfix {
   &:after {
     content: "";
@@ -107,7 +108,8 @@ body {
 
     &[type="text"],
     &[type="email"],
-    &[type="password"] {
+    &[type="password"],
+    &[type="tel"] {
       width: 100%;
       padding: 8px 10px 9px 35px;
       height: 35px;
@@ -122,41 +124,18 @@ body {
 
     &[type="text"]:hover,
     &[type="email"]:hover,
-    &[type="password"]:hover {
+    &[type="password"]:hover,
+    &[type="tel"]:hover {
       background: #fafafa;
     }
 
     &[type="text"]:focus,
     &[type="email"]:focus,
-    &[type="password"]:focus {
+    &[type="password"]:focus,
+    &[type="tel"]:focus {
       box-shadow: 0 0 2px 1px rgba(29, 117, 136, 0.5);
       border: 1px solid #61dafb;
       background: #fafafa;
-    }
-
-    &[type="submit"] {
-      background: #61dafb;
-      height: 35px;
-      line-height: 35px;
-      width: 100%;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      color: #fff;
-      font-size: 1.1em;
-      margin-bottom: 10px;
-      -webkit-transition: all 0.30s ease-in-out;
-      -moz-transition: all 0.30s ease-in-out;
-      -ms-transition: all 0.30s ease-in-out;
-      transition: all 0.30s ease-in-out;
-
-      &:hover {
-        background: darken(#61dafb, 7%);
-      }
-
-      &:focus {
-        background: darken(#61dafb, 7%);
-      }
     }
 
     &[type="checkbox"],
@@ -414,5 +393,5 @@ input[type=file]::file-selector-button:hover {
 .uploadtext {
   font-weight: bold;
   font-size: 16px;
-  color: #084cdf;
+  color: black;
 }

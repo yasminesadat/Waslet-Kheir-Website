@@ -6,11 +6,6 @@ import { useState } from 'react';
 import { FaPhone, FaLock } from "react-icons/fa";
 import { FaUser, FaLocationDot } from "react-icons/fa6";
 import GoogleMap from './Map';
-import SpinnerLoader from './SpinnerLoader';
-
-
-
-
 
 function RegisterD() {
     const [isLoading, setIsLoading] = useState(false);
@@ -99,7 +94,7 @@ function RegisterD() {
                                     <div className="input_field">
                                         <span><FaUser className='fa' />
                                         </span>
-                                        <input type="text" name="firstName" placeholder="First Name" />
+                                        <input type="text" name="firstName" placeholder="First Name" required />
                                     </div>
                                 </div>
                                 <div className="col_half">
@@ -111,7 +106,6 @@ function RegisterD() {
                             </div>
 
                             <div className="input_field radio_option">
-
                                 <input type="radio" name="radiogroup1" id="rd1" />
                                 <label htmlFor="rd1"> Male</label>
                                 <input type="radio" name="radiogroup1" id="rd2" />
@@ -128,7 +122,7 @@ function RegisterD() {
                             <div className="input_field">
                                 <span><FaPhone className='fa' />
                                 </span>
-                                <input type="text" name="phone" placeholder="Phone Number" required />
+                                <input type="tel" name="phone" placeholder="Phone Number" required />
                             </div>
                             <div className="input_field">
                                 <span><FaLock className='fa' />
@@ -211,19 +205,7 @@ function RegisterD() {
                                 </div>
                             )}
                             <div >
-                                {/* <button type="button" className='mapButton' onClick={openPopUp}>
-                                    Pin Location on Map
-                                </button>
-                                {isOpen && (
-                                    <div className="popup">
-                                        <div className="popup-content"  >
-                                            <GoogleMap />
-                                            <button className='NormalButton' onClick={closePopUp}>Close</button>
-                                            {showMessage && (<h3>Pinned successfully! </h3>)}
-                                        </div>
 
-                                    </div>
-                                )} */}
                                 <GoogleMap />
                             </div>
                             <br /><br />
