@@ -545,7 +545,7 @@ form .title {
   margin-top: 20px;
 }
 
-.passwordchange {
+/* .passwordchange {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -555,14 +555,9 @@ form .title {
 
 .pass {
   min-width: 200px;
-}
+} */
 
-.passButton {
-  min-width: 200px;
-
-}
-
-.passButton {
+.pinButton {
   border: none;
   background: #61dafb;
   padding: 10px 20px;
@@ -573,7 +568,7 @@ form .title {
   margin-left: 25%;
 }
 
-.passButton:hover {
+.pinButton:hover {
   background-color: #0056b3;
 
 }
@@ -858,4 +853,30 @@ form .title {
   height: 30px;
   width: auto;
 
+}
+
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-pills .nav-item {
+  margin-right: 5px;
+}
+
+.nav-link {
+  color: #007bff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  background-color: #61dafb;
+  color: #fff;
 }

@@ -46,7 +46,7 @@ export default function WelcomePage() {
 
             <div className="register-account">
 
-                Don't have an account? <Link to="/RegisterD">Register</Link>
+                Don't have an account? <Link to="/Register">Register</Link>
                 <div className="go-to-admin">
                     <Link to="/AdminLogin">Go to Admin</Link>
                     {/* <a href="/AdminLogin">Go to Admin</a> */}

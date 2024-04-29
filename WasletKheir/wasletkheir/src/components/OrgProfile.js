@@ -15,7 +15,7 @@ export default function OrgProfile() {
 
                 <div className='leftHalf'>
                     <div className='logoanduser'>
-                        <h2>Mersal Foundation</h2>
+                        {/* <h2>Mersal Foundation</h2> */}
                         <img className='NGOLogo' src='charitylogo.png' alt='Charity Logo' />
                     </div>
                 </div>

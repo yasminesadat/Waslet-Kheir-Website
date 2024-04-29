@@ -8,6 +8,8 @@ import OrgProfile from './components/OrgProfile';
 import WelcomePage from './components/WelcomePage';
 import RegisterD from './components/RegisterD';
 import Icon from './components/Icon';
+import TabsComponent from './components/SwitchTabs';
+import Form from './components/RegFormOrg';
 function App() {
   return (
     <Router>
@@ -17,7 +19,10 @@ function App() {
         <Route path="/OrgMain" element={<OrgMainPage />} />
         <Route path="/OrgProfile" element={<OrgProfile />} />
         <Route path="/AdminLogin" element={<AdminLogin />} />
+        <Route path="/Register" element={<TabsComponent />} />
         <Route path="/RegisterD" element={<RegisterD />} />
+        <Route path="/RegisterO" element={<Form />} />
+
 
       </Routes>
     </Router>
