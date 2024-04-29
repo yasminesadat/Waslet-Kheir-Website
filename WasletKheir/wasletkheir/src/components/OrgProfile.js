@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from './Footer';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
+import PopupGfg from './ChangePass';
 export default function OrgProfile() {
     return (
         <div className='Page'>
@@ -40,7 +41,7 @@ export default function OrgProfile() {
                         <div className='Element'>
                             <label htmlFor='pass'>Password:</label>
                             <input type='password' id='pass' readOnly value='abcdefghghdjdi' />
-                            <button className='NormalButton'>Change password</button>
+                            <PopupGfg />
                         </div>
                     </div>
                 </div>

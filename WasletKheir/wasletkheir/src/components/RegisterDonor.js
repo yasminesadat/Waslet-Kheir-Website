@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import GoogleMap from "./MapTrial";
+import GoogleMap from "./Map";
 
 
 function RegisterDonor() {
@@ -150,6 +150,7 @@ function RegisterDonor() {
                     <button type="submit" disabled={isLoading || isRegistered} className={isRegistered ? 'greenButton' : 'NormalButton'}>
                         {isLoading ? 'Loading...' : isRegistered ? 'Registered!' : 'Register'}
                     </button>
+
                 </div>
             </form>
         </div>

@@ -430,7 +430,8 @@ form .title {
   color: white;
 }
 
-/* Org profile */
+/* profile */
+
 .profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -544,20 +545,51 @@ form .title {
   margin-top: 20px;
 }
 
-/* .actions button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #61dafb;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.passwordchange {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
-.actions button:hover {
-  background-color: #47a8e8;
-} */
+.pass {
+  min-width: 200px;
+}
+
+.passButton {
+  min-width: 200px;
+
+}
+
+.passButton {
+  border: none;
+  background: #61dafb;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.passButton:hover {
+  background-color: #0056b3;
+
+}
+
+.reactjs-popup-content {
+  border-radius: 8px;
+  /* Gives the popup slightly rounded corners */
+  width: auto;
+  max-width: 400px;
+  /* Control the width of the popup */
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #61dafb;
+  /* Light blue border */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 /*Organization NavBar Styling*/
 

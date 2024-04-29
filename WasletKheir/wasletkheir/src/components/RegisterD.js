@@ -1,13 +1,13 @@
 import React from 'react';
 import './Register.css';
 import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import { FaPhone } from "react-icons/fa";
-import { FaUser } from "react-icons/fa6";
-import { FaLock } from "react-icons/fa";
-import GoogleMap from './MapTrial';
+import { FaPhone, FaLock } from "react-icons/fa";
+import { FaUser, FaLocationDot } from "react-icons/fa6";
+import GoogleMap from './Map';
+import SpinnerLoader from './SpinnerLoader';
+
 
 
 
@@ -22,6 +22,8 @@ function RegisterD() {
     const [selectedOption, setSelectedOption] = useState('');
     const [showUploadDr, setShowUploadDr] = useState(false);
     const [showUploadTeacher, setShowUploadTeacher] = useState(false);
+
+
     const navigate = useNavigate();
     const openPopUp = () => {
         setIsOpen(true);
@@ -69,6 +71,7 @@ function RegisterD() {
         }
         else {
             setIsLoading(true);
+
             event.preventDefault();
             setTimeout(() => {
                 setIsRegistered(true);
@@ -77,6 +80,7 @@ function RegisterD() {
                     navigate("/");
                 }, 2000);
             }, 2000);
+
         };
     }
     return (
@@ -207,7 +211,7 @@ function RegisterD() {
                                 </div>
                             )}
                             <div >
-                                <button type="button" className='mapButton' onClick={openPopUp}>
+                                {/* <button type="button" className='mapButton' onClick={openPopUp}>
                                     Pin Location on Map
                                 </button>
                                 {isOpen && (
@@ -219,12 +223,15 @@ function RegisterD() {
                                         </div>
 
                                     </div>
-                                )}
+                                )} */}
+                                <GoogleMap />
                             </div>
                             <br /><br />
                             <button type="submit" onClick={handleClick} disabled={isLoading || isRegistered} className={isRegistered ? 'greenButton' : 'NormalButton'}>
                                 {isLoading ? 'Loading...' : isRegistered ? 'Registered!' : 'Register'}
+
                             </button>
+
                         </form>
                     </div>
                 </div>
