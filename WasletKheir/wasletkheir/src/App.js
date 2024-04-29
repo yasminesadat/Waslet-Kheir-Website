@@ -6,6 +6,8 @@ import RegisterDonor from './components/RegisterDonor';
 import OrgMainPage from './components/OrgMainPage';
 import OrgProfile from './components/OrgProfile';
 import WelcomePage from './components/WelcomePage';
+import RegisterD from './components/RegisterD';
+import Icon from './components/Icon';
 function App() {
   return (
     <Router>
@@ -15,7 +17,7 @@ function App() {
         <Route path="/OrgMain" element={<OrgMainPage />} />
         <Route path="/OrgProfile" element={<OrgProfile />} />
         <Route path="/AdminLogin" element={<AdminLogin />} />
-        <Route path="/RegisterDonor" element={<RegisterDonor />} />
+        <Route path="/RegisterD" element={<RegisterD />} />
 
       </Routes>
     </Router>
