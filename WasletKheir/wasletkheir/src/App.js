@@ -10,6 +10,7 @@ import RegisterD from './components/RegisterD';
 import Icon from './components/Icon';
 import TabsComponent from './components/SwitchTabs';
 import Form from './components/RegFormOrg';
+import Notif from './components/Notif';
 function App() {
   return (
     <Router>

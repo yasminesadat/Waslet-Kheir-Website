@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Notif from './Notif';
 export default function OrgNavBar2() {
     return (
         <nav className="navbar fixed-navbar"> {/* Added "navbar" class */}
@@ -50,9 +50,9 @@ export default function OrgNavBar2() {
                         </ul>
                     </li>
                     <li className="navbar-item">
-                        <Link to="/Org" className="navbar-link">
-                            Notifications
-                        </Link>
+                        {/* <Link to="/Org" className="navbar-link"> */}
+                        <Notif />
+                        {/* </Link> */}
                     </li>
                     <li className="navbar-item">
                         <Link to="/OrgProfile" className="navbar-link">
