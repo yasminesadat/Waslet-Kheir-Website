@@ -13,7 +13,7 @@ export default function OrgNavBar2() {
                 </Link>
                 <ul className="navbar-menu">
                     <li>
-                        <Link to="/Org" className="navbar-link">
+                        <Link to="/OrgMain" className="navbar-link">
                             Home
                         </Link>
                     </li>
@@ -28,8 +28,8 @@ export default function OrgNavBar2() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Org" className="dropdown-link">
-                                    View All donations
+                                <Link to="/OrgViewDon" className="dropdown-link">
+                                    View my donations request status
                                 </Link>
                             </li>
                         </ul>
@@ -40,9 +40,8 @@ export default function OrgNavBar2() {
                         </Link>
                         <ul className="dropdown-menu">
                             <li>
-                                <Link to="/Org" className="dropdown-link">
-                                    View offered services
-                                </Link>
+                                <Link to="/OrgReqServ" className="dropdown-link">
+                                    Request a Service                                </Link>
                             </li>
                             <li>
                                 <Link to="/Org" className="dropdown-link">

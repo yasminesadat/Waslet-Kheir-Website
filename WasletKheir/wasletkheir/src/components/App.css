@@ -893,3 +893,188 @@ form .title {
   border-radius: 4px;
 
 }
+
+/*View Organization Requests*/
+.donations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5%;
+  padding: 0 5%;
+}
+
+/*View Organization Request Details*/
+.org-view-container {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.org-view-title {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.org-item-details {
+  margin-top: 20px;
+}
+
+.org-item-name {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.org-item-info {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.org-item-info strong {
+  color: #333;
+}
+
+.org-item-details center {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.blue-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.blue-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Organization Request Donation */
+.main-request-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.main-request-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.main-request-container select,
+.main-request-container input[type="text"],
+.main-request-container input[type="number"],
+.main-request-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.main-request-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #40a9cb;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 20px 0;
+}
+
+
+.select-container select {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 13.224l5.82-5.821a.75.75 0 011.06 1.06l-6.35 6.35a.75.75 0 01-1.06 0l-6.35-6.35a.75.75 0 111.06-1.06L10 13.224z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  text-align: center;
+}
+
+.select-container select:focus {
+  outline: none;
+  border-color: #61dafb;
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+}
+
+.success-message {
+  position: fixed;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #61dafb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  animation: slide-up 0.5s ease-in-out forwards, slide-down 0.5s 3s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    bottom: -100px;
+  }
+
+  to {
+    bottom: 20px;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    bottom: 20px;
+  }
+
+  to {
+    bottom: -50px;
+  }
+}

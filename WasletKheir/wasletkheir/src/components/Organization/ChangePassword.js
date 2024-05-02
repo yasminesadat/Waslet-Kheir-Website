@@ -9,9 +9,8 @@ export default function ChangePassword() {
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [open, setOpen] = useState(false);
-
     const handleSubmit = (event) => {
-        event.preventDefault();  // Prevent the default form submission
+        event.preventDefault();
 
         if (oldPassword !== '1234') {
             alert('Old password is incorrect.');
