@@ -54,10 +54,22 @@ export default function OrgNavBar2() {
                         <Notif />
                         {/* </Link> */}
                     </li>
-                    <li className="navbar-item">
-                        <Link to="/OrgProfile" className="navbar-link">
-                            My Profile
+                    <li className="navbar-item dropdown">
+                        <Link to="/Org" className="navbar-link">
+                            <img src='charitylogo.png' className='profileicon' />
                         </Link>
+                        <ul className="dropdown-menu">
+                            <li>
+                                <Link to="/OrgProfile" className="dropdown-link">
+                                    View my profile
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="dropdown-link">
+                                    Log out
+                                </Link>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
