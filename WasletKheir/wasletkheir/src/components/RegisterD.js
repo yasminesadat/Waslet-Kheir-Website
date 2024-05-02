@@ -7,6 +7,12 @@ import { FaPhone, FaLock } from "react-icons/fa";
 import { FaUser, FaLocationDot } from "react-icons/fa6";
 import GoogleMap from './Map';
 import NavBarLogoTitle from './NavBarLogoTitle';
+import { FaUserDoctor } from "react-icons/fa6";
+import { FaHospitalUser } from "react-icons/fa";
+import { GiTeacher } from "react-icons/gi";
+
+
+
 
 function RegisterD() {
     const [isLoading, setIsLoading] = useState(false);
@@ -191,19 +197,45 @@ function RegisterD() {
 
 
                             {showUploadDr && (
-                                <div className="formElement">
-                                    <label htmlFor="fileInput"><b>Upload your Medical License</b></label>
-                                    <br></br>
-                                    <br></br>
-                                    <input type="file" required />
+                                <div>
+                                    <div className="input_field">
+                                        <span><FaUserDoctor className='fa' />
+                                        </span>
+                                        <input type="text" name="Medicalspeciality" placeholder="Medical Speciality" required />
+                                    </div>
+                                    <div className="input_field">
+                                        <span><FaUserDoctor className='fa' />
+                                        </span>
+                                        <input type="number" name="YearsOfExp" placeholder="Years of Experience" required />
+                                    </div>
+                                    <div className="input_field">
+                                        <span><FaHospitalUser className='fa' />
+                                        </span>
+                                        <input type="text" name="Clinicloc" placeholder="Clinic Location" required />
+                                    </div>
+                                    <div className="formElement">
+                                        <label htmlFor="fileInput"><b>Upload your Medical License</b></label>
+                                        <br></br>
+                                        <br></br>
+                                        <input type="file" required />
+                                    </div>
                                 </div>
+
                             )}
                             {showUploadTeacher && (
-                                <div className="formElement">
-                                    <label htmlFor="fileInput"><b>Upload your Teaching License</b></label>
-                                    <br></br>
-                                    <br></br>
-                                    <input type="file" required />
+                                <div>
+                                    <div className="input_field">
+                                        <span><GiTeacher
+                                            className='fa' />
+                                        </span>
+                                        <input type="text" name="subjects" placeholder="Subjects" required multiple />
+                                    </div>
+                                    <div className="formElement">
+                                        <label htmlFor="fileInput"><b>Upload your Teaching License</b></label>
+                                        <br></br>
+                                        <br></br>
+                                        <input type="file" required />
+                                    </div>
                                 </div>
                             )}
                             <div >

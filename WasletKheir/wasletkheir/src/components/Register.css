@@ -109,7 +109,8 @@ body {
     &[type="text"],
     &[type="email"],
     &[type="password"],
-    &[type="tel"] {
+    &[type="tel"],
+    &[type="number"] {
       width: 100%;
       padding: 8px 10px 9px 35px;
       height: 35px;
@@ -125,14 +126,16 @@ body {
     &[type="text"]:hover,
     &[type="email"]:hover,
     &[type="password"]:hover,
-    &[type="tel"]:hover {
+    &[type="tel"]:hover,
+    &[type="number"]:hover {
       background: #fafafa;
     }
 
     &[type="text"]:focus,
     &[type="email"]:focus,
     &[type="password"]:focus,
-    &[type="tel"]:focus {
+    &[type="tel"]:focus,
+    &[type="number"]:focus {
       box-shadow: 0 0 2px 1px rgba(29, 117, 136, 0.5);
       border: 1px solid #61dafb;
       background: #fafafa;

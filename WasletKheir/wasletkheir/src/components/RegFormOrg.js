@@ -161,7 +161,7 @@ function Form() {
                             </div>
 
                             <div className='formElement'>
-                                <div className='formText'>Please upload the Tax registration document</div>
+                                <div className='formText'>Please upload the Organizations's Tax registration document</div>
                                 <input type="file" id="documents" multiple required />
                             </div>
                             <GoogleMap location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110497.17550589156!2d31.182106716406256!3d30.06448150000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e451b2a3603%3A0xfca80e4ff9d274dc!2sMersal%20Foundation!5e0!3m2!1sen!2seg!4v1714426159716!5m2!1sen!2seg" />

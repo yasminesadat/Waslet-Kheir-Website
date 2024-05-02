@@ -46,7 +46,9 @@ export default function WelcomePage() {
 
             <div className="register-account">
 
-                Don't have an account? <Link to="/Register">Register</Link>
+                Don't have an account? <Link to="/RegisterD"><b>Register as a Donor</b></Link>
+                <br></br>
+                <Link to="/RegisterO"><b>Register as an Organization</b></Link>
                 <div className="go-to-admin">
                     <Link to="/AdminLogin">Go to Admin</Link>
                     {/* <a href="/AdminLogin">Go to Admin</a> */}
