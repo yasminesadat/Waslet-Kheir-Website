@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 import ChangePassword from './ChangePassword';
 import { useState } from 'react';
 import { FaEdit } from "react-icons/fa";
-import { FaCheck } from "react-icons/fa";
-import { IoCloseSharp } from "react-icons/io5";
+
 import checkORx from './checkORx';
+import { BiSolidHide } from "react-icons/bi";
+import { FaRegEye } from "react-icons/fa";
+
+
 
 
 export default function OrgProfile() {
