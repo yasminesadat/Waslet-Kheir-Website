@@ -2,8 +2,38 @@ import React from 'react';
 import Footer from './Footer';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
-import PopupGfg from './ChangePass';
+import ChangePassword from './ChangePassword';
+import { useState } from 'react';
+import { FaEdit } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
+import { IoCloseSharp } from "react-icons/io5";
+import checkORx from './checkORx';
+
+
 export default function OrgProfile() {
+    const toggleEditState = (fieldName) => {
+        setEditStates(prevState => ({
+            ...prevState,
+            [fieldName]: !prevState[fieldName]
+        }));
+    };
+    const [inputType, setInputType] = useState("password");
+    const [editStates, setEditStates] = useState({
+        firstName: false,
+        lastName: false,
+        gender: false,
+        email: false,
+        password: false,
+        orgName: false,
+        orgType: false,
+        address: false,
+        area: false,
+        governate: false
+    });
+
+    const togglePasswordVisibility = () => {
+        setInputType(inputType === "password" ? "text" : "password");
+    };
     return (
         <div className='Page'>
             <OrgNavBar2 />
@@ -24,29 +54,61 @@ export default function OrgProfile() {
                         <h2>Representative details</h2>
                         <div className='Element'>
                             <label htmlFor='FirstName'>First Name:</label>
-                            <input type='text' id='FirstName' readOnly value='Mohamed' />
+                            <input type='text' readOnly value='Mohamed' />
+                            &nbsp; &nbsp;
+                            !firstName && <FaEdit onClick={() => toggleEditState('firstName')} id='FirstName' style={{ fontSize: '20px' }} />
+                            firstName && <checkORx />
                         </div>
                         <div className='Element'>
                             <label htmlFor='LastName'>Last Name:</label>
                             <input type='text' id='LastName' readOnly value='Seif' />
+                            &nbsp; &nbsp;
+                            <FaEdit onClick={() => toggleEditState('lastName')} style={{ fontSize: '20px' }} />
+
                         </div>
                         <div className='Element'>
                             <label htmlFor='Gender'>Gender:</label>
                             <input type='text' id='Gender' readOnly value='Male' />
+                            &nbsp; &nbsp;
+                            <FaEdit onClick={() => toggleEditState('gender')} style={{ fontSize: '20px' }} />
                         </div>
                         <div className='Element'>
                             <label htmlFor='Email'>Email:</label>
-                            <input type='text' id='Email' readOnly value='mohamedseif@misrelkheir.egypt.com' />
+                            <input type='text' id='Email' readOnly value='mohamedseif@mersal.egypt.com' />
+                            &nbsp; &nbsp;
+                            <FaEdit style={{ fontSize: '20px' }} />
+
+
+
                         </div>
                         <div className='Element'>
                             <label htmlFor='pass'>Password:</label>
-                            <input type='password' id='pass' readOnly value='abcdefghghdjdi' />
-                            <PopupGfg />
+                            <input
+                                id='pass'
+                                className='PwInput'
+                                readOnly value='abcdefghghdjdi'
+                                type={inputType}
+
+                            />
+                            &nbsp; &nbsp;
+                            {inputType === 'password' && (<FaRegEye style={{ fontSize: '20px' }} onClick={togglePasswordVisibility} />)}
+                            {inputType === 'text' && (<BiSolidHide style={{ fontSize: '20px' }} onClick={togglePasswordVisibility} />)}
+
+                            {/* <button className='changePasswordbutton' >
+                                {inputType === "password" ? "Show password" : "Hide password"}
+                            </button> */}
+                            <br></br>
+                            <br></br>
+                            <ChangePassword />
                         </div>
                     </div>
                 </div>
                 <div className='orgdetails'>
                     <h2>Organization Details</h2>
+                    <div className='Element'>
+                        <label htmlFor='OrgName'>Organization Name:</label>
+                        <input type='text' id='OrgName' readOnly value='Mersal Foundatiom' />
+                    </div>
                     <div className='Element'>
                         <label htmlFor='OrgType'>Organization Type:</label>
                         <input type='text' id='OrgType' readOnly value='Charity' />
@@ -75,6 +137,6 @@ export default function OrgProfile() {
             </div>
             <Footer />
 
-        </div>
+        </div >
     );
 }

@@ -316,7 +316,7 @@
   text-decoration: none;
 }
 
-/new/ .loginPage {
+.loginPage {
   background-color: #61dafb;
   background-size: 100%;
   height: 100vh;
@@ -523,6 +523,7 @@ form .title {
 
 .Element {
   margin-bottom: 10px;
+
 }
 
 .Element label {
@@ -532,11 +533,13 @@ form .title {
 }
 
 .Element input {
-  width: calc(100% - 10px);
+  /* width: calc(100% - 10px); */
+  width: 70%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 
 .actions {
   grid-column: 1 / -1;
@@ -544,21 +547,21 @@ form .title {
   margin-top: 20px;
 }
 
-/* .passwordchange {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 100%;
-}
-
-.pass {
-  min-width: 200px;
-} */
 
 .pinButton {
   border: none;
   background: #61dafb;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.greenpinButton {
+  border: none;
+  background-color: rgb(109, 178, 109);
   padding: 10px 20px;
   color: #fff;
   cursor: pointer;
@@ -585,7 +588,8 @@ form .title {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/Organization NavBar Styling/ .dropdown {
+/*Organization NavBar Styling*/
+.dropdown {
   position: relative;
 }
 
@@ -876,4 +880,16 @@ form .title {
 .nav-link.active {
   background-color: #61dafb;
   color: #fff;
+}
+
+/* change password button in profilr */
+.changePasswordbutton {
+  border: none;
+  background: #61dafb;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  font-weight: bold;
+  border-radius: 4px;
+
 }
