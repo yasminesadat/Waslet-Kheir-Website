@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import CloseButton from './CloseButton';
 
 export default function ChangePassword() {
     const [oldPassword, setOldPassword] = useState('');
@@ -34,6 +35,8 @@ export default function ChangePassword() {
                 contentStyle={{ width: "auto", height: "auto" }}
             >
                 <div className="cpMainDiv">
+                    <div onClick={() => setOpen(false)} >   <CloseButton /></div>
+
                     <div className="cpCardStyle">
                         <form onSubmit={handleSubmit}>
                             <h2 className="cpFormTitle">Change Account Password</h2>
