@@ -9,7 +9,6 @@ import TabsComponent from "./components/SwitchTabs";
 import RegisterD from "./components/RegisterD";
 import OrgMainPage from "./components/OrgMainPage";
 import OrgProfile from './components/OrgProfile';
-import checkORx from './components/checkORx';
 
 function App() {
   return (
