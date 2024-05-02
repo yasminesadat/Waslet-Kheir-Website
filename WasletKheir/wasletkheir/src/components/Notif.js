@@ -7,32 +7,30 @@ import { MdDeliveryDining } from "react-icons/md";
 // Define multiple default notifications
 const DEFAULT_NOTIFICATIONS = [
     {
-        image: "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/5809d1d8af3059ed5b346ed1/logo-1615367026425-logo-v6.png",
-        message: "Hi!",
+        image: "notification.png",
+        message: "Your request with id #2342 for jackets has been chosen by a donor!",
         detailPage: "/events",
         receivedTime: "5m ago"
     },
     {
-        image: "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/5809d1d8af3059ed5b346ed1/logo-1615367026425-logo-v6.png",
-        message: "Hello",
+        image: "notification.png",
+        message: "The courier is on his way with school supplies for request #5467",
         detailPage: "/events",
         receivedTime: "10m ago"
     },
     {
-        image: "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/5809d1d8af3059ed5b346ed1/logo-1615367026425-logo-v6.png",
-        message: "Hey there!",
+        image: "notification.png",
+        message: "Your request with id #9870 for puzzles and stuffed toys has been chosen by a donor!",
         detailPage: "/events",
         receivedTime: "15m ago"
     },
     {
-        image: "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/5809d1d8af3059ed5b346ed1/logo-1615367026425-logo-v6.png",
-        message: "How are you?",
+        image: "notification.png", message: "The courier is on his way with your fresh food delivery , Get ready to meet him!",
         detailPage: "/events",
         receivedTime: "20m ago"
     },
     {
-        image: "https://cutshort-data.s3.amazonaws.com/cloudfront/public/companies/5809d1d8af3059ed5b346ed1/logo-1615367026425-logo-v6.png",
-        message: "What's up?",
+        image: "notification.png", message: "Your request with id #0187 for the fridge has been chosen by a donor!",
         detailPage: "/events",
         receivedTime: "25m ago"
     }
