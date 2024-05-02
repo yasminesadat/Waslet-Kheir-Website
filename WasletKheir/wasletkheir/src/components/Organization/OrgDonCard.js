@@ -24,6 +24,15 @@ const OrgDonCard = ({ image, title, description, progress }) => {
 
 
     };
+    const handleEdit = () => {
+        if (title === 'Jackets')
+            window.location.href = "/OrgUpd1";
+        else if (title === 'Plushies')
+            window.location.href = "/OrgUpd2";
+
+
+
+    }
     const handleInfo = () => {
         if (title === 'Jackets')
             window.location.href = "/OrgView1";
@@ -43,13 +52,13 @@ const OrgDonCard = ({ image, title, description, progress }) => {
 
     return (
         <div className="card">
-            <img className="card-img" src={image} alt={title} />
             <div className={`card-content ${showConfirm ? 'dimmed' : ''}`}>
+                <img className="card-img" src={image} alt={title} />
                 <h2 className="card-title">{title}</h2>
                 <p className="card-description">{description}</p>
                 <div className="button-container">
                     <button className="view-details-button" onClick={handleInfo}><FontAwesomeIcon icon={faInfo} /></button>
-                    {!isFulfilled && <button className="edit-button"><FontAwesomeIcon icon={faEdit} /></button>}
+                    {!isFulfilled && <button className="edit-button" onClick={handleEdit}><FontAwesomeIcon icon={faEdit} /></button>}
                     <button className="delete-button" onClick={handleDelete}><FontAwesomeIcon icon={faTrash} /></button>
                 </div>
                 <div className="progress-container">

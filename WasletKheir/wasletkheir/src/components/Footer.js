@@ -7,7 +7,7 @@ const Footer = () => {
         <h2>Contact Us</h2>
         <ul>
           <li>Phone: +204387332984</li>
-          <li>Email: help@ctrlshiftdelete.com</li>
+          <li>Email: help@ctrlshiftelite.com</li>
         </ul>
       </div>
       <div className="footer-section">

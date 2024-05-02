@@ -1,141 +1,155 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../Footer';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
 import ChangePassword from './ChangePassword';
-import { useState } from 'react';
-import { FaEdit } from "react-icons/fa";
-import { FaRegEye } from "react-icons/fa";
+import { FaEdit, FaSave, FaRegEye } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
-import '../App.css';
-
 
 export default function OrgProfile() {
-    const toggleEditState = (fieldName) => {
-        setEditStates(prevState => ({
-            ...prevState,
-            [fieldName]: !prevState[fieldName]
-        }));
-    };
-    const [inputType, setInputType] = useState("password");
-    const [editStates, setEditStates] = useState({
-        firstName: false,
-        lastName: false,
-        gender: false,
-        email: false,
-        password: false,
-        orgName: false,
-        orgType: false,
-        address: false,
-        area: false,
-        governate: false
+    const [isEdit, setIsEdit] = useState(false);
+    const [buttonText, setText] = useState("Edit details");
+    const [formData, setFormData] = useState({
+        firstName: 'Mohamed',
+        lastName: 'Seif',
+        gender: 'Male',
+        email: 'mohamedseif@mersal.egypt.com',
+        password: 'abcdefghghdjdi',
+        orgName: 'Mersal Foundatiom',
+        orgType: 'Charity',
+        address: 'Rehab Building 36',
+        area: 'New Cairo',
+        governate: 'Cairo'
     });
+    const [inputType, setInputType] = useState("password");
+
+    const toggleEdit = () => {
+        setIsEdit(!isEdit);
+        if (buttonText === "Edit details")
+            setText("Save changes");
+        else
+            setText("Edit details");
+
+    }
+
+
+    const handleInputChange = (event) => {
+        setFormData({ ...formData, [event.target.id]: event.target.value });
+    };
 
     const togglePasswordVisibility = () => {
         setInputType(inputType === "password" ? "text" : "password");
     };
+
+    const handleUpdate = (event) => {
+        event.preventDefault();
+        console.log('Update data:', formData);
+        // Implement update logic here (e.g., API call, validation)
+    };
+
+    console.log("isEdit:", isEdit); // Check the value of isEdit in the console
+
     return (
         <div className='Page'>
             <OrgNavBar2 />
-            <br>
-            </br>
-            <br>
-            </br>
+            <br />
+            <br />
+            <br />
             <div className='profile'>
 
                 <div className='leftHalf'>
                     <div className='logoanduser'>
-                        {/* <h2>Mersal Foundation</h2> */}
                         <img className='NGOLogo' src='charitylogo.png' alt='Charity Logo' />
                     </div>
                 </div>
                 <div className='rightHalf'>
                     <div className='representative'>
-                        <h2>Representative details</h2>
-                        <div className='Element'>
-                            <label htmlFor='FirstName'>First Name:</label>
-                            <input type='text' readOnly value='Mohamed' />
-                            &nbsp; &nbsp;
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <h2>Representative details</h2>
+                            <button style={{ fontSize: '20px', marginLeft: 'auto' }} onClick={toggleEdit}>
+                                {isEdit && (<FaSave />)}
+                                {!isEdit && (<FaEdit />)}
 
+                                {buttonText}
+                            </button>
                         </div>
-                        <div className='Element'>
-                            <label htmlFor='LastName'>Last Name:</label>
-                            <input type='text' id='LastName' readOnly value='Seif' />
-                            &nbsp; &nbsp;
-                            <FaEdit onClick={() => toggleEditState('lastName')} style={{ fontSize: '20px' }} />
-
-                        </div>
-                        <div className='Element'>
-                            <label htmlFor='Gender'>Gender:</label>
-                            <input type='text' id='Gender' readOnly value='Male' />
-                            &nbsp; &nbsp;
-                            <FaEdit onClick={() => toggleEditState('gender')} style={{ fontSize: '20px' }} />
-                        </div>
-                        <div className='Element'>
-                            <label htmlFor='Email'>Email:</label>
-                            <input type='text' id='Email' readOnly value='mohamedseif@mersal.egypt.com' />
-                            &nbsp; &nbsp;
-                            <FaEdit style={{ fontSize: '20px' }} />
 
 
+                        <form onSubmit={handleUpdate}>
+                            <div className='Element'>
+                                <label htmlFor='FirstName'>First Name:</label>
+                                <input type='text' id='firstName' readOnly={!isEdit} value={formData.firstName} onChange={handleInputChange} />
+                            </div>
+                            <div className='Element'>
+                                <label htmlFor='LastName'>Last Name:</label>
+                                <input type='text' id='lastName' readOnly={!isEdit} value={formData.lastName} onChange={handleInputChange} />
+                            </div>
+                            <div className='Element'>
+                                <label htmlFor='Gender'>Gender:</label>
+                                <input type='text' id='gender' readOnly value={formData.gender} />
+                            </div>
+                            <div className='Element'>
+                                <label htmlFor='Email'>Email:</label>
+                                <input type='text' id='email' readOnly value={formData.email} />
+                            </div>
+                            <div className='Element'>
+                                <label htmlFor='pass'>Password:</label>
+                                <input
+                                    id='password'
+                                    className='PwInput'
+                                    readOnly={!isEdit}
+                                    value={formData.password}
+                                    type={inputType}
+                                    onChange={handleInputChange}
+                                />
+                                &nbsp; &nbsp;
 
-                        </div>
-                        <div className='Element'>
-                            <label htmlFor='pass'>Password:</label>
-                            <input
-                                id='pass'
-                                className='PwInput'
-                                readOnly value='abcdefghghdjdi'
-                                type={inputType}
+                                {inputType === 'password' && (<FaRegEye style={{ fontSize: '20px' }} onClick={togglePasswordVisibility} />)}
+                                {inputType === 'text' && (<BiSolidHide style={{ fontSize: '20px' }} onClick={togglePasswordVisibility} />)}
+                                <br />
+                                <br />
+                                <ChangePassword />
+                            </div>
+                        </form>
+                        <br />
+                        <br />
 
-                            />
-                            &nbsp; &nbsp;
-                            {inputType === 'password' && (<FaRegEye style={{ fontSize: '20px' }} onClick={togglePasswordVisibility} />)}
-                            {inputType === 'text' && (<BiSolidHide style={{ fontSize: '20px' }} onClick={togglePasswordVisibility} />)}
-
-                            {/* <button className='changePasswordbutton' >
-                                {inputType === "password" ? "Show password" : "Hide password"}
-                            </button> */}
-                            <br></br>
-                            <br></br>
-                            <ChangePassword />
-                        </div>
                     </div>
                 </div>
                 <div className='orgdetails'>
                     <h2>Organization Details</h2>
                     <div className='Element'>
                         <label htmlFor='OrgName'>Organization Name:</label>
-                        <input type='text' id='OrgName' readOnly value='Mersal Foundatiom' />
+                        <input type='text' id='orgName' readOnly={!isEdit} value={formData.orgName} onChange={handleInputChange} />
                     </div>
                     <div className='Element'>
                         <label htmlFor='OrgType'>Organization Type:</label>
-                        <input type='text' id='OrgType' readOnly value='Charity' />
+                        <input type='text' id='orgType' readOnly value={formData.orgType} />
                     </div>
                     <div className='Element'>
                         <label htmlFor='Address'>Address:</label>
-                        <input type='text' id='Address' readOnly value='Rehab Building 36' />
+                        <input type='text' id='address' readOnly={!isEdit} value={formData.address} onChange={handleInputChange} />
                     </div>
                     <div className='Element'>
                         <label htmlFor='Area'>Area:</label>
-                        <input type='text' id='Area' readOnly value='New Cairo' />
+                        <input type='text' id='area' readOnly={!isEdit} value={formData.area} onChange={handleInputChange} />
                     </div>
                     <div className='Element'>
                         <label htmlFor='Governate'>Governate:</label>
-                        <input type='text' id='Governate' readOnly value='Cairo' />
+                        <input type='text' id='governate' readOnly value={formData.governate} />
                     </div>
                 </div>
                 <div className='actions'>
                     <Link to='/'>
                         <button className='deleteButton'>Delete Account</button>
                     </Link>
+
                 </div>
-                <br></br>
-                <br></br>
+                <br />
+                <br />
 
             </div>
             <Footer />
-
         </div >
     );
 }

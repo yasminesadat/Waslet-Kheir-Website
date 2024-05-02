@@ -28,7 +28,7 @@ export default function ChangePassword() {
 
     return (
         <div>
-            <button onClick={() => setOpen(true)} className='pinButton'>Change Password</button>
+            <button onClick={() => setOpen(true)} className='smallpinButton'>Change Password</button>
             <Popup
                 open={open}
                 onClose={() => setOpen(false)}  // Handle closing of the popup

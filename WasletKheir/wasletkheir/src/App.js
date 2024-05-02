@@ -11,6 +11,9 @@ import OrgProfile from './components/Organization/OrgProfile';
 import OrgViewDon from './components/Organization/OrgViewDon';
 import OrgReqDon from './components/Organization/OrgReqDon';
 import OrgReqServ from './components/Organization/OrgReqServ';
+import OrgView2 from './components/Organization/OrgView2';
+import OrgView1 from './components/Organization/OrgView1';
+import OrgView3 from './components/Organization/OrgView3';
 function App() {
   return (
     <Router>
@@ -26,6 +29,10 @@ function App() {
         <Route path="/OrgViewDon" element={<OrgViewDon />} />
         <Route path="/OrgReqDon" element={<OrgReqDon />} />
         <Route path="/OrgReqServ" element={<OrgReqServ />} />
+        <Route path="/OrgView2" element={<OrgView2 />} />
+        <Route path="/OrgView3" element={<OrgView3 />} />
+        <Route path="/OrgView1" element={<OrgView1 />} />
+
 
 
 

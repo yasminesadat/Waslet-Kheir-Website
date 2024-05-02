@@ -1,5 +1,5 @@
 import React from 'react';
-import OrgNavBar2 from './OrgNavBar2';
+import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
 
 export default function OrgView3() {
@@ -17,6 +17,9 @@ export default function OrgView3() {
     return (
         <>
             <OrgNavBar2 />
+            <br></br>
+            <br></br>
+            <br></br>
             <div className="org-view-container">
                 <h1 className="org-view-title">View Request Details</h1>
                 <hr></hr>
