@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import AdminLogin from './components/AdminLogin'; // import your AdminLogin component
-import Notif from "./components/Notif";
+import Notif from "./components/Organization/Notif";
 import Form from "./components/RegFormOrg";
 import WelcomePage from "./components/WelcomePage";
 import TabsComponent from "./components/SwitchTabs";
 import RegisterD from "./components/RegisterD";
-import OrgMainPage from "./components/OrgMainPage";
-import OrgProfile from './components/OrgProfile';
+import OrgMainPage from "./components/Organization/OrgMainPage";
+import OrgProfile from './components/Organization/OrgProfile';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './Footer';
+import Footer from '../Footer';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
 import ChangePassword from './ChangePassword';
@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { FaEdit } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
+import '../App.css';
 
 
 export default function OrgProfile() {

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Notif from './Notif';
+import '../App.css';
+
 export default function OrgNavBar2() {
     return (
         <nav className="navbar fixed-navbar"> {/* Added "navbar" class */}

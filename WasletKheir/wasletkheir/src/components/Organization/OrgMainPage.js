@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import './App.css';
+import '../App.css';
 import React, { useEffect, useState } from 'react';
-
-import Footer from './Footer';
+import Footer from '../Footer';
 import OrgNavBar2 from './NavbarOrg';
 import Notif from './Notif';
 

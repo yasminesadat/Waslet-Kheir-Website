@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Notifications from "react-notifications-menu";
-import "./styles.css";
+import "../styles.css";
 
 
 // Define multiple default notifications
