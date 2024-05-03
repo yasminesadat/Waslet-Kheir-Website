@@ -5,11 +5,17 @@ import { Link } from 'react-router-dom';
 import ChangePassword from './ChangePassword';
 import { FaEdit, FaSave, FaRegEye } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
+import { Button, Popover } from 'antd';
 
 export default function OrgProfile() {
     const [isEdit, setIsEdit] = useState(false);
     const [buttonText, setText] = useState("Edit details");
+    const buttonMessage = (
+        <div>
+            <p>Click here to edit any of your profile details</p>
 
+        </div>
+    );
     const [formData, setFormData] = useState({
         firstName: 'Mohamed',
         lastName: 'Seif',
@@ -51,7 +57,6 @@ export default function OrgProfile() {
     };
 
     console.log("isEdit:", isEdit); // Check the value of isEdit in the console
-
     return (
         <div className='Page'>
             <OrgNavBar2 />
@@ -61,6 +66,7 @@ export default function OrgProfile() {
                 {!isEdit && (<FaEdit />)}
                 {buttonText}
             </button>
+
 
             <br></br> <br></br> <br></br>
             <br></br>
@@ -123,26 +129,28 @@ export default function OrgProfile() {
                     </div>
                 </div>
                 <div className={'orgdetails' + (isEdit ? " glowing-border" : "")}>
-                    <h2>Organization Details</h2>
-                    <div className='Element'>
-                        <label htmlFor='OrgName'>Organization Name:</label>
-                        <input type='text' id='orgName' readOnly={!isEdit} value={formData.orgName} onChange={handleInputChange} />
-                    </div>
-                    <div className='Element'>
-                        <label htmlFor='OrgType'>Organization Type:</label>
-                        <input type='text' id='orgType' readOnly value={formData.orgType} />
-                    </div>
-                    <div className='Element'>
-                        <label htmlFor='Address'>Address:</label>
-                        <input type='text' id='address' readOnly={!isEdit} value={formData.address} onChange={handleInputChange} />
-                    </div>
-                    <div className='Element'>
-                        <label htmlFor='Area'>Area:</label>
-                        <input type='text' id='area' readOnly={!isEdit} value={formData.area} onChange={handleInputChange} />
-                    </div>
-                    <div className='Element'>
-                        <label htmlFor='Governate'>Governate:</label>
-                        <input type='text' id='governate' readOnly value={formData.governate} />
+                    <div className='orginfo'>
+                        <h2>Organization Details</h2>
+                        <div className='Element'>
+                            <label htmlFor='OrgName'>Organization Name:</label>
+                            <input type='text' id='orgName' readOnly={!isEdit} value={formData.orgName} onChange={handleInputChange} />
+                        </div>
+                        <div className='Element'>
+                            <label htmlFor='OrgType'>Organization Type:</label>
+                            <input type='text' id='orgType' readOnly value={formData.orgType} />
+                        </div>
+                        <div className='Element'>
+                            <label htmlFor='Address'>Address:</label>
+                            <input type='text' id='address' readOnly={!isEdit} value={formData.address} onChange={handleInputChange} />
+                        </div>
+                        <div className='Element'>
+                            <label htmlFor='Area'>Area:</label>
+                            <input type='text' id='area' readOnly={!isEdit} value={formData.area} onChange={handleInputChange} />
+                        </div>
+                        <div className='Element'>
+                            <label htmlFor='Governate'>Governate:</label>
+                            <input type='text' id='governate' readOnly value={formData.governate} />
+                        </div>
                     </div>
                 </div>
                 <div className='actions'>

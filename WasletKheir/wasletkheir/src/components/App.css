@@ -524,12 +524,10 @@ button.savebutton {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* Smooth color transition */
 }
 
 .deleteButton:hover {
   background-color: #d32f2f;
-  /* Darker shade of red on hover */
 }
 
 .orgdetails {
@@ -543,7 +541,19 @@ button.savebutton {
   height: 400px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+
 }
+
+/* .orginfo {
+  display: grid;
+  place-items: center;
+
+}
+
+.orginfo.Element {
+  width: 100%;
+
+} */
 
 .logoanduser {
   display: flex;
@@ -570,7 +580,6 @@ button.savebutton {
 
 .Element {
   margin-bottom: 10px;
-
 }
 
 .Element label {

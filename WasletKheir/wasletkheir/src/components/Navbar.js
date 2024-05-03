@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Notif from './Organization/Notif';
+import { UserOutlined } from '@ant-design/icons';
+import { Avatar } from 'antd';
 const Navbar = ({ className }) => {
   const messages = [
 
@@ -33,6 +35,9 @@ const Navbar = ({ className }) => {
           </li>
           <li className="navbar-item">
             <Notif messages={messages} />
+          </li>
+          <li className="navbar-item">
+            <Avatar size="large" icon={<UserOutlined />} />
           </li>
         </ul>
       </div>
