@@ -489,8 +489,23 @@ button.savebutton {
   border-radius: 5px;
 }
 
+button.editbuttonsmall {
+  border: none;
 
+  background-color: #1677ff;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
 
+button.savebuttonsmall {
+
+  border: none;
+  background-color: #237804;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
 
 .OrgNavBar2 {
   position: absolute;
@@ -540,6 +555,8 @@ button.savebutton {
   width: 1085px;
   height: 400px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
 
 
 }
@@ -550,10 +567,15 @@ button.savebutton {
 
 }
 
+
 .orginfo.Element {
   width: 100%;
 
 } */
+.orginfo {
+  width: 50%;
+
+}
 
 .logoanduser {
   display: flex;
@@ -596,6 +618,24 @@ button.savebutton {
   border-radius: 5px;
 }
 
+.orgElement {
+  margin-bottom: 10px;
+  width: 100%
+}
+
+.orgElement label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.orgElement input {
+  /* width: calc(100% - 10px); */
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 .actions {
   grid-column: 1 / -1;

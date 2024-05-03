@@ -37,7 +37,10 @@ const Navbar = ({ className }) => {
             <Notif messages={messages} />
           </li>
           <li className="navbar-item">
-            <Avatar size="large" icon={<UserOutlined />} />
+            <Link to="/DonorProfile">
+              {/* <Avatar size="large" icon={<UserOutlined />} /> */}
+              <p>Hi </p>
+            </Link>
           </li>
         </ul>
       </div>

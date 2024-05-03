@@ -75,7 +75,7 @@ export default function OrgProfile() {
             <div className='profile'>
 
                 <div className='leftHalf'>
-                    <div className={'logoanduser' + (isEdit ? " glowing-border" : "")}>
+                    <div className='logoanduser' >
                         <img className='NGOLogo' src='charitylogo.png' alt='Charity Logo' />
                     </div>
                 </div>
@@ -131,26 +131,36 @@ export default function OrgProfile() {
                 <div className={'orgdetails' + (isEdit ? " glowing-border" : "")}>
                     <div className='orginfo'>
                         <h2>Organization Details</h2>
-                        <div className='Element'>
+                        <div className='orgElement'>
                             <label htmlFor='OrgName'>Organization Name:</label>
                             <input type='text' id='orgName' readOnly={!isEdit} value={formData.orgName} onChange={handleInputChange} />
                         </div>
-                        <div className='Element'>
+                        <div className='orgElement'>
                             <label htmlFor='OrgType'>Organization Type:</label>
-                            <input type='text' id='orgType' readOnly value={formData.orgType} />
+                            <input type='text' id='orgType' readOnly={!isEdit} value={formData.orgType} />
                         </div>
-                        <div className='Element'>
+                        <div className='orgElement'>
                             <label htmlFor='Address'>Address:</label>
                             <input type='text' id='address' readOnly={!isEdit} value={formData.address} onChange={handleInputChange} />
                         </div>
-                        <div className='Element'>
+                        <div className='orgElement'>
                             <label htmlFor='Area'>Area:</label>
                             <input type='text' id='area' readOnly={!isEdit} value={formData.area} onChange={handleInputChange} />
                         </div>
-                        <div className='Element'>
+                        <div className='orgElement'>
                             <label htmlFor='Governate'>Governate:</label>
-                            <input type='text' id='governate' readOnly value={formData.governate} />
+                            <input type='text' id='governate' readOnly={!isEdit} value={formData.governate} />
                         </div>
+                    </div>
+                    <div className='mapOrg' style={{ width: "auto", width: "400px", maxWidth: "600px", height: "auto", marginTop: "5%", marginRight: "5%" }} >
+                        <iframe
+                            title="google map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
+                            style={{ width: '100%', height: '300px', border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
                 </div>
                 <div className='actions'>

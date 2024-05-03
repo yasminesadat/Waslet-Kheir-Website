@@ -14,6 +14,7 @@ import OrgView2 from './components/Organization/OrgView2';
 import OrgView1 from './components/Organization/OrgView1';
 import OrgView3 from './components/Organization/OrgView3';
 import Home from './components/Donor/Home';
+import DonorProfile from './components/Donor/DonorProfile';
 function App() {
   return (
     <Router>
@@ -32,6 +33,8 @@ function App() {
         <Route path="/OrgView2" element={<OrgView2 />} />
         <Route path="/OrgView3" element={<OrgView3 />} />
         <Route path="/OrgView1" element={<OrgView1 />} />
+        <Route path="/DonorProfile" element={<DonorProfile />} />
+
 
 
 

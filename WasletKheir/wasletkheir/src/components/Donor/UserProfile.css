@@ -1,0 +1,242 @@
+/* General Layout */
+.profile-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* Add space between the name and button */
+}
+
+.profile-name {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.profile-button {
+    color: white;
+}
+
+
+/* Header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+/* Profile Overview */
+.profile-overview {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Sections */
+section {
+    padding: 10px 0;
+}
+
+/* Footer */
+.profile-footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* Container */
+.user-details {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Heading */
+.user-details h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.user-details form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label */
+.form-group label {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input */
+.form-group input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+    padding-right: 40px;
+}
+
+/* Password Input */
+.password-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Button Inside Input */
+.form-group button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Map and Statistics Split */
+.split-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Map Section */
+.map-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.statistics-section {
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 10%;
+    flex: 1;
+    min-width: 400px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.glowing-border {
+    border: 1px solid #61dafb;
+    border-radius: 5px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        border-color: #61dafb;
+        box-shadow: 0 0 5px #61dafb, 0 0 20px #61dafb, 0 0 30px #61dafb;
+    }
+
+    to {
+        border-color: #59abe3;
+        box-shadow: 0 0 10px #61dafb, 0 0 30px #61dafb, 0 0 40px #61dafb;
+    }
+}
+
+/* UserProfile.css */
+
+.badge-section {
+    margin-top: 5%;
+    margin-right: 15%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    max-width: 300px;
+}
+
+.badge-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.badge {
+    position: relative;
+    display: inline-block;
+}
+
+.badge-image {
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.badge-description {
+    position: absolute;
+    top: 50%;
+    /* Position below the badge */
+    left: 180%;
+
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: rgba(106, 185, 211, 0.7);
+    /* Light blue color with 70% opacity */
+
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 100;
+    /* Ensure it's on top */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.badge:hover .badge-description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pageProfileDonor {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}

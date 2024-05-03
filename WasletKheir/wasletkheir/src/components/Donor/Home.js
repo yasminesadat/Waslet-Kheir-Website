@@ -7,6 +7,10 @@ import Card2 from '../Card2';
 import Footer from '../Footer';
 import { UserOutlined } from '@ant-design/icons';
 import { Avatar } from 'antd';
+import { MdEmail } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+
+
 import '../App.css';
 
 function Home() {
