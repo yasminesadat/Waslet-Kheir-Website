@@ -9,6 +9,7 @@ import { BiSolidHide } from "react-icons/bi";
 export default function OrgProfile() {
     const [isEdit, setIsEdit] = useState(false);
     const [buttonText, setText] = useState("Edit details");
+
     const [formData, setFormData] = useState({
         firstName: 'Mohamed',
         lastName: 'Seif',
@@ -33,6 +34,8 @@ export default function OrgProfile() {
     }
 
 
+
+
     const handleInputChange = (event) => {
         setFormData({ ...formData, [event.target.id]: event.target.value });
     };
@@ -44,7 +47,7 @@ export default function OrgProfile() {
     const handleUpdate = (event) => {
         event.preventDefault();
         console.log('Update data:', formData);
-        // Implement update logic here (e.g., API call, validation)
+
     };
 
     console.log("isEdit:", isEdit); // Check the value of isEdit in the console
@@ -52,26 +55,29 @@ export default function OrgProfile() {
     return (
         <div className='Page'>
             <OrgNavBar2 />
-            <br />
-            <br />
-            <br />
+
+            <button className={isEdit ? 'savebutton' : 'editbutton'} onClick={toggleEdit}>
+                {isEdit && (<FaSave />)}
+                {!isEdit && (<FaEdit />)}
+                {buttonText}
+            </button>
+
+            <br></br> <br></br> <br></br>
+            <br></br>
+
+
             <div className='profile'>
 
                 <div className='leftHalf'>
-                    <div className='logoanduser'>
+                    <div className={'logoanduser' + (isEdit ? " glowing-border" : "")}>
                         <img className='NGOLogo' src='charitylogo.png' alt='Charity Logo' />
                     </div>
                 </div>
                 <div className='rightHalf'>
-                    <div className='representative'>
+                    <div className={'representative' + (isEdit ? " glowing-border" : "")}>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <h2>Representative details</h2>
-                            <button style={{ fontSize: '20px', marginLeft: 'auto' }} onClick={toggleEdit}>
-                                {isEdit && (<FaSave />)}
-                                {!isEdit && (<FaEdit />)}
 
-                                {buttonText}
-                            </button>
                         </div>
 
 
@@ -86,11 +92,11 @@ export default function OrgProfile() {
                             </div>
                             <div className='Element'>
                                 <label htmlFor='Gender'>Gender:</label>
-                                <input type='text' id='gender' readOnly value={formData.gender} />
+                                <input type='text' id='gender' readOnly={!isEdit} onChange={handleInputChange} value={formData.gender} />
                             </div>
                             <div className='Element'>
                                 <label htmlFor='Email'>Email:</label>
-                                <input type='text' id='email' readOnly value={formData.email} />
+                                <input type='text' id='email' value={formData.email} readOnly={!isEdit} onChange={handleInputChange} />
                             </div>
                             <div className='Element'>
                                 <label htmlFor='pass'>Password:</label>
@@ -116,7 +122,7 @@ export default function OrgProfile() {
 
                     </div>
                 </div>
-                <div className='orgdetails'>
+                <div className={'orgdetails' + (isEdit ? " glowing-border" : "")}>
                     <h2>Organization Details</h2>
                     <div className='Element'>
                         <label htmlFor='OrgName'>Organization Name:</label>

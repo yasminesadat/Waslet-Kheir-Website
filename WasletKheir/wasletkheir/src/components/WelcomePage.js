@@ -11,7 +11,7 @@ export default function WelcomePage() {
     function handleSubmit(e) {
         e.preventDefault();
         if (email === 'Donor@gmail.com' && password === '1234') {
-            navigate("/Donor");
+            navigate("/Home");
         } else if (email === 'Org@gmail.com' && password === '1234') {
             navigate("/OrgMain");
         } else {

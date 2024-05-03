@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
 import AdminLogin from './components/AdminLogin'; // import your AdminLogin component
 import Form from "./components/RegFormOrg";
 import WelcomePage from "./components/WelcomePage";
@@ -14,6 +13,7 @@ import OrgReqServ from './components/Organization/OrgReqServ';
 import OrgView2 from './components/Organization/OrgView2';
 import OrgView1 from './components/Organization/OrgView1';
 import OrgView3 from './components/Organization/OrgView3';
+import Home from './components/Donor/Home';
 function App() {
   return (
     <Router>

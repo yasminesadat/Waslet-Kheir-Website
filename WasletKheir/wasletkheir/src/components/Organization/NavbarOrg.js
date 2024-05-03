@@ -4,6 +4,13 @@ import Notif from './Notif';
 import '../App.css';
 
 export default function OrgNavBar2() {
+    const messages = [
+        "Your request with request id #2333 for jackets has been chosen by a donor",
+        "The courier is on his way with the school supplies for request #9012",
+        "Your request with id #2346 for puzzles and toys has been chosen by a donor",
+        "The courier is on his way with your fresh food delivery for request #0187, Get ready to meet him",
+        "Your request with id #8711 for the fridge has been chosen by a donor"
+    ];
     return (
         <nav className="navbar fixed-navbar"> {/* Added "navbar" class */}
             <div className="navbar-container">
@@ -52,7 +59,7 @@ export default function OrgNavBar2() {
                     </li>
                     <li className="navbar-item">
                         {/* <Link to="/Org" className="navbar-link"> */}
-                        <Notif />
+                        <Notif messages={messages} />
                         {/* </Link> */}
                     </li>
                     <li className="navbar-item dropdown">
