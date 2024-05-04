@@ -55,7 +55,27 @@ export default function OrgViewServ() {
                 { label: 'Governate', value: 'Cairo' },
                 { label: 'Google Map Marker', value: '' },
             ],
+        },
+        {
+            image: "https://img.freepik.com/free-photo/flat-lay-health-still-life-arrangement-with-copy-space_23-2148854064.jpg",
+            avatar: "https://cdn-icons-png.flaticon.com/512/3774/3774299.png",
+            title: "Mersal is Requesting a Doctor ",
+            description: "We are organizing a health outreach program in a village where healthcare access is limited.",
+            type: "medical",
+            contactInfo: [
+                { label: 'Name', value: 'Dr. Rania Salah' },
+                { label: 'Email', value: 'raniassalah@nasaemclinics.org' },
+                { label: 'Phone', value: '01278934209' },
+            ],
+            serviceDetails: [
+                { label: 'Location', value: 'Sunshine Village, Rural District' },
+                { label: 'Service Date', value: '2024-06-15' },
+                { label: 'Expected Patients', value: '150' },
+                { label: 'Focus Areas', value: 'Vaccinations, Health Screenings, Medical Consultations' },
+                { label: 'Additional Information', value: 'The outreach program will be held in the village community center, where basic facilities are available for setting up a temporary clinic. The doctor should be prepared for a busy day and be open to working with a diverse population, including children and elderly patients.' },
+            ],
         }
+
     ];
     const filteredServices = services.filter(service => {
         if (filter === 'all') {
