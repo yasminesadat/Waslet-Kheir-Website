@@ -51,7 +51,7 @@ export default function OrgNavBar2() {
                                     Request a Service                                </Link>
                             </li>
                             <li>
-                                <Link to="/Org" className="dropdown-link">
+                                <Link to="/OrgViewServ" className="dropdown-link">
                                     View fulfilled services
                                 </Link>
                             </li>
