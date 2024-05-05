@@ -620,6 +620,7 @@ button.savebuttonsmall {
 
 .orgElement {
   margin-bottom: 10px;
+
   width: 100%
 }
 
@@ -632,6 +633,14 @@ button.savebuttonsmall {
 .orgElement input {
   /* width: calc(100% - 10px); */
   width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.orgElement select {
+  /* width: calc(100% - 10px); */
+  width: 102.3%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
