@@ -68,7 +68,7 @@ function OrgMainPage() {
                 </h3>
 
 
-            </div> */
+            </div>
 
             <Footer></Footer>
         </div>

@@ -116,6 +116,16 @@ section {
     padding-right: 40px;
 }
 
+.selectProfile {
+    width: calc(100.5%);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+    padding-right: 40px;
+
+}
+
 /* Password Input */
 .password-input {
     position: relative;

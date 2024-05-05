@@ -24,8 +24,8 @@ export default function OrgProfile() {
         password: 'abcdefghghdjdi',
         orgName: 'Mersal Foundatiom',
         orgType: 'Charity',
-        address: 'Rehab Building 36',
-        area: 'New Cairo',
+        address: '8 Street 263 Ezbet Fahmy',
+        area: 'El Basatin',
         governate: 'Cairo'
     });
     const [inputType, setInputType] = useState("password");
@@ -185,7 +185,7 @@ export default function OrgProfile() {
                     <div className='mapOrg' style={{ width: "auto", width: "400px", maxWidth: "600px", height: "auto", marginTop: "5%", marginRight: "5%" }} >
                         <iframe
                             title="google map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8932.899824878383!2d31.26860684256589!3d29.977683965577004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458386f89f9a029%3A0xe63218d38fcfebe1!2z2YXYpNiz2LPYqSDZhdix2LPYp9mEIC0gTWVyc2FsIGZvdW5kYXRpb24g2KfZhNmB2LHYuSDYp9mE2LHYptmK2LPZig!5e0!3m2!1sen!2seg!4v1714943670492!5m2!1sen!2seg"
                             style={{ width: '100%', height: '300px', border: 0 }}
                             allowFullScreen=""
                             loading="lazy"

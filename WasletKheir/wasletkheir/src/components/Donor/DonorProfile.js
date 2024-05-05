@@ -205,14 +205,38 @@ function DonorProfile() {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="governorate"><FaLocationDot />  Governorate</label>
-                                <input
-                                    type="text"
-                                    id="governorate"
-                                    name="governorate"
-                                    value={formData.governorate}
-                                    onChange={handleChange}
-                                    readOnly={!isEdit}
-                                />
+                                <select className='selectProfile' id="governorate" onChange={handleChange}
+                                    name="Governorate" disabled={!isEdit} >
+                                    <option value="option0">Choose a governorate</option>
+                                    <option value="option1" selected >Cairo </option>
+                                    <option value="option2">Alexandria</option>
+                                    <option value="option3">Giza</option>
+                                    <option value="option4">Damietta</option>
+                                    <option value="option5">Aswan</option>
+                                    <option value="option6">Asyut</option>
+                                    <option value="option7">Beheira</option>
+                                    <option value="option8">Beni Suef</option>
+                                    <option value="option9">Port Said</option>
+                                    <option value="option10">Red Sea</option>
+                                    <option value="option11">Dakahlia</option>
+                                    <option value="option12">Sohag</option>
+                                    <option value="option13">South Sinai</option>
+                                    <option value="option14">Suez</option>
+                                    <option value="option15">Sharqia</option>
+                                    <option value="option16">Fayoum</option>
+                                    <option value="option17">Qena</option>
+                                    <option value="option18">Kafr El Sheikh</option>
+                                    <option value="option19">Matrouh</option>
+                                    <option value="option20">Minya</option>
+                                    <option value="option21">Monufia</option>
+                                    <option value="option22">Luxor</option>
+                                    <option value="option23">New Valley</option>
+                                    <option value="option24">North Sinai</option>
+                                    <option value="option25">Gharbia</option>
+                                    <option value="option26">Ismailia</option>
+                                    <option value="option27">Qalyubia</option>
+                                </select>
+
                             </div>
                         </form>
                     </section>
