@@ -21,10 +21,16 @@ function DonorProfile() {
             description: "for supporters during critical moments"
         },
         {
+            name: "Champion of charity",
+            image: "championb.png",
+            description: "for donors who made 100+ donations"
+        },
+        {
             name: "Catalyst for Change",
             image: "star.png",
             description: "for donors who initiate significant change"
-        }
+        },
+
     ];
     const [formData, setFormData] = useState({
         firstName: 'Hana',
