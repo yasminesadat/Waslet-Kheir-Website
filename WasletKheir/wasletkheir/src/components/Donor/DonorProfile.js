@@ -10,7 +10,7 @@ import { BiSolidHide } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { FaUserDoctor, FaLocationDot } from "react-icons/fa6";
 import Footer from '../Footer';
-import Statistics from './Statistics';
+import DonorHistory from './DonorHistory';
 
 function DonorProfile() {
     const [isEdit, setIsEdit] = useState(false);
@@ -18,12 +18,12 @@ function DonorProfile() {
         {
             name: "Hero of Hope",
             image: "Hero.png",
-            description: "This badge salutes unwavering supporters during critical moments"
+            description: "for supporters during critical moments"
         },
         {
             name: "Catalyst for Change",
             image: "star.png",
-            description: "This badge highlights donors who initiate significant change"
+            description: "for donors who initiate significant change"
         }
     ];
     const [formData, setFormData] = useState({
@@ -84,18 +84,35 @@ function DonorProfile() {
             <br />
             <br />
             <div className='pageProfileDonor'>
-                <section className="badge-section">
-                    <h3>My Badges</h3>
-                    <div className="badge-container">
-                        {badges.map((badge, index) => (
-                            <Badge key={index} badge={badge} />
-                        ))}
+                <div className='rightSideProfile'>
+                    <section className="map-section">
+                        <h2>My Location</h2>
+                        <div className="map" style={{ textAlign: 'center' }}>
+                            <iframe
+                                title="google map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
+                                style={{ width: '100%', height: '300px', border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </section>
+                    <div className='badgesANDstats'>
+
+                        <section className='statistics-section'>
+                            <DonorHistory />
+                        </section>
+
+
+
                     </div>
-                </section>
+                </div>
                 <div className="profile-container">
 
                     <section className="profile-overview">
                         <Avatar size={64} icon={<UserOutlined />} className="profile-picture" />
+
                         <div className="profile-info">
                             <div className="profile-name">
                                 <h2>{formData.firstName} {formData.lastName}</h2>
@@ -103,8 +120,15 @@ function DonorProfile() {
                             <div className="profile-button">
                                 <button className={isEdit ? 'savebuttonsmall' : 'editbuttonsmall'} onClick={toggleEdit}>{buttonText}</button>
                             </div>
-                        </div>
 
+                        </div>
+                        <section className="badge-section">
+                            <div className="badge-container">
+                                {badges.map((badge, index) => (
+                                    <Badge key={index} badge={badge} />
+                                ))}
+                            </div>
+                        </section>
                     </section>
 
                     <section className={"user-details" + (isEdit ? " glowing-border" : " ")}>
@@ -242,26 +266,9 @@ function DonorProfile() {
                     </section>
 
                     <div className="split-container">
-                        <section className="map-section">
-                            <h3>My Location</h3>
-                            <div className="map" style={{ textAlign: 'center' }}>
-                                <iframe
-                                    title="google map"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
-                                    style={{ width: '100%', height: '300px', border: 0 }}
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                            </div>
-                        </section>
-
-                        <section className="statistics-section">
-
-                            <Statistics />
 
 
-                        </section>
+
                     </div>
 
 

@@ -2,8 +2,9 @@
 .profile-container {
     font-family: Arial, sans-serif;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    /* margin: 0 auto; */
+    /* padding: 20px; */
+    width: 600px;
 
 }
 
@@ -154,19 +155,33 @@ section {
 .map-section {
     flex: 1;
     min-width: 300px;
+    max-width: 500px;
+    max-height: 500px;
+    height: 500px;
+    margin-right: 5%;
+    margin-top: 5%
 }
 
 .statistics-section {
-    align-items: center;
-    justify-content: center;
-    margin-left: 25%;
-    margin-top: 10%;
-    flex: 1;
+    align-items: left;
+    justify-content: left;
+    align-self: left;
+    align-content: left;
+    /* margin-left: 25%;
+    margin-top: 10%; */
     min-width: 400px;
-    max-width: 600px;
+    max-width: 400px;
     padding: 20px;
     border-radius: 10px;
+    /* margin-right: 200px; */
 
+}
+
+.rightSideProfile {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    margin-top: 2%;
 }
 
 .glowing-border {
@@ -195,14 +210,14 @@ section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 300px;
-    max-width: 300px;
+    align-items: left;
+    width: 230px;
+    max-width: 230px;
 }
 
 .badge-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 
@@ -212,28 +227,27 @@ section {
 }
 
 .badge-image {
-    width: 150px;
-    height: 100px;
+    width: 100px;
+    height: 75px;
     cursor: pointer;
 }
 
 .badge-description {
     position: absolute;
-    top: 50%;
+    top: 180%;
     /* Position below the badge */
-    left: 180%;
 
-    transform: translateX(-50%);
+    transform: translate(-15%, -105%);
     width: 200px;
     background-color: rgba(106, 185, 211, 0.7);
     /* Light blue color with 70% opacity */
 
     color: white;
     font-weight: bold;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 4px;
     text-align: center;
-    z-index: 100;
+    z-index: 80;
     /* Ensure it's on top */
     visibility: hidden;
     opacity: 0;

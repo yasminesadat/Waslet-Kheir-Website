@@ -1,0 +1,48 @@
+.donation-history-container {
+    width: 100%;
+    height: 400px;
+    /* Adjust based on your layout */
+    overflow: hidden;
+    background-color: white;
+    color: #333;
+    /* Dark text for readability */
+    border: 1px solid #ccc;
+}
+
+.donation-entry {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    /* Light separator for each entry */
+}
+
+.org-logo {
+    width: 50px;
+    /* Logo size */
+    height: 50px;
+    margin-right: 20px;
+    /* Space between logo and text */
+    border-radius: 50%;
+    /* Circular logo */
+    object-fit: cover;
+}
+
+.donation-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-date,
+.donation-cause {
+    margin: 0;
+    color: #0056b3;
+    /* Blue color for text */
+    font-size: 14px;
+}
+
+/* Optionally, add animations or effects on hover to enhance interactivity */
+.donation-entry:hover {
+    background-color: #f0f8ff;
+    /* Light blue background on hover */
+}

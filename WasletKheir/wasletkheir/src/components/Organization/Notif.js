@@ -25,6 +25,7 @@ const Notif = ({ messages }) => {
                     markAsRead={(data) => {
                         console.log(data);
                     }}
+                    icon={'Bell.png'}
                 />
             </div>
         </div>

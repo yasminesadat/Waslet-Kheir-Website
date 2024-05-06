@@ -39,7 +39,7 @@ export default function OrgViewServ() {
             image: "https://img.freepik.com/premium-photo/teacher-checking-cute-student-homework-while-explaining-idea-class-pedagogy_31965-332468.jpg",
             avatar: "https://cdn-icons-png.flaticon.com/512/4232/4232293.png",
             title: "Mersal is Requesting a Teacher",
-            description: "We are looking for a science teacher for 3rd graders.",
+            description: "We are looking for a science teacher for 3rd graders",
             type: "teaching",
             contactInfo: [
                 { label: 'Name', value: 'Miss.Sara Hany' },
@@ -60,7 +60,7 @@ export default function OrgViewServ() {
             image: "https://img.freepik.com/free-photo/flat-lay-health-still-life-arrangement-with-copy-space_23-2148854064.jpg",
             avatar: "https://cdn-icons-png.flaticon.com/512/3774/3774299.png",
             title: "Mersal is Requesting a Doctor ",
-            description: "We are organizing a health outreach program in a village where healthcare access is limited.",
+            description: "We are organizing a health outreach program in a village.",
             type: "medical",
             contactInfo: [
                 { label: 'Name', value: 'Dr. Rania Salah' },

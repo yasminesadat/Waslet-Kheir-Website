@@ -27,7 +27,6 @@ const ServicesCard = ({ image, avatar, title, description, serviceDetails, conta
     };
 
     const handleConfirmDelete = () => {
-        // Handle the actual delete logic here
         console.log('Deleted');
         setIsFlipped(false);
     };
@@ -120,6 +119,8 @@ const ServicesCard = ({ image, avatar, title, description, serviceDetails, conta
                             width: 400,
                             maxWidth: 400,
                             backfaceVisibility: 'hidden',
+                            fontSize: '18px',
+                            color: 'black'
                         }}
                         cover={
                             <img

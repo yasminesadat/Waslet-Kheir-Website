@@ -21,12 +21,12 @@ export default function OrgNavBar2() {
                 <ul className="navbar-menu">
                     <li>
                         <Link to="/OrgMain" className="navbar-link">
-                            Home
+                            <b>     Home </b>
                         </Link>
                     </li>
                     <li className="navbar-item dropdown">
                         <Link to="/Org" className="navbar-link">
-                            Donations
+                            <b>    Donations </b>
                         </Link>
                         <ul className="dropdown-menu">
                             <li>
@@ -43,16 +43,16 @@ export default function OrgNavBar2() {
                     </li>
                     <li className="navbar-item dropdown">
                         <Link to="/Org" className="navbar-link">
-                            Services
+                            <b>  Services </b>
                         </Link>
                         <ul className="dropdown-menu">
                             <li>
                                 <Link to="/OrgReqServ" className="dropdown-link">
-                                    Request a Service                                </Link>
+                                    <b>Request a Service         </b>                        </Link>
                             </li>
                             <li>
                                 <Link to="/OrgViewServ" className="dropdown-link">
-                                    View fulfilled services
+                                    <b>   View fulfilled services  </b>
                                 </Link>
                             </li>
                         </ul>

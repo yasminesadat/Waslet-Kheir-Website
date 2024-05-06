@@ -16,6 +16,7 @@ import OrgView3 from './components/Organization/OrgView3';
 import Home from './components/Donor/Home';
 import DonorProfile from './components/Donor/DonorProfile';
 import OrgViewServ from './components/Organization/OrgViewServ';
+import DonorHistory from './components/Donor/DonorHistory';
 function App() {
   return (
     <Router>
