@@ -14,21 +14,17 @@
   color: white;
 }
 
-/* .greenButton {
-  background-color: green;
-  color: white;
-} */
 
 
 .App-link {
   color: #61dafb;
 }
 
-.navbar {
+/* .navbar {
   z-index: 100;
   top: -100px;
   transition: top 0.3s ease-in-out;
-  background-color: #4D869C;
+  background-color: #AAD7D9;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
 
@@ -115,6 +111,85 @@
 .navbar-link:hover {
   color: #fff;
   text-decoration: underline;
+} */
+.navbar {
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+  /* background-color: #61dafb; */
+  background-color: #AAD7D9;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  height: 10%;
+  width: 100%;
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* This line centers items vertically */
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    /* This line ensures the container takes up the full height of the navbar */
+  }
+
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar-item {
+    margin: 0 10px;
+  }
+
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+  .navbar-link:hover {
+    color: #4D869C;
+    text-decoration: underline;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 10px;
 }
 
 .parallax-image {
@@ -1216,6 +1291,7 @@ input[type="submit"]:hover {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  max-width: 100%
 }
 
 .card-img {
@@ -1439,17 +1515,52 @@ input[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100vw;
 }
 
-.overlay {
+.overlayMineHere {
   position: absolute;
-  top: 0;
-  left: 50%;
+  /* top: 20%;
+    left: 70%; */
+  margin-right: 30%;
+
+
   width: 100%;
   height: 100%;
   background: linear-gradient(-45deg, transparent 50%, rgba(229, 225, 218, 0.8) 50%);
 
+  z-index: 2;
+}
+
+
+.banner {
+  position: relative;
+  width: 100vw;
+  /* Matches the viewport width to prevent horizontal overflow */
+  height: 500px;
+  /* Adjust based on your needs */
+  overflow: hidden;
+  /* Prevents child elements from overflowing the container's bounds */
+  background-image: url('path_to_your_image.jpg');
+  /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+}
+
+.overlayMineHere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Matches the width of the .container */
+  height: 100%;
+  /* Matches the height of the .container */
+  background-color: rgba(102, 51, 153, 0.5);
+  /* Semi-transparent purple */
   z-index: 1;
+  /* Lower than text elements */
+  box-sizing: border-box;
+  /* Includes padding and border in the element's total dimensions */
 }
 
 .content {
@@ -1513,4 +1624,21 @@ input[type="submit"]:hover {
 .story-slide {
   width: 500px;
   /* Adjust this width to fit your design */
+}
+
+/* about box */
+.about-box {
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: #92c7cf;
+  color: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 107%;
+  /* Adjust this value based on your preference for vertical positioning */
+  right: 3%;
+  /* Distance from the right edge of the window */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }

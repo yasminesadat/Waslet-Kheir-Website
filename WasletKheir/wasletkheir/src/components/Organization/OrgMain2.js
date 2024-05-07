@@ -5,6 +5,22 @@ import CountUp from 'react-countup';
 import { MdOutlineVolunteerActivism } from "react-icons/md";
 import { FaHandsHelping } from "react-icons/fa";
 import DonationImpact from './Success';
+import Testimonials from './testimonials';
+
+function AboutBox() {
+    return (
+        <div className="about-box">
+            <h2 >About Us</h2>
+            <p style={{ fontFamily: 'poppins', color: 'black', fontSize: '20px' }}>We aim to improve lives through the generosity of our
+                donors. Every donation contributes to making the world
+                a better place. A myriad of donations can be made such as food, clothing, medicine, and many more.
+                Through these donations, many individuals and communities are able to receive the support and resources
+                they need to thrive. Our donations are classified into different categories.</p>
+        </div>
+    );
+}
+
+
 
 const OrgMain2 = () => {
     const bannerStyle = {
@@ -52,7 +68,7 @@ const OrgMain2 = () => {
         <div className='OrgMainAll'>
             <OrgNavBar2 />
             <div className="banner">
-                <div className="overlay"></div>
+                <div className="overlayMineHere"></div>
                 <div className="content">
                     <h1>Welcome to Waslet kheir</h1>
                     <p>Lend the helping hand, get involved</p>
@@ -95,7 +111,9 @@ const OrgMain2 = () => {
                 </div>
 
             </div>
+            <AboutBox />
             <DonationImpact />
+            <Testimonials />
             <Footer></Footer>
         </div>
     );

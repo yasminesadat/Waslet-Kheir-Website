@@ -31,7 +31,7 @@ const data = [
 function DonationImpact() {
     return (
         <div style={{ maxWidth: '1200px', margin: 'auto', padding: '20px' }}>
-            <h1 style={{ textAlign: 'center', fontFamily: 'Poppins' }}>The Impact of Donations</h1>
+            <h1 style={{ textAlign: 'center', fontFamily: 'Poppins', color: '#4D869C' }}>The Impact of Donations</h1>
             <p style={{ textAlign: 'center', fontFamily: 'Poppins' }}>
                 Donations have a great impact on both the orphans and the donors. It provides different kinds of help and resources to orphans and allows the donors to give back to their communities and support causes that are dear to their hearts.
             </p>

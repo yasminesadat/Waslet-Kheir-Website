@@ -60,7 +60,7 @@ export default function OrgProfile() {
     return (
         <div className='Page'>
             <OrgNavBar2 />
-
+            <br></br>
             <button className={isEdit ? 'savebutton' : 'editbutton'} onClick={toggleEdit}>
                 {isEdit && (<FaSave />)}
                 {!isEdit && (<FaEdit />)}

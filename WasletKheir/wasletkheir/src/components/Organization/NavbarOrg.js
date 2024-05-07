@@ -12,12 +12,14 @@ export default function OrgNavBar2() {
         "Your request with id #8711 for the fridge has been chosen by a donor"
     ];
     return (
+
         <nav className="navbar fixed-navbar"> {/* Added "navbar" class */}
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
-                    <img src="https://i.ibb.co/gFxywzc/logo1Yes.png" alt="Waslet Kheir" className="logo-image" />
-                    Waslet Kheir
+                    <img src="WebSiteLogo.png" alt="Waslet Kheir" className="logo-image" />
+                    <img src="website title.png" alt="Waslet Kheir" style={{ height: '40px', width: '200px' }} />
                 </Link>
+
                 <ul className="navbar-menu">
                     <li>
                         <Link to="/OrgMain" className="navbar-link">
