@@ -17,13 +17,14 @@ import Home from './components/Donor/Home';
 import DonorProfile from './components/Donor/DonorProfile';
 import OrgViewServ from './components/Organization/OrgViewServ';
 import DonorHistory from './components/Donor/DonorHistory';
+import OrgMain2 from './components/Organization/OrgMain2'
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/OrgMain" element={<OrgMainPage />} />
+        <Route path="/OrgMain" element={<OrgMain2 />} />
         <Route path="/OrgProfile" element={<OrgProfile />} />
         <Route path="/AdminLogin" element={<AdminLogin />} />
         <Route path="/Register" element={<TabsComponent />} />

@@ -1,74 +1,103 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu } from 'antd';
-import { HomeOutlined, InfoCircleOutlined, AppstoreOutlined, PictureOutlined, MailOutlined, DownOutlined, BellOutlined, UserOutlined } from '@ant-design/icons';
-import Notif from './Notif';
-const { Header, Content, Footer } = Layout;
-const { SubMenu } = Menu;
+import OrgNavBar2 from './NavbarOrg';
+import Footer from '../Footer';
+import CountUp from 'react-countup';
+import { MdOutlineVolunteerActivism } from "react-icons/md";
+import { FaHandsHelping } from "react-icons/fa";
+import DonationImpact from './Success';
 
 const OrgMain2 = () => {
+    const bannerStyle = {
+        position: 'relative',
+        color: 'white',
+        background: 'url(https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/UNHCR/Embargoed%202/03-11-2022_UNICEF_Guatemala.jpg/image1170x530cropped.jpg) no-repeat center center',
+        backgroundSize: 'cover',
+        height: '500px', // Adjust based on your needs
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        textAlign: 'center'
+    };
+
+    const overlayStyle = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        backgroundColor: 'rgba(54, 77, 121, 0.8)', // This creates the purple overlay
+        zIndex: 1
+    };
+
+    const textStyle = {
+        position: 'relative',
+        zIndex: 2,
+        fontSize: '36px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+    };
+
+    const buttonStyle = {
+        marginTop: '20px',
+        fontSize: '18px',
+        padding: '10px 30px',
+        backgroundColor: '#ffcc00', // Bright yellow button
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer'
+    };
+
     return (
-        <Layout>
-            <style>
-                {`
-                    .ant-menu-dark .ant-menu-submenu-popup {
-                        background-color: #333; /* Dark background for the submenu */
-                    }
-
-                    .ant-menu-dark .ant-menu-submenu-popup .ant-menu-item {
-                        color: #ccc; /* Lighter text for better contrast */
-                    }
-
-                    .ant-menu-dark .ant-menu-submenu-popup .ant-menu-item:hover {
-                        background-color: #555; /* Slightly lighter background on hover */
-                    }
-                `}
-            </style>
-            <Header style={{
-                display: 'flex',
-                alignItems: 'center',
-                backgroundColor: '#92C7CF',
-                padding: '0 20px',
-            }}>
-                <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-                    <img src="https://i.ibb.co/gFxywzc/logo1Yes.png" alt="Logo" style={{ width: '65px', height: '60px', marginRight: '10px' }} />
-                    <h3 style={{ color: 'white', margin: 0, whiteSpace: 'nowrap', fontSize: '20px' }}>WASLET KHEIR</h3>
+        <div className='OrgMainAll'>
+            <OrgNavBar2 />
+            <div className="banner">
+                <div className="overlay"></div>
+                <div className="content">
+                    <h1>Welcome to Waslet kheir</h1>
+                    <p>Lend the helping hand, get involved</p>
+                    <button>Discover More</button>
                 </div>
-                <Menu theme="dark" mode="horizontal" style={{ display: 'flex', justifyContent: 'flex-end', width: '100%', backgroundColor: '#92C7CF', border: 0 }}>
-                    <Menu.Item key="1" icon={<HomeOutlined />}>Home</Menu.Item>
-                    <SubMenu key="sub1" icon={<DownOutlined />} title="Donations">
-                        <Menu.Item key="2">Request a donation</Menu.Item>
-                        <Menu.Item key="3">View my donations</Menu.Item>
-                    </SubMenu>
-                    <SubMenu key="sub2" icon={<DownOutlined />} title="Services">
-                        <Menu.Item key="4">Request a service</Menu.Item>
-                        <Menu.Item key="5">View fulfilled services</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item key="6" icon={<BellOutlined />}>Notifications </Menu.Item>
-
-                    <SubMenu key="sub3" icon={<DownOutlined />} title="Profile">
-                        <Menu.Item key="7">My Profile</Menu.Item>
-                        <Menu.Item key="8">Log Out</Menu.Item>
-                    </SubMenu>
-
-                </Menu>
-            </Header>
-            <Content style={{ padding: '0 48px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>List</Breadcrumb.Item>
-                    <Breadcrumb.Item>App</Breadcrumb.Item>
-                </Breadcrumb>
-                <div style={{ background: '#fff', minHeight: 280, padding: 24, borderRadius: '8px' }}>
-                    Content
+            </div>
+            {/* <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; text-align: center;">
+                <div style="margin-bottom: 20px;">
+                    <FaHandsHelping alt="Funds Raised" style="width: 50px; height: auto;" />
+                    <CountUp style="font-size: 48px; color: #000; margin: 10px 0;" end={34567} duration={500} />
+                    <p style="font-size: 20px; color: #666;">raised by 6,388 people in 7 days</p>
                 </div>
-            </Content>
-            <Footer style={{
+                <div>
+                    <MdOutlineVolunteerActivism
+                        style="width: 50px; height: auto;" />
+                    <CountUp style="font-size: 48px; color: #000; margin: 10px 0;" end={34567} duration={500} />
+                    <p style="font-size: 20px; color: #666;">volunteers are available to help you</p>
+                </div>
+              
+            </div> */}
+
+
+            <div style={{
+                fontFamily: 'Arial, sans-serif',
+                maxWidth: '300px',
+                margin: '20px auto',
                 textAlign: 'center',
-                backgroundColor: '#92C7CF',
+                marginRight: '65%',
+
             }}>
-                Ant Design ©{new Date().getFullYear()} Created by Ant UED
-            </Footer>
-        </Layout>
+                <div style={{ marginBottom: '20px' }}>
+                    <FaHandsHelping size="50" />
+                    <h2><CountUp end={8600} duration={500} style={{ fontSize: '50px', color: '#000', margin: '10px 0' }} /></h2>
+                    <p style={{ fontSize: '26px', color: '#666' }}>donors are ready to lend you a hand</p>
+                </div>
+                <div>
+                    <MdOutlineVolunteerActivism size="50" />
+                    <h2><CountUp end={1500} duration={500} style={{ fontSize: '50px', color: '#000', margin: '10px 0' }} /></h2>
+                    <p style={{ fontSize: '26px', color: '#666' }}>volunteers are available to help you</p>
+                </div>
+
+            </div>
+            <DonationImpact />
+            <Footer></Footer>
+        </div>
     );
 };
 
