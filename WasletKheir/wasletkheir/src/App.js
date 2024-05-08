@@ -25,7 +25,17 @@ import OrgDel1 from './components/Organization/OrgDel1';
 import OrgDel2 from './components/Organization/OrgDel2';
 import OrgDel3 from './components/Organization/OrgDel3';
 import OrgDel4 from './components/Organization/OrgDel4';
-
+import AdminLogin from './components/Admin/Login';
+import AdminPage from './components/Admin/Dashboard';
+import ViewSubmission from './components/Admin/ViewSubmission';
+import AdminOrgRequests from './components/Admin/OrgRequests';
+import AdminDeletedOrgRequest from './components/Admin/DeletedOrgRequest';
+import AdminVolRequests from './components/Admin/VolunteerRequests';
+import AdminDeletedVolRequests from './components/Admin/DeletedVolRequest';
+import AdminOrgAccounts from './components/Admin/OrgAccounts';
+import AdminVolAccounts from './components/Admin/VolunteerAccounts';
+import AdminDonorAccounts from './components/Admin/DonorAccounts';
+import AdminChangePassword from './components/Admin/ChangePassword';
 
 function App() {
   return (
@@ -55,6 +65,20 @@ function App() {
         <Route path="/OrgDel2" element={<OrgDel2 />} />
         <Route path="/OrgDel3" element={<OrgDel3 />} />
         <Route path="/OrgDel4" element={<OrgDel4 />} />
+        {/* admin routes */}
+
+        <Route path="/AdminLogin" element={<AdminLogin />} />
+        <Route path="/Admin/ViewSubmission" element={<ViewSubmission />} />
+        <Route path="/Admin" element={<AdminPage />} />
+        <Route path="/Admin/OrgRequests" element={<AdminOrgRequests />} />
+        <Route path="/Admin/DeletedOrgRequest" element={<AdminDeletedOrgRequest />} />
+        <Route path="/Admin/VolunteerRequests" element={<AdminVolRequests />} />
+        <Route path='/Admin/DeletedVolRequest' element={<AdminDeletedVolRequests />} />
+        <Route path="/Admin/OrgAccounts" element={<AdminOrgAccounts />} />
+        <Route path="/Admin/VolunteerAccounts" element={<AdminVolAccounts />} />
+        <Route path="/Admin/DonorAccounts" element={<AdminDonorAccounts />} />
+        <Route path="/Admin/ChangePassword" element={<AdminChangePassword />} />
+
 
 
 
