@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import ServicesCard from './ServicesCard';
 import OrgNavBar2 from './NavbarOrg';
+import './Org.css';
 
 
 export default function OrgViewServ() {

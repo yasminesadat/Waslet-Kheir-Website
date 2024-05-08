@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { Route, Routes, useNavigate, Link } from "react-router-dom";
-
+import './App.css'
 
 export default function WelcomePage() {
     const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ export default function WelcomePage() {
         if (email === 'Donor@gmail.com' && password === '1234') {
             navigate("/Home");
         } else if (email === 'Org@gmail.com' && password === '1234') {
-            navigate("/OrgMain");
+            navigate("/OrgMain2");
         } else {
             alert('Invalid username or password');
         }
@@ -32,13 +32,18 @@ export default function WelcomePage() {
                 <div className="input-group">
                     <input required type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" autoComplete="off" />
                     <label className="user-label">Password</label>
+
                 </div>
+                <div>
+                    <input type="checkbox" id="rememberMe" name="rememberMe" /> &nbsp;
+                    <label htmlFor="rememberMe">Remember me </label>
+                </div>
+                <br></br>
                 <button type="submit">Login</button>
             </form>
             <div className="remember-and-forgot">
                 <div className="forgot-password">
-                    <input type="checkbox" id="rememberMe" name="rememberMe" />
-                    <label htmlFor="rememberMe">Remember me </label>
+
                     <a href="#">Forgot password?</a>
 
                 </div>

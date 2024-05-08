@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
     EditOutlined,
     DeleteOutlined,
@@ -9,6 +10,7 @@ import {
     CloseOutlined
 } from '@ant-design/icons';
 import { Avatar, Card, Button, Space, Typography } from 'antd';
+import './Org.css';
 
 const { Meta } = Card;
 const { Text } = Typography;

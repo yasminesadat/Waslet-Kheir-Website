@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Notif from './Notif';
 import '../App.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faUser, faUsers, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 export default function OrgNavBar2() {
     const messages = [
         "Your request with request id #2333 for jackets has been chosen by a donor",
@@ -12,28 +13,27 @@ export default function OrgNavBar2() {
         "Your request with id #8711 for the fridge has been chosen by a donor"
     ];
     return (
-
-        <nav className="navbar fixed-navbar"> {/* Added "navbar" class */}
+        <nav className="navbar fixed-navbar">
             <div className="navbar-container">
-                <Link to="/" className="navbar-logo">
-                    <img src="WebSiteLogo.png" alt="Waslet Kheir" className="logo-image" />
-                    <img src="website title.png" alt="Waslet Kheir" style={{ height: '40px', width: '200px' }} />
+                <Link to="/Admin" className="navbar-logo">
+                    <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
+                    Waslet Kheir
                 </Link>
-
                 <ul className="navbar-menu">
-                    <li>
-                        <Link to="/OrgMain" className="navbar-link">
-                            <b>     Home </b>
+                    <li className="navbar-item">
+                        <Link to="/OrgMain2" className="navbar-link">
+                            <FontAwesomeIcon icon={faHome} color="white" className='home-icon' />
+                            <span>Home</span>
                         </Link>
                     </li>
                     <li className="navbar-item dropdown">
-                        <Link to="/Org" className="navbar-link">
-                            <b>    Donations </b>
-                        </Link>
+                        <div className="navbar-link">
+                            <FontAwesomeIcon icon={faHandHoldingHeart} color="white" className='home-icon' /> Donations
+                        </div>
                         <ul className="dropdown-menu">
                             <li>
                                 <Link to="/OrgReqDon" className="dropdown-link">
-                                    Request a donation
+                                    Request a Donation
                                 </Link>
                             </li>
                             <li>
@@ -44,45 +44,62 @@ export default function OrgNavBar2() {
                         </ul>
                     </li>
                     <li className="navbar-item dropdown">
-                        <Link to="/Org" className="navbar-link">
-                            <b>  Services </b>
-                        </Link>
+                        <div className="navbar-link">
+                            <FontAwesomeIcon icon={faUsers} color="white" className='home-icon' />
+                            Services
+                        </div>
                         <ul className="dropdown-menu">
                             <li>
                                 <Link to="/OrgReqServ" className="dropdown-link">
-                                    <b>Request a Service         </b>                        </Link>
+                                    Request a Service
+                                </Link>
                             </li>
                             <li>
                                 <Link to="/OrgViewServ" className="dropdown-link">
-                                    <b>   View fulfilled services  </b>
+                                    View my services request status
                                 </Link>
                             </li>
+
+
                         </ul>
                     </li>
-                    <li className="navbar-item">
-                        {/* <Link to="/Org" className="navbar-link"> */}
-                        <Notif messages={messages} />
-                        {/* </Link> */}
+                    <li>
+                        <div style={{ marginTop: '-3px' }}>
+                            <Notif messages={messages} />
+                        </div>
                     </li>
+
                     <li className="navbar-item dropdown">
-                        <Link to="/Org" className="navbar-link">
-                            <img src='charitylogo.png' className='profileicon' />
-                        </Link>
+                        <div className="navbar-link">
+                            <FontAwesomeIcon icon={faUser} color="white" className='home-icon' />
+                            Profile
+                        </div>
                         <ul className="dropdown-menu">
                             <li>
                                 <Link to="/OrgProfile" className="dropdown-link">
-                                    View my profile
-                                </Link>
+                                    View profile                                </Link>
                             </li>
                             <li>
                                 <Link to="/" className="dropdown-link">
                                     Log out
                                 </Link>
                             </li>
+
                         </ul>
                     </li>
+
                 </ul>
             </div>
         </nav>
+
     );
 }
+
+
+
+
+
+
+
+
+

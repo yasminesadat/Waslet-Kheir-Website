@@ -1,4 +1,5 @@
 import React from 'react';
+import './Org.css';
 
 const data = [
     {

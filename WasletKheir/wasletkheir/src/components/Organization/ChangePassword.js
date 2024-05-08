@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import CloseButton from './CloseButton';
-import '../App.css';
+import './Org.css';
 
 export default function ChangePassword() {
     const [oldPassword, setOldPassword] = useState('');

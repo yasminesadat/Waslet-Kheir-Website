@@ -6,6 +6,8 @@ import { MdOutlineVolunteerActivism } from "react-icons/md";
 import { FaHandsHelping } from "react-icons/fa";
 import DonationImpact from './Success';
 import Testimonials from './testimonials';
+import './Org.css';
+
 
 function AboutBox() {
     return (

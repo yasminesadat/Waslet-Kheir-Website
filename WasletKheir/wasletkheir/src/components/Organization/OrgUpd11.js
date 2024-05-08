@@ -4,14 +4,15 @@ import OrgDonCard from './OrgDonCard';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
 
-export default function OrgViewDon() {
+
+export default function OrgUpd11() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const handleSelectChange = (event) => {
         setSelectedOption(event.target.value);
     };
 
     const donations = [
-        { image: 'https://i.ibb.co/DQVh3ZS/Winter-Colour-14-512.webp', title: 'Jackets', description: 'We would appreciate receiving winter jackets for our students to wear.', progress: 15 },
+        { image: 'https://i.ibb.co/DQVh3ZS/Winter-Colour-14-512.webp', title: 'Winter Jackets For School', description: 'We would appreciate receiving winter jackets for our students to wear.', progress: 15 },
         { image: 'https://i.ibb.co/0fZyMX1/toys2.png', title: 'Plushies', description: 'We would like to have plushies for our younger students.', progress: 25 },
         { image: 'https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg', title: 'Notebooks', description: 'We are in need of notebooks for our students.', progress: 50 },
     ];

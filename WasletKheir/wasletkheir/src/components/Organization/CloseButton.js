@@ -1,4 +1,6 @@
 import React from 'react'
+import './Org.css';
+
 import { IoMdClose } from 'react-icons/io';
 
 const CloseButton = () => {

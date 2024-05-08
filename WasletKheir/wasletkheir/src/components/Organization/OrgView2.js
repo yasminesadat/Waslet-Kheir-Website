@@ -1,6 +1,7 @@
 import React from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
+import './Org.css';
 
 export default function OrgView2() {
 

@@ -6,6 +6,7 @@ import ChangePassword from './ChangePassword';
 import { FaEdit, FaSave, FaRegEye } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
 import { Button, Popover } from 'antd';
+import './Org.css';
 
 export default function OrgProfile() {
     const [isEdit, setIsEdit] = useState(false);

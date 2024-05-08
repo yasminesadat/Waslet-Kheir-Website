@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import OrgNavBar2 from './NavbarOrg';
+import './Org.css';
 
 export default function OrgReqServ() {
     const [selectedOption, setSelectedOption] = useState('teacher');
