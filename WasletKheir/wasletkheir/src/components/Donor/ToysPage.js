@@ -7,6 +7,7 @@ import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Select } from 'antd';
 import FilterAll from './FilterAll';
 import { Link } from 'react-router-dom';
+import './donor.css'
 
 const toysData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.Toys)
 const ageOptions = toysData.map((card) => { return { "value": card.age, "label": card.age } })
@@ -112,17 +113,17 @@ export default function FoodPage() {
           }}
         >
           <Breadcrumb.Item>Home</Breadcrumb.Item>
-          
+
           <Breadcrumb.Item>
-            <Link to = "/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}  
-                       All Products  </Link></Breadcrumb.Item>
+            <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
+              All Products  </Link></Breadcrumb.Item>
           <Breadcrumb.Item>Toys</Breadcrumb.Item>
         </Breadcrumb>
-        </div>
+      </div>
       <div className='main-content'>
         <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
-          <p style={{marginLeft:'8%'}}>Filter by</p>
-          <Divider className="divider-filter" orientation="center" orientationMargin="0" style={{margin:'6%'}}/>
+          <p style={{ marginLeft: '8%' }}>Filter by</p>
+          <Divider className="divider-filter" orientation="center" orientationMargin="0" style={{ margin: '6%' }} />
           <Select
             mode="multiple"
             placeholder="Age"
@@ -154,8 +155,8 @@ export default function FoodPage() {
             style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%' }}
           />
         </div>
-          <RequestGrid  filteredData={filteredData}/>
-        </div>
+        <RequestGrid filteredData={filteredData} />
       </div>
+    </div>
   );
 }

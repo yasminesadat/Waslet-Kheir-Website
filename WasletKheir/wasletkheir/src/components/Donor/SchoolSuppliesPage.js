@@ -5,6 +5,7 @@ import { Breadcrumb, Divider, Checkbox } from 'antd'; // Import Checkbox from An
 import { DonationCategories, SchoolTypes } from '../helpers/types';
 import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Link } from 'react-router-dom';
+import './donor.css'
 
 const schoolSuppliesData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.SchoolSupplies);
 
@@ -17,18 +18,18 @@ export default function FoodPage() {
 
     useEffect(() => {
         let data = changeDataBasedOnSearch(schoolSuppliesData, value);
-        if (booksFilter && stationaryFilter) { 
-          // If both checkboxes are checked, show all data
-          data = schoolSuppliesData;
-      } else {
-          // If only one checkbox is checked, filter based on that checkbox
-          if (booksFilter) {
-              data = data.filter((element) => element.type === SchoolTypes.SchoolBooks);
-          }
-          if (stationaryFilter) {
-              data = data.filter((element) => element.type === SchoolTypes.SchoolStationary);
-          }
-      
+        if (booksFilter && stationaryFilter) {
+            // If both checkboxes are checked, show all data
+            data = schoolSuppliesData;
+        } else {
+            // If only one checkbox is checked, filter based on that checkbox
+            if (booksFilter) {
+                data = data.filter((element) => element.type === SchoolTypes.SchoolBooks);
+            }
+            if (stationaryFilter) {
+                data = data.filter((element) => element.type === SchoolTypes.SchoolStationary);
+            }
+
         }
         setFilteredData(data);
     }, [booksFilter, value, stationaryFilter]);
@@ -99,21 +100,21 @@ export default function FoodPage() {
                 <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
                     <p style={{ marginLeft: '8%' }}>Filter by</p>
                     <Divider className="divider-filter" orientation="center" orientationMargin="0" style={{ margin: '6%' }} />
-                        <div className='filter-school' style={{marginLeft:'5%'}}>
-                            <Checkbox onChange={(e) => handleBooksFilter(e.target.checked)}>
-                                {/* Call handleBooksFilter to toggle books filter */}
-                                Books
-                            </Checkbox>
-                            <br />
-                            <Checkbox onChange={(e) => handleStationaryFilter(e.target.checked)}>
-                                {/* Call handleSuppliesFilter to toggle supplies filter */}
-                                Stationary
-                            </Checkbox>
-                            <br />
-                          </div>
-                          </div>
+                    <div className='filter-school' style={{ marginLeft: '5%' }}>
+                        <Checkbox onChange={(e) => handleBooksFilter(e.target.checked)}>
+                            {/* Call handleBooksFilter to toggle books filter */}
+                            Books
+                        </Checkbox>
+                        <br />
+                        <Checkbox onChange={(e) => handleStationaryFilter(e.target.checked)}>
+                            {/* Call handleSuppliesFilter to toggle supplies filter */}
+                            Stationary
+                        </Checkbox>
+                        <br />
+                    </div>
+                </div>
 
-                    <RequestGrid filteredData={filteredData} />
+                <RequestGrid filteredData={filteredData} />
             </div>
         </div>
     );

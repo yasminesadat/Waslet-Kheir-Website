@@ -19,12 +19,13 @@ const BloodCard = ({ title, text, progress }) => {
         <p className="card-descriptionMariam">{text}</p>
         <br></br>
         <div className="button-container">
-          <div className={`status ${statusClass}`}>Status: {status}</div>
+
           <button className="donate-button">Donate</button>
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button>
         </div>
         <div className="progress-container">
           <progress className={`progress-bar ${progressBarClass}`} value={progress} max="100"></progress>
+          <div className={`status ${statusClass}`}>Status: {status}</div>
           <h3>{progress}% Donated </h3>
         </div>
       </div>

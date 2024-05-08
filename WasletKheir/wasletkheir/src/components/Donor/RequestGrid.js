@@ -7,13 +7,14 @@ import ToysCard from './ToysCard';
 import MedicalSuppliesCard from './MedicalSuppliesCard';
 import SchoolSuppliesCard from './SchoolSuppliesCard';
 import BloodCard from './BloodCard';
+import './donor.css'
 
 const selectCorrespondingCard = (data) => {
-    const { title, text,type,age,gender,season,material,quantity, progress, category } = data;
+    const { title, text, type, age, gender, season, material, quantity, progress, category } = data;
 
     switch (category) {
         case DonationCategories.Clothes:
-            return <ClothesCard title={title} text={text} type={type}  age={age}  gender={gender}  season={season}  material={material}  quantity={quantity} progress={progress} />;
+            return <ClothesCard title={title} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
         case DonationCategories.Toys:
             return <ToysCard title={title} text={text} progress={progress} />;
         case DonationCategories.MedicalSupplies:

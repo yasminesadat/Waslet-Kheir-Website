@@ -7,6 +7,7 @@ import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Select } from 'antd';
 import FilterAll from './FilterAll';
 import { Link } from 'react-router-dom';
+import './donor.css'
 
 const foodData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.Food)
 
@@ -70,17 +71,17 @@ export default function FoodPage() {
           }}
         >
           <Breadcrumb.Item>Home</Breadcrumb.Item>
-          
+
           <Breadcrumb.Item>
-            <Link to = "/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}  
-                       All Products  </Link></Breadcrumb.Item>
+            <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
+              All Products  </Link></Breadcrumb.Item>
           <Breadcrumb.Item>Food</Breadcrumb.Item>
         </Breadcrumb>
       </div>
       <div className='main-content'>
-          <FilterAll />
-          <RequestGrid  filteredData={filteredData}/>
-        </div>
+        <FilterAll />
+        <RequestGrid filteredData={filteredData} />
       </div>
+    </div>
   );
 }

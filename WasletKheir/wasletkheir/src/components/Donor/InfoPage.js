@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './donor.css'
 
 export class InfoPage extends Component {
   render() {

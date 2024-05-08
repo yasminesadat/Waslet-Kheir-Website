@@ -8,20 +8,21 @@ import { IoSchoolOutline } from "react-icons/io5";
 import { MdOutlineToys } from "react-icons/md";
 import { LuShirt } from "react-icons/lu";
 import { IoListOutline } from "react-icons/io5";
+import './donor.css'
 
 const { Sider } = Layout;
 
 function FilterAll() {
   const items = [
     {
-        type: 'divider-top',
-      },
+      type: 'divider-top',
+    },
     {
       key: 'sub1',
       label: 'All Products',
-      icon: <IoListOutline size={17}/>
+      icon: <IoListOutline size={17} />
       ,
-      
+
     },
     {
       type: 'divider',
@@ -29,7 +30,7 @@ function FilterAll() {
     {
       key: 'sub2',
       label: 'Clothes',
-      icon: <LuShirt size={17}/>
+      icon: <LuShirt size={17} />
       ,
       link: '/ClothesPage',
     },
@@ -39,7 +40,7 @@ function FilterAll() {
     {
       key: 'sub3',
       label: 'Blood Donations',
-      icon: <MdOutlineBloodtype size={20}/>      ,
+      icon: <MdOutlineBloodtype size={20} />,
       link: '/BloodDonationsPage',
     },
     {
@@ -48,7 +49,7 @@ function FilterAll() {
     {
       key: 'sub4',
       label: 'Food',
-      icon: <MdOutlineFoodBank size={21}/>      ,
+      icon: <MdOutlineFoodBank size={21} />,
       link: '/FoodPage',
     },
     {
@@ -57,7 +58,7 @@ function FilterAll() {
     {
       key: 'sub5',
       label: 'Medical Supplies',
-      icon: <AiOutlineMedicineBox size={20}/>      ,
+      icon: <AiOutlineMedicineBox size={20} />,
       link: '/MedicalSuppliesPage',
     },
     {
@@ -66,7 +67,7 @@ function FilterAll() {
     {
       key: 'sub6',
       label: 'School Supplies',
-      icon: <IoSchoolOutline size={20}/>      ,
+      icon: <IoSchoolOutline size={20} />,
       link: '/SchoolSuppliesPage',
     },
     {
@@ -75,7 +76,7 @@ function FilterAll() {
     {
       key: 'sub7',
       label: 'Toys',
-      icon: <MdOutlineToys size={20}/>      ,
+      icon: <MdOutlineToys size={20} />,
       link: '/ToysPage',
     },
   ];
@@ -87,9 +88,9 @@ function FilterAll() {
           {items.map(item => {
             if (item.type === 'divider') {
               return <Divider key={item.key} className="custom-divider" />;
-            } 
-            else if(item.type === 'divider-top'){
-               return <Divider key={item.key} className="custom-divider-top" />;
+            }
+            else if (item.type === 'divider-top') {
+              return <Divider key={item.key} className="custom-divider-top" />;
             }
             else {
               return (
@@ -101,7 +102,7 @@ function FilterAll() {
           })}
         </Menu>
       </Sider>
-    </div>
+    </div >
   );
 }
 
