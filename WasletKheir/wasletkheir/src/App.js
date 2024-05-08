@@ -36,6 +36,14 @@ import AdminOrgAccounts from './components/Admin/OrgAccounts';
 import AdminVolAccounts from './components/Admin/VolunteerAccounts';
 import AdminDonorAccounts from './components/Admin/DonorAccounts';
 import AdminChangePassword from './components/Admin/ChangePassword';
+import BloodDonationsPage from './components/Donor/BloodDonationsPage';
+import DonorDonatePage from './components/Donor/DonorDonatePage';
+import ClothesPage from './components/Donor/ClothesPage';
+import FoodPage from './components/Donor/FoodPage';
+import ToysPage from './components/Donor/ToysPage';
+import SchoolSuppliesPage from './components/Donor/SchoolSuppliesPage';
+import MedicalSuppliesPage from './components/Donor/MedicalSuppliesPage';
+import InfoPage from './components/Donor/InfoPage';
 
 function App() {
   return (
@@ -45,6 +53,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/OrgMain2" element={<OrgMain2 />} />
         <Route path="/OrgProfile" element={<OrgProfile />} />
+        {/* organization routes */}
 
         <Route path="/RegisterD" element={<RegisterD />} />
         <Route path="/RegisterO" element={<Form />} />
@@ -78,8 +87,19 @@ function App() {
         <Route path="/Admin/VolunteerAccounts" element={<AdminVolAccounts />} />
         <Route path="/Admin/DonorAccounts" element={<AdminDonorAccounts />} />
         <Route path="/Admin/ChangePassword" element={<AdminChangePassword />} />
+        {/* donor routes  */}
 
-
+        <Route path="/DonorProfile" element={<DonorProfile />} />
+        <Route path="/" element={<DonorDonatePage />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/BloodDonationsPage" element={<BloodDonationsPage />} />
+        <Route path="/DonorDonatePage" element={<DonorDonatePage />} />
+        <Route path="/ClothesPage" element={<ClothesPage />} />
+        <Route path="/FoodPage" element={<FoodPage />} />
+        <Route path="/ToysPage" element={<ToysPage />} />
+        <Route path="/MedicalSuppliesPage" element={<MedicalSuppliesPage />} />
+        <Route path="/SchoolSuppliesPage" element={<SchoolSuppliesPage />} />
+        <Route path="/InfoPage" element={<InfoPage />} />
 
 
 

@@ -1,0 +1,815 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar {
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+  /* background-color: #61dafb; */
+  background-color: #AAD7D9;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  height: 10%;
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* This line centers items vertically */
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    /* This line ensures the container takes up the full height of the navbar */
+  }
+
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar-item {
+    margin: 0 10px;
+  }
+
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+  .navbar-link:hover {
+    color: #4D869C;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.home-icon {
+  padding-right: 0.4em;
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover .home-icon {
+  color: #4D869C;
+}
+
+.home-text {
+  transition: color 0.3s;
+}
+
+/* .navbar {
+  z-index: 100;
+  top: -100px;
+  transition: top 0.3s ease-in-out;
+  background-color: #AAD7D9;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  .navbar {
+    background-color: #92C7CF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+
+
+
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar-item {
+    margin: 0 10px;
+  }
+
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+
+  .navbar-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.navbar-link:hover {
+  color: #fff;
+  text-decoration: underline;
+} */
+
+.parallax-image {
+  background-image: url('https://i.ibb.co/sP9Srt7/happypoorchildren.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.centered-text {
+  text-align: center;
+  color: #fff;
+}
+
+.centered-text h1 {
+  font-size: 3em;
+}
+
+.centered-text h2 {
+  font-size: 2em;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fading-text {
+  animation: fadeIn 1s ease-in 1s forwards;
+}
+
+.spaces {
+  height: 200px;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+.navbar-hidden {
+  top: -100px;
+}
+
+.our-goal-section {
+  text-align: center;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+}
+
+
+.cardMariam {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  position: relative;
+  text-align: center;
+}
+
+.cardMariam:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+/* .card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+} */
+
+.card-contentMariam {
+  padding: 15px;
+
+}
+
+/* .card-title .card .ant-card-meta-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #007bff !important;
+
+} */
+
+
+
+/* .cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: red;
+} */
+
+.gray-background {
+  background-color: #f9f9f9;
+}
+
+.header {
+  position: relative;
+  display: inline-block;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #61dafb;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.header:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* 
+.card-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-button {
+  background-color: #61dafb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #4ec5f7;
+} */
+
+/* .card-link {
+  color: #4ec5f7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: darkblue;
+} */
+
+.footer {
+  background-color: #61dafb;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-section {
+  margin: 20px;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*new*/
+.loginPage {
+  background-color: #61dafb;
+  background-size: 100%;
+  height: 100vh;
+  /* Ensure the container covers the entire viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* search bar */
+/* CSS for the search bar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-inner {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 600px;
+  /* Limit the width of the search bar */
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  /* Border color */
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+
+/* sub menu category */
+/* Style for the dropdown menu */
+
+.category ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.category li {
+  position: relative;
+  right: 400px;
+}
+
+.category a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  right: -400px;
+
+}
+
+.category .submenu {
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  width: 200px;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+
+}
+
+.category li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.category .submenu li {
+  display: block;
+  right: 0px;
+
+}
+
+.category .submenu li a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+
+}
+
+.category .submenu li:hover a {
+  color: #007bff;
+  /* Change color on hover */
+}
+
+/*icons*
+/* Optional: Center the icon horizontally */
+
+
+/* Optional: Center the icon vertically */
+/* .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+} */
+
+.icon-container {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: #007bff;
+}
+
+
+/* Card grid */
+.card-grid {
+  align-items: center;
+  margin-left: 5%;
+}
+
+/*Donor NavBar */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 8px 0;
+  border-radius: 4px;
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333333;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* extras in donor page */
+.divider-main {
+  margin-top: 7%;
+}
+
+.divider-filter {
+  margin-top: 0%;
+}
+
+.breadcrumb-main {
+  margin-left: 3%;
+  white-space: nowrap;
+}
+
+.main-content {
+  display: flex;
+}
+
+.filter-section {
+  width: 60%;
+}
+
+.filter-link {
+  color: #000000;
+  text-decoration: none;
+
+}
+
+.filter-link:hover {
+  text-decoration: underline;
+  background-color: #4ec4f78c;
+}
+
+.filter-item {
+  margin-bottom: 4%;
+  align-items: left;
+  margin-left: 0%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-details-button-donor {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 0%;
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+}
+
+/* Remove the margin-left and margin-right properties */
+
+.view-details-button-donor {
+  align-self: flex-start;
+  /* Adjust alignment */
+}
+
+.status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.edit-button,
+.view-details-button-donor {
+  background-color: #FFD700;
+  color: white;
+}
+
+.view-details-button-donor:hover {
+  background-color: #ccac00;
+
+}
+
+/* .delete-button {
+  background-color: #ff6b6b;
+  color: white;
+} */
+
+/* .edit-button:hover {
+  background-color: #ccac00;
+} */
+
+.donate-button:hover {
+  background-color: #0062cc;
+}
+
+/* .delete-button:hover {
+  background-color: #cc4c4c;
+} */
+
+.status-ongoing {
+  color: #007bff;
+}
+
+.status-fulfilled {
+
+  color: green;
+}
+
+.progress-container {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  border: none;
+  border-radius: 20px;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: #007bff;
+  border-radius: 20px;
+}
+
+.progress-bar::-moz-progress-bar {
+  background-color: #007bff;
+}
+
+.progress-bar::-ms-fill {
+  background-color: #007bff;
+}
+
+.progress-bar::-moz-progress-bar {
+  background-color: #007bff;
+}
+
+.progress-bar.progress-bar-green::-webkit-progress-value,
+.progress-bar.progress-bar-green::-moz-progress-bar,
+.progress-bar.progress-bar-green::-ms-fill {
+  background-color: #00cc00;
+}
+
+.progress-container h3 {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.card-imgMariam {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color:  rgb(88, 210, 241);  */
+  background-color: rgba(88, 210, 241, 0.9);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.overlay-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-description {
+  margin-top: 10%;
+  color: #000000;
+  text-align: justify;
+}
+
+.card-descriptionMariam {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+
+.search-donor {
+  margin-left: 66%;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+}
+
+
+.custom-divider {
+  margin: 1% 0 !important;
+  /* Adjust margin as needed */
+}
+
+.custom-divider-top {
+  margin: 1% 0 !important;
+  /* Adjust margin as needed */
+  margin-top: -8px;
+  /* Adjust the value as needed */
+
+}
+
+.filter-icon {
+  font-size: 80px;
+  /* Adjust the size as needed */
+}
