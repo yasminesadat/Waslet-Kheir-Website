@@ -45,7 +45,7 @@ export default function DonorDonatePage() {
 
   return (
     <div>
-      <DonorNavbar className={navbarClass} value={value} onChange={onChange} />
+      <DonorNavbar />
 
       <div className='divider-main'>
         <Divider orientation="center" orientationMargin="0">

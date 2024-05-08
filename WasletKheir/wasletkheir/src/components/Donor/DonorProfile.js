@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './UserProfile.css';
-import OrgNavBar2 from '../Organization/NavbarOrg';
 import { UserOutlined } from '@ant-design/icons';
 import { Avatar } from 'antd';
 import { FaPhone, FaLock, FaUser, FaHospitalUser, FaEdit, FaSave, FaRegEye } from "react-icons/fa";
@@ -11,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { FaUserDoctor, FaLocationDot } from "react-icons/fa6";
 import Footer from '../Footer';
 import DonorHistory from './DonorHistory';
-
+import DonorNavbar from './DonorNavbar';
 function DonorProfile() {
     const [isEdit, setIsEdit] = useState(false);
     const badges = [
@@ -68,11 +67,14 @@ function DonorProfile() {
         const [showDescription, setShowDescription] = useState(false);
 
         return (
+
+
             <div
                 className="badge"
                 onMouseEnter={() => setShowDescription(true)}
                 onMouseLeave={() => setShowDescription(false)}
             >
+
                 <img src={badge.image} alt={badge.name} className="badge-image" />
                 {showDescription && (
                     <div className="badge-description">
@@ -85,7 +87,7 @@ function DonorProfile() {
 
     return (
         <div>
-            <OrgNavBar2 />
+            <DonorNavbar />
 
             <br />
             <br />

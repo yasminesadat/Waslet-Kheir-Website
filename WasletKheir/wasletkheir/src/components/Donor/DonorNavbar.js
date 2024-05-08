@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Input } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faFileInvoice, faUsers } from '@fortawesome/free-solid-svg-icons';
-
+import Notif from '../Organization/Notif';
 const { Search } = Input;
 const messages = [
 
@@ -58,9 +58,9 @@ export default function DonorNavbar() {
                     </li>
                     <div className='notification' style={{ marginTop: '9px' }}>
 
-                        <li className="navbar-item" >
-                            {/* <Notif messages={messages} /> */}
-                        </li>
+                        <div style={{ marginTop: '-8.5px' }}>
+                            <Notif messages={messages} />
+                        </div>
                     </div>
                     <li className="navbar-item">
                         <Link to="/DonorProfile" className="navbar-link">
