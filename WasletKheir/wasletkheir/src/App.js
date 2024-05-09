@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Form from "./components/RegFormOrg";
 import WelcomePage from "./components/WelcomePage";
 import RegisterD from "./components/RegisterD";
-import OrgMainPage from "./components/Organization/OrgMainPage";
 import OrgProfile from './components/Organization/OrgProfile';
 import OrgViewDon from './components/Organization/OrgViewDon';
 import OrgReqDon from './components/Organization/OrgReqDon';
@@ -15,7 +14,6 @@ import OrgView4 from './components/Organization/OrgView4';
 import Home from './components/Donor/Home';
 import DonorProfile from './components/Donor/DonorProfile';
 import OrgViewServ from './components/Organization/OrgViewServ';
-import DonorHistory from './components/Donor/DonorHistory';
 import OrgMain2 from './components/Organization/OrgMain2'
 import OrgUpd1 from './components/Organization/OrgUpd1';
 import OrgUpd11 from './components/Organization/OrgUpd11';

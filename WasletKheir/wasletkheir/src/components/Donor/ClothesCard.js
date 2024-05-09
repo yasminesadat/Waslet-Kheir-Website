@@ -1,11 +1,9 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import { FaUtensils } from 'react-icons/fa';
 import './donor.css'
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
 const ClothesCard = ({ title, text, progress }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
