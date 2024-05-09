@@ -4,22 +4,29 @@ import { Input } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faFileInvoice, faUsers } from '@fortawesome/free-solid-svg-icons';
 import Notif from '../Organization/Notif';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Icon from '../Admin/Icon';
 const { Search } = Input;
 const messages = [
 
     "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
     "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
+    "A courier is coming to pick up your donation to 57357 Hospital for medical supplies,Click to know more ",
+    "Your request to volunteer as a doctor has been accepted "
 
 ];
 
 
 
 export default function DonorNavbar() {
-
+    const navigate = useNavigate();
+    const location = useLocation();
     return (
         <nav className="navbar fixed-navbar">
             <div className="navbar-container">
-
+                <div style={{ position: 'absolute', top: '20%', left: '1%' }} onClick={() => navigate(-1)}>
+                    <Icon iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back" />
+                </div>
                 <Link to="/Admin" className="navbar-logo">
                     <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
                     Waslet Kheir
@@ -50,7 +57,7 @@ export default function DonorNavbar() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/DonorDonatePage" className="dropdown-link">
+                                <Link to="/ViewServicesDonor" className="dropdown-link">
                                     Services Requests
                                 </Link>
                             </li>
@@ -59,7 +66,7 @@ export default function DonorNavbar() {
                     <div className='notification' style={{ marginTop: '9px' }}>
 
                         <div style={{ marginTop: '-8.5px' }}>
-                            <Notif messages={messages} />
+                          {/*  <Notif messages={messages} />*/}
                         </div>
                     </div>
                     <li className="navbar-item">

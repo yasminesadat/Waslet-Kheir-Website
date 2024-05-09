@@ -648,3 +648,21 @@
   font-size: 80px;
   /* Adjust the size as needed */
 }
+
+.custom-modal .ant-modal-content {
+  background-color: #fbf9f1;
+}
+
+.custom-modal .ant-modal-body {
+  font-size: 1.3em;
+}
+
+.custom-modal .ant-modal-header {
+  background-color: #fbf9f1;
+}
+
+.custom-modal .ant-modal-title {
+  color: #4d869c;
+  font-size: 1.8em;
+  font-weight: bold;
+}
