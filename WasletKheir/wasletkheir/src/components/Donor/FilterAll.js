@@ -8,16 +8,27 @@ import { IoSchoolOutline } from "react-icons/io5";
 import { MdOutlineToys } from "react-icons/md";
 import { LuShirt } from "react-icons/lu";
 import { IoListOutline } from "react-icons/io5";
-import './donor.css'
+import styled from 'styled-components'; // Import styled-components
 
+import './donor.css'
+const CustomMenu = styled(Menu)`
+  background-color: #f0f2f5; 
+`;
 const { Sider } = Layout;
+
+const CustomMenuItem = styled(Menu.Item)`
+  &&&:hover {
+    background-color: #007bff; // Using &&& to increase specificity
+  }
+`;
+
 
 function FilterAll() {
   const items = [
     
     {
       key: 'sub1',
-      label: 'All Products',
+      label: 'All Items',
       icon: <IoListOutline size={17} />
       ,
 
@@ -82,8 +93,8 @@ function FilterAll() {
   return (
     <div style={{ display: 'flex' }}>
       <Sider>
-        <Menu>
-          {items.map(item => {
+      <CustomMenu>          
+        {items.map(item => {
             if (item.type === 'divider') {
               return <Divider key={item.key} className="custom-divider" />;
             }
@@ -92,14 +103,15 @@ function FilterAll() {
             }
             else {
               return (
-                <Menu.Item key={item.key} icon={item.icon}>
+                <CustomMenuItem key={item.key} icon={item.icon}>
                   <Link to={item.link}>{item.label}</Link>
-                </Menu.Item>
+                </CustomMenuItem>
               );
             }
           })}
-        </Menu>
-      </Sider>
+    </CustomMenu>      
+
+</Sider>
     </div >
   );
 }

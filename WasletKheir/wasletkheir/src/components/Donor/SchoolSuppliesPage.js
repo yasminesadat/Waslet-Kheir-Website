@@ -6,34 +6,36 @@ import { DonationCategories, SchoolTypes } from '../helpers/types';
 import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Link } from 'react-router-dom';
 import './donor.css'
-import { Input } from 'antd';
+import { Input, Select } from 'antd';
 const { Search } = Input;
 const schoolSuppliesData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.SchoolSupplies);
+const supplyOptions = [
+    {
+      label: 'Books',
+      value: 'school_books',
+    },
+    {
+      label: 'Stationary',
+      value: 'school_stationary',
+    },
+   
+  ];
+  export default function SchoolSuppliesPage() {
 
-export default function FoodPage() {
     const [showNavbar, setShowNavbar] = useState(false);
     const [value, setValue] = useState('');
     const [filteredData, setFilteredData] = useState(schoolSuppliesData);
-    const [booksFilter, setBooksFilter] = useState(false);
-    const [stationaryFilter, setStationaryFilter] = useState(false);
+    const [schoolFilter, setSchoolFilter] = useState([]);
 
     useEffect(() => {
         let data = changeDataBasedOnSearch(schoolSuppliesData, value);
-        if (booksFilter && stationaryFilter) {
-            // If both checkboxes are checked, show all data
-            data = schoolSuppliesData;
-        } else {
-            // If only one checkbox is checked, filter based on that checkbox
-            if (booksFilter) {
-                data = data.filter((element) => element.type === SchoolTypes.SchoolBooks);
-            }
-            if (stationaryFilter) {
-                data = data.filter((element) => element.type === SchoolTypes.SchoolStationary);
-            }
-
-        }
+        if (schoolFilter.length > 0) {
+            data = data.filter((element) => schoolFilter.includes(element.type))
+      
+          }
+         
         setFilteredData(data);
-    }, [booksFilter, value, stationaryFilter]);
+    }, [schoolFilter, value]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -63,13 +65,6 @@ export default function FoodPage() {
         return arr.filter((element) => element.title.includes(value));
     };
 
-    const handleBooksFilter = (checked) => {
-        setBooksFilter(checked);
-    };
-
-    const handleStationaryFilter = (checked) => {
-        setStationaryFilter(checked);
-    };
 
     let navbarClass = showNavbar ? 'fixed-navbar' : 'navbar-hidden';
 
@@ -91,7 +86,7 @@ export default function FoodPage() {
  <Breadcrumb.Item><Link to="/Home" className="filter-link" > {/* Pass BloodDonations category */}
              Home</Link></Breadcrumb.Item>          <Breadcrumb.Item>
             <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
-              All Products  </Link></Breadcrumb.Item>
+              All Items  </Link></Breadcrumb.Item>
           <Breadcrumb.Item>School Supplies</Breadcrumb.Item>
         </Breadcrumb>
       </div>
@@ -109,19 +104,17 @@ export default function FoodPage() {
                 <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
                     <p style={{ marginLeft: '8%' }}>Filter by</p>
                     <Divider className="divider-filter" orientation="center" orientationMargin="0" style={{ margin: '6%' }} />
-                    <div className='filter-school' style={{ marginLeft: '5%' }}>
-                        <Checkbox onChange={(e) => handleBooksFilter(e.target.checked)}>
-                            {/* Call handleBooksFilter to toggle books filter */}
-                            Books
-                        </Checkbox>
-                        <br />
-                        <Checkbox onChange={(e) => handleStationaryFilter(e.target.checked)}>
-                            {/* Call handleSuppliesFilter to toggle supplies filter */}
-                            Stationary
-                        </Checkbox>
-                        <br />
-                    </div>
-                </div>
+          <Select
+            placeholder="Type of School Supply"
+            value={schoolFilter}
+            onChange={(value) => {
+              setSchoolFilter(value)
+            }}
+            options={supplyOptions}
+            style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%' }}
+          />
+          
+        </div>
 
         <RequestGrid filteredData={filteredData} />
                     </div>

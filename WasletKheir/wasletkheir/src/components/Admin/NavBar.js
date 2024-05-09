@@ -13,7 +13,7 @@ export default function AdminNavBar() {
         <nav className="navbar fixed-navbar"> 
             <div className="navbar-container"> 
             {location.pathname !== '/Admin' && 
-                <div style={{position: 'absolute', top: '20%', left: '1%'}} onClick={()=>navigate("/Admin")}>
+                <div style={{position: 'absolute', top: '25%', left: '1%'}} onClick={()=>navigate("/Admin")}>
                     <Icon  iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back"/>   
                 </div>
             }

@@ -20,8 +20,10 @@ export const SchoolTypes = {
 }
 
 export const MedicalSuppliesTypes = {
-    MedicalDevices: "Medical_devices",
-    MedicalEquipment: "Medical_equipment",
+    MedicalDevices: "Medical Devices",
+    MedicalEquipment: "Medical Equipment",
     Medication: "Medication",
 }
+
+
 

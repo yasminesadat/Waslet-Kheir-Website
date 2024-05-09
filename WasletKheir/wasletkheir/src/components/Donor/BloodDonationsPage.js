@@ -12,7 +12,8 @@ const { Search } = Input;
 const bloodDonationsData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.BloodDonations)
 const areaOptions = bloodDonationsData.map((card) => { return { "value": card.area, "label": card.area } })
 const hospitalOptions = bloodDonationsData.map((card) => { return { "value": card.hospitalName, "label": card.hospitalName } })
-const governateOptions = Array.from(new Set(bloodDonationsData.map((card) => { return { "value": card.government, "label": card.government } })))
+const filteredGovernmentOptions = bloodDonationsData.map((card) => card.government)
+let governateOptions = [...new Set(filteredGovernmentOptions)].map((government)  => { return { "value": government, "label": government } })
 
 export default function BloodDonationsPage() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -98,7 +99,7 @@ export default function BloodDonationsPage() {
  <Breadcrumb.Item><Link to="/Home" className="filter-link" > {/* Pass BloodDonations category */}
              Home</Link></Breadcrumb.Item>          <Breadcrumb.Item>
             <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
-              All Products  </Link></Breadcrumb.Item>
+              All Items  </Link></Breadcrumb.Item>
           <Breadcrumb.Item>Blood Donations</Breadcrumb.Item>
         </Breadcrumb>
       </div>

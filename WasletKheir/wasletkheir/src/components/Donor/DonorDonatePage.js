@@ -51,7 +51,7 @@ export default function DonorDonatePage() {
 
       <div className='divider-main'>
         <Divider orientation="center" orientationMargin="0">
-          <span className="divider-text">All Products</span>
+          <span className="divider-text">All Items</span>
         </Divider>
       </div>
       <div className='top-section'>
@@ -63,7 +63,7 @@ export default function DonorDonatePage() {
           >
  <Breadcrumb.Item><Link to="/Home" className="filter-link" > {/* Pass BloodDonations category */}
              Home</Link></Breadcrumb.Item>            
-             <Breadcrumb.Item>All Products</Breadcrumb.Item>
+             <Breadcrumb.Item>All Items</Breadcrumb.Item>
           </Breadcrumb>
         </div>
         <div className='search-donor' >
