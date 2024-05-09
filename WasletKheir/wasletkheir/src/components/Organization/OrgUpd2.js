@@ -76,7 +76,7 @@ export default function OrgReqDon() {
           <label>
             Picture:
             <br></br>
-            <img src="https://kidscompany.com.ph/pub/media/catalog/product/cache/0ef27d54d91a8f8479161d0f80b1b510/7/s/7smi-6048626.jpg" alt="Plushies" style={{ width: '30%', height: 'auto' }} className="org-item-image" />
+            <img src="teddy.jpeg" alt="Plushies" style={{ width: '30%', height: 'auto' }} className="org-item-image" />
             <br></br>
             <input type="file" name="picture" accept="image/*" />
           </label>

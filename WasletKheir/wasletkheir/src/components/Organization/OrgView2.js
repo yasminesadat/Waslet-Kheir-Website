@@ -14,7 +14,7 @@ export default function OrgView2() {
         quantity: 20,
         description: "We would like to have plushies for our younger students.",
         donationstatus: "5 out of 20 donated",
-        imageUrl: "https://kidscompany.com.ph/pub/media/catalog/product/cache/0ef27d54d91a8f8479161d0f80b1b510/7/s/7smi-6048626.jpg"
+        imageUrl: "teddy.jpeg"
 
     };
 
