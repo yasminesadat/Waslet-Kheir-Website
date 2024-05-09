@@ -38,4 +38,5 @@ Notif.propTypes = {
     messages: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
-export default Notif;*/
+export default Notif;
+*/

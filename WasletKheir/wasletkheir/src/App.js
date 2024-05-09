@@ -45,6 +45,7 @@ import MedicalSuppliesPage from './components/Donor/MedicalSuppliesPage';
 import InfoPage from './components/Donor/InfoPage';
 import ViewOrgDonor from './components/Donor/ViewOrgDonor';
 import ViewServicesDonor from './components/Donor/ViewServicesDonor';
+import DonateAction from './components/Donor/DonateAction';
 
 function App() {
   return (
@@ -103,6 +104,7 @@ function App() {
         <Route path="/ViewOrgDonor" element={<ViewOrgDonor />} />
         <Route path="/Notif2" element={<Delivery />} />
         <Route path="/ViewServicesDonor" element={<ViewServicesDonor />} />
+        <Route path="/DonateAction" element={<DonateAction />} />
 
 
 

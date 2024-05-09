@@ -20,7 +20,7 @@ const containerStyle = {
 
 const iconStyle = {
     fontSize: '30px',
-    color: '#61dafb',
+    color: '#4D869C',
 };
 
 
