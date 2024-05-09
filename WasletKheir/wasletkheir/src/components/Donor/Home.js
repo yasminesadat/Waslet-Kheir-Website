@@ -63,17 +63,17 @@ function Home() {
           <h2 className="fading-text">Connecting the World</h2>
         </div>
       </div>
-      <div className="spaces"></div>
+      <br/>
       <div className="our-goal-section">
         <h1 className="header">
           About Us
         </h1>
-        <h3>We aim to improve lives through the generosity of our
+        <h2>We aim to improve lives through the generosity of our
           donors. Every donation contributes to making the world
           a better place. A myriad of donations can be made such as food, clothing, medicine, and many more.
           Through these donations, many individuals and communities are able to receive the support and resources
           they need to thrive. Our donations are classified into different categories.
-        </h3>
+        </h2>
       </div>
       <br></br>
       <div className="cardContainer">
@@ -84,13 +84,13 @@ function Home() {
         />
         <Card
           image="https://i.ibb.co/kK1CB4M/teacher.jpg"
-          title="School Sector"
+          title="Education Sector"
           description="School books, school supplies, and free teaching appointments."
         />
         <Card
           image="https://i.ibb.co/pjQ3Wnf/refugees.jpg"
-          title="Refugee Sector"
-          description="Living quarters, clothes, kitchen supplies, food and groceries, and electrical appliances."
+          title= "Food Sector"
+          description="Encourage donations of food and grocery for people living below the poverty line."
         />
         <Card
           image="https://i.ibb.co/dQDW5fC/orphanage.jpg"
@@ -108,31 +108,31 @@ function Home() {
             image="https://i.ibb.co/dQDW5fC/orphanage.jpg"
             title="Clothes"
             description="Clothes for children aged 5-10 years old."
-            donateUrl="https://www.google.com"
-            detailsUrl="https://www.google.com"
+            donateUrl="/ClothesPage"
+            detailsUrl="/ClothesPage"
           />
           <Card2
             image="https://i.ibb.co/pjQ3Wnf/refugees.jpg"
-            title="Apartment"
-            description="Apartment for a family of 5."
-            donateUrl="https://www.google.com"
-            detailsUrl="https://www.google.com"
+            title="Food"
+            description="Fruits and Veggies for orphans."
+            donateUrl="/FoodPage"
+            detailsUrl="/FoodPage"
           />
           <Card2
             image="https://i.ibb.co/kK1CB4M/teacher.jpg"
             title="School Supplies"
             description="Bags and notebooks for students."
-            donateUrl="https://www.google.com"
-            detailsUrl="https://www.google.com"
+            donateUrl="/SchoolSuppliesPage"
+            detailsUrl="/SchoolSuppliesPage"
           />
         </div>
         <br></br>
-        <center><a href="" className="card-link">View All Donation Requests</a></center>
+        <center><a href="/DonorDonatePage" className="card-link">View All Donation Requests</a></center>
         <br></br>
 
       </div>
 
-      <Footer></Footer>
+      <Footer/>
     </div>
     /*</Router>*/
   );

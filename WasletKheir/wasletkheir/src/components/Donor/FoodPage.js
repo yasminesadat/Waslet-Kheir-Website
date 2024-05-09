@@ -2,21 +2,49 @@ import React, { useEffect, useState } from 'react';
 import RequestGrid from './RequestGrid';
 import DonorNavbar from './DonorNavbar';
 import { Breadcrumb, Divider } from 'antd';
-import { DonationCategories } from '../helpers/types';
+import { DonationCategories, FoodTypes } from '../helpers/types';
 import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Select } from 'antd';
 import FilterAll from './FilterAll';
 import { Link } from 'react-router-dom';
-import './donor.css'
-
+import './donor.css';
+import { Input } from 'antd';
+const { Search } = Input;
 const foodData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.Food)
-
+const foodOptions = [
+  {
+    label: 'Canned Foods',
+    value: 'cannedfoods',
+  },
+  {
+    label: 'Fruits and Vegetables',
+    value: 'fruits_vegetables',
+  },
+  {
+    label: 'Fresh Meals',
+    value: 'fresh_meals',
+  },
+  {
+    label: 'Baked Goods',
+    value: 'baked_goods',
+  }
+];
 
 export default function FoodPage() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [value, setValue] = useState('');
   const [filteredData, setFilteredData] = useState(foodData);
+  const [foodFilter, setFoodFilter] = useState([]);
 
+  useEffect(() => {
+    let data = changeDataBasedOnSearch(foodData, value)
+    if (foodFilter.length > 0) {
+      data = data.filter((element) => foodFilter.includes(element.type))
+
+    }
+    
+    setFilteredData(data)
+  }, [foodFilter, value])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,42 +74,61 @@ export default function FoodPage() {
     return arr.filter((element) => element.title.includes(value))
   }
 
-  const onSearch = () => {
-    const data = changeDataBasedOnSearch(foodData, value)
-    setFilteredData(data)
-    // You can perform search operations here
-    console.log('Search term:', value);
-  };
+  
 
 
   let navbarClass = showNavbar ? 'fixed-navbar' : 'navbar-hidden';
 
   return (
     <div>
-      <DonorNavbar className={navbarClass} value={value} onChange={onChange} onSearch={onSearch} />
+      <DonorNavbar className={navbarClass} value={value} onChange={onChange} />
       <div className='divider-main'>
         <Divider orientation="center" orientationMargin="0">
           <span className="divider-text">Food</span>
         </Divider>
       </div>
+      <div className='top-section'>
       <div className='breadcrumb-main'>
         <Breadcrumb
           style={{
             margin: '16px 0',
           }}
         >
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-
-          <Breadcrumb.Item>
+ <Breadcrumb.Item><Link to="/Home" className="filter-link" > {/* Pass BloodDonations category */}
+             Home</Link></Breadcrumb.Item>          <Breadcrumb.Item>
             <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
               All Products  </Link></Breadcrumb.Item>
           <Breadcrumb.Item>Food</Breadcrumb.Item>
         </Breadcrumb>
       </div>
+      <div className='search-donor'>
+          <Search
+            placeholder="Search"
+            enterButton
+            style={{ width: 200 }}
+            value={value} // Set the value prop to the value received from the parent
+            onChange={onChange} // onChange handler to update the value
+          />
+        </div>
+        </div>
       <div className='main-content'>
-        <FilterAll />
+      <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
+          <p style={{ marginLeft: '8%' }}>Filter by</p>
+          <Divider className="divider-filter" orientation="center" orientationMargin="0" style={{ margin: '6%' }} />
+          <Select
+            mode="multiple"
+            placeholder="Type of Food"
+            value={foodFilter}
+            onChange={(value) => {
+              setFoodFilter(value)
+            }}
+            options={foodOptions}
+            style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%' }}
+          />
+         
+        </div>
         <RequestGrid filteredData={filteredData} />
-      </div>
+              </div>
     </div>
   );
 }

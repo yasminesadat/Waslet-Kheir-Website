@@ -547,7 +547,7 @@ button.savebuttonsmall {
 
 .pinButton {
     border: none;
-    background: #61dafb;
+    background: #AAD7D9;
     padding: 10px 20px;
     color: #fff;
     cursor: pointer;
@@ -568,7 +568,7 @@ button.savebuttonsmall {
 }
 
 .pinButton:hover {
-    background-color: #0056b3;
+    background-color: #4D869C;
 
 }
 
@@ -580,7 +580,7 @@ button.savebuttonsmall {
     /* Control the width of the popup */
     padding: 20px;
     background-color: white;
-    border: 2px solid #61dafb;
+    border: 2px solid #4D869C;
     /* Light blue border */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -783,11 +783,11 @@ button.savebuttonsmall {
 }
 
 .welcome-page-logo {
-    width: 30vw;
+    width: 17vw;
     height: auto;
     position: absolute;
-    top: 0%;
-    right: 13%;
+    top: 5%;
+    left: 67%;
 }
 
 .vertical-line {
@@ -806,8 +806,8 @@ button.savebuttonsmall {
     top: 0;
     width: 50%;
     height: 100vh;
-    background-image: url('https://i.ibb.co/yF7485g/bluephonewallpaper.png');
     background-size: cover;
+    background-image: url('');
     background-position: center;
     display: flex;
     align-items: center;
@@ -946,7 +946,7 @@ button.savebuttonsmall {
 .blue-button {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #92C7CF;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -954,7 +954,7 @@ button.savebuttonsmall {
 }
 
 .blue-button:hover {
-    background-color: #0056b3;
+    background-color: #4D869C;
 }
 
 
@@ -977,6 +977,7 @@ button.savebuttonsmall {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    background-color: #D1E9EB;
 }
 
 .main-request-container select,
@@ -1001,14 +1002,14 @@ label {
 }
 
 input[type="submit"] {
-    background-color: #61dafb;
+    background-color: #92C7CF;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #40a9cb;
+    background-color: #4D869C;
 }
 
 .select-container {
@@ -1040,7 +1041,7 @@ input[type="submit"]:hover {
 
 .select-container select:focus {
     outline: none;
-    border-color: #61dafb;
+    border-color: #4D869C;
     box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
 }
 
@@ -1049,7 +1050,7 @@ input[type="submit"]:hover {
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #61dafb;
+    background-color: #4D869C;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -1098,7 +1099,7 @@ input[type="submit"]:hover {
     user-select: none;
 }
 
-.overlay {
+.overlayCards {
     position: absolute;
     top: 0;
     left: 0;
@@ -1106,7 +1107,7 @@ input[type="submit"]:hover {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    max-width: 100%
+    max-width: 100%;
 }
 
 .card-img {
@@ -1305,16 +1306,19 @@ input[type="submit"]:hover {
 /* small button for change password */
 .smallpinButton {
     border: none;
-    background: #61dafb;
+    background: #AAD7D9;
     padding: 10px 20px;
-    color: #fff;
+    font-weight: bolder;
+    color: #000;
     cursor: pointer;
     transition: background .2s ease-in-out;
     width: 30%;
+    border-radius: 5px;
 }
 
 .smallpinButton:hover {
-    background-color: #0056b3;
+    background-color: #4D869C;
+    color: #fff;
 
 }
 

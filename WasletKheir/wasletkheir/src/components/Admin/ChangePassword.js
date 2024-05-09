@@ -13,7 +13,7 @@ export default function AdminChangePassword(){
  
     <div>
      <NavBar/>
-     <div style={{marginTop: '15%',minHeight: '100vh'}}>
+     <div style={{marginTop: '7%',minHeight: '100vh'}}>
      <ChangePasswordForm defaultPassword={defaultPassword} redirectLink={redirectLink} />
      </div>
      <Footer/>

@@ -3,6 +3,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import CloseButton from './CloseButton';
 import './Org.css';
+import { FaLock } from "react-icons/fa";
 
 export default function ChangePassword() {
     const [oldPassword, setOldPassword] = useState('');
@@ -32,14 +33,14 @@ export default function ChangePassword() {
             <Popup
                 open={open}
                 onClose={() => setOpen(false)}  // Handle closing of the popup
-                contentStyle={{ width: "auto", height: "auto" }}
+                contentStyle={{ width: "auto", height: "auto", backgroundColor: '#f9f9f9' }}
             >
                 <div className="cpMainDiv">
                     <div onClick={() => setOpen(false)} >   <CloseButton /></div>
-
+                    {/* <div style={{ color: '#4D869C', marginTop: '%30', marginTop: '%40', }}>   <FaLock /></div> */}
                     <div className="cpCardStyle">
                         <form onSubmit={handleSubmit}>
-                            <h2 className="cpFormTitle">Change Account Password</h2>
+                            <h2 className="cpFormTitle"> <FaLock style={{ color: '#4D869C' }} /> Change Account Password</h2>
                             <div className="cpInputDiv">
                                 <label htmlFor="oldPassword">Old Password</label>
                                 <input type="password" id="oldPassword" required value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} />

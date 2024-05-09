@@ -87,6 +87,8 @@
   transition: 0.3s;
   position: relative;
   text-align: center;
+  background-color: #fff;
+  height: 300px;
 }
 
 .cardMariam:hover {
@@ -102,8 +104,10 @@
 
 .card-contentMariam {
   padding: 15px;
+  height: 30%;
 
 }
+
 
 /* .card-title .card .ant-card-meta-title {
   margin: 0;
@@ -425,6 +429,8 @@
 .breadcrumb-main {
   margin-left: 3%;
   white-space: nowrap;
+  width:30%;
+  max-width: 30%;
 }
 
 .main-content {
@@ -455,10 +461,12 @@
 .button-container {
   display: flex;
   justify-content: space-between;
+  height:22%;
 }
 
 .view-details-button-donor {
-  padding: 10px 10px;
+  margin-top: -4%;
+  padding: 5px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -466,7 +474,7 @@
 }
 
 .donate-button {
-  padding: 10px 15px;
+  padding: 6px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -581,8 +589,8 @@
 
 
 .card-imgMariam {
-  width: 70%;
-  height: 70%;
+  width: 81%;
+  height: 43%;
   object-fit: cover;
 }
 
@@ -622,7 +630,9 @@
 }
 
 .search-donor {
-  margin-left: 66%;
+  margin-left: 46%;
+  width: 5%;
+  max-width: 5%;
 }
 
 .top-section {

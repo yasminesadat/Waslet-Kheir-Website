@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import '../Organization/Org.css';
-import DonorNavbar from './DonorNavbar';
-import ServicesCardDonor from './ServicesCardDonor';
-import Footer from '../Footer';
-export default function ViewServicesDonor() {
+import ServicesCard from './ServicesCard';
+import OrgNavBar2 from './NavbarOrg';
+import './Org.css';
+
+
+export default function OrgViewServ() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const [filter, setFilter] = useState('all');
 
@@ -14,17 +15,10 @@ export default function ViewServicesDonor() {
         {
             image: "https://img.freepik.com/free-photo/flat-lay-health-still-life-arrangement-with-copy-space_23-2148854064.jpg",
             avatar: "https://cdn-icons-png.flaticon.com/512/3774/3774299.png",
-            title: "Mersal is Requesting a Doctor",
-            description: "We would like a pediatrician to check up on kids",
+            title: "Mersal is Requesting a Dentist",
+            description: "We would like a Dentist to who specializes in braces",
             type: "medical",
-            contactInfo: [
-                { label: 'Name', value: 'Dr.Ahmed Helmy' },
-                { label: 'Email', value: 'dr.ahmedhelmy@gmail.com' },
-                { label: 'Speciality', value: 'Pediatrics & Nutrition' },
-                { label: 'Phone Number', value: '01154632049' },
-                { label: 'Clinic location', value: 'Rehab Medical Center room 223' },
 
-            ],
             serviceDetails: [
                 { label: 'Patient Name', value: 'Jana Ashraf' },
                 { label: 'Patient Weight', value: '20 kg' },
@@ -88,32 +82,29 @@ export default function ViewServicesDonor() {
     };
 
     return (
-        <div>
-            <div style={{ minHeight: '100vh' }}>
-                <DonorNavbar />
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <center>
-                    <h1>View Requested Services</h1>
-                </center>
-                <div className="select-container">
-                    <select onChange={handleFilterChange}>
-                        <option value="all">All</option>
-                        <option value="teaching">Teaching</option>
-                        <option value="medical">Medical</option>
-                    </select>
-                </div>
-
-                <div className="donations-container">
-                    {filteredServices.map((service, index) => (
-                        <ServicesCardDonor key={index} {...service} />
-                    ))}
-                </div>
-
+        <>
+            <OrgNavBar2 />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <center>
+                <h1>View My fulfilled Services</h1>
+            </center>
+            <div className="select-container">
+                <select onChange={handleFilterChange}>
+                    <option value="all">All</option>
+                    <option value="teaching">Teaching</option>
+                    <option value="medical">Medical</option>
+                </select>
             </div>
-            <  Footer />
-        </div>
+
+            <div className="donations-container">
+                {filteredServices.map((service, index) => (
+                    <ServicesCard key={index} {...service} />
+                ))}
+            </div>
+
+        </>
     )
 }
