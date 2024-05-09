@@ -1,6 +1,4 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import { FaUtensils } from 'react-icons/fa';
 import './donor.css'
 
 
@@ -14,7 +12,7 @@ const FoodCard = ({ title, text, progress }) => {
 
   return (
     <div className="cardMariam">
-      <img className="card-imgMariam" src={"https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg"} alt={title} />
+      <img className="card-imgMariam" src={"https://cdn.iconscout.com/icon-pack/preview-mockup/food-1-1-3695.png?f=webp&h=240&modified_at=1507627043"} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
         <p className="card-descriptionMariam">{text}</p>

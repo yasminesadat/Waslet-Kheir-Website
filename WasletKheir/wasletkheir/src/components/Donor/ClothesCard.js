@@ -12,7 +12,7 @@ const ClothesCard = ({ title, text, progress }) => {
 
   return (
     <div className="cardMariam">
-      <img className="card-imgMariam" src={"https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg"} alt={title} />
+      <img className="card-imgMariam" src={"https://cdn.iconscout.com/icon-pack/preview-mockup/free-free-clothing-fill-color-icons-8806.png?f=webp&h=240&modified_at=1506069958"} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
         <p className="card-descriptionMariam">{text}</p>

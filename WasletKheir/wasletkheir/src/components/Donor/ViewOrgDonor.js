@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import '../Organization/Org.css';
 import DonorNavbar from './DonorNavbar';
 import OrgCard from './OrgCard';
-import Footer from '../Footer';
 export default function ViewOrgDonor() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const [filter, setFilter] = useState('all');
@@ -139,7 +138,7 @@ export default function ViewOrgDonor() {
                 { label: 'Governorate', value: 'Cairo' },
 
             ],
-            location: ""
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.1594275450207!2d31.25359547548899!3d30.032283719146804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840ac0ae91775%3A0x74c6b9904c0f8ce4!2sMosque-Madrasa%20of%20Sultan%20Hassan!5e0!3m2!1sen!2seg!4v1715275296332!5m2!1sen!2seg"
         },
         {
             image: "https://www.egypttoursportal.com/images/2020/12/Christian-Monuments-and-Monasteries-in-Egypt-Egypt-Tours-Portal.jpg",
@@ -155,7 +154,7 @@ export default function ViewOrgDonor() {
                 { label: 'Governorate', value: 'Cairo' },
 
             ],
-            location: ""
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27630.056686209682!2d31.206089979101574!3d30.0438261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840b86acf1e95%3A0xd1c627c198eaca21!2zQ2h1cmNoIG9mIHRoZSBCbGVzc2VkIFZpcmdpbiBNYXJ5IGFuZCBTYWludCBKb2huIGluIEJhYiBFbCBMb3VxIC0g2YPZhtmK2LPYqSDYp9mE2LPZitiv2Kkg2KfZhNi52LDYsdin2KEg2YXYsdmK2YUg2Ygg2YXYp9ix2YrZiNit2YbYpyDYqNio2KfYqCDYp9mE2YTZiNmC!5e0!3m2!1sen!2seg!4v1715275324670!5m2!1sen!2seg"
         },
         {
             image: "https://alshams.com.eg/wp-content/uploads/2019/11/Azhar-University.jpg",
@@ -170,7 +169,7 @@ export default function ViewOrgDonor() {
                 { label: 'Area', value: 'Nasr City' },
                 { label: 'Governorate', value: 'Cairo' },
             ],
-            location: ""
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.947680356629!2d31.331235182919762!3d30.06703415283053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f5fbfdb10f9%3A0x5fa33ed996112843!2sAl-Azhar%20University!5e0!3m2!1sen!2seg!4v1715275358959!5m2!1sen!2seg"
         },
         {
             image: "https://www.dar-alorman.com/imgs/ormanb-logo.png",
@@ -185,7 +184,7 @@ export default function ViewOrgDonor() {
                 { label: 'Area', value: 'Nasr City' },
                 { label: 'Governorate', value: 'Cairo' },
             ],
-            location: ""
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.947680356629!2d31.331235182919762!3d30.06703415283053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e65c5c6db47%3A0x5771b11558409c4!2sDar%20Al%20Orman%20Association!5e0!3m2!1sen!2seg!4v1715275341418!5m2!1sen!2seg"
         },
         {
             image: "https://sanadorphans.org/storage/settings/January2024/vMGNGY5ZMqNBl1luAdiF.png",
@@ -216,8 +215,7 @@ export default function ViewOrgDonor() {
     };
 
     return (
-
-        <div>
+        <>
             <div style={{ minHeight: '230vh' }}>
                 <DonorNavbar />
                 <br></br>
@@ -246,6 +244,6 @@ export default function ViewOrgDonor() {
                 </div>
             </div>
             <Footer />
-        </div>
+        </div >
     )
 }
