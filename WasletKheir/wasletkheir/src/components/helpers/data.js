@@ -76,7 +76,7 @@ export const DONATION_CARDS_DATA = [
         progress: 45,
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.Medication,
-        medicationValue: "heart"
+        medicationValue: "Heart"
     },
     {
         title: "Need Medical Supplies",
@@ -84,7 +84,7 @@ export const DONATION_CARDS_DATA = [
         progress: 45,
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.Medication,
-        medicationValue: "lung"
+        medicationValue: "Lung"
     },
     {
         title: "Need Medical Supplies",
@@ -92,7 +92,7 @@ export const DONATION_CARDS_DATA = [
         progress: 45,
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.Medication,
-        medicationValue: "liver"
+        medicationValue: "Liver"
     },
     {
         title: "Need School books",

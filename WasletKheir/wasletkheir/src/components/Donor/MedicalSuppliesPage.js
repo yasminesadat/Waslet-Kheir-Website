@@ -11,6 +11,11 @@ import { Input } from 'antd';
 const { Search } = Input;
 const medicalSuppliesData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.MedicalSupplies)
 const typeOptions = Object.values(MedicalSuppliesTypes).map((element) => { return { "value": element, "label": element } })
+const medicineOptions = DONATION_CARDS_DATA
+  .filter(element => element.medicationValue !== undefined && element.medicationValue !== null) // Filter out elements without medicationValue
+  .map(element => ({ "value": element.medicationValue, "label": element.medicationValue }));
+
+
 
 export default function FoodPage() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -107,7 +112,16 @@ export default function FoodPage() {
             style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%' }}
           />
           {typeFilter == MedicalSuppliesTypes.Medication &&
-            <Search placeholder="Input area of use" value={medicationValue} onChange={(event) => { setMedicationValue(event.target.value) }} style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%', marginTop: '0%' }} ></Search>}
+              <Select
+              placeholder="Input area of use"
+              value={medicationValue}
+              onChange={(value) => {
+                setMedicationValue(value);
+              }}
+              options={medicineOptions}
+              style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%' }}
+            />}
+            {/* <Search placeholder="Input area of use" value={medicationValue} onChange={(event) => { setMedicationValue(event.target.value) }} style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%', marginTop: '0%' }} ></Search>} */}
         </div>
         <RequestGrid filteredData={filteredData} />
               </div>
