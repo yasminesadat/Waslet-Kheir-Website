@@ -9,7 +9,7 @@ export default function VolAccounts(){
     { Header: '#', accessor: 'ID' },
     { Header: 'First Name', accessor: "First Name" },
     { Header: 'Last Name', accessor: 'Last Name'},
-    { Header: 'Role', accessor: 'Role'},
+    { Header: 'Role', accessor: 'Role', disableSortBy: true,},
     { Header: 'Email', accessor: 'Email'},
     { Header: 'Contact Number', accessor: 'Contact Number'},
     { Header: 'Join Date', accessor: 'Date'},

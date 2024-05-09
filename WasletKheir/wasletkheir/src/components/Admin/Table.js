@@ -9,7 +9,6 @@ import { Popconfirm,Modal,Button } from "antd";
 import './App.css';
 
 function GlobalFilter({
-  preGlobalFilteredRows,
   globalFilter,
   setGlobalFilter,
 }) {
@@ -199,10 +198,22 @@ const handleCancel = () => {
     footer={null} // This removes the default OK and Cancel buttons
     className="custom-modal"
   >
-    {/* Display the details of the selected row here */}
-    {Object.entries(selectedRowDetails).map(([key, value]) => (
-     key!=='Date' && <p key={key}><strong>{key}</strong>: {value}</p>
-    ))}
+{/* Display the details of the selected row here */}
+{Object.entries(selectedRowDetails).map(([key, value], index, array) => {
+  const previousKey = index !== 0 ? array[index - 1][0] : null;
+  return (
+    <>
+    {previousKey === 'Email' && key === 'First Name' && (
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <hr style={{ flex: 1 }} />
+    <div style={{ textAlign: 'center',fontWeight: 'bold',margin: '0% 1%'}}>Representative</div>
+    <hr style={{ flex: 1 }} />
+  </div>
+)}
+      {key !== 'Date' && <p key={key}><strong>{key}</strong>: {value}</p>}
+    </>
+  );
+})}
 
    <div style={{flexDirection:"row",display:"flex",justifyContent:"center"}}>
   <button 

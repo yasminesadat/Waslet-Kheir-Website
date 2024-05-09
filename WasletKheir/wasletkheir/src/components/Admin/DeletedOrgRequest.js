@@ -8,7 +8,7 @@ function AdminOrgRequests(){
   const columns= [
     { Header: '#', accessor: 'ID' },
     { Header: 'Name', accessor: 'Name' },
-    { Header: 'Type', accessor: 'Type'},
+    { Header: 'Type', accessor: 'Type', disableSortBy: true},
     { Header: 'Governorate', accessor: 'Governorate'},
     { Header: 'Email', accessor: 'Email'},
     { Header: 'Contact Number', accessor: 'Phone'},

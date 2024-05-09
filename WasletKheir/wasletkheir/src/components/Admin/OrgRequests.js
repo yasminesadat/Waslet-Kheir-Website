@@ -8,7 +8,7 @@ function AdminOrgRequests(){
   const columns= [
     { Header: '#', accessor: 'ID' },
     { Header: 'Name', accessor: 'Name' },
-    { Header: 'Type', accessor: 'Type'},
+    { Header: 'Type', accessor: 'Type', disableSortBy: true,},
     { Header: 'Governorate', accessor: 'Governorate'},
     { Header: 'Email', accessor: 'Email'},
     { Header: 'Contact Number', accessor: 'Phone'},
@@ -22,8 +22,7 @@ function AdminOrgRequests(){
       Area: 'Nasr City',
       Governorate: 'Cairo',
       Email: 'info@egyptianfoodbank.org',
-      Phone: '+202 2395 3333',
-      "First Name": 'Nada',"Last Name": 'Ibrahim', Gender:'Female',
+      "First Name": 'Nada',"Last Name": 'Ibrahim', Gender:'Female', Phone: '+202 2395 3333',
       Date: "2024-05-01"
     },
     {
@@ -33,8 +32,7 @@ function AdminOrgRequests(){
       Area: 'Heliopolis',
       Governorate: 'Cairo',
       Email: 'info@misrelkheir.org',
-      Phone: '+202 3762 1234',
-      "First Name": 'Amira', "Last Name": 'Hassan', Gender: 'Female',
+      "First Name": 'Amira', "Last Name": 'Hassan', Gender: 'Female', Phone: '+202 3762 1234',
       Date: "2024-05-02"
     },
     {
@@ -44,8 +42,7 @@ function AdminOrgRequests(){
       Area: 'Dokki',
       Governorate: 'Giza',
       Email: 'info@resalacharity.org',
-      Phone: '+202 3321 4567',
-      "First Name": 'Tarek', "Last Name": 'Mahmoud', Gender: 'Male',
+      "First Name": 'Tarek', "Last Name": 'Mahmoud', Gender: 'Male', Phone: '+202 3321 4567',
       Date: "2024-04-02"
     },
     {
@@ -55,8 +52,7 @@ function AdminOrgRequests(){
       Area: 'Manial',
       Governorate: 'Cairo',
       Email: 'info@57357.org',
-      Phone: '+202 2280 5735',
-      "First Name": 'Yasmin', "Last Name": 'Ahmed', Gender: 'Female',
+      "First Name": 'Yasmin', "Last Name": 'Ahmed', Gender: 'Female', Phone: '+202 2280 5735',
       Date: "2024-05-02"
     },
     {
@@ -66,8 +62,7 @@ function AdminOrgRequests(){
       Area: 'Sidi Gaber',
       Governorate: 'Alexandria',
       Email: 'info@beitzakat.org',
-      Phone: '+203 4789 0123',
-      "First Name": 'Hisham', "Last Name": 'Said', Gender: 'Male',
+      "First Name": 'Hisham', "Last Name": 'Said', Gender: 'Male', Phone: '+203 4789 0123',
       Date: "2024-04-02"
     },
     {
@@ -77,8 +72,7 @@ function AdminOrgRequests(){
       Area: 'Maadi',
       Governorate: 'Cairo',
       Email: 'info@elsalamhospital.org',
-      Phone: '+202 2796 3456',
-      "First Name": 'Mariam', "Last Name": 'Khalifa', Gender: 'Female',
+      "First Name": 'Mariam', "Last Name": 'Khalifa', Gender: 'Female', Phone: '+202 2796 3456',
       Date: "2024-01-02"
     },
     {
@@ -88,8 +82,7 @@ function AdminOrgRequests(){
       Area: 'Sidi Gaber',
       Governorate: 'Alexandria',
       Email: 'info@cleopatrahospital.org',
-      Phone: '+203 4567 2345',
-      "First Name": 'Ahmed', "Last Name": 'Mansour', Gender: 'Male',
+      "First Name": 'Ahmed', "Last Name": 'Mansour', Gender: 'Male', Phone: '+203 4567 2345',
       Date: "2024-02-15"
     },
     {
@@ -99,8 +92,7 @@ function AdminOrgRequests(){
       Area: 'Zagazig',
       Governorate: 'Sharqia',
       Email: 'info@zagazighospital.edu.eg',
-      Phone: '+2010 9876 5432',
-      "First Name": 'Fatima', "Last Name": 'Ali', Gender: 'Female',
+      "First Name": 'Fatima', "Last Name": 'Ali', Gender: 'Female', Phone: '+2010 9876 5432',
       Date: "2024-02-20"
     },
     {
@@ -110,8 +102,7 @@ function AdminOrgRequests(){
       Area: 'Islamic Cairo',
       Governorate: 'Cairo',
       Email: 'info@sultanhassanmosque.org',
-      Phone: '+202 2365 4321',
-      "First Name": 'Kareem', "Last Name": 'Abdel Nasser', Gender: 'Male',
+      "First Name": 'Kareem', "Last Name": 'Abdel Nasser', Gender: 'Male', Phone: '+202 2365 4321',
       Date: "2024-02-12"
     },
     {
@@ -121,8 +112,7 @@ function AdminOrgRequests(){
       Area: 'Mokattam',
       Governorate: 'Cairo',
       Email: 'info@stmaryschurch.eg',
-      Phone: '+202 2258 7890',
-      "First Name": 'Marina', "Last Name": 'Gerges', Gender: 'Female',
+      "First Name": 'Marina', "Last Name": 'Gerges', Gender: 'Female', Phone: '+202 2258 7890',
       Date: "2024-04-15"
     },
     {
@@ -132,8 +122,7 @@ function AdminOrgRequests(){
       Area: 'Zamalek',
       Governorate: 'Cairo',
       Email: 'info@hopevillageorphanage.org',
-      Phone: '+202 2901 2345',
-      "First Name": 'Aisha', "Last Name": 'Ibrahim', Gender: 'Female',
+      "First Name": 'Aisha', "Last Name": 'Ibrahim', Gender: 'Female', Phone: '+202 2901 2345',
       Date: "2024-04-20"
     },
     {
@@ -143,8 +132,7 @@ function AdminOrgRequests(){
       Area: 'Dokki',
       Governorate: 'Giza',
       Email: 'info@childrensmercyfoundation.org',
-      Phone: '+202 3876 5432',
-      "First Name": 'Mahmoud', "Last Name": 'Farouk', Gender: 'Male',
+      "First Name": 'Mahmoud', "Last Name": 'Farouk', Gender: 'Male', Phone: '+202 3876 5432',
       Date: "2024-03-20"
     },
     {
@@ -154,8 +142,7 @@ function AdminOrgRequests(){
       Area: 'Assiut City',
       Governorate: 'Assiut',
       Email: 'info@daralorman.org',
-      Phone: '+2088 1234 5678',
-      "First Name": 'Nour', "Last Name": 'RashID', Gender: 'Female',
+      "First Name": 'Nour', "Last Name": 'RashID', Gender: 'Female', Phone: '+2088 1234 5678',
       Date: "2024-03-21"
     },
     {
@@ -165,8 +152,7 @@ function AdminOrgRequests(){
       Area: 'Islamic Cairo',
       Governorate: 'Cairo',
       Email: 'info@alazhar.edu.eg',
-      Phone: '+202 2235 1234',
-      "First Name": 'Youssef', "Last Name": 'Hassan', Gender: 'Male',
+      "First Name": 'Youssef', "Last Name": 'Hassan', Gender: 'Male', Phone: '+202 2235 1234',
       Date: "2024-03-25"
     }
 ];

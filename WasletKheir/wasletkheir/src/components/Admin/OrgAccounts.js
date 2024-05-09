@@ -28,13 +28,12 @@ export default function OrgAccounts(){
       )
      },
     { Header: 'Name', accessor: 'Name' },
-    { Header: 'Type', accessor: 'Type'},
-    { Header: 'Governorate', accessor: 'Governorate'},
-    { Header: 'Area', accessor: 'Area'},
+    { Header: 'Type', accessor: 'Type', disableSortBy: true,},
+    { Header: 'Governorate', accessor: 'Governorate', disableSortBy: true,},
+    { Header: 'Area', accessor: 'Area', disableSortBy: true,},
     { Header: 'Join Date', accessor: 'Date'},
   ];
   const data = [
-    [
       {
           "ID": 1,
           "Logo": "https://seeklogo.com/images/E/egyptian-food-bank-logo-C71C6ACF11-seeklogo.com.png",
@@ -245,9 +244,7 @@ export default function OrgAccounts(){
           "Phone": "+202 2235 1234",
           "Date": "2024-03-25"
       }
-  ]
-  
-];
+  ];
 
   const filterColumn = [
     {
