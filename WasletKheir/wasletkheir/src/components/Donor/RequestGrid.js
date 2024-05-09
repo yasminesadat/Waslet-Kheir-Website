@@ -7,22 +7,26 @@ import ToysCard from './ToysCard';
 import MedicalSuppliesCard from './MedicalSuppliesCard';
 import SchoolSuppliesCard from './SchoolSuppliesCard';
 import BloodCard from './BloodCard';
+import FoodCard from './FoodCard';
+
 import './donor.css'
 
 const selectCorrespondingCard = (data) => {
-    const { title, text, type, age, gender, season, material, quantity, progress, category } = data;
+    const { title, text, type, age, gender, season, material, quantity, progress, category, image, hospitalName,government,area } = data;
 
     switch (category) {
         case DonationCategories.Clothes:
-            return <ClothesCard title={title} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+            return <ClothesCard title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
         case DonationCategories.Toys:
-            return <ToysCard title={title} text={text} progress={progress} />;
+            return <ToysCard title={title} age={age} gender={gender} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
+        case DonationCategories.Food:
+            return <FoodCard title={title} type={type} image={image} text={text} progress={progress} />;
         case DonationCategories.MedicalSupplies:
             return <MedicalSuppliesCard title={title} text={text} progress={progress} />;
         case DonationCategories.SchoolSupplies:
             return <SchoolSuppliesCard title={title} text={text} progress={progress} />;
         case DonationCategories.BloodDonations:
-            return <BloodCard title={title} text={text} progress={progress} />;
+            return <BloodCard title={title} text={text} hospitalName={hospitalName} government={government} area={area} progress={progress} />;
         default:
             return <RequestCard title={title} text={text} progress={progress} />;
     }

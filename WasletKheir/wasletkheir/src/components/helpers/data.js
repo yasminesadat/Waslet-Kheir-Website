@@ -1,4 +1,4 @@
-import { DonationCategories, MedicalSuppliesTypes, SchoolTypes } from "./types";
+import { DonationCategories, MedicalSuppliesTypes, SchoolTypes, FoodTypes } from "./types";
 
 export const DONATION_CARDS_DATA = [
 
@@ -14,41 +14,35 @@ export const DONATION_CARDS_DATA = [
         quantity: "5",
         progress: 45,
         category: DonationCategories.Clothes,
+        image: "C:/Users/user/Desktop/clothes-icon-png/clothes-icon-png-27.jpg",
     },
     {
 
-        title: "Need Clothes 2",
-        text: "",
+        title: "Shirts",
+        text: "We need 10 shirts for boys ages 1-5",
         age: "1-5",
-        gender: "Female",
+        gender: "Male",
         season: "Summer",
         progress: 45,
         category: DonationCategories.Clothes,
+        image: "https://cdn-az.allevents.in/events9/banners/d90070eb23ffe435e9795fe2c107dea2ebab3b31d856a370a1a75cf774108b10-rimg-w525-h350-gmir.jpg?v=1563940495",
     },
+   
     {
-
-        title: "Need Clothes 3",
-        text: "",
-        age: "13-18",
-        gender: "Male",
-        season: "Winter",
-        progress: 45,
-        category: DonationCategories.Clothes,
-    },
-    {
-        title: "Need Food",
-        text: "",
-        type: "",
-        quantity: 2,
+        title: "Fresh Meals",
+        text: "Need 100 fresh meals to feed orphans",
+        quantity: 100,
         progress: 45,
         category: DonationCategories.Food,
+        type: FoodTypes.freshMeals,
+        image:"https://az727718.vo.msecnd.net/75f28e2721eb4488b6b368de202c4603/images/ff89fcf94bc94fdd972a685833839d3a_2048w.jpg",
     },
     {
-        title: "Need Food",
+        title: "Need fruits and vegetables",
         text: "",
-        type: "",
         quantity: 5,
         progress: 45,
+        type: FoodTypes.FruitsVegetables,
         category: DonationCategories.Food,
     },
     {
@@ -57,7 +51,7 @@ export const DONATION_CARDS_DATA = [
         age: "",
         gender: "",
         type: "Board Games",
-        picture: "",
+        image: "",
         quantity: "",
         progress: 45,
         category: DonationCategories.Toys,
