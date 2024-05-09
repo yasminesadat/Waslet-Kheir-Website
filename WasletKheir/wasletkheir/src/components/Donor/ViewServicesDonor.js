@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import '../Organization/Org.css';
 import DonorNavbar from './DonorNavbar';
 import ServicesCardDonor from './ServicesCardDonor';
-
+import Footer from '../Footer';
 export default function ViewServicesDonor() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const [filter, setFilter] = useState('all');
@@ -88,29 +88,32 @@ export default function ViewServicesDonor() {
     };
 
     return (
-        <>
-            <DonorNavbar />
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <center>
-                <h1>View Requested Services</h1>
-            </center>
-            <div className="select-container">
-                <select onChange={handleFilterChange}>
-                    <option value="all">All</option>
-                    <option value="teaching">Teaching</option>
-                    <option value="medical">Medical</option>
-                </select>
-            </div>
+        <div>
+            <div style={{ minHeight: '100vh' }}>
+                <DonorNavbar />
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <center>
+                    <h1>View Requested Services</h1>
+                </center>
+                <div className="select-container">
+                    <select onChange={handleFilterChange}>
+                        <option value="all">All</option>
+                        <option value="teaching">Teaching</option>
+                        <option value="medical">Medical</option>
+                    </select>
+                </div>
 
-            <div className="donations-container">
-                {filteredServices.map((service, index) => (
-                    <ServicesCardDonor key={index} {...service} />
-                ))}
-            </div>
+                <div className="donations-container">
+                    {filteredServices.map((service, index) => (
+                        <ServicesCardDonor key={index} {...service} />
+                    ))}
+                </div>
 
-        </>
+            </div>
+            <  Footer />
+        </div>
     )
 }

@@ -4,6 +4,9 @@ import Notif from './Notif';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faUsers, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
+import Icon from '../Admin/Icon';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 export default function OrgNavBar2() {
     const messages = [
         "Your request with request id #2333 for jackets has been chosen by a donor",
@@ -12,10 +15,18 @@ export default function OrgNavBar2() {
         "The courier is on his way with your fresh food delivery for request #0187, Get ready to meet him",
         "Your request with id #8711 for the fridge has been chosen by a donor"
     ];
+    const navigate = useNavigate();
+    const location = useLocation();
     return (
+
         <nav className="navbar fixed-navbar">
             <div className="navbar-container">
-                <Link to="/Admin" className="navbar-logo">
+                {location.pathname !== '/OrgMain2' &&
+                    <div style={{ position: 'absolute', top: '20%', left: '1%' }} onClick={() => navigate(-1)}>
+                        <Icon iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back" />
+                    </div>
+                }
+                <Link to="/OrgMain2" className="navbar-logo">
                     <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
                     Waslet Kheir
                 </Link>

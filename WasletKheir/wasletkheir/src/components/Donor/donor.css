@@ -108,6 +108,7 @@
 
 }
 
+
 /* .card-title .card .ant-card-meta-title {
   margin: 0;
   margin-bottom: 10px;
@@ -428,6 +429,8 @@
 .breadcrumb-main {
   margin-left: 3%;
   white-space: nowrap;
+  width:30%;
+  max-width: 30%;
 }
 
 .main-content {
@@ -584,8 +587,8 @@
 
 
 .card-imgMariam {
-  width: 70%;
-  height: 40%;
+  width: 100%;
+  height: 45%;
   object-fit: cover;
 }
 
@@ -625,7 +628,9 @@
 }
 
 .search-donor {
-  margin-left: 66%;
+  margin-left: 46%;
+  width: 5%;
+  max-width: 5%;
 }
 
 .top-section {

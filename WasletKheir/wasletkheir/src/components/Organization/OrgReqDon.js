@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
-
+import Footer from '../Footer';
 export default function OrgReqDon() {
     const [selectedOption, setSelectedOption] = useState('clothes');
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -104,7 +104,7 @@ export default function OrgReqDon() {
                         </label>
                         <label>
                             Quantity:
-                            <input type="number" name="quantity" placeholder="1" />
+                            <input type="number" name="quantity" placeholder="1" min="1" />
                         </label>
                         <label>
                             Description:
@@ -165,7 +165,7 @@ export default function OrgReqDon() {
                         </label>
                         <label>
                             Quantity:
-                            <input type="number" name="quantity" placeholder="1" />
+                            <input type="number" name="quantity" placeholder="1" min="1" />
                         </label>
                         <label>
                             Picture:
@@ -217,7 +217,7 @@ export default function OrgReqDon() {
                         </label>
                         <label>
                             {foodType === 'fruitveg' ? 'Quantity (in kg)' : 'Quantity (by amount)'}:
-                            <input type="number" name="quantity" placeholder="1" />
+                            <input type="number" name="quantity" placeholder="1" min="1" />
                         </label>
                         <label>
                             Description:
@@ -263,7 +263,7 @@ export default function OrgReqDon() {
                         <br></br>
                         <label>
                             Quantity:
-                            <input type="number" name="quantity" placeholder="1" />
+                            <input type="number" name="quantity" placeholder="1" min="1" />
                         </label>
                         <label>
                             Description:
@@ -324,7 +324,7 @@ export default function OrgReqDon() {
                         )}
                         <label>
                             Quantity:
-                            <input type="number" name="quantity" placeholder="1" />
+                            <input type="number" name="quantity" placeholder="1" min="1" />
                         </label>
                         <label>
                             Description:

@@ -14,9 +14,7 @@ const { Sider } = Layout;
 
 function FilterAll() {
   const items = [
-    {
-      type: 'divider-top',
-    },
+    
     {
       key: 'sub1',
       label: 'All Products',

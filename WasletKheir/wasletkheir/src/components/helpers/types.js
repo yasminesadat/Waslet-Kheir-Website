@@ -8,9 +8,8 @@ export const DonationCategories =  {
 }
 
 export const FoodTypes  = {
-    CannedFood: "cannedfood",
-    vegetables: "vegetables",
-    fruits: "fruits",
+    CannedFoods: "cannedfoods",
+    FruitsVegetables: "fruits_vegetables",
     freshMeals: "fresh_meals",
     BakedGoods: "baked_goods",
 }
