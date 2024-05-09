@@ -46,6 +46,7 @@ export default function DonorDonatePage() {
 
   return (
     <div>
+    <div style={{ minHeight: '100vh' }}>
       <DonorNavbar />
 
       <div className='divider-main'>
@@ -81,6 +82,7 @@ export default function DonorDonatePage() {
         <FilterAll />
       </div>
         <RequestGrid filteredData={filteredData} />
+      </div>
       </div>
       <Footer />
     </div>

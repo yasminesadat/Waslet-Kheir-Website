@@ -24,10 +24,13 @@ export default function DonorNavbar() {
     return (
         <nav className="navbar fixed-navbar">
             <div className="navbar-container">
-                <div style={{ position: 'absolute', top: '20%', left: '1%' }} onClick={() => navigate(-1)}>
-                    <Icon iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back" />
-                </div>
-                <Link to="/Admin" className="navbar-logo">
+                {location.pathname !== '/Home' &&
+                    <div style={{ position: 'absolute', top: '20%', left: '1%' }} onClick={() => navigate(-1)}>
+                        <Icon iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back" />
+                    </div>
+                }
+
+                <Link to="/Home" className="navbar-logo">
                     <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
                     Waslet Kheir
                 </Link>
@@ -66,7 +69,7 @@ export default function DonorNavbar() {
                     <div className='notification' style={{ marginTop: '9px' }}>
 
                         <div style={{ marginTop: '-8.5px' }}>
-                           <Notif messages={messages} />
+                            {/*<Notif messages={messages} />*/}
                         </div>
                     </div>
                     <li className="navbar-item">

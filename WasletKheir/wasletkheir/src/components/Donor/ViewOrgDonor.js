@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import '../Organization/Org.css';
 import DonorNavbar from './DonorNavbar';
 import OrgCard from './OrgCard';
+import Footer from '../Footer';
 export default function ViewOrgDonor() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const [filter, setFilter] = useState('all');
@@ -216,32 +217,34 @@ export default function ViewOrgDonor() {
 
     return (
         <>
-            <DonorNavbar />
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <center>
-                <h1>View All Organizations</h1>
-            </center>
-            <div className="select-container">
-                <select onChange={handleFilterChange}>
-                    <option value="all">All</option>
-                    <option value="mosque">Mosque</option>
-                    <option value="church">Church</option>
-                    <option value="school">Public School</option>
-                    <option value="charity">Charity</option>
-                    <option value="hospital">Hospital</option>
-                    <option value="orphanage">Orphanage</option>
-                </select>
-            </div>
+            <div style={{ minHeight: '230vh' }}>
+                <DonorNavbar />
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <center>
+                    <h1>View All Organizations</h1>
+                </center>
+                <div className="select-container">
+                    <select onChange={handleFilterChange}>
+                        <option value="all">All</option>
+                        <option value="mosque">Mosque</option>
+                        <option value="church">Church</option>
+                        <option value="school">Public School</option>
+                        <option value="charity">Charity</option>
+                        <option value="hospital">Hospital</option>
+                        <option value="orphanage">Orphanage</option>
+                    </select>
+                </div>
 
-            <div className="donations-container">
-                {filteredOrgs.map((organizations, index) => (
-                    <OrgCard key={index} {...organizations} />
-                ))}
+                <div className="donations-container">
+                    {filteredOrgs.map((organizations, index) => (
+                        <OrgCard key={index} {...organizations} />
+                    ))}
+                </div>
             </div>
-
-        </>
+            <Footer />
+        </ >
     )
 }
