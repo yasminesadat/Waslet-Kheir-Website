@@ -61,8 +61,8 @@ const TabsComponent = () => {
   const height = 300;
 
   return (
-    <div className="tab-content" id="tabs-content">
-      <ul className="nav nav-pills mb-3" id="tabs" role="tablist">
+    <div className="tab-content" id="tabs-content" >
+      <ul className="nav nav-pills mb-3"  id="tabs" role="tablist">
         <li className="nav-item" role="presentation">
           <button
             className={`nav-link ${activeTab === 'total' ? 'active' : ''}`}
@@ -150,12 +150,13 @@ const TabsComponent = () => {
       </ul>
 
       
-      <div>
+      <div  style={{ marginLeft:'10%' }} >
         <div
           className={`tab-pane fade ${activeTab === 'total' ? 'show active' : ''}`}
           id="total"
           role="tabpanel"
           aria-labelledby="total-tab"
+          
         >
           {activeTab === 'total' && (
             <div>
