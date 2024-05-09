@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
-
+import Footer from '../Footer';
 export default function OrgReqDon() {
     const [selectedOption, setSelectedOption] = useState('clothes');
     const [formSubmitted, setFormSubmitted] = useState(false);
