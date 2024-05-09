@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-
+import { useEffect } from 'react';
+import './Org.css'
 const OrgDonCard = ({ image, title, description, progress }) => {
     const isFulfilled = Number(progress) === 100;
     const [showConfirm, setShowConfirm] = useState(false);
@@ -10,11 +11,16 @@ const OrgDonCard = ({ image, title, description, progress }) => {
     const handleDelete = () => {
         setShowConfirm(true);
     };
+    useEffect(() => {
+        console.log(showConfirm);  // This will log after updates, so you can see the change
+    }, [showConfirm]);  // This useEffect runs every time showConfirm changes
 
     const confirmDelete = () => {
         setShowConfirm(false);
-        if (title === 'Jackets')
+        if (title === 'Jackets') {
             window.location.href = "/OrgDel1";
+            console.log("im here");
+        }
         else if (title === 'Plushies')
             window.location.href = "/OrgDel2";
         else if (title === 'Fruits & Vegetables')
@@ -67,7 +73,7 @@ const OrgDonCard = ({ image, title, description, progress }) => {
                 </div>
             </div>
             {showConfirm && (
-                <div className="overlay">
+                <div className="overlayCards">
                     <div className="confirm-dialog">
                         <p>Are you sure you want to delete this request?</p>
                         <div className="confirm-dialog-buttons">
