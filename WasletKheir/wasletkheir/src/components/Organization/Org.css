@@ -1099,7 +1099,7 @@ input[type="submit"]:hover {
     user-select: none;
 }
 
-.overlay {
+.overlayCards {
     position: absolute;
     top: 0;
     left: 0;
@@ -1107,7 +1107,7 @@ input[type="submit"]:hover {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    max-width: 100%
+    max-width: 100%;
 }
 
 .card-img {
