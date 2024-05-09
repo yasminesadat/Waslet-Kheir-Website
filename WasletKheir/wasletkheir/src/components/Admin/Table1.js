@@ -177,13 +177,25 @@ const handleCancel = () => {
     className="custom-modal"
   >
     {/* Display the details of the selected row here */}
-    {Object.entries(selectedRowDetails).map(([key, value]) => (
-      key !== 'Logo' && key!=='Date' && <p key={key}><strong>{key}</strong>: {value}</p>
-    ))}
+    {Object.entries(selectedRowDetails).map(([key, value],index,array) => {
+      const previousKey = index !== 0 ? array[index - 1][0] : null;
+      return(
+        <>
+         {previousKey === 'Email' && key === 'First Name' && (
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <hr style={{ flex: 1 }} />
+    <div style={{ textAlign: 'center',fontWeight: 'bold',margin: '0% 1%'}}>Representative</div>
+    <hr style={{ flex: 1 }} />
+  </div>
+)}
+      {key !== 'Logo' && key!=='Date' && <p key={key}><strong>{key}</strong>: {value}</p>}
+      </>
+    );
+    })}
    {location.pathname==='/Admin/OrgAccounts'&& <div style={{  
   position: "absolute", 
-  bottom: "5%", 
-  right: "5%", 
+  bottom: "45%", 
+  right: "7%", 
   width: "30%", 
   height: "25%"
 }}>                   <iframe

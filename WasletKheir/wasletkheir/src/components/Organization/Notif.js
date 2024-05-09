@@ -1,13 +1,13 @@
 /*import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Notifications from "react-notifications-menu";
-
+import Delivery from "../Donor/Notif2";
 const Notif = ({ messages }) => {
     const [data, setData] = useState(
         messages.map((message, index) => ({
             image: "notifbell.png",
             message,
-            detailPage: "/events",
+            detailPage: `/Notif${index}`,
             receivedTime: `${index * 5}m ago`
         }))
     );
