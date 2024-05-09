@@ -81,9 +81,9 @@ export default function ViewOrgDonor() {
             image: "https://img1.wsimg.com/isteam/ip/298cb803-7078-4032-b25d-88a8bd8d08d0/Awlady%20logo%20wider-0001.jpg/:/rs=h:1000,cg:true,m",
             title: "Awlady Orphanage",
             description: "",
-            type: "charity",
+            type: "orphanage",
             orgDetails: [
-                { label: 'Organization Type', value: 'Charity' },
+                { label: 'Organization Type', value: 'Orphanage' },
                 { label: 'Contact Number', value: '+2023456789' },
                 { label: 'Email', value: 'contact@awladyorphanage.eg' },
                 { label: 'Address', value: '123 Al Orman St' },
@@ -110,7 +110,7 @@ export default function ViewOrgDonor() {
         },
         {
             image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-9/59839023_1293661097452058_3538026430166204416_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHzlB3falxPrzG9FfjIirlr5h1v8AJNX7HmHW_wAk1fsZsqR8MWu-B2NIsN3Jbpg2SZhCGNNP8efSNCnf1e0RD9&_nc_ohc=xCGmW64URg0Q7kNvgEfb9Ge&_nc_ht=scontent.fcai19-7.fna&oh=00_AfAew-pa1ajyJ8Q-0nK5FDUaJb2I8y-ZmXr9_YyievcXyA&oe=66642648",
-            title: "Nas Hospital",
+            title: "AlNas Hospital",
             description: "",
             type: "hospital",
             orgDetails: [
@@ -130,14 +130,15 @@ export default function ViewOrgDonor() {
             description: "",
             type: "mosque",
             orgDetails: [
-                { label: 'Name', value: 'Dr.Ahmed Helmy' },
-                { label: 'Email', value: 'dr.ahmedhelmy@gmail.com' },
-                { label: 'Speciality', value: 'Pediatrics & Nutrition' },
-                { label: 'Phone Number', value: '01154632049' },
-                { label: 'Clinic location', value: 'Rehab Medical Center room 223' },
+                { label: 'Organization Type', value: 'Mosque' },
+                { label: 'Contact Number', value: '+201109476789' },
+                { label: 'Email', value: 'egymonuments@gov.eg' },
+                { label: 'Address', value: 'El-Darb El-Ahmar' },
+                { label: 'Area', value: 'Mokkatam' },
+                { label: 'Governorate', value: 'Cairo' },
 
             ],
-            mapLocation: ""
+            location: ""
         },
         {
             image: "https://www.egypttoursportal.com/images/2020/12/Christian-Monuments-and-Monasteries-in-Egypt-Egypt-Tours-Portal.jpg",
@@ -145,14 +146,15 @@ export default function ViewOrgDonor() {
             description: "",
             type: "church",
             orgDetails: [
-                { label: 'Name', value: 'Dr.Ahmed Helmy' },
-                { label: 'Email', value: 'dr.ahmedhelmy@gmail.com' },
-                { label: 'Speciality', value: 'Pediatrics & Nutrition' },
-                { label: 'Phone Number', value: '01154632049' },
-                { label: 'Clinic location', value: 'Rehab Medical Center room 223' },
+                { label: 'Organization Type', value: 'Church' },
+                { label: 'Contact Number', value: '+201189476710' },
+                { label: 'Email', value: 'egymonuments@gov.eg' },
+                { label: 'Address', value: 'Qasr Ad Dobarah, Qasr El Nil' },
+                { label: 'Area', value: 'Downtown' },
+                { label: 'Governorate', value: 'Cairo' },
 
             ],
-            mapLocation: ""
+            location: ""
         },
         {
             image: "https://alshams.com.eg/wp-content/uploads/2019/11/Azhar-University.jpg",
@@ -160,16 +162,45 @@ export default function ViewOrgDonor() {
             description: "",
             type: "school",
             orgDetails: [
-                { label: 'Name', value: 'Dr.Ahmed Helmy' },
-                { label: 'Email', value: 'dr.ahmedhelmy@gmail.com' },
-                { label: 'Speciality', value: 'Pediatrics & Nutrition' },
-                { label: 'Phone Number', value: '01154632049' },
-                { label: 'Clinic location', value: 'Rehab Medical Center room 223' },
-
+                { label: 'Organization Type', value: 'School' },
+                { label: 'Contact Number', value: '+0222636192' },
+                { label: 'Email', value: 'www.azhar@edu.eg' },
+                { label: 'Address', value: 'Al Mokhaym Al Daem' },
+                { label: 'Area', value: 'Nasr City' },
+                { label: 'Governorate', value: 'Cairo' },
             ],
-            mapLocation: ""
+            location: ""
         },
-
+        {
+            image: "https://www.dar-alorman.com/imgs/ormanb-logo.png",
+            title: "Dar Al Orman Association",
+            description: "",
+            type: "charity",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Charity' },
+                { label: 'Contact Number', value: '+0222636192' },
+                { label: 'Email', value: 'info@alorman.org' },
+                { label: 'Address', value: '7 Abbas El-Akkad' },
+                { label: 'Area', value: 'Nasr City' },
+                { label: 'Governorate', value: 'Cairo' },
+            ],
+            location: ""
+        },
+        {
+            image: "https://sanadorphans.org/storage/settings/January2024/vMGNGY5ZMqNBl1luAdiF.png",
+            title: "Sanad Orphanage",
+            description: "",
+            type: "orphanage",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Orphanage' },
+                { label: 'Contact Number', value: '+2023456789' },
+                { label: 'Email', value: 'info@sanadorphans.org' },
+                { label: 'Address', value: 'Baron Palace' },
+                { label: 'Area', value: 'Heliopolis' },
+                { label: 'Governorate', value: 'Cairo' },
+            ],
+            location: ""
+        },
 
 
     ];

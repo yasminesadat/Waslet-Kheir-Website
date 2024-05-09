@@ -34,12 +34,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* This line centers items vertically */
-    padding: 0 20px;
-    max-width: 1200px;
-    margin: auto;
+    padding: 0 3.5vw;
+    max-width: 100vw;
     height: 100%;
-    /* This line ensures the container takes up the full height of the navbar */
   }
 
   .navbar-logo {
@@ -55,10 +52,6 @@
     justify-content: space-between;
     list-style: none;
     padding: 0;
-  }
-
-  .navbar-item {
-    margin: 0 10px;
   }
 
   .navbar-link {
@@ -77,8 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -165,105 +157,7 @@
   width: auto;
 }
 
-/* 
-.card {
-  width: 300px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
-  transition: 0.3s;
-}
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
-}
-
-.card-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card-title {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-}
-
-.card-description {
-  margin: 0;
-  font-size: 16px;
-  line-height: 20px;
-  color: #333;
-}
-.cardContainer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.gray-background{
-  background-color: #f9f9f9;
-}
-.header {
-  position: relative;
-  display: inline-block;
-}
-
-.header::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(1);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #61dafb;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.header:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.card-buttons {
-  margin-top:20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-button {
-  background-color: #61dafb;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.card-button:hover {
-  background-color: #4ec5f7;
-}
-
-.card-link {
-  color: #4ec5f7;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.card-link:hover {
-  color: darkblue;
-} */
 .footer {
   background-color: #AAD7D9;
   color: #fff;
@@ -308,7 +202,7 @@
   border-radius: 5px;
   width: 80%;
   max-width: 300px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .input-group {
@@ -378,44 +272,66 @@
   transform: translateX(-51%);
 }
 
-.register-account {
-  text-align: center;
+.account-options {
+  display: flex;
+  flex-direction: column; /* This arranges the links in a column */
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 9.5%;
-  left: 74%;
-  transform: translateX(-51%);
-
-
-
+  bottom: 2%;
+  right: 20%;
+  white-space: nowrap;
+  gap:0.3rem;
+}
+.account-options :first-child {
+  margin-bottom: 1rem; /* This adds a margin to the bottom of the last item */
+}
+.account-options :last-child {
+  margin-top: 1rem; /* This adds a margin to the bottom of the last item */
 }
 
-
-
-.forgot-password a {
-  color: #61dafb;
-  text-decoration: none;
-  font-size: 14px;
+.account-options a {
+  text-decoration: none; 
 }
 
-.forgot-password a:hover {
+.account-options a:hover{
   text-decoration: underline;
 }
 
-.register-account a {
-  color: #61dafb;
-  text-decoration: none;
+.account-options a:visited {
+  color: rgb(106, 106, 215); /* This sets the color of visited links to the same color as unvisited links */
 }
 
-.register-account a:hover {
+.user-option {
+  display: flex;
+  flex-direction: column; /* This arranges the links in a column */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  right: 25%;
+  white-space: nowrap;
+  gap:0.3rem;
+}
+
+.user-option a {
+  text-decoration: none; 
+}
+
+.user-option a:hover{
   text-decoration: underline;
+}
+
+.user-option a:visited {
+  color: rgb(106, 106, 215); /* This sets the color of visited links to the same color as unvisited links */
 }
 
 .welcome-page-logo {
-  width: 25vw;
+  width: 17vw;
   height: auto;
   position: absolute;
-  top: 0%;
-  right: 13%;
+  top: 5%;
+  left: 67%;
 }
 
 .vertical-line {
@@ -434,7 +350,7 @@
   top: 0;
   width: 50%;
   height: 100vh;
-  background-image: url('https://i.ibb.co/yF7485g/bluephonewallpaper.png');
+  background-image: url('');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -446,19 +362,17 @@
 .left-side-text {
   color: #fff;
   font-size: 4em;
-  font-family: 'Arial', sans-serif;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
 
 .subtext {
   color: #fff;
   font-size: 2em;
-  font-family: 'Arial', sans-serif;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  margin-top: 10px;
+  margin-top: 5%;
 }
 
 .remember-and-forgot {
@@ -470,6 +384,7 @@
 .remember {
   color: #61dafb;
 }
+
 
 .profileicon {
 

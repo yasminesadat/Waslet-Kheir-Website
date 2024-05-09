@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Notifications from "react-notifications-menu";
 import Delivery from "../Donor/Notif2";
@@ -38,4 +38,4 @@ Notif.propTypes = {
     messages: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
-export default Notif;
+export default Notif;*/
