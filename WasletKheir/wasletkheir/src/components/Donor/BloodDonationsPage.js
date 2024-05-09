@@ -7,7 +7,8 @@ import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Select } from 'antd';
 import { Link } from 'react-router-dom';
 import './donor.css'
-
+import { Input } from 'antd';
+const { Search } = Input;
 const bloodDonationsData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.BloodDonations)
 const areaOptions = bloodDonationsData.map((card) => { return { "value": card.area, "label": card.area } })
 const hospitalOptions = bloodDonationsData.map((card) => { return { "value": card.hospitalName, "label": card.hospitalName } })
@@ -87,6 +88,7 @@ export default function BloodDonationsPage() {
           <span className="divider-text">Blood Donations</span>
         </Divider>
       </div>
+      <div className='top-section'>
       <div className='breadcrumb-main'>
         <Breadcrumb
           style={{
@@ -100,6 +102,16 @@ export default function BloodDonationsPage() {
           <Breadcrumb.Item>Blood Donations</Breadcrumb.Item>
         </Breadcrumb>
       </div>
+      <div className='search-donor'>
+          <Search
+            placeholder="Search"
+            enterButton
+            style={{ width: 200 }}
+            value={value} // Set the value prop to the value received from the parent
+            onChange={onChange} // onChange handler to update the value
+          />
+        </div>
+        </div>
       <div className='main-content'>
         <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
           <p style={{ marginLeft: '8%' }}>Filter by</p>

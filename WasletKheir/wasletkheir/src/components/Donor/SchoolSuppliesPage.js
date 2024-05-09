@@ -6,7 +6,8 @@ import { DonationCategories, SchoolTypes } from '../helpers/types';
 import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Link } from 'react-router-dom';
 import './donor.css'
-
+import { Input } from 'antd';
+const { Search } = Input;
 const schoolSuppliesData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.SchoolSupplies);
 
 export default function FoodPage() {
@@ -80,22 +81,30 @@ export default function FoodPage() {
                     <span className="divider-text">School Supplies</span>
                 </Divider>
             </div>
-            <div className='breadcrumb-main'>
-                <Breadcrumb
-                    style={{
-                        margin: '16px 0',
-                    }}
-                >
+            <div className='top-section'>
+      <div className='breadcrumb-main'>
+        <Breadcrumb
+          style={{
+            margin: '16px 0',
+          }}
+        >
  <Breadcrumb.Item><Link to="/Home" className="filter-link" > {/* Pass BloodDonations category */}
-             Home</Link></Breadcrumb.Item>                    <Breadcrumb.Item>
-                        <Link to="/DonorDonatePage" className="filter-link">
-                            {/* Pass BloodDonations category */}
-                            All Products
-                        </Link>
-                    </Breadcrumb.Item>
-                    <Breadcrumb.Item>School Supplies</Breadcrumb.Item>
-                </Breadcrumb>
-            </div>
+             Home</Link></Breadcrumb.Item>          <Breadcrumb.Item>
+            <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
+              All Products  </Link></Breadcrumb.Item>
+          <Breadcrumb.Item>School Supplies</Breadcrumb.Item>
+        </Breadcrumb>
+      </div>
+      <div className='search-donor'>
+          <Search
+            placeholder="Search"
+            enterButton
+            style={{ width: 200 }}
+            value={value} // Set the value prop to the value received from the parent
+            onChange={onChange} // onChange handler to update the value
+          />
+        </div>
+        </div>
             <div className='main-content'>
                 <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
                     <p style={{ marginLeft: '8%' }}>Filter by</p>
@@ -114,8 +123,8 @@ export default function FoodPage() {
                     </div>
                 </div>
 
-                <RequestGrid filteredData={filteredData} />
-            </div>
+        <RequestGrid filteredData={filteredData} />
+                    </div>
         </div>
     );
 }

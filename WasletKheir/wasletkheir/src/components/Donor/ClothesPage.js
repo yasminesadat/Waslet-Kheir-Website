@@ -8,7 +8,8 @@ import { Select } from 'antd';
 import FilterAll from './FilterAll';
 import { Link } from 'react-router-dom';
 import './donor.css'
-
+import { Input } from 'antd';
+const { Search } = Input;
 const clothesData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.Clothes)
 const ageOptions = clothesData.map((card) => { return { "value": card.age, "label": card.age } })
 const filteredGenderOptions = clothesData.map((card) => card.gender)
@@ -82,6 +83,7 @@ export default function ClothesPage() {
           <span className="divider-text">Clothes</span>
         </Divider>
       </div>
+      <div className='top-section'>
       <div className='breadcrumb-main'>
         <Breadcrumb
           style={{
@@ -89,13 +91,22 @@ export default function ClothesPage() {
           }}
         >
  <Breadcrumb.Item><Link to="/Home" className="filter-link" > {/* Pass BloodDonations category */}
-             Home</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>
+             Home</Link></Breadcrumb.Item>          <Breadcrumb.Item>
             <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
               All Products  </Link></Breadcrumb.Item>
           <Breadcrumb.Item>Clothes</Breadcrumb.Item>
         </Breadcrumb>
       </div>
+      <div className='search-donor'>
+          <Search
+            placeholder="Search"
+            enterButton
+            style={{ width: 200 }}
+            value={value} // Set the value prop to the value received from the parent
+            onChange={onChange} // onChange handler to update the value
+          />
+        </div>
+        </div>
       <div className='main-content'>
         <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
           <p style={{ marginLeft: '8%' }}>Filter by</p>
@@ -132,7 +143,7 @@ export default function ClothesPage() {
           />
         </div>
         <RequestGrid filteredData={filteredData} />
-      </div>
+              </div>
     </div >
   );
 }

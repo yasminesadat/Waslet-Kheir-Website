@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import RequestGrid from './RequestGrid';
 import DonorNavbar from './DonorNavbar';
-import { Breadcrumb, Divider, Input } from 'antd';
+import { Breadcrumb, Divider } from 'antd';
 import { DonationCategories, MedicalSuppliesTypes } from '../helpers/types';
 import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Select } from 'antd';
 import { Link } from 'react-router-dom';
 import './donor.css'
-
+import { Input } from 'antd';
+const { Search } = Input;
 const medicalSuppliesData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.MedicalSupplies)
 const typeOptions = Object.values(MedicalSuppliesTypes).map((element) => { return { "value": element, "label": element } })
-const { Search } = Input;
 
 export default function FoodPage() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [value, setValue] = useState('');
   const [filteredData, setFilteredData] = useState(medicalSuppliesData);
-  const [typeFilter, setTypeFilter] = useState("");
-  const [medicationValue, setMedicationValue] = useState("");
+  const [typeFilter, setTypeFilter] = useState([]);
+  const [medicationValue, setMedicationValue] = useState([]);
 
 
   useEffect(() => {
@@ -69,6 +69,7 @@ export default function FoodPage() {
           <span className="divider-text">Medical Supplies</span>
         </Divider>
       </div>
+      <div className='top-section'>
       <div className='breadcrumb-main'>
         <Breadcrumb
           style={{
@@ -76,13 +77,22 @@ export default function FoodPage() {
           }}
         >
  <Breadcrumb.Item><Link to="/Home" className="filter-link" > {/* Pass BloodDonations category */}
-             Home</Link></Breadcrumb.Item>
-          <Breadcrumb.Item>
+             Home</Link></Breadcrumb.Item>          <Breadcrumb.Item>
             <Link to="/DonorDonatePage" className="filter-link" > {/* Pass BloodDonations category */}
               All Products  </Link></Breadcrumb.Item>
           <Breadcrumb.Item>Medical Supplies</Breadcrumb.Item>
         </Breadcrumb>
       </div>
+      <div className='search-donor'>
+          <Search
+            placeholder="Search"
+            enterButton
+            style={{ width: 200 }}
+            value={value} // Set the value prop to the value received from the parent
+            onChange={onChange} // onChange handler to update the value
+          />
+        </div>
+        </div>
       <div className='main-content'>
         <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
           <p style={{ marginLeft: '8%' }}>Filter by</p>
@@ -100,7 +110,7 @@ export default function FoodPage() {
             <Search placeholder="Input area of use" value={medicationValue} onChange={(event) => { setMedicationValue(event.target.value) }} style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%', marginTop: '0%' }} ></Search>}
         </div>
         <RequestGrid filteredData={filteredData} />
-      </div>
+              </div>
     </div>
   );
 }
