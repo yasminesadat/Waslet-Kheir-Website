@@ -37,6 +37,7 @@ import AdminChangePassword from './components/Admin/ChangePassword';
 import BloodDonationsPage from './components/Donor/BloodDonationsPage';
 import DonorDonatePage from './components/Donor/DonorDonatePage';
 import ClothesPage from './components/Donor/ClothesPage';
+import CheckDeliveryInfo from './components/Donor/CheckDeliveryInfo';
 import FoodPage from './components/Donor/FoodPage';
 import ToysPage from './components/Donor/ToysPage';
 import SchoolSuppliesPage from './components/Donor/SchoolSuppliesPage';
@@ -100,6 +101,7 @@ function App() {
         <Route path="/SchoolSuppliesPage" element={<SchoolSuppliesPage />} />
         <Route path="/InfoPage" element={<InfoPage />} />
         <Route path="/ViewOrgDonor" element={<ViewOrgDonor />} />
+        <Route path="/CheckDeliveryInfo" element={<CheckDeliveryInfo />} />
 
 
 

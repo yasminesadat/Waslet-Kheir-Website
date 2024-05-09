@@ -6,7 +6,7 @@ import FilterAll from './FilterAll';
 import { DONATION_CARDS_DATA } from '../helpers/data';
 import { Input } from 'antd';
 import './donor.css'
-
+import Footer from '../Footer';
 const { Search } = Input;
 export default function DonorDonatePage() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -78,6 +78,7 @@ export default function DonorDonatePage() {
         <FilterAll />
         <RequestGrid filteredData={filteredData} />
       </div>
+      <Footer />
     </div>
   );
 }

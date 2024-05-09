@@ -9,6 +9,8 @@ const messages = [
 
     "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
     "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
+    "A courier is coming to pick up your donation to 57357 Hospital for medical supplies,Click to know more ",
+    "Your request to volunteer as a doctor has been accepted "
 
 ];
 
