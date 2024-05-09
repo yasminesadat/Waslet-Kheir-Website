@@ -254,6 +254,8 @@
   transition: 0.3s;
   position: relative;
   text-align: center;
+  background-color: #fff;
+  height: 400px;
 }
 
 .cardMariam:hover {
@@ -269,6 +271,7 @@
 
 .card-contentMariam {
   padding: 15px;
+  height: 30%;
 
 }
 
@@ -749,7 +752,7 @@
 
 .card-imgMariam {
   width: 70%;
-  height: 70%;
+  height: 40%;
   object-fit: cover;
 }
 

@@ -13,18 +13,20 @@ const Notif = ({ messages }) => {
     );
 
     return (
-        <div className="App">
+        <div >
             <div>
                 <Notifications
                     width='400px'
                     data={data}
+
                     header={{
                         title: "Notifications",
-                        option: { text: "View All", onClick: () => console.log("Clicked") }
+                        option: { text: "", onClick: () => console.log("Clicked") }
                     }}
                     markAsRead={(data) => {
                         console.log(data);
                     }}
+
                     icon={'Bell.png'}
                 />
             </div>
