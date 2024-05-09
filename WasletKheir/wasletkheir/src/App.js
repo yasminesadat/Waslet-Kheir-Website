@@ -44,6 +44,7 @@ import ToysPage from './components/Donor/ToysPage';
 import SchoolSuppliesPage from './components/Donor/SchoolSuppliesPage';
 import MedicalSuppliesPage from './components/Donor/MedicalSuppliesPage';
 import InfoPage from './components/Donor/InfoPage';
+import ViewOrgDonor from './components/Donor/ViewOrgDonor';
 
 function App() {
   return (
@@ -100,7 +101,7 @@ function App() {
         <Route path="/MedicalSuppliesPage" element={<MedicalSuppliesPage />} />
         <Route path="/SchoolSuppliesPage" element={<SchoolSuppliesPage />} />
         <Route path="/InfoPage" element={<InfoPage />} />
-
+        <Route path="/ViewOrgDonor" element={<ViewOrgDonor />} />
 
 
 

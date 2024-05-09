@@ -1,0 +1,216 @@
+import React from 'react'
+import { useState, useEffect } from 'react';
+import '../Organization/Org.css';
+import DonorNavbar from './DonorNavbar';
+import OrgCard from './OrgCard';
+export default function ViewOrgDonor() {
+    const [selectedOption, setSelectedOption] = useState('ongoing');
+    const [filter, setFilter] = useState('all');
+
+
+
+    const organizations = [
+        {
+            image: "https://arab.org/wp-content/uploads/2019/05/mersal-foundation.jpg",
+            title: "Mersal ",
+            description: "",
+            type: "charity",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Charity' },
+                { label: 'Contact Number', value: '+201154672938' },
+                { label: 'Email', value: 'Mersal11@ngo.egypt.com' },
+                { label: 'Address', value: '8 Street 263, Ezbet Fahmy' },
+                { label: 'Area', value: 'El Basatin' },
+                { label: 'Governorate', value: 'Cairo' },
+
+
+            ],
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.3309145040307!2d31.274569975487026!3d29.96991852209805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458386f89f9a029%3A0xe63218d38fcfebe1!2z2YXYpNiz2LPYqSDZhdix2LPYp9mEIC0gTWVyc2FsIGZvdW5kYXRpb24g2KfZhNmB2LHYuSDYp9mE2LHYptmK2LPZig!5e0!3m2!1sen!2seg!4v1715253107652!5m2!1sen!2seg"
+
+        },
+        {
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiBx2s6hdvg0n3f0Bs3CuTK1Ty4MayooAzd5oJivQvw&s",
+            title: "Resala ",
+            description: "",
+            type: "charity",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Charity' },
+                { label: 'Contact Number', value: '+201298772938' },
+                { label: 'Email', value: 'Resala11@ngo.egypt.com' },
+                { label: 'Address', value: '2 Zaki Rostom' },
+                { label: 'Area', value: 'Nasr city' },
+                { label: 'Governorate', value: 'Cairo' },
+
+            ],
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.166734726429!2d31.33650537548998!3d30.060754817797825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e6ee2ebc7ab%3A0x5523ad87156ef241!2sResala%20Charity%20Association!5e0!3m2!1sen!2seg!4v1715253608674!5m2!1sen!2seg"
+        },
+        {
+            image: "https://www.myf-egypt.org/img/logo.png",
+            title: "Magdy Yacoub Heart Foundation",
+            description: "",
+            type: "hospital",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Hospital' },
+                { label: 'Contact Number', value: '+2010777772938' },
+                { label: 'Email', value: 'MagdiY@hsopital.egypt.com' },
+                { label: 'Address', value: '26 July' },
+                { label: 'Area', value: 'Zamalek' },
+                { label: 'Governorate', value: 'Cairo' },
+
+
+            ],
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.1725425080344!2d31.22189247549012!3d30.06058831780579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458411d812781bf%3A0x530844b6182c818!2zTWFnZGkgWWFjb3ViIEhlYXJ0IEZvdW5kYXRpb24g2YXYpNiz2LPYqSDZhdis2K_ZiSDZiti52YLZiNioINmE2YTZgtmE2Kg!5e0!3m2!1sen!2seg!4v1715253733123!5m2!1sen!2seg"
+        },
+        {
+            image: "https://mir-s3-cdn-cf.behance.net/projects/404/2c1f32117496869.Y3JvcCw1MTIsNDAxLDYwMiwyMDQ.jpg",
+            title: "Misr El kheir",
+            description: "",
+            type: "charity",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Charity' },
+                { label: 'Contact Number', value: '+201897502938' },
+                { label: 'Email', value: 'MisrkH@ngo.egypt.com' },
+                { label: 'Address', value: 'Al Nafoura Square' },
+                { label: 'Area', value: 'Mokattam' },
+                { label: 'Governorate', value: 'Cairo' },
+
+            ],
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110446.68552361324!2d31.17045138902496!3d30.10967890603508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458398acc67dc43%3A0xc9bb9167c0afe413!2zTWlzciBFbGtoZWlyIEZvdW5kYXRpb24g2YXYpNiz2LPYqSDZhdi12LEg2KfZhNiu2YrYsQ!5e0!3m2!1sen!2seg!4v1715253955334!5m2!1sen!2seg"
+        },
+        {
+            image: "https://img1.wsimg.com/isteam/ip/298cb803-7078-4032-b25d-88a8bd8d08d0/Awlady%20logo%20wider-0001.jpg/:/rs=h:1000,cg:true,m",
+            title: "Awlady Orphanage",
+            description: "",
+            type: "charity",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Charity' },
+                { label: 'Contact Number', value: '+2023456789' },
+                { label: 'Email', value: 'contact@awladyorphanage.eg' },
+                { label: 'Address', value: '123 Al Orman St' },
+                { label: 'Area', value: 'Giza' },
+                { label: 'Governorate', value: 'Cairo' },
+            ],
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.7844861943436!2d31.271171382892362!3d29.95687705818818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145838125013bfe3%3A0xb619455644e0e330!2z2KzZhdi52YrYqSDYo9mI2YTYp9iv2Yo!5e0!3m2!1sen!2seg!4v1715254191643!5m2!1sen!2seg"
+        },
+        {
+            image: "https://images.wuzzuf-data.net/files/company_logo/57357-Egypt-21412-1482076211-og.png",
+            title: "57357 Hospital",
+            description: "",
+            type: "hospital",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Hospital' },
+                { label: 'Contact Number', value: '+201189456789' },
+                { label: 'Email', value: 'contact@57357hospital.eg' },
+                { label: 'Address', value: '123 Al Orman St' },
+                { label: 'Area', value: 'Giza' },
+                { label: 'Governorate', value: 'Cairo' },
+
+            ],
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.482837424789!2d31.235299575488824!3d30.02300281958647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458474801f2136f%3A0x5b7e6b7cbf39dd15!2sChildren%E2%80%99s%20Cancer%20Hospital%20Egypt%2057357!5e0!3m2!1sen!2seg!4v1715254485203!5m2!1sen!2seg"
+        },
+        {
+            image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-9/59839023_1293661097452058_3538026430166204416_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHzlB3falxPrzG9FfjIirlr5h1v8AJNX7HmHW_wAk1fsZsqR8MWu-B2NIsN3Jbpg2SZhCGNNP8efSNCnf1e0RD9&_nc_ohc=xCGmW64URg0Q7kNvgEfb9Ge&_nc_ht=scontent.fcai19-7.fna&oh=00_AfAew-pa1ajyJ8Q-0nK5FDUaJb2I8y-ZmXr9_YyievcXyA&oe=66642648",
+            title: "Nas Hospital",
+            description: "",
+            type: "hospital",
+            orgDetails: [
+                { label: 'Organization Type', value: 'Hospital' },
+                { label: 'Contact Number', value: '+201189456789' },
+                { label: 'Email', value: 'contact@nashospital.eg' },
+                { label: 'Address', value: '123 Al Orman St' },
+                { label: 'Area', value: 'Giza' },
+                { label: 'Governorate', value: 'Cairo' },
+
+            ],
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.471952259606!2d31.250278075491725!3d30.10930591549473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145841fd0f98ffeb%3A0xad8c4bf7c6349f96!2sAl%20Nas%20Hospital!5e0!3m2!1sen!2seg!4v1715254398437!5m2!1sen!2seg"
+        },
+        {
+            image: "https://egyptunitedtours.com/wp-content/uploads/2021/01/Sultan-Hassan-Mosque-1-2.jpg",
+            title: "Sultan Hassan Mosque",
+            description: "",
+            type: "mosque",
+            orgDetails: [
+                { label: 'Name', value: 'Dr.Ahmed Helmy' },
+                { label: 'Email', value: 'dr.ahmedhelmy@gmail.com' },
+                { label: 'Speciality', value: 'Pediatrics & Nutrition' },
+                { label: 'Phone Number', value: '01154632049' },
+                { label: 'Clinic location', value: 'Rehab Medical Center room 223' },
+
+            ],
+            mapLocation: ""
+        },
+        {
+            image: "https://www.egypttoursportal.com/images/2020/12/Christian-Monuments-and-Monasteries-in-Egypt-Egypt-Tours-Portal.jpg",
+            title: "Virgin Mary Church",
+            description: "",
+            type: "church",
+            orgDetails: [
+                { label: 'Name', value: 'Dr.Ahmed Helmy' },
+                { label: 'Email', value: 'dr.ahmedhelmy@gmail.com' },
+                { label: 'Speciality', value: 'Pediatrics & Nutrition' },
+                { label: 'Phone Number', value: '01154632049' },
+                { label: 'Clinic location', value: 'Rehab Medical Center room 223' },
+
+            ],
+            mapLocation: ""
+        },
+        {
+            image: "https://alshams.com.eg/wp-content/uploads/2019/11/Azhar-University.jpg",
+            title: "Azhar University",
+            description: "",
+            type: "school",
+            orgDetails: [
+                { label: 'Name', value: 'Dr.Ahmed Helmy' },
+                { label: 'Email', value: 'dr.ahmedhelmy@gmail.com' },
+                { label: 'Speciality', value: 'Pediatrics & Nutrition' },
+                { label: 'Phone Number', value: '01154632049' },
+                { label: 'Clinic location', value: 'Rehab Medical Center room 223' },
+
+            ],
+            mapLocation: ""
+        },
+
+
+
+    ];
+    const filteredOrgs = organizations.filter(organizations => {
+        if (filter === 'all') {
+            return true;
+        }
+        return organizations.type === filter;
+    });
+    const handleFilterChange = (event) => {
+        setFilter(event.target.value);
+    };
+
+    return (
+        <>
+            <DonorNavbar />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <center>
+                <h1>View All Organizations</h1>
+            </center>
+            <div className="select-container">
+                <select onChange={handleFilterChange}>
+                    <option value="all">All</option>
+                    <option value="mosque">Mosque</option>
+                    <option value="church">Church</option>
+                    <option value="school">Public School</option>
+                    <option value="charity">Charity</option>
+                    <option value="hospital">Hospital</option>
+                    <option value="orphanage">Orphanage</option>
+                </select>
+            </div>
+
+            <div className="donations-container">
+                {filteredOrgs.map((organizations, index) => (
+                    <OrgCard key={index} {...organizations} />
+                ))}
+            </div>
+
+        </>
+    )
+}

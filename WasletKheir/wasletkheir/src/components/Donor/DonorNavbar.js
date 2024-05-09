@@ -40,7 +40,7 @@ export default function DonorNavbar() {
                         </div>
                         <ul className="dropdown-menu">
                             <li>
-                                <Link to="/Home" className="dropdown-link">
+                                <Link to="/ViewOrgDonor" className="dropdown-link">
                                     Organizations
                                 </Link>
                             </li>
