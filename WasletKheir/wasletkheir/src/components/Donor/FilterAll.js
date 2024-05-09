@@ -28,7 +28,7 @@ function FilterAll() {
     
     {
       key: 'sub1',
-      label: 'All Products',
+      label: 'All Items',
       icon: <IoListOutline size={17} />
       ,
 
