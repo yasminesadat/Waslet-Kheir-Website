@@ -23,7 +23,8 @@ function handleSubmit(e) {
 
 
   return (
-    <div>
+    <div className='welcome-page-wrapper'>
+        <div className="content-wrapper">
     <form onSubmit={handleSubmit} className="login">
         <div className="input-group">
             <input required type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="input" autoComplete="off"/>
@@ -40,23 +41,22 @@ function handleSubmit(e) {
     </form>
 
     <div className="account-options">
-    <a href="#">Forgot password?</a>
-     Don't have an account? 
-    <Link to="/RegisterD" >Register here as a Donor</Link>
-    <Link to="/RegisterO">Register here as an Organization</Link>
-    <Link to="/AdminLogin">Go to Admin</Link>
-</div>
-   
-   <img src="https://i.ibb.co/R45gdfG/image-removebg-preview-1.png" alt="Waslet Kheir" className="welcome-page-logo" />
-    <div className="vertical-line"></div>
-    <div className="left-side-image">
-        <div className="left-side-text">Waslet Kheir</div>
-        <div className="subtext">Connecting the World</div>
+      <a href="#">Forgot password?</a>
+      Don't have an account? 
+      <Link to="/RegisterD" >Register here as a Donor</Link>
+      <Link to="/RegisterO">Register here as an Organization</Link>
+      <Link to="/AdminLogin">Go to Admin</Link>
     </div>
-    
- 
+   
+    <img src="https://i.ibb.co/R45gdfG/image-removebg-preview-1.png" alt="Waslet Kheir" className="welcome-page-logo" />
+  </div>
 
-
+  <div className="vertical-line"></div>
+  <div className="left-side-image">
+    <div className="left-side-text">Waslet Kheir</div>
+    <div className="subtext">Connecting the World</div>
+  </div>
 </div>
+    
   )
 }
