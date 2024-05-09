@@ -47,7 +47,7 @@ const OrgCard = ({ image, title, description, orgDetails, location }) => {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
-                        <Button style={{ marginTop: 16 }} onClick={handleCancel}>
+                        <Button style={{ marginTop: 13 }} onClick={handleCancel}>
                             Back
                         </Button>
                     </div>
