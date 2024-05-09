@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Notifications from "react-notifications-menu";
-import CheckDeliveryInfo
 const Notif = ({ messages }) => {
     const [data, setData] = useState(
         messages.map((message, index) => ({
