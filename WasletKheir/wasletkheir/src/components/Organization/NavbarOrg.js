@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faUsers, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 import Icon from '../Admin/Icon';
 import { useNavigate, useLocation } from 'react-router-dom';
+
 export default function OrgNavBar2() {
     const messages = [
         "Your request with request id #2333 for jackets has been chosen by a donor",
@@ -17,6 +18,7 @@ export default function OrgNavBar2() {
     const navigate = useNavigate();
     const location = useLocation();
     return (
+
         <nav className="navbar fixed-navbar">
             <div className="navbar-container">
                 {location.pathname !== '/OrgMain2' &&
