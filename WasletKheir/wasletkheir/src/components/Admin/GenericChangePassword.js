@@ -40,36 +40,36 @@ const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
   }
   
   return (
-    <div className="mainDiv">
-      <div className="cardStyle">
+    <div className="mainDivAd">
+      <div className="cardStyleAd">
         <form onSubmit={handleSubmit} name="signupForm" id="signupForm">
-          <img src="lock-custom.svg" id="signupLogo" alt="Lock Logo"/>
-          <h2 className="formTitle">
+          <img className='lockLogoAd' src="lock-fill.svg" id="lockLogo" alt="Lock Logo"/>
+          <h2 className="formTitleAd">
           
             Change Account Password
           </h2>
-          <div className="inputDiv">
-            <label className="inputLabel" htmlFor="oldPassword">Old Password</label>
-            <input type="password" id="oldPassword" name="oldPassword" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} required />
+          <div className="inputDivAd">
+            <label className="inputLabelAd" htmlFor="oldPassword">Old Password</label>
+            <input className='inputAd' type="password" id="oldPassword" name="oldPassword" value={oldPassword} onChange={(e) => setOldPassword(e.target.value)} required />
             {passwordError && <p className="error">Incorrect password</p>}
           </div>
-          <div className="inputDiv">
-            <label className="inputLabel" htmlFor="newPassword">New Password</label>
-            <input type="password" id="newPassword" name="newPassword" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required />
+          <div className="inputDivAd">
+            <label className="inputLabelAd" htmlFor="newPassword">New Password</label>
+            <input className='inputAd' type="password" id="newPassword" name="newPassword" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required />
           </div>
-          <div className="inputDiv">
-            <label className="inputLabel" htmlFor="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+          <div className="inputDivAd">
+            <label className="inputLabelAd" htmlFor="confirmPassword">Confirm Password</label>
+            <input  className='inputAd' type="password" id="confirmPassword" name="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
             {confirmPasswordError && <p className="error">Passwords do not match</p>}
           </div>
-          <div className="buttonWrapper">
-            <button type="submit" id="submitButton" className="submitButton pure-button pure-button-primary">
+          <div className="buttonWrapperAd">
+            <button type="submit" id="submitButton" className="submitButtonAd pure-button pure-button-primary">
               <span>Confirm</span>
               
             </button>
             
           </div>
-          {successMessage && <p className="correct">{successMessage} <span id="loader"></span></p>}
+          {successMessage && <p className="correct">{successMessage} <span id="loaderAd"></span></p>}
         </form>
       </div>
     </div>
