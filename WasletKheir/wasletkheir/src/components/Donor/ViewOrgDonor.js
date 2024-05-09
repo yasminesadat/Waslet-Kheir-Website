@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import '../Organization/Org.css';
 import DonorNavbar from './DonorNavbar';
 import OrgCard from './OrgCard';
+import Footer from '../Footer';
 export default function ViewOrgDonor() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const [filter, setFilter] = useState('all');
@@ -215,7 +216,8 @@ export default function ViewOrgDonor() {
     };
 
     return (
-        <>
+
+        <div>
             <DonorNavbar />
             <br></br>
             <br></br>
@@ -241,7 +243,22 @@ export default function ViewOrgDonor() {
                     <OrgCard key={index} {...organizations} />
                 ))}
             </div>
-
-        </>
+            <br>
+            </br>
+            <br>
+            </br> <br>
+            </br> <br>
+            </br> <br>
+            </br>
+            <br>
+            </br> <br>
+            </br> <br>
+            </br> <br>
+            </br>
+            <br>
+            </br> <br>
+            </br>
+            <Footer />
+        </div>
     )
 }
