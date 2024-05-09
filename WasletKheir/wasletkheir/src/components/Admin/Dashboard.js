@@ -10,6 +10,7 @@ import { styled } from '@mui/material/styles';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import NavBar from './NavBar'
 
+
 const MyCard = ({ image, title, description }) => {
   return (
     <div className="card3">
@@ -30,15 +31,15 @@ function AdminPage() {
 
     <div>
       <NavBar />
-      <br /><br /><br />
+      {/* <br /><br /><br /> */}
       <div className="adContainer">
         <div className="adLeft-panel">
-
-
+      <h1><strong><b>Welcome Back!</b></strong></h1>
+      <h3 style={{color:'grey'}}> track your activity here.</h3>
           <MyCard
             image="icons8-donation-64.png"
             title="Total Donations"
-            description={<Statistic title="this year" value={49505} formatter={formatter} />}
+            description={<Statistic title="last year" value={49505} formatter={formatter} />}
           />
           <br />
           <MyCard
@@ -54,19 +55,31 @@ function AdminPage() {
           />
 
         </div>
-        <div className="adRight-panel">
+        <div className="adCenter-panel">
 
           <h2>
+            {/* <br/> <br/><br></br><br/> */}
+           
+      <h4 style={{color:'grey'}}> navigate through the past Statistics</h4>
+
           </h2>
-          <div >{/*style={{ border: '2px solid #1661a5',borderRadius:'5px', padding: '20px' }}*/}
-            <TabsComponent />
+          <ActiveUsers prop1="Active Donors" prop2 ="Inactive Donors" value1 ='8079' value2='120' suff1='' suff2='' arrow1={<ArrowUpOutlined />} arrow2 ={<ArrowDownOutlined/>} color1='#3f8600' color2='#cf1322' />
+            <br></br>
+          <ActiveUsers prop1="Total Website Visitors" prop2 ="Total impressions" value1 ='54,869' value2='41' suff1='' suff2='%' arrow1={<ArrowUpOutlined />} arrow2 ={<ArrowUpOutlined/>} color1='#3f8600' color2='#3f8600' />
+          <div >
+        
+            <TabsComponent/>
             {/*<TableComponent/>*/}
-            <ActiveUsers />
+            
           </div>
         </div>
-        <div className="adLeft-panel">
+       
+        <div className="adRight-panel">
           <div className='card4'>
-            <PieChartWithCenterLabel />
+          <h3 style={{color:'grey', textAlign:'center', justifySelf:'center'}}> The following pie chart displays the top three governorates in Egypt that used this website the most during the year 2023</h3><br/><br/>
+
+      {/* <h3 > the top 3 governorates  </h3> */}
+            <PieChartWithCustomizedLabel />
           </div>
 
         </div>
@@ -80,7 +93,7 @@ function AdminPage() {
 }
 
 export default AdminPage;
-
+/*
 const data = [
   { value: 15000, label: 'Cairo' },
   { value: 10000, label: 'Alexandria' },
@@ -89,7 +102,7 @@ const data = [
 ];
 
 const size = {
-  width: 410,
+  width: 400,
   height: 200,
 };
 
@@ -115,37 +128,97 @@ function PieChartWithCenterLabel() {
       <PieCenterLabel>donors</PieCenterLabel>
     </PieChart>
   );
-}
+}*/
 
-const ActiveUsers = () => (
+const ActiveUsers = ({prop1,value1, prop2,value2, suff1,suff2,arrow1,arrow2,color1,color2}) => (
   <Row gutter={16}>
     <Col span={12}>
       <Card bordered={false}>
         <Statistic
-          title="Active Users"
-          value={8540}
-          precision={2}
+          title={`${prop1}`}
+          value={value1}
+          precision={0}
           valueStyle={{
-            color: '#3f8600',
+            color: color1,
           }}
-          prefix={<ArrowUpOutlined />}
-        /*suffix="%"*/
+          prefix={arrow1}
+        suffix={suff1}
         />
       </Card>
     </Col>
     <Col span={12}>
       <Card bordered={false}>
         <Statistic
-          title="Inactive Users"
-          value={500}
-          precision={2}
+          title={`${prop2}`}
+          value={value2}
+          precision={0}
           valueStyle={{
-            color: '#cf1322',
+            color: color2,
           }}
-          prefix={<ArrowDownOutlined />}
-        /*suffix="%"*/
+          prefix={arrow2}
+        suffix={suff2}
         />
       </Card>
     </Col>
   </Row>
 );
+
+
+
+
+const data = [
+  { label: 'Cairo', value: 15000, color: '#0088FE' },
+  { label: 'Alexandria', value: 10000, color: '#00C49F' },
+  { label: 'Portsaid', value: 7890, color: '#FFBB28' },
+  { label: 'Others', value: 5000, color: '#FF8042' },
+];
+
+const sizing = {
+  margin: { right: 5 },
+  width: 400,
+  height: 200,
+  legend: { hidden: true },
+};
+const TOTAL = data.map((item) => item.value).reduce((a, b) => a + b, 0);
+
+const getArcLabel = (params) => {
+  const percent = params.value / TOTAL;
+  return `${(percent * 100).toFixed(0)}%`;
+};
+
+const StyledText = styled('text')(({ theme }) => ({
+  fill: theme.palette.text.primary,
+  textAnchor: 'middle',
+  dominantBaseline: 'central',
+  fontSize: 14,
+}));
+
+function PieChartWithCustomizedLabel() {
+  return (
+    <div>
+      <PieChart
+        series={[
+          {
+            outerRadius: 80,
+            data,
+            arcLabel: getArcLabel,
+          },
+        ]}
+        sx={{
+          [`& .${pieArcLabelClasses.root}`]: {
+            fill: 'white',
+            fontSize: 14,
+          },
+        }}
+        {...sizing}
+      />
+      <div style={{ textAlign: 'center', marginTop: '10px' , fontSize:'35px',font:'bold' }}>
+        {data.map((item, index) => (
+          <StyledText key={index} x="0" y="0">
+            {`${item.label}: ${(item.value / TOTAL * 100).toFixed(2)}%`}<br/>
+          </StyledText>
+        ))}
+      </div>
+    </div>
+  );
+}
