@@ -25,7 +25,7 @@ export default function DonorNavbar() {
         <nav className="navbar fixed-navbar">
             <div className="navbar-container">
                 {location.pathname !== '/Home' &&
-                    <div style={{ position: 'absolute', top: '20%', left: '1%' }} onClick={() => navigate(-1)}>
+                    <div style={{ position: 'absolute', top: '25%', left: '1%' }} onClick={() => navigate(-1)}>
                         <Icon iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back" />
                     </div>
                 }
