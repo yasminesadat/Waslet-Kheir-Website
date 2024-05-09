@@ -783,11 +783,11 @@ button.savebuttonsmall {
 }
 
 .welcome-page-logo {
-    width: 30vw;
+    width: 17vw;
     height: auto;
     position: absolute;
-    top: 0%;
-    right: 13%;
+    top: 5%;
+    left: 67%;
 }
 
 .vertical-line {
@@ -806,8 +806,8 @@ button.savebuttonsmall {
     top: 0;
     width: 50%;
     height: 100vh;
-    background-image: url('https://i.ibb.co/yF7485g/bluephonewallpaper.png');
     background-size: cover;
+    background-image: url('');
     background-position: center;
     display: flex;
     align-items: center;
