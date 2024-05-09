@@ -100,6 +100,8 @@ export const DONATION_CARDS_DATA = [
         progress: 45,
         type: SchoolTypes.SchoolBooks,
         category: DonationCategories.SchoolSupplies,
+        quantity:"",
+        image:"",
     },
     {
         title: "Need School Stationary",

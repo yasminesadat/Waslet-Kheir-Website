@@ -3,7 +3,7 @@ import './donor.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
-const BloodCard = ({ title, text, progress }) => {
+const BloodCard = ({ title, text, hospitalName, government, area, progress }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -22,9 +22,9 @@ const BloodCard = ({ title, text, progress }) => {
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button>
         </div>
         <div className="progress-container">
-          <progress className={`progress-bar ${progressBarClass}`} value={progress} max="100"></progress>
+        <progress className={`progress-bar ${progressBarClass}`} style={{marginBottom:'10%'}} value={progress} max="100"></progress>
           <div className={`status ${statusClass}`}>Status: {status}</div>
-          <h3>{progress}% Donated </h3>
+          <h3 style={{marginTop:'-8%' , fontSize:'13px'}}>{progress}% Donated </h3>
         </div>
       </div>
     </div>
