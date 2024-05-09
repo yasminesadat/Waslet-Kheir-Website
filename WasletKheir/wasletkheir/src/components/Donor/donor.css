@@ -429,6 +429,8 @@
 .breadcrumb-main {
   margin-left: 3%;
   white-space: nowrap;
+  width:30%;
+  max-width: 30%;
 }
 
 .main-content {
@@ -626,7 +628,9 @@
 }
 
 .search-donor {
-  margin-left: 66%;
+  margin-left: 46%;
+  width: 5%;
+  max-width: 5%;
 }
 
 .top-section {

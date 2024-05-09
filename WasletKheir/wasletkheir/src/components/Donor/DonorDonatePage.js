@@ -4,11 +4,10 @@ import DonorNavbar from './DonorNavbar';
 import { Breadcrumb, Divider, Layout, Menu, theme } from 'antd';
 import FilterAll from './FilterAll';
 import { DONATION_CARDS_DATA } from '../helpers/data';
-import { Input } from 'antd';
 import './donor.css'
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
-
+import { Input } from 'antd';
 const { Search } = Input;
 export default function DonorDonatePage() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -66,7 +65,7 @@ export default function DonorDonatePage() {
              <Breadcrumb.Item>All Products</Breadcrumb.Item>
           </Breadcrumb>
         </div>
-        <div className='search-donor'>
+        <div className='search-donor' >
           <Search
             placeholder="Search"
             enterButton
@@ -78,7 +77,9 @@ export default function DonorDonatePage() {
 
       </div>
       <div className='main-content'>
+      <div className='filter-blood' style={{ width: '200px', maxWidth: '200px' }} >
         <FilterAll />
+      </div>
         <RequestGrid filteredData={filteredData} />
       </div>
       <Footer />
