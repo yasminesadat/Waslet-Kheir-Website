@@ -37,7 +37,7 @@ import AdminChangePassword from './components/Admin/ChangePassword';
 import BloodDonationsPage from './components/Donor/BloodDonationsPage';
 import DonorDonatePage from './components/Donor/DonorDonatePage';
 import ClothesPage from './components/Donor/ClothesPage';
-import CheckDeliveryInfo from './components/Donor/CheckDeliveryInfo';
+import Delivery from './components/Donor/Notif2';
 import FoodPage from './components/Donor/FoodPage';
 import ToysPage from './components/Donor/ToysPage';
 import SchoolSuppliesPage from './components/Donor/SchoolSuppliesPage';
@@ -90,7 +90,6 @@ function App() {
         {/* donor routes  */}
 
         <Route path="/DonorProfile" element={<DonorProfile />} />
-        <Route path="/" element={<DonorDonatePage />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/BloodDonationsPage" element={<BloodDonationsPage />} />
         <Route path="/DonorDonatePage" element={<DonorDonatePage />} />
@@ -101,7 +100,7 @@ function App() {
         <Route path="/SchoolSuppliesPage" element={<SchoolSuppliesPage />} />
         <Route path="/InfoPage" element={<InfoPage />} />
         <Route path="/ViewOrgDonor" element={<ViewOrgDonor />} />
-        <Route path="/CheckDeliveryInfo" element={<CheckDeliveryInfo />} />
+        <Route path="/Notif2" element={<Delivery />} />
 
 
 
