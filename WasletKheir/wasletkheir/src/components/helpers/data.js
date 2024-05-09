@@ -1,4 +1,4 @@
-import { DonationCategories, MedicalSuppliesTypes, SchoolTypes, schoolTypes } from "./types";
+import { DonationCategories, MedicalSuppliesTypes, SchoolTypes } from "./types";
 
 export const DONATION_CARDS_DATA = [
 
