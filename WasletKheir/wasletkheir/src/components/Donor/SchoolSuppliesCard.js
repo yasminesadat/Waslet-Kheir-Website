@@ -1,6 +1,4 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import { FaUtensils } from 'react-icons/fa';
 import './donor.css'
 
 
