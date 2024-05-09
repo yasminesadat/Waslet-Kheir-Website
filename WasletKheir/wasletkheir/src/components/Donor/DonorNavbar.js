@@ -69,7 +69,7 @@ export default function DonorNavbar() {
                     <div className='notification' style={{ marginTop: '9px' }}>
 
                         <div style={{ marginTop: '-8.5px' }}>
-                            {/*<Notif messages={messages} />*/}
+                            <Notif messages={messages} />
                         </div>
                     </div>
                     <li className="navbar-item">
