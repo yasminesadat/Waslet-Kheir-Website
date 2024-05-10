@@ -1,24 +1,23 @@
 import React from 'react';
 import './donor.css'
-;
+import { useNavigate  } from 'react-router-dom';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
 
 
-const ClothesDetailedCard = ({ title, text,age, gender, season, material,quantity, progress}) => {
+const ClothesDetailedCard = ({ title, text,age, gender, season, material,quantity, progress  }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
-  
+
   return (
     <div className="cardMariam">
       <img className="card-imgMariam" src={"https://cdn.iconscout.com/icon-pack/preview-mockup/free-free-clothing-fill-color-icons-8806.png?f=webp&h=240&modified_at=1506069958"} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}{quantity}</p>
-        <p>age: {age}</p>
-        <p>gender: {gender}</p>
-        <p>season:{season}</p>
-        <p>material:{material}</p>
+        <p className="card-descriptionMariam">{text}{age}{gender}{season}</p>
         <br></br>
         
         <div className="progress-container">
@@ -31,4 +30,4 @@ const ClothesDetailedCard = ({ title, text,age, gender, season, material,quantit
   );
 };
 
-export default ClothesCard;
+export default ClothesDetailedCard;

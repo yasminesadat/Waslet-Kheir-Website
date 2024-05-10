@@ -4,7 +4,7 @@ import {useLocation } from 'react-router-dom';
 import ClothesCard from './ClothesCard';
 import { Select } from 'antd';
 import QuantityInput from './NumberInput';
-import ClothesDetailedCard from './ClothesDetailedCard'
+import ClothesDetailedCard from './ClothesDetailedCard';
 const customStyles = {
     control: (provided, state) => ({
       ...provided,
