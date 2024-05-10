@@ -3,8 +3,8 @@ import DonorNavbar from './DonorNavbar';
 import {useLocation } from 'react-router-dom';
 import ClothesCard from './ClothesCard';
 import { Select } from 'antd';
-import { Calendar } from "antd";
-
+import QuantityInput from './NumberInput';
+import { NumberInput } from '@mui/base/Unstable_NumberInput/NumberInput';
 const customStyles = {
     control: (provided, state) => ({
       ...provided,
@@ -42,7 +42,8 @@ export default function DonateAction() {
             <br/>
 
             <div style={{marginTop:'5%'}}>
-                <span><form >
+                <div><form >
+                  <div>
                     <label>Select the transportation</label>
                     <Select styles={customStyles}>      
                     <option value="Option0">Vehicle Type</option>
@@ -50,11 +51,17 @@ export default function DonateAction() {
                     <option value="Option2">Car</option>
                     <option value="Option3">Motorcycle</option>
                     </Select>
+                    </div><div>
                     <label>Select the suitable timing</label>
              hena yowgad calendar
-                    </form></span>
-                    <span>
-            {renderCard()}</span>
+             <div>
+              <label> Please select a quantity</label>
+<NumberInput/>
+             </div>
+             </div>
+                    </form></div>
+               <div>  {renderCard()}</div> 
+           
             </div>
         </div>
     );
