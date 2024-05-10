@@ -34,8 +34,8 @@ function AdminPage() {
       {/* <br /><br /><br /> */}
       <div className="adContainer">
         <div className="adLeft-panel">
-      <h1><strong><b>Welcome Back!</b></strong></h1>
-      <h3 style={{color:'grey'}}> track your activity here.</h3>
+          <h1><strong><b>Welcome Back!</b></strong></h1>
+          <h3 style={{ color: 'grey' }}> track your activity here</h3>
           <MyCard
             image="icons8-donation-64.png"
             title="Total Donations"
@@ -59,26 +59,26 @@ function AdminPage() {
 
           <h2>
             {/* <br/> <br/><br></br><br/> */}
-           
-      <h4 style={{color:'grey'}}> navigate through the past Statistics</h4>
+
+            <h4 style={{ color: 'grey' }}> Navigate through the past statistics</h4>
 
           </h2>
-          <ActiveUsers prop1="Active Donors" prop2 ="Inactive Donors" value1 ='8079' value2='120' suff1='' suff2='' arrow1={<ArrowUpOutlined />} arrow2 ={<ArrowDownOutlined/>} color1='#3f8600' color2='#cf1322' />
-            <br></br>
-          <ActiveUsers prop1="Total Website Visitors" prop2 ="Total impressions" value1 ='54,869' value2='41' suff1='' suff2='%' arrow1={<ArrowUpOutlined />} arrow2 ={<ArrowUpOutlined/>} color1='#3f8600' color2='#3f8600' />
+          <ActiveUsers prop1="Active Donors" prop2="Inactive Donors" value1='8079' value2='120' suff1='' suff2='' arrow1={<ArrowUpOutlined />} arrow2={<ArrowDownOutlined />} color1='#3f8600' color2='#cf1322' />
+          <br></br>
+          <ActiveUsers prop1="Total Website Visitors" prop2="Total impressions" value1='54,869' value2='41' suff1='' suff2='%' arrow1={<ArrowUpOutlined />} arrow2={<ArrowUpOutlined />} color1='#3f8600' color2='#3f8600' />
           <div >
-        
-            <TabsComponent/>
+
+            <TabsComponent />
             {/*<TableComponent/>*/}
-            
+
           </div>
         </div>
-       
+
         <div className="adRight-panel">
           <div className='card4'>
-          <h3 style={{color:'grey', textAlign:'center', justifySelf:'center'}}> The following pie chart displays the top three governorates in Egypt that used this website the most during the year 2023</h3><br/><br/>
+            <h3 style={{ color: 'grey', textAlign: 'center', justifySelf: 'center' }}> The following pie chart displays the top three governorates in Egypt that used this website the most during the year 2023</h3><br /><br />
 
-      {/* <h3 > the top 3 governorates  </h3> */}
+            {/* <h3 > the top 3 governorates  </h3> */}
             <PieChartWithCustomizedLabel />
           </div>
 
@@ -130,7 +130,7 @@ function PieChartWithCenterLabel() {
   );
 }*/
 
-const ActiveUsers = ({prop1,value1, prop2,value2, suff1,suff2,arrow1,arrow2,color1,color2}) => (
+const ActiveUsers = ({ prop1, value1, prop2, value2, suff1, suff2, arrow1, arrow2, color1, color2 }) => (
   <Row gutter={16}>
     <Col span={12}>
       <Card bordered={false}>
@@ -142,7 +142,7 @@ const ActiveUsers = ({prop1,value1, prop2,value2, suff1,suff2,arrow1,arrow2,colo
             color: color1,
           }}
           prefix={arrow1}
-        suffix={suff1}
+          suffix={suff1}
         />
       </Card>
     </Col>
@@ -156,7 +156,7 @@ const ActiveUsers = ({prop1,value1, prop2,value2, suff1,suff2,arrow1,arrow2,colo
             color: color2,
           }}
           prefix={arrow2}
-        suffix={suff2}
+          suffix={suff2}
         />
       </Card>
     </Col>
@@ -212,10 +212,10 @@ function PieChartWithCustomizedLabel() {
         }}
         {...sizing}
       />
-      <div style={{ textAlign: 'center', marginTop: '10px' , fontSize:'35px',font:'bold' }}>
+      <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '35px', font: 'bold' }}>
         {data.map((item, index) => (
           <StyledText key={index} x="0" y="0">
-            {`${item.label}: ${(item.value / TOTAL * 100).toFixed(2)}%`}<br/>
+            {`${item.label}: ${(item.value / TOTAL * 100).toFixed(2)}%`}<br />
           </StyledText>
         ))}
       </div>

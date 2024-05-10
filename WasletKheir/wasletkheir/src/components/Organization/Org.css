@@ -667,19 +667,19 @@ button.savebuttonsmall {
 }
 
 
-.nav {
+/* .nav {
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-}
+} */
 
-.nav-pills .nav-item {
+/* .nav-pills .nav-item {
     margin-right: 5px;
-}
+} */
 
-.nav-link {
+/* .nav-link {
     color: #007bff;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
@@ -690,7 +690,7 @@ button.savebuttonsmall {
 .nav-link.active {
     background-color: #61dafb;
     color: #fff;
-}
+} */
 
 /* change password button in profilr */
 .changePasswordbutton {

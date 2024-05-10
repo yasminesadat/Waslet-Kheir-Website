@@ -34,8 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 3.5vw;
-    padding-right: 6vw;
+    padding: 0 3.5vw;
     max-width: 100vw;
     height: 100%;
   }
@@ -235,7 +234,7 @@
 .login button {
   cursor: pointer;
   padding: 10px 20px;
-  background-color: #79a9c2 ;
+  background-color: #79a9c2;
   color: black;
   border: none;
   border-radius: 5px;
@@ -247,7 +246,7 @@
 }
 
 .login button:hover {
-  background-color: #4D869C ;
+  background-color: #4D869C;
 }
 
 .forgot-password {
@@ -260,56 +259,64 @@
 
 .account-options {
   display: flex;
-  flex-direction: column; /* This arranges the links in a column */
+  flex-direction: column;
+  /* This arranges the links in a column */
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 2%;
   right: 20%;
   white-space: nowrap;
-  gap:0.3rem;
+  gap: 0.3rem;
 }
+
 .account-options :first-child {
-  margin-bottom: 1rem; /* This adds a margin to the bottom of the last item */
+  margin-bottom: 1rem;
+  /* This adds a margin to the bottom of the last item */
 }
+
 .account-options :last-child {
-  margin-top: 1rem; /* This adds a margin to the bottom of the last item */
+  margin-top: 1rem;
+  /* This adds a margin to the bottom of the last item */
 }
 
 .account-options a {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
-.account-options a:hover{
+.account-options a:hover {
   text-decoration: underline;
 }
 
 .account-options a:visited {
-  color: rgb(106, 106, 215); /* This sets the color of visited links to the same color as unvisited links */
+  color: rgb(106, 106, 215);
+  /* This sets the color of visited links to the same color as unvisited links */
 }
 
 .user-option {
   display: flex;
-  flex-direction: column; /* This arranges the links in a column */
+  flex-direction: column;
+  /* This arranges the links in a column */
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 17%;
   right: 24%;
   white-space: nowrap;
-  gap:0.3rem;
+  gap: 0.3rem;
 }
 
 .user-option a {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
-.user-option a:hover{
+.user-option a:hover {
   text-decoration: underline;
 }
 
 .user-option a:visited {
-  color: rgb(106, 106, 215); /* This sets the color of visited links to the same color as unvisited links */
+  color: rgb(106, 106, 215);
+  /* This sets the color of visited links to the same color as unvisited links */
 }
 
 .welcome-page-wrapper {
@@ -317,6 +324,7 @@
   width: 100%;
   height: 100vh;
 }
+
 .content-wrapper {
   width: 50%;
   height: 100vh;
@@ -678,28 +686,34 @@
 /*dashboard stuff*/
 .adContainer {
   display: flex;
-
+  margin-top: 4%;
 
 }
 
 .adLeft-panel {
   flex: 1;
   background-color: #f2f2f2;
-  padding: 30px;
+  /* padding: 5px; */
+  margin-left: 3%;
   align-items: center;
   justify-content: center;
 }
 
 .adCenter-panel {
-  flex: 2;
+  flex: 3;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 10px;
+  margin-top: 1.9%;
+  align-items: center;
+  justify-content: center;
 }
 
 .adRight-panel {
   flex: 1;
   background-color: #f2f2f2;
-
+  margin-top: 7%;
+  align-items: center;
+  justify-content: center;
 }
 
 .card3-img {
@@ -726,11 +740,12 @@
 
 .card3 {
   width: 240px;
-  border: 2px solid #dee2e6;
+  border: 2px solid #ffffff;
   background-color: #ffffff;
   border-radius: 5px;
   overflow: hidden;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   transition: 0.3s;
   display: flex;
@@ -741,9 +756,9 @@
 }
 
 .card4 {
-  width: 400px;
-  height: 375px;
-  border: 2px solid #dee2e6;
+  width: 230px;
+  height: 700px;
+  border: 2px solid #ffffff;
   background-color: #ffffff;
   border-radius: 5px;
   overflow: hidden;
@@ -754,7 +769,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  margin-top: 15px;
 }
 
 /* Styles for nav pills */
@@ -763,6 +778,7 @@
   flex-wrap: wrap;
   list-style: none;
   padding: 20px;
+  margin-left: 10%;
 
 }
 
@@ -775,7 +791,7 @@
 
 .nav-link {
   color: #4e869d;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
   padding: 0.5rem 1rem;
   text-decoration: none;
   cursor: pointer;
@@ -788,7 +804,7 @@
 
 /* Styles for tab content */
 .tab-content {
-  border: 1px solid #dee2e6;
+  /* border: 1px solid #dee2e6; */
   border-top: 0;
   margin-top: 40px;
   background-color: #ffffff;
@@ -797,6 +813,7 @@
   align-self: center;
   align-items: center;
   align-content: center;
+  justify-content: center;
   margin-bottom: 6%;
 }
 
@@ -806,4 +823,113 @@
 
 .tab-pane.show {
   display: block;
+}
+
+/*admin change password*/
+.mainDivAd {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cardStyleAd {
+  width: 500px;
+  border-color: white;
+  background: #fff;
+  padding: 36px 0;
+  border-radius: 4px;
+  margin: 30px 0;
+  box-shadow: 0px 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.lockLogoAd {
+  max-height: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formTitleAd {
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.inputLabelAd {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+  margin-top: 24px;
+}
+
+.inputDivAd {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.inputAd {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  border: solid 1px #ccc;
+  padding: 0 11px;
+}
+
+.inputAd:disabled {
+  cursor: not-allowed;
+  border: solid 1px #eee;
+}
+
+.buttonWrapperAd {
+  margin-top: 40px;
+}
+
+.submitButtonAd {
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  display: block;
+  color: #fff;
+  background-color: #53b9cc;
+  border-color: #53b9cc;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submitButtonAd:disabled,
+.buttonAd[disabled] {
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#loaderAd {
+  position: absolute;
+  z-index: 1;
+  margin: -2px 0 0 10px;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #666666;
+  width: 14px;
+  height: 14px;
+  -webkit-animation: spinAd 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spinAd {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
