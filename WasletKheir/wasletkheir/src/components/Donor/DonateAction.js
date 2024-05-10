@@ -5,6 +5,8 @@ import ClothesCard from './ClothesCard';
 import { Select } from 'antd';
 import QuantityInput from './NumberInput';
 import ClothesDetailedCard from './ClothesDetailedCard';
+import FoodDetailedCard from './FoodDetailedCard';
+
 const customStyles = {
     control: (provided, state) => ({
       ...provided,
@@ -30,6 +32,9 @@ export default function DonateAction() {
             case 'Jackets':
             case 'Shirts':
                 return <ClothesDetailedCard title={title} text={text} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+            case 'Fresh Meals':
+            case 'Fruits': 
+              return <FoodDetailedCard title={title} text={text} quantity={quantity} progress={progress} />;
             default:
                 return null; // If the title doesn't match, render nothing or a default component
         }

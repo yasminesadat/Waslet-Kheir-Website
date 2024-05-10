@@ -1,5 +1,6 @@
 import React from 'react';
 import './donor.css'
+import { useNavigate  } from 'react-router-dom';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +10,14 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress }) => {
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
+  const navigate = useNavigate(); 
+  const handleDonate = () => {
+    const details = { title, text, age, gender, season, material, quantity, progress };
+
+    console.log('Details:', details); 
+    navigate('/DonateAction', { state: details }); 
+  };
+
 
   return (
     <div className="cardMariam">
@@ -18,8 +27,9 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress }) => {
         <p className="card-descriptionMariam">{text}</p>
         <br></br>
         <div className="button-container">
-
-          <button className="donate-button">Donate</button>
+        {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>
+          <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
+          <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button>
         </div>
         <div className="progress-container">

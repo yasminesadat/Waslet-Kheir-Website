@@ -20,7 +20,7 @@ const selectCorrespondingCard = (data) => {
         case DonationCategories.Toys:
             return <ToysCard title={title} age={age} gender={gender} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
         case DonationCategories.Food:
-            return <FoodCard title={title} type={type} image={image} text={text} progress={progress} />;
+            return <FoodCard title={title} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
         case DonationCategories.MedicalSupplies:
             return <MedicalSuppliesCard title={title} text={text} progress={progress} />;
         case DonationCategories.SchoolSupplies:

@@ -1,28 +1,26 @@
 import React from 'react';
 import './donor.css'
-import { useNavigate  } from 'react-router-dom';
 
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
-const BloodCard = ({ title, text, hospitalName, government, area, progress }) => {
+
+const FoodDetailedCard = ({ title, text,quantity, type, progress }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
 
+
+
   return (
-    <div className="cardMariam">
-      <img className="card-imgMariam" src={"https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg"} alt={title} />
+    <div className="cardMariam2">
+      <img className="card-imgMariam" src={"https://cdn.iconscout.com/icon-pack/preview-mockup/food-1-1-3695.png?f=webp&h=240&modified_at=1507627043"} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
         <p className="card-descriptionMariam">{text}</p>
-        <br></br>
-        <div className="button-container">
+        <p className="card-descriptionMariam">Quantity: {quantity}</p>
 
-          <button className="donate-button">Donate</button>
-          <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button>
-        </div>
+        <br></br>
+        
         <div className="progress-container">
         <progress className={`progress-bar ${progressBarClass}`} style={{marginBottom:'10%'}} value={progress} max="100"></progress>
           <div className={`status ${statusClass}`}>Status: {status}</div>
@@ -33,4 +31,4 @@ const BloodCard = ({ title, text, hospitalName, government, area, progress }) =>
   );
 };
 
-export default BloodCard;
+export default FoodDetailedCard;

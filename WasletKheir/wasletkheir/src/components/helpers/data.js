@@ -10,7 +10,7 @@ export const DONATION_CARDS_DATA = [
         age: "7-12",
         gender: "Female",
         season: "Winter",
-        material: "",
+        material: "Leather",
         quantity: "5",
         progress: 45,
         category: DonationCategories.Clothes,
@@ -23,6 +23,8 @@ export const DONATION_CARDS_DATA = [
         age: "1-5",
         gender: "Male",
         season: "Summer",
+        material: "Cotton",
+        quantity: "10",
         progress: 45,
         category: DonationCategories.Clothes,
         image: "https://cdn-az.allevents.in/events9/banners/d90070eb23ffe435e9795fe2c107dea2ebab3b31d856a370a1a75cf774108b10-rimg-w525-h350-gmir.jpg?v=1563940495",
@@ -31,22 +33,22 @@ export const DONATION_CARDS_DATA = [
     {
         title: "Fresh Meals",
         text: "Need 100 fresh meals to feed orphans",
-        quantity: 100,
-        progress: 45,
+        quantity: "100",
+        progress: 55,
         category: DonationCategories.Food,
         type: FoodTypes.freshMeals,
         image:"https://az727718.vo.msecnd.net/75f28e2721eb4488b6b368de202c4603/images/ff89fcf94bc94fdd972a685833839d3a_2048w.jpg",
     },
     {
-        title: "Need fruits and vegetables",
-        text: "",
-        quantity: 5,
-        progress: 45,
+        title: "Fruits",
+        text: "need various types of fruits for children",
+        quantity: "20 kg",
+        progress: 65,
         type: FoodTypes.FruitsVegetables,
         category: DonationCategories.Food,
     },
     {
-        title: "Need Toys",
+        title: "Toys",
         text: "",
         age: "",
         gender: "",
@@ -57,21 +59,21 @@ export const DONATION_CARDS_DATA = [
         category: DonationCategories.Toys,
     },
     {
-        title: "Need Medical Supplies",
+        title: "Medical Supplies",
         text: "",
         progress: 45,
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.MedicalDevices
     },
     {
-        title: "Need Medical Supplies",
+        title: "Medical Supplies",
         text: "",
         progress: 45,
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.MedicalEquipment
     },
     {
-        title: "Need Medical Supplies",
+        title: "Medical Supplies",
         text: "",
         progress: 45,
         category: DonationCategories.MedicalSupplies,
@@ -79,7 +81,7 @@ export const DONATION_CARDS_DATA = [
         medicationValue: "Heart"
     },
     {
-        title: "Need Medical Supplies",
+        title: "Medical Supplies",
         text: "",
         progress: 45,
         category: DonationCategories.MedicalSupplies,
@@ -87,7 +89,7 @@ export const DONATION_CARDS_DATA = [
         medicationValue: "Lung"
     },
     {
-        title: "Need Medical Supplies",
+        title: "Medical Supplies",
         text: "",
         progress: 45,
         category: DonationCategories.MedicalSupplies,
@@ -95,8 +97,9 @@ export const DONATION_CARDS_DATA = [
         medicationValue: "Liver"
     },
     {
-        title: "Need School books",
+        title: "School books",
         text: "",
+        description:"",
         progress: 45,
         type: SchoolTypes.SchoolBooks,
         category: DonationCategories.SchoolSupplies,
@@ -104,7 +107,7 @@ export const DONATION_CARDS_DATA = [
         image:"",
     },
     {
-        title: "Need School Stationary",
+        title: "School Stationary",
         text: "",
         progress: 45,
         type: SchoolTypes.SchoolStationary,
