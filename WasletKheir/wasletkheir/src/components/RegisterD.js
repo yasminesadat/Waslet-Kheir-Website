@@ -238,11 +238,13 @@ function RegisterD() {
                                     </div>
                                 </div>
                             )}
-                            <div >
-
-                                <GoogleMap location={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.348339328516!2d31.519167779898066!3d30.02686282997592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458233378effb41%3A0x2aba1306ee887182!2sLoutus%2093%2F11!5e0!3m2!1sen!2seg!4v1714430964706!5m2!1sen!2seg"} />
-                            </div>
-                            <br /><br />
+                            {showUploadDr &&
+                                (
+                                    <div>
+                                        <GoogleMap location={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.348339328516!2d31.519167779898066!3d30.02686282997592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458233378effb41%3A0x2aba1306ee887182!2sLoutus%2093%2F11!5e0!3m2!1sen!2seg!4v1714430964706!5m2!1sen!2seg"} />
+                                        <br /><br />
+                                    </div>)
+                            }
                             <button type="submit" disabled={isLoading || isRegistered} className={isRegistered ? 'greenButton' : 'NormalButton'}>
                                 {isLoading ? 'Loading...' : isRegistered ? 'Registered!' : 'Register'}
 

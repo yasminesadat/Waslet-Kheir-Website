@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-
+import './Organization/Org.css'
 export default function GoogleMap({ location }) {
     const [open, setOpen] = useState(false); // used to describe state of map 
     const [showMessage, setShowMessage] = useState(false); // show a message when its successfu;;

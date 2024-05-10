@@ -24,7 +24,7 @@ body {
   margin: 2% auto 2%;
   position: relative;
   z-index: 1;
-  border-top: 5px solid #61dafb;
+  border-top: 5px solid #AAD7D9;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -86,7 +86,7 @@ body {
       top: 0;
       color: #333;
       height: 100%;
-      border-right: 1px solid #0056b3;
+      border-right: 1px solid #4d869c;
       text-align: center;
       width: 30px;
 
@@ -114,7 +114,7 @@ body {
       width: 100%;
       padding: 8px 10px 9px 35px;
       height: 35px;
-      border: 1px solid #0056b3;
+      border: 1px solid #4d869c;
       box-sizing: border-box;
       outline: none;
       -webkit-transition: all 0.30s ease-in-out;
@@ -137,7 +137,7 @@ body {
     &[type="tel"]:focus,
     &[type="number"]:focus {
       box-shadow: 0 0 2px 1px rgba(29, 117, 136, 0.5);
-      border: 1px solid #61dafb;
+      border: 1px solid #4d869c;
       background: #fafafa;
     }
 
@@ -158,7 +158,7 @@ body {
 .form_container {
   .row {
     .col_half.last {
-      border-left: 1px solid #0056b3;
+      border-left: 1px solid #4d869c;
     }
   }
 }
@@ -175,7 +175,7 @@ body {
       height: 0.5em;
       margin-right: 0.5em;
       vertical-align: -2px;
-      border: 2px solid #0056b3;
+      border: 2px solid #4d869c;
       padding: 0.12em;
       background-color: transparent;
       background-clip: content-box;
@@ -183,8 +183,8 @@ body {
     }
 
     &:after {
-      border-right: 2px solid #0056b3;
-      border-top: 2px solid #0056b3;
+      border-right: 2px solid #4d869c;
+      border-top: 2px solid #4d869c;
       content: "";
       height: 20px;
       left: 2px;
@@ -199,12 +199,12 @@ body {
 
   input {
     &:hover+label:before {
-      border-color: #0056b3;
+      border-color: #4d869c;
     }
 
     &:checked+label {
       &:before {
-        border-color: #0056b3;
+        border-color: #4d869c;
       }
 
       &:after {
@@ -214,7 +214,7 @@ body {
         display: block;
         width: 7px;
         height: 20px;
-        border-color: #0056b3;
+        border-color: #4d869c;
       }
     }
   }
@@ -232,7 +232,7 @@ body {
       margin-right: 0.5em;
       border-radius: 100%;
       vertical-align: -3px;
-      border: 2px solid #0056b3;
+      border: 2px solid #4d869c;
       padding: 0.15em;
       background-color: transparent;
       background-clip: content-box;
@@ -242,12 +242,12 @@ body {
 
   input {
     &:hover+label:before {
-      border-color: #0056b3;
+      border-color: #4d869c;
     }
 
     &:checked+label:before {
-      background-color: #0056b3;
-      border-color: #0056b3;
+      background-color: #4d869c;
+      border-color: #4d869c;
     }
   }
 }
@@ -263,7 +263,7 @@ body {
     padding: 0px 15px;
     cursor: pointer;
     color: #7b7b7b;
-    border: 1px solid #0056b3;
+    border: 1px solid #4d869c;
     border-radius: 0;
     background: #fff;
     appearance: none;
@@ -277,9 +277,9 @@ body {
 
     &:hover,
     &:focus {
-      color: #0056b3;
+      color: #4d869c;
       background: #fafafa;
-      border-color: #0056b3;
+      border-color: #4d869c;
       outline: none;
     }
   }
@@ -301,7 +301,7 @@ body {
 
   &:hover+.select_arrow,
   &:focus+.select_arrow {
-    border-top-color: #0056b3;
+    border-top-color: #4d869c;
   }
 }
 
@@ -310,10 +310,10 @@ body {
   z-index: 1;
   text-align: center;
   padding: 15px;
-  color: #61dafb;
+  color: #4d869c;
 
   a {
-    color: darken(#61dafb, 7%);
+    color: darken(#4d869c, 7%);
   }
 }
 
@@ -357,7 +357,7 @@ body {
 input[type=file]::file-selector-button {
   margin-right: 20px;
   border: none;
-  background: #084cdf;
+  background: #4d869c;
   padding: 10px 20px;
   border-radius: 10px;
   color: #fff;
@@ -366,12 +366,12 @@ input[type=file]::file-selector-button {
 }
 
 input[type=file]::file-selector-button:hover {
-  background: #0d45a5;
+  background: #4d869c;
 }
 
 .mapButton {
   border: none;
-  background: #61dafb;
+  background: #AAD7D9;
   padding: 10px 20px;
   color: #fff;
   cursor: pointer;
@@ -381,7 +381,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 .mapButton:hover {
-  background-color: #0056b3;
+  background-color: #4D969C;
 
 }
 
