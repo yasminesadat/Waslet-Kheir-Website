@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 
 
-const ClothesCard = ({ title, text,age, gender, season, material,quantity, progress,navigation  }) => {
+const ClothesCard = ({ title, text,age, gender, season, material,quantity, progress  }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';

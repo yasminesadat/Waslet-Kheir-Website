@@ -4,7 +4,7 @@ import {useLocation } from 'react-router-dom';
 import ClothesCard from './ClothesCard';
 import { Select } from 'antd';
 import QuantityInput from './NumberInput';
-import { NumberInput } from '@mui/base/Unstable_NumberInput/NumberInput';
+import ClothesDetailedCard from './ClothesDetailedCard'
 const customStyles = {
     control: (provided, state) => ({
       ...provided,
@@ -29,7 +29,7 @@ export default function DonateAction() {
         switch (title) {
             case 'Jackets':
             case 'Shirts':
-                return <ClothesCard title={title} text={text} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+                return <ClothesDetailedCard title={title} text={text} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
             default:
                 return null; // If the title doesn't match, render nothing or a default component
         }
@@ -42,7 +42,7 @@ export default function DonateAction() {
             <br/>
 
             <div style={{marginTop:'5%' ,display:'flex'}}>
-                <div>
+                <div style={{flex:'1', marginLeft:'20vh', marginRight:'20vh'}}>
                   <div>
                     <label>Select the transportation</label>
                     <Select styles={customStyles}>      
@@ -54,13 +54,13 @@ export default function DonateAction() {
                     </div><div>
                     <label>Select the suitable timing</label>
              hena yowgad calendar
-             <div style={{flex:'1'}} >
+             <div  >
               <label> Please select a quantity</label>
               <QuantityInput/>
              </div>
              </div>
                     </div>
-               <div> 
+               <div style={{flex:'1',marginLeft:'20vh', marginRight:'20vh'}}> 
                 <h1>Thank you for your contribution to this request</h1> {renderCard()}</div> 
            
             </div>
