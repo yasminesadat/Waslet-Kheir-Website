@@ -10,50 +10,50 @@ const TabsComponent = () => {
   const yAxis = [{ label: '', min: 0 }];
   const series = [
     {
-      data: [ 4782, 3614, 3000, 3250, 3750, 4000, 3500, 4250, 4500, 4749, 5001, 5309],
-      label:'total number of donations for the year 2023',
+      data: [4782, 3614, 3000, 3250, 3750, 4000, 3500, 4250, 4500, 4749, 5001, 5309],
+      label: 'total number of donations for the year 2023',
       color: '#785245'
     },
   ];
   const series1 = [
     {
-      data: [ 850 , 600 , 650 , 800 , 550 , 800 , 700 , 650 , 600 , 550 , 500 , 748],
-      label:'food donations for the year 2023',
+      data: [850, 600, 650, 800, 550, 800, 700, 650, 600, 550, 500, 748],
+      label: 'food donations for the year 2023',
       color: '#77cae9'
     },
   ];
   const series2 = [
     {
-      data: [ 850 , 600 , 650 , 800 , 550 , 800 , 700 , 650 , 600 , 550 , 500 , 748],
-      label:'blood donations for the year 2023',
+      data: [850, 500, 763, 800, 900, 550, 379, 790, 1000, 550, 800, 748],
+      label: 'blood donations for the year 2023',
       color: '#f3a84d'
     },
   ];
   const series3 = [
     {
-      data: [ 850 , 600 , 650 , 800 , 550 , 800 , 700 , 650 , 600 , 550 , 500 , 748],
-      label:'school supplies donated for the year 2023',
+      data: [850, 600, 650, 800, 550, 800, 700, 650, 600, 550, 500, 748],
+      label: 'school supplies donated for the year 2023',
       color: '#37c8d6'
     },
   ];
   const series4 = [
     {
-      data: [ 850 , 600 , 650 , 800 , 550 , 800 , 700 , 650 , 600 , 550 , 500 , 748],
-      label:'medical supplies donated for the year 2023',
-      color: '#f9e7bb'
+      data: [748, 800, 950, 1000, 670, 750, 900, 870, 590, 700, 690, 800],
+      label: 'medical supplies donated for the year 2023',
+      color: '#cfca15'
     },
   ];
   const series5 = [
     {
-      data: [ 850 , 600 , 650 , 800 , 550 , 800 , 700 , 650 , 600 , 550 , 500 , 748],
-      label:'toys donations for the year 2023',
+      data: [900, 920, 850, 800, 750, 799, 600, 1000, 1050, 900, 800, 810],
+      label: 'toys donations for the year 2023',
       color: '#948efd'
     },
   ];
   const series6 = [
     {
-      data: [ 850 , 600 , 650 , 800 , 550 , 800 , 700 , 650 , 600 , 550 , 500 , 748],
-      label:'clothes donated for the year 2023',
+      data: [750, 645, 700, 600, 550, 670, 680, 740, 900, 850, 600, 748],
+      label: 'clothes donated for the year 2023',
       color: '#fb8788'
     },
   ];
@@ -62,7 +62,7 @@ const TabsComponent = () => {
 
   return (
     <div className="tab-content" id="tabs-content" >
-      <ul className="nav nav-pills mb-3"  id="tabs" role="tablist">
+      <ul className="nav nav-pills mb-3" id="tabs" role="tablist">
         <li className="nav-item" role="presentation">
           <button
             className={`nav-link ${activeTab === 'total' ? 'active' : ''}`}
@@ -120,7 +120,7 @@ const TabsComponent = () => {
             aria-selected={activeTab === 'medical'}
             onClick={() => handleTabChange('medical')}
           >
-            Medical Supplies 
+            Medical Supplies
           </button>
         </li>
         <li className="nav-item" role="presentation">
@@ -132,7 +132,7 @@ const TabsComponent = () => {
             aria-selected={activeTab === 'toy'}
             onClick={() => handleTabChange('toy')}
           >
-            Toys 
+            Toys
           </button>
         </li>
         <li className="nav-item" role="presentation">
@@ -149,14 +149,14 @@ const TabsComponent = () => {
         </li>
       </ul>
 
-      
-      <div  style={{ marginLeft:'10%' }} >
+
+      <div style={{ marginLeft: '10%' }} >
         <div
           className={`tab-pane fade ${activeTab === 'total' ? 'show active' : ''}`}
           id="total"
           role="tabpanel"
           aria-labelledby="total-tab"
-          
+
         >
           {activeTab === 'total' && (
             <div>
