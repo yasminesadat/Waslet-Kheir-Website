@@ -60,7 +60,8 @@ export default function DonateAction() {
              </div>
              </div>
                     </div>
-               <div>  {renderCard()}</div> 
+               <div> 
+                <h1>Thank you for your contribution to this request</h1> {renderCard()}</div> 
            
             </div>
         </div>
