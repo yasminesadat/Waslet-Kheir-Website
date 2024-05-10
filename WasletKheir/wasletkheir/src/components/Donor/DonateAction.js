@@ -28,8 +28,8 @@ const customStyles = {
   };
 
 export default function DonateAction() {
-    const location = useLocation();
-    const [isDonationConfirmed, setIsDonationConfirmed] = useState(false);
+  const location = useLocation();
+  const [isDonationConfirmed, setIsDonationConfirmed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
 
