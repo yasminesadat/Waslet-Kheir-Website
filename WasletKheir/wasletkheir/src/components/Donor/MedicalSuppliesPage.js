@@ -113,7 +113,7 @@ export default function FoodPage() {
           />
           {typeFilter == MedicalSuppliesTypes.Medication &&
               <Select
-              placeholder="Input area of use"
+              placeholder="Select area of use"
               value={medicationValue}
               onChange={(value) => {
                 setMedicationValue(value);
