@@ -5,14 +5,14 @@ import { useNavigate  } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
-const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress }) => {
+const SchoolSuppliesCard = ({ title, text, progress }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate(); 
   const handleDonate = () => {
-    const details = { title, text, age, gender, season, material, quantity, progress };
+    const details = { title, text, progress };
 
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 

@@ -62,6 +62,7 @@ export const DONATION_CARDS_DATA = [
         title: "Medical Supplies",
         text: "",
         progress: 45,
+        medicationValue: "",
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.MedicalDevices
     },
@@ -69,6 +70,7 @@ export const DONATION_CARDS_DATA = [
         title: "Medical Supplies",
         text: "",
         progress: 45,
+        medicationValue: "",
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.MedicalEquipment
     },

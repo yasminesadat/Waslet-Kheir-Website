@@ -12,7 +12,7 @@ import FoodCard from './FoodCard';
 import './donor.css'
 
 const selectCorrespondingCard = (data) => {
-    const { title, text, type, age, gender, season, material, quantity, progress, category, image, hospitalName,government,area } = data;
+    const { title, text, type, age, gender, season, material,medicationValue, quantity, progress, category, image, hospitalName,government,area } = data;
 
     switch (category) {
         case DonationCategories.Clothes:
@@ -22,7 +22,7 @@ const selectCorrespondingCard = (data) => {
         case DonationCategories.Food:
             return <FoodCard title={title} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
         case DonationCategories.MedicalSupplies:
-            return <MedicalSuppliesCard title={title} text={text} progress={progress} />;
+            return <MedicalSuppliesCard title={title} text={text} medicationValue={medicationValue} type={type} progress={progress} />;
         case DonationCategories.SchoolSupplies:
             return <SchoolSuppliesCard title={title} text={text} progress={progress} />;
         case DonationCategories.BloodDonations:

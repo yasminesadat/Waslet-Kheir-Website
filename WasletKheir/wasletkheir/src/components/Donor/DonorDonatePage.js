@@ -84,6 +84,7 @@ export default function DonorDonatePage() {
         <RequestGrid filteredData={filteredData} />
       </div>
       </div>
+      <br/><br/>
       <Footer />
     </div>
   );
