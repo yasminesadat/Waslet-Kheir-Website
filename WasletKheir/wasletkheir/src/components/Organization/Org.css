@@ -297,7 +297,7 @@ form .title {
 .NormalButton {
     width: 100%;
     padding: 10px;
-    background-color: #61dafb;
+    background-color: #4d869c;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -305,7 +305,7 @@ form .title {
 }
 
 .NormalButton:hover {
-    background-color: #0056b3;
+    background-color: #AAD7D9;
 }
 
 .greenButton {
