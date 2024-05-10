@@ -1,11 +1,13 @@
 import React from 'react';
 import DonorNavbar from './DonorNavbar';
 import {useLocation } from 'react-router-dom';
-import ClothesCard from './ClothesCard';
 import { Select } from 'antd';
 import QuantityInput from './NumberInput';
 import ClothesDetailedCard from './ClothesDetailedCard';
 import FoodDetailedCard from './FoodDetailedCard';
+import ToysDetailedCard from './ToysDetailedCard';
+
+
 
 const customStyles = {
     control: (provided, state) => ({
@@ -26,7 +28,7 @@ const customStyles = {
 
 export default function DonateAction() {
     const location = useLocation();
-    const { title, text, age, gender, season, material, quantity, progress } = location.state || {};
+    const { title, text, age, gender, season, material, quantity, type,progress ,image} = location.state || {};
     const renderCard = () => {
         switch (title) {
             case 'Jackets':
@@ -35,6 +37,8 @@ export default function DonateAction() {
             case 'Fresh Meals':
             case 'Fruits': 
               return <FoodDetailedCard title={title} text={text} quantity={quantity} progress={progress} />;
+            case 'Toys': 
+              return <ToysDetailedCard title={title} text={text}  age={age} gender={gender} type={type} quantity={quantity} progress={progress}  />;
             default:
                 return null; // If the title doesn't match, render nothing or a default component
         }
