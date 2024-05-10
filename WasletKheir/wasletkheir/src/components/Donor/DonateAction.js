@@ -41,8 +41,8 @@ export default function DonateAction() {
             <br/>
             <br/>
 
-            <div style={{marginTop:'5%'}}>
-                <div><form >
+            <div style={{marginTop:'5%' ,display:'flex'}}>
+                <div>
                   <div>
                     <label>Select the transportation</label>
                     <Select styles={customStyles}>      
@@ -54,12 +54,12 @@ export default function DonateAction() {
                     </div><div>
                     <label>Select the suitable timing</label>
              hena yowgad calendar
-             <div>
+             <div style={{flex:'1'}} >
               <label> Please select a quantity</label>
-<NumberInput/>
+              <QuantityInput/>
              </div>
              </div>
-                    </form></div>
+                    </div>
                <div>  {renderCard()}</div> 
            
             </div>
