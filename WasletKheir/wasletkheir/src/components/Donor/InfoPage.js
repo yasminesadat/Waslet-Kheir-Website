@@ -3,8 +3,10 @@ import { useLocation } from 'react-router-dom';
 import DonorNavbar from './DonorNavbar';
 import Footer from '../Footer';
 import { DonationCategories } from '../helpers/types'; // Import DonationCategories
+import { Modal } from 'antd';
 
 export default function InfoPage() {
+  
   const location = useLocation();
   const { title, text, age, gender, season, material, quantity, type, progress, image, category } = location.state || {};
   const isFulfilled = Number(progress) === 100;

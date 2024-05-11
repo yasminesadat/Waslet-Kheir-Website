@@ -1,11 +1,12 @@
-import React from 'react';
+import {React,useState} from 'react';
 import './donor.css'
-
-
+import { Modal, Avatar, Progress,  } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faInfo } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate  } from 'react-router-dom';
-
+import { Dropdown, Space, Divider } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, category}) => {
   const isFulfilled = Number(progress) === 100;
@@ -19,7 +20,18 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
 
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="cardMariam">
@@ -32,7 +44,44 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
         {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
-          <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button>
+          <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
+          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+          <Avatar size={55} icon={<UserOutlined />} />
+          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <Progress
+            type="circle"
+            percent={progress}
+            size={70}
+            style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%) translateX(-10%)' }}
+            showInfo={false}
+          />
+        </div>
+          <Divider style={{marginTop:'3%', marginBottom:'-1.5%'}}/>
+          
+          <div className='details'>
+            <br/>
+          <Dropdown
+              trigger={['click']}
+              overlay={
+                <img src={image} alt="Your Image" style={{ width: '325px', height:'228px' }} />
+              }
+            >
+              <a onClick={(e) => e.preventDefault()} style={{ color: 'black', fontSize:'14px' }}>
+                <Space>
+                  Toy Picture
+                  <DownOutlined />
+                </Space>
+              </a>
+            </Dropdown>
+            <p >Type: {title}</p>
+            <p >Description: {text}</p>
+            <p >Age: {age}</p>
+            <p >Gender: {gender}</p>
+            <p >Category: {type}</p>
+            <p >Quantity: {quantity}</p>
+          </div>
+          </Modal>
         </div>
         <div className="progress-container">
         <progress className={`progress-bar ${progressBarClass}`} style={{marginBottom:'10%'}} value={progress} max="100"></progress>
