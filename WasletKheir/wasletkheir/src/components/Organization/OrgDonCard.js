@@ -4,29 +4,33 @@ import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import './Org.css'
-const OrgDonCard = ({ image, title, description, progress }) => {
+const OrgDonCard = ({ image, title, description, progress,onDelete }) => {
     const isFulfilled = Number(progress) === 100;
     const [showConfirm, setShowConfirm] = useState(false);
 
     const handleDelete = () => {
         setShowConfirm(true);
     };
+   
     useEffect(() => {
-        console.log(showConfirm);  // This will log after updates, so you can see the change
-    }, [showConfirm]);  // This useEffect runs every time showConfirm changes
+        console.log(showConfirm); 
+    }, [showConfirm]); 
 
     const confirmDelete = () => {
         setShowConfirm(false);
-        if (title === 'Jackets') {
-            window.location.href = "/OrgDel1";
-            console.log("im here");
-        }
-        else if (title === 'Plushies')
-            window.location.href = "/OrgDel2";
-        else if (title === 'Fruits & Vegetables')
-            window.location.href = "/OrgDel3";
-        else if (title === 'Board Markers')
-            window.location.href = "/OrgDel4";
+        // if (title === 'Jackets' || title==='Winter Jackets For School') {
+        //     window.location.href = "/OrgDel1";
+        //     console.log("im here");
+        // }
+        // else if (title === 'Plushies')
+        //     window.location.href = "/OrgDel2";
+        // else if (title === 'Fruits & Vegetables')
+        //     window.location.href = "/OrgDel3";
+        // else if (title === 'Board Markers')
+        //     window.location.href = "/OrgDel4";
+
+       onDelete(title);
+
 
 
     };
