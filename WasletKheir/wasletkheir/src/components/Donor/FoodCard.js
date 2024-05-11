@@ -5,7 +5,7 @@ import {  faInfo } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate  } from 'react-router-dom';
 
 
-const FoodCard = ({  title, text, quantity,  progress, type}) => {
+const FoodCard = ({  title, text, quantity,image,  progress, type}) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -20,7 +20,7 @@ const FoodCard = ({  title, text, quantity,  progress, type}) => {
 
   return (
     <div className="cardMariam">
-      <img className="card-imgMariam" src={"https://cdn.iconscout.com/icon-pack/preview-mockup/food-1-1-3695.png?f=webp&h=240&modified_at=1507627043"} alt={title} />
+      <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
         <p className="card-descriptionMariam">{text}</p>
