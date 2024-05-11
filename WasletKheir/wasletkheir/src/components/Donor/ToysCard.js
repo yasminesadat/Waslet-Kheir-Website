@@ -14,7 +14,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate(); 
   const handleDonate = () => {
-    const details = { title, text ,age, gender, type, quantity, progress  };
+    const details = { title, text ,age, gender, type, quantity, progress,category  };
       
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 

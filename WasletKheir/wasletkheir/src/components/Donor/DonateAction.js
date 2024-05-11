@@ -11,6 +11,7 @@ import SchoolSuppliesDetailedCard from './SchoolSuppliesDetailedCard';
 import Footer from '../Footer';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import { DonationCategories } from '../helpers/types'; 
 
 export default function DonateAction() {
   const location = useLocation();
@@ -19,23 +20,22 @@ export default function DonateAction() {
   const [successMessage, setSuccessMessage] = useState('');
   const [date, setDate] = useState(new Date());
   const navigate = useNavigate();
-  const { title, text, age, gender, season, medicationValue, material, quantity, type, progress, image } = location.state || {};
+  const { title, text, age, gender, season, medicationValue, material, quantity, type, progress, image ,category, 
+    patientName,blood,hospitalAddress, hospitalName,government,area,use,
+    bookName, author, language,edition,summary,stationaryType } = location.state || {};
 
   const renderCard = () => {
-    switch (title) {
-      case 'Jackets':
-      case 'Shirts':
-        return <ClothesDetailedCard title={title} text={text} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
-      case 'Fresh Meals':
-      case 'Fruits':
-        return <FoodDetailedCard title={title} text={text} quantity={quantity} progress={progress} />;
-      case 'Toys':
-        return <ToysDetailedCard title={title} text={text} age={age} gender={gender} type={type} quantity={quantity} progress={progress} />;
-      case 'Medical Supplies':
-        return <MedicalSuppliesDetailedCard title={title} type={type} medicationValue={medicationValue} text={text} progress={progress} />;
-      case 'School Stationary':
-      case 'School books':
-        return <SchoolSuppliesDetailedCard title={title} text={text} progress={progress} />;
+    switch (category) {
+      case DonationCategories.Clothes:
+         return <ClothesDetailedCard category={category} title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+      case DonationCategories.Food:
+        return <FoodDetailedCard category={category} title={title} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
+      case DonationCategories.Toys:
+        return <ToysDetailedCard  category={category} title={title} age={age} gender={gender} type={type} image={image} quantity={quantity} text={text} progress={progress}  />;
+      case DonationCategories.MedicalSupplies:
+        return <MedicalSuppliesDetailedCard category={category} title={title} image={image} text={text} use={use} type={type} quantity={quantity} medicationValue={medicationValue} progress={progress}/>;
+      case DonationCategories.SchoolSupplies:
+        return <SchoolSuppliesDetailedCard  category={category} title={title} text={text} image={image} bookName={bookName} author={author} language={language} edition={edition} summary={summary} type={type} quantity={quantity} stationaryType={stationaryType} progress={progress}  />;
       default:
         return null;
     }
@@ -77,10 +77,10 @@ export default function DonateAction() {
               <br></br>
               <Calendar onChange={setDate} value={date} className="calendar" />
             </div>
-            <div style={{ marginBottom: '1rem' }}>
-              <label>Please select a quantity</label>
+            {quantity !== 1 && (<div style={{ marginBottom: '1rem' }}>
+           <label>Please select a quantity</label>
               <QuantityInput required />
-            </div>
+            </div>)}
             <button onClick={handleConfirmDonation} style={{ alignSelf: 'flex-start', marginTop: '1rem', padding: '10px 20px', background: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
               Confirm Donation
             </button>

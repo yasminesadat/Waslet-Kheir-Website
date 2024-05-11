@@ -15,9 +15,9 @@ const ToysDetailedCard = ({title, text ,age, gender, type, quantity, progress })
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
         <p className="card-descriptionMariam">{text}</p>
-        <p className="card-descriptionMariam">Age: {age}</p>
-        <p className="card-descriptionMariam">Gender: {gender}</p>
-        <p className="card-descriptionMariam">Quantity: {quantity}</p>
+        {age && <p className="card-descriptionMariam">Age: {age}</p>}
+        {gender && <p className="card-descriptionMariam">Gender: {gender}</p>}
+        { quantity&&<p className="card-descriptionMariam">Quantity: {quantity}</p>}
         <br></br>
        
         <div className="progress-container">

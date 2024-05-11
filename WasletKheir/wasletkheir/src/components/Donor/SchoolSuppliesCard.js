@@ -12,7 +12,7 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate();
   const handleDonate = () => {
-    const details = { title, text, progress };
+    const details = {  title,type,quantity, text, progress,bookName, author, language,edition,summary,category,stationaryType};
 
     console.log('Details:', details);
     navigate('/DonateAction', { state: details });
