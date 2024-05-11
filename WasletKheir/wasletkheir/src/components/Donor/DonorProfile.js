@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './UserProfile.css';
 import { UserOutlined } from '@ant-design/icons';
 import { Avatar } from 'antd';
-import { FaPhone, FaLock, FaUser, FaHospitalUser, FaEdit, FaSave, FaRegEye } from "react-icons/fa";
+import { FaPhone, FaLock, FaUser, FaHospitalUser, FaEdit, FaSave, FaChalkboardTeacher, FaRegEye } from "react-icons/fa";
 import { MdEmail } from 'react-icons/md';
 import { GiTeacher } from "react-icons/gi";
 import { BiSolidHide } from "react-icons/bi";
@@ -12,6 +12,7 @@ import Footer from '../Footer';
 import DonorHistory from './DonorHistory';
 import DonorNavbar from './DonorNavbar';
 function DonorProfile() {
+    let user = localStorage.getItem('user');
     const [isEdit, setIsEdit] = useState(false);
     const badges = [
         {
@@ -175,6 +176,18 @@ function DonorProfile() {
                                     readOnly={!isEdit}
                                 />
                             </div>
+                            {user === 'teacher' && <div className="form-group">
+                                <label htmlFor="subjects"><FaChalkboardTeacher /> Subjects</label>
+                                <input
+                                    type="text"
+                                    id="subjects"
+                                    name="gender"
+                                    value="Math, English"
+                                    onChange={handleChange}
+                                    readOnly={!isEdit}
+                                />
+                            </div>
+                            }
                             <div className="form-group">
                                 <label htmlFor="email"><MdEmail /> Email</label>
                                 <input

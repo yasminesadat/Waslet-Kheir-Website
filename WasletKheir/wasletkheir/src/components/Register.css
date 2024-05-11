@@ -399,14 +399,6 @@ input[type=file]::file-selector-button:hover {
   color: black;
 }
 
-.navbarintro {
-  background-color: #61dafb;
-  color: #ffffff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-}
-
 .logo {
   display: flex;
   align-items: center;

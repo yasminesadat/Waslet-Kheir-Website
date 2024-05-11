@@ -72,25 +72,39 @@ export default function DonorNavbar() {
                             {/* <Notif messages={messages} /> */}
                         </div>
                     </div>
-                    <li className="navbar-item">
-                        <Link to="/DonorProfile" className="navbar-link">
+                    <li className="navbar-item dropdown">
+                        < div className="navbar-link">
                             <FontAwesomeIcon icon={faUser} color="white" className='home-icon' />
-                            <span>Profile</span>
-                        </Link>
+                            Profile
+                        </div>
+                        <ul className="dropdown-menu">
+                            <li>
+                                <Link to="/DonorProfile" className="dropdown-link">
+                                    Profile Details
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="dropdown-link">
+                                    Log Out
+                                </Link>
+                            </li>
+
+                        </ul>
+
                     </li>
                     <li className="navbar-item">
                         <Link to="/DonorDonatePage" className="navbar-link">
                             <button style={{
                                 backgroundColor: 'white', // White background color
                                 color: '#AAD7D9',         // Light blue text color
-                                borderRadius: '20px',     // Rounded edges with 20px radius
-                                padding: '10px 20px',     // Padding around the text
+                                borderRadius: '10px',     // Rounded edges with 20px radius
+                                padding: '5px 10px',     // Padding around the text
                                 border: 'none',           // No border (you can add one if you like)
-                                fontSize: '16px',         // Font size
+                                fontSize: '100%',         // Font size
                                 fontWeight: 'bold',       // Bold font weight
                                 cursor: 'pointer',        // Cursor indicates it's clickable
                                 outline: 'none',          // Remove focus outline
-                                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' // Optional: shadow for better visibility
+                                // boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' // Optional: shadow for better visibility
                             }}>Donate Now!</button>
 
                         </Link>
