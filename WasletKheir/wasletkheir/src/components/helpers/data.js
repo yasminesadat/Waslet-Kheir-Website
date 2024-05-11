@@ -55,7 +55,7 @@ export const DONATION_CARDS_DATA = [
         title: "Medical Devices",
         text: "57357 Hospital needs an X-Ray machines for our hospital",
         use:'To capture X-Ray images of our patients for correct diagnosis',
-        quantity: 3,
+        quantity: 1,
         progress: 0,
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.MedicalDevices,
@@ -89,7 +89,7 @@ export const DONATION_CARDS_DATA = [
         progress: 50,
         category: DonationCategories.MedicalSupplies,
         type: MedicalSuppliesTypes.Medication,
-        medicationValue: "Lung",
+        medicationValue: "Respiratory",
         image:"https://microbiologyinfo.com/wp-content/uploads/2018/10/featured-antibiotics-guide.jpg"
     },
     {

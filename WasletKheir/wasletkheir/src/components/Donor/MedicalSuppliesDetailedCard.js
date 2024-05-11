@@ -1,7 +1,7 @@
 import React from 'react';
 import './donor.css'
 
-const MedicalSuppliesDetailedCard = ({ title, type, medicationValue, text, progress }) => {
+const MedicalSuppliesDetailedCard = ({ title,use,quantity, type, medicationValue,image, text, progress,category }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -14,8 +14,9 @@ const MedicalSuppliesDetailedCard = ({ title, type, medicationValue, text, progr
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
         <p className="card-descriptionMariam">{text}</p>
-        <p className="card-descriptionMariam">{medicationValue}</p>
-
+       {medicationValue&& <p className="card-descriptionMariam">Domain: {medicationValue}</p>}
+        {use && <p className="card-descriptionMariam">Purpose: {use}</p>}
+        {quantity&&<p className="card-descriptionMariam">Quantity: {quantity}</p>}
         <br></br>
       
         <div className="progress-container">

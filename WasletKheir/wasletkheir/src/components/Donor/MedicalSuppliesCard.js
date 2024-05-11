@@ -14,7 +14,7 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate(); 
   const handleDonate = () => {
-    const details = { title, type, medicationValue, text, progress,category };
+    const details = { title,use,quantity, type, medicationValue,image, text, progress,category };
 
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 

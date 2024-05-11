@@ -77,10 +77,10 @@ export default function DonateAction() {
               <br></br>
               <Calendar onChange={setDate} value={date} className="calendar" />
             </div>
-            <div style={{ marginBottom: '1rem' }}>
-              <label>Please select a quantity</label>
+            {quantity !== 1 && (<div style={{ marginBottom: '1rem' }}>
+           <label>Please select a quantity</label>
               <QuantityInput required />
-            </div>
+            </div>)}
             <button onClick={handleConfirmDonation} style={{ alignSelf: 'flex-start', marginTop: '1rem', padding: '10px 20px', background: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
               Confirm Donation
             </button>
