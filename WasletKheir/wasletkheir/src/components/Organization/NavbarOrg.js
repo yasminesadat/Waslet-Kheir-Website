@@ -8,12 +8,32 @@ import Icon from '../Admin/Icon';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function OrgNavBar2() {
-    const messages = [
-        "Your request with request id #2333 for jackets has been chosen by a donor",
-        "The courier is on his way with the school supplies for request #9012",
-        "Your request with id #2346 for puzzles and toys has been chosen by a donor",
-        "The courier is on his way with your fresh food delivery for request #0187, Get ready to meet him",
-        "Your request with id #8711 for the fridge has been chosen by a donor"
+
+    const data = [
+        {
+            image: "notifbell.png",
+            message: "Your request with request id #2333 for jackets has been chosen by a donor",
+            detailPage: "",
+            receivedTime: "10 minutes ago"
+        },
+        {
+            image: "notifbell.png",
+            message: "The courier is on his way with the school supplies for request #9012",
+            detailPage: "",
+            receivedTime: "Yesterday"
+        },
+        {
+            image: "notifbell.png",
+            message: "The courier is arriving in 4 minutes with your fresh food delivery for request #0187, Get ready to meet him",
+            detailPage: "",
+            receivedTime: "2 days ago"
+        },
+        {
+            image: "notifbell.png",
+            message: "Your request with id #8711 for the fridge has been chosen by a donor",
+            detailPage: "",
+            receivedTime: "A week ago"
+        },
     ];
     const navigate = useNavigate();
     const location = useLocation();
@@ -76,7 +96,7 @@ export default function OrgNavBar2() {
                     </li>
                     <li>
                         <div style={{ marginTop: '-3px' }}>
-                            {/* <Notif messages={messages} /> */}
+                            <Notif data={data} />
                         </div>
                     </li>
 

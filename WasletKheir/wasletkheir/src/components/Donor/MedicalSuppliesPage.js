@@ -8,6 +8,7 @@ import { Select } from 'antd';
 import { Link } from 'react-router-dom';
 import './donor.css'
 import { Input } from 'antd';
+
 const { Search } = Input;
 const medicalSuppliesData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.MedicalSupplies)
 const typeOptions = Object.values(MedicalSuppliesTypes).map((element) => { return { "value": element, "label": element } })
@@ -103,6 +104,7 @@ export default function FoodPage() {
           <p style={{ marginLeft: '8%' }}>Filter by</p>
           <Divider className="divider-filter" orientation="center" orientationMargin="0" style={{ margin: '6%' }} />
           <Select
+            mode="multiple"
             placeholder="Type of Medical Supplies"
             value={typeFilter}
             onChange={(value) => {
@@ -113,6 +115,7 @@ export default function FoodPage() {
           />
           {typeFilter == MedicalSuppliesTypes.Medication &&
               <Select
+              mode="multiple"
               placeholder="Select area of use"
               value={medicationValue}
               onChange={(value) => {

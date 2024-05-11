@@ -160,7 +160,7 @@
 }
 
 .card-button {
-    background-color: #61dafb;
+    background-color: #4D869C;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -173,7 +173,7 @@
 }
 
 .card-link {
-    color: #4ec5f7;
+    color: #4D869C;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -538,13 +538,21 @@ button.savebuttonsmall {
 
 .pinButton {
     border: none;
-    background: #AAD7D9;
+    background: #4D869C;
     padding: 10px 20px;
     color: #fff;
     cursor: pointer;
     transition: background .2s ease-in-out;
     width: 50%;
-    margin-left: 25%;
+    position: absolute;
+    max-width: 200px;
+    top: 280px;
+    opacity: 100%;
+    /* Adjust these values to position the button as needed */
+    right: 210px;
+    /* Places the button near the top right corner of the map */
+    z-index: 100;
+    /* Ensures the button is above other content in the container */
 }
 
 .greenpinButton {
@@ -559,7 +567,7 @@ button.savebuttonsmall {
 }
 
 .pinButton:hover {
-    background-color: #4D869C;
+    background-color: black;
 
 }
 
@@ -837,6 +845,15 @@ input[type="submit"]:hover {
     align-items: center;
 }
 
+.select-containersmall {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px 0;
+}
 
 .select-container select {
     width: 50%;
@@ -854,7 +871,24 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
-.select-container select:focus {
+.select-containersmall select {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 13.224l5.82-5.821a.75.75 0 011.06 1.06l-6.35 6.35a.75.75 0 01-1.06 0l-6.35-6.35a.75.75 0 111.06-1.06L10 13.224z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    text-align: center;
+    background-size: 20px;
+}
+
+.select-containersmall select:focus {
     outline: none;
     border-color: #4D869C;
     box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);

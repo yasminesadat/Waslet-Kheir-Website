@@ -5,7 +5,6 @@ import CountUp from 'react-countup';
 import { Statistic, Card, Col, Row } from 'antd';
 import TabsComponent from './SwitchTabs';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
-import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import NavBar from './NavBar'
@@ -31,11 +30,11 @@ function AdminPage() {
 
     <div>
       <NavBar />
-      {/* <br /><br /><br /> */}
       <div className="adContainer">
         <div className="adLeft-panel">
           <h1><strong><b>Welcome Back!</b></strong></h1>
-          <h3 style={{ color: 'grey' }}> track your activity here</h3>
+          <h3 style={{ color: 'grey',marginTop:'-2%'}}> Track your activity here</h3>
+          <div style={{height:'0.8%'}} />
           <MyCard
             image="icons8-donation-64.png"
             title="Total Donations"
@@ -76,7 +75,7 @@ function AdminPage() {
 
         <div className="adRight-panel">
           <div className='card4'>
-            <h3 style={{ color: 'grey', textAlign: 'center', justifySelf: 'center' }}> The following pie chart displays the top three governorates in Egypt that used this website the most during the year 2023</h3><br /><br />
+            <h3 style={{ color: 'grey', textAlign: 'center', justifySelf: 'center' }}> The following pie chart displays the top three governorates in Egypt that used this website the during the year 2023</h3><br /><br />
 
             {/* <h3 > the top 3 governorates  </h3> */}
             <PieChartWithCustomizedLabel />

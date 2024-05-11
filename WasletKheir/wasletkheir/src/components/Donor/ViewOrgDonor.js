@@ -1,13 +1,16 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import '../Organization/Org.css';
 import DonorNavbar from './DonorNavbar';
 import OrgCard from './OrgCard';
 import Footer from '../Footer';
+import { MdFilterListAlt } from "react-icons/md";
+
 export default function ViewOrgDonor() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
-    const [filter, setFilter] = useState('all');
-
+    const [typeFilter, setTypeFilter] = useState('all');
+    const [governorateFilter, setGovernorateFilter] = useState('all');
+    const [areaFilter, setAreaFilter] = useState('all');
 
 
     const organizations = [
@@ -16,6 +19,8 @@ export default function ViewOrgDonor() {
             title: "Mersal ",
             description: "",
             type: "charity",
+            area: 'newcairo',
+            governorate: 'cairo',
             orgDetails: [
                 { label: 'Organization Type', value: 'Charity' },
                 { label: 'Contact Number', value: '+201154672938' },
@@ -33,6 +38,8 @@ export default function ViewOrgDonor() {
             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiBx2s6hdvg0n3f0Bs3CuTK1Ty4MayooAzd5oJivQvw&s",
             title: "Resala ",
             description: "",
+            area: 'nasrcity',
+            governorate: 'cairo',
             type: "charity",
             orgDetails: [
                 { label: 'Organization Type', value: 'Charity' },
@@ -49,6 +56,8 @@ export default function ViewOrgDonor() {
             image: "https://www.myf-egypt.org/img/logo.png",
             title: "Magdy Yacoub Heart Foundation",
             description: "",
+            area: 'nasrcity',
+            governorate: 'cairo',
             type: "hospital",
             orgDetails: [
                 { label: 'Organization Type', value: 'Hospital' },
@@ -66,6 +75,8 @@ export default function ViewOrgDonor() {
             image: "https://mir-s3-cdn-cf.behance.net/projects/404/2c1f32117496869.Y3JvcCw1MTIsNDAxLDYwMiwyMDQ.jpg",
             title: "Misr El kheir",
             description: "",
+            area: 'mokattam',
+            governorate: 'cairo',
             type: "charity",
             orgDetails: [
                 { label: 'Organization Type', value: 'Charity' },
@@ -83,6 +94,8 @@ export default function ViewOrgDonor() {
             title: "Awlady Orphanage",
             description: "",
             type: "orphanage",
+            area: 'newcairo',
+            governorate: 'giza',
             orgDetails: [
                 { label: 'Organization Type', value: 'Orphanage' },
                 { label: 'Contact Number', value: '+2023456789' },
@@ -98,6 +111,8 @@ export default function ViewOrgDonor() {
             title: "57357 Hospital",
             description: "",
             type: "hospital",
+            area: 'newcairo',
+            governorate: 'giza',
             orgDetails: [
                 { label: 'Organization Type', value: 'Hospital' },
                 { label: 'Contact Number', value: '+201189456789' },
@@ -114,6 +129,8 @@ export default function ViewOrgDonor() {
             title: "AlNas Hospital",
             description: "",
             type: "hospital",
+            area: 'nasrcity',
+            governorate: 'giza',
             orgDetails: [
                 { label: 'Organization Type', value: 'Hospital' },
                 { label: 'Contact Number', value: '+201189456789' },
@@ -130,6 +147,8 @@ export default function ViewOrgDonor() {
             title: "Sultan Hassan Mosque",
             description: "",
             type: "mosque",
+            area: 'nasrcity',
+            governorate: 'cairo',
             orgDetails: [
                 { label: 'Organization Type', value: 'Mosque' },
                 { label: 'Contact Number', value: '+201109476789' },
@@ -145,6 +164,8 @@ export default function ViewOrgDonor() {
             image: "https://www.egypttoursportal.com/images/2020/12/Christian-Monuments-and-Monasteries-in-Egypt-Egypt-Tours-Portal.jpg",
             title: "Virgin Mary Church",
             description: "",
+            area: 'downtown',
+            governorate: 'cairo',
             type: "church",
             orgDetails: [
                 { label: 'Organization Type', value: 'Church' },
@@ -161,6 +182,8 @@ export default function ViewOrgDonor() {
             image: "https://alshams.com.eg/wp-content/uploads/2019/11/Azhar-University.jpg",
             title: "Azhar University",
             description: "",
+            area: 'nasrcity',
+            governorate: 'cairo',
             type: "school",
             orgDetails: [
                 { label: 'Organization Type', value: 'School' },
@@ -177,6 +200,8 @@ export default function ViewOrgDonor() {
             title: "Dar Al Orman Association",
             description: "",
             type: "charity",
+            area: 'zamalek',
+            governorate: 'cairo',
             orgDetails: [
                 { label: 'Organization Type', value: 'Charity' },
                 { label: 'Contact Number', value: '+0222636192' },
@@ -191,6 +216,8 @@ export default function ViewOrgDonor() {
             image: "https://sanadorphans.org/storage/settings/January2024/vMGNGY5ZMqNBl1luAdiF.png",
             title: "Sanad Orphanage",
             description: "",
+            area: 'heliopolis',
+            governorate: 'cairo',
             type: "orphanage",
             orgDetails: [
                 { label: 'Organization Type', value: 'Orphanage' },
@@ -200,19 +227,33 @@ export default function ViewOrgDonor() {
                 { label: 'Area', value: 'Heliopolis' },
                 { label: 'Governorate', value: 'Cairo' },
             ],
-            location: ""
+            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.2626746956466!2d31.32636817549097!3d30.086662616569374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e2229cbc89f%3A0x7728f47eab7d5044!2sWataneya%20society!5e0!3m2!1sen!2seg!4v1715446662755!5m2!1sen!2seg"
         },
 
 
     ];
-    const filteredOrgs = organizations.filter(organizations => {
-        if (filter === 'all') {
-            return true;
-        }
-        return organizations.type === filter;
+
+    const filteredOrgs = organizations.filter(organization => {
+        const typeMatches = typeFilter === 'all' || organization.type === typeFilter;
+        const governorateMatches = governorateFilter === 'all' || organization.governorate === governorateFilter;
+        const areaMatches = areaFilter === 'all' || organization.area === areaFilter;
+        return typeMatches && governorateMatches && areaMatches;
     });
-    const handleFilterChange = (event) => {
-        setFilter(event.target.value);
+
+    const handleFilterChange = (event, filterType) => {
+        switch (filterType) {
+            case 'type':
+                setTypeFilter(event.target.value);
+                break;
+            case 'governorate':
+                setGovernorateFilter(event.target.value);
+                break;
+            case 'area':
+                setAreaFilter(event.target.value);
+                break;
+            default:
+                break;
+        }
     };
 
     return (
@@ -220,15 +261,18 @@ export default function ViewOrgDonor() {
             <div style={{ minHeight: '230vh' }}>
                 <DonorNavbar />
                 <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <center>
-                    <h1>View All Organizations</h1>
-                </center>
-                <div className="select-container">
-                    <select onChange={handleFilterChange}>
-                        <option value="all">All</option>
+                <br></br>  <br></br>
+                <br></br>  <br></br>
+                <center><h1>Organizations</h1></center>
+                <div className="select-containersmall">
+
+
+
+
+
+
+                    <select style={{ maxWidth: '300px', margin: '10px' }} onChange={(e) => handleFilterChange(e, 'type')}>
+                        <option value="all">Organization Type</option>
                         <option value="mosque">Mosque</option>
                         <option value="church">Church</option>
                         <option value="school">Public School</option>
@@ -236,15 +280,35 @@ export default function ViewOrgDonor() {
                         <option value="hospital">Hospital</option>
                         <option value="orphanage">Orphanage</option>
                     </select>
-                </div>
 
+
+
+
+                    <select style={{ maxWidth: '300px', margin: '10px' }} onChange={(e) => handleFilterChange(e, 'governorate')}>
+                        <option value="all">Governorate</option>
+                        <option value="cairo">Cairo</option>
+                        <option value="giza">Giza</option>
+                        <option value="alexandria">Alexandria</option>
+
+                    </select>
+
+                    <select style={{ maxWidth: '300px', margin: '10px' }} onChange={(e) => handleFilterChange(e, 'area')}>
+                        <option value="all">Area</option>
+                        <option value="zamalek">Zamalek</option>
+                        <option value="newcairo">New Cairo</option>
+                        <option value="nasrcity">Nasr City</option>
+                        <option value="heliopolis">Heliopolis</option>
+                        <option value="downtown">Downtown</option>
+                    </select>
+
+                </div>
                 <div className="donations-container">
-                    {filteredOrgs.map((organizations, index) => (
-                        <OrgCard key={index} {...organizations} />
+                    {filteredOrgs.map((organization, index) => (
+                        <OrgCard key={index} {...organization} />
                     ))}
                 </div>
-            </div>
+            </div >
             <Footer />
-        </ >
-    )
+        </>
+    );
 }

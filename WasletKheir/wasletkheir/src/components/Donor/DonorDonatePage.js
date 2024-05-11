@@ -33,8 +33,10 @@ export default function DonorDonatePage() {
   }, []);
 
   const changeDataBasedOnSearch = (arr, value) => {
-    return arr.filter((element) => element.title.toLowerCase().includes(value.toLowerCase()))
-  }
+    return arr.filter((element) => 
+    element.title.toLowerCase().includes(value.toLowerCase()) ||
+    element.category.toLowerCase().includes(value.toLowerCase())
+  );  }
 
   const onChange = (event) => {
     setValue(event.target.value);
@@ -84,6 +86,7 @@ export default function DonorDonatePage() {
         <RequestGrid filteredData={filteredData} />
       </div>
       </div>
+      <br/><br/>
       <Footer />
     </div>
   );

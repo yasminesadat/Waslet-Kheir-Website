@@ -88,7 +88,21 @@
   position: relative;
   text-align: center;
   background-color: #fff;
-  height: 300px;
+  height: 330px;
+}
+
+.cardMariam2 {
+  width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  height: 500px;
 }
 
 .cardMariam:hover {
@@ -103,7 +117,7 @@
 } */
 
 .card-contentMariam {
-  padding: 15px;
+  padding: 9px;
   height: 30%;
 
 }
@@ -145,7 +159,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #61dafb;
+  background-color: #4D869C;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -429,7 +443,7 @@
 .breadcrumb-main {
   margin-left: 3%;
   white-space: nowrap;
-  width:30%;
+  width: 30%;
   max-width: 30%;
 }
 
@@ -461,7 +475,7 @@
 .button-container {
   display: flex;
   justify-content: space-between;
-  height:22%;
+  height: 22%;
 }
 
 .view-details-button-donor {
@@ -589,8 +603,8 @@
 
 
 .card-imgMariam {
-  width: 81%;
-  height: 43%;
+  width: 100%;
+  height: 45%;
   object-fit: cover;
 }
 
@@ -674,5 +688,84 @@
 .custom-modal .ant-modal-title {
   color: #4d869c;
   font-size: 1.8em;
+  font-weight: bold;
+}
+
+.info-container {
+  background-color: #D1E9EB;
+  margin-top: 10%;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  height: 390px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin-left: 18%;
+  margin-bottom: 10%;
+}
+
+.info-image {
+  flex: 1.3;
+  /* Take up half of the container */
+}
+
+.info-details {
+  flex: 1;
+  /* Take up the other half of the container */
+  padding-left: 15%;
+  justify-self: center;
+  justify-content: center;
+}
+
+/* Style the image to take up the entire space of its container */
+.info-image img {
+  margin-left: 3%;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.progress-barMariam {
+  margin-top: 3%;
+  width: 90%;
+  height: 10px;
+  border: none;
+  border-radius: 20px;
+}
+
+.progress-barMariam::-webkit-progress-bar {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+
+}
+
+.progress-barMariam::-webkit-progress-value {
+  background-color: #007bff;
+  border-radius: 20px;
+}
+
+.progress-barMariam::-moz-progress-bar {
+  background-color: #007bff;
+}
+
+.progress-barMariam::-ms-fill {
+  background-color: #007bff;
+}
+
+.progress-barMariam::-moz-progress-bar {
+  background-color: #007bff;
+}
+
+.progress-barMariam.progress-bar-green::-webkit-progress-value,
+.progress-barMariam.progress-bar-green::-moz-progress-bar,
+.progress-barMariam.progress-bar-green::-ms-fill {
+  background-color: #00cc00;
+}
+
+.details{
+  margin-bottom: -2%;
+  font-size: 15px;
   font-weight: bold;
 }
