@@ -28,7 +28,7 @@ function AdminPage() {
 
   return (
 
-    <div>
+    <div style={{backgroundColor: '#f2f2f2'}}>
       <NavBar />
       <div className="adContainer">
         <div className="adLeft-panel">

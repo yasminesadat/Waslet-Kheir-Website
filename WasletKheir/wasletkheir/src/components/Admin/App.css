@@ -227,7 +227,7 @@
 .input:focus~.user-label,
 .input:valid~.user-label {
   transform: translateY(-50%) scale(0.8);
-  background-color: #f8f9fa;
+  background-color: white;
   padding: 0 0.2em;
   color: #79a9c2;
 }
@@ -324,6 +324,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  background-color: white;
 }
 
 .content-wrapper {

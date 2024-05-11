@@ -21,6 +21,7 @@ function handleSubmit(e) {
 
   return (
     <div>
+        <div className="welcome-page-wrapper">
     <form onSubmit={handleSubmit} className="login">
         <div className="input-group">
             <input required type="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} className="input" autoComplete="off"/>
@@ -46,7 +47,7 @@ function handleSubmit(e) {
     <div className="subtext">Connecting the World</div>
     </div>
     
- 
+ </div>
 
 
 </div>
