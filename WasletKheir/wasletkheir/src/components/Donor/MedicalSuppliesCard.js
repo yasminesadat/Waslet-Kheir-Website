@@ -7,14 +7,14 @@ import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate  } from 'react-router-dom';
 
 
-const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, text, progress }) => {
+const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, text, progress,category }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate(); 
   const handleDonate = () => {
-    const details = { title, type, medicationValue, text, progress };
+    const details = { title, type, medicationValue, text, progress,category };
 
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 

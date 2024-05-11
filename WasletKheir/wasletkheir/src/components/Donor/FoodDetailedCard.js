@@ -3,7 +3,7 @@ import './donor.css'
 
 
 
-const FoodDetailedCard = ({ title, text,quantity, type, progress }) => {
+const FoodDetailedCard = ({   title, text, quantity, progress, type }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -18,7 +18,6 @@ const FoodDetailedCard = ({ title, text,quantity, type, progress }) => {
         <h2 className="card-title">{title}</h2>
         <p className="card-descriptionMariam">{text}</p>
         <p className="card-descriptionMariam">Quantity: {quantity}</p>
-
         <br></br>
         
         <div className="progress-container">
