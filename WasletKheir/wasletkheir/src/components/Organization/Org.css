@@ -169,17 +169,18 @@
 }
 
 .card-button:hover {
-    background-color: #4ec5f7;
+    background-color: #92C7CF;
+    color: black;
+
 }
 
 .card-link {
-    color: #4D869C;
-    text-decoration: none;
+    color: #C6735A;
     transition: color 0.3s ease;
 }
 
 .card-link:hover {
-    color: darkblue;
+    color: #2F5E69;
 }
 
 .footer {
@@ -191,6 +192,8 @@
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .footer-section {
@@ -1312,4 +1315,3 @@ input[type="submit"]:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
