@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { FaUser } from 'react-icons/fa';
+import { FaClinicMedical } from "react-icons/fa";
+import { LuHeartPulse } from "react-icons/lu";
+import { MdOutlineSick } from "react-icons/md";
+
 
 export default function DoctorForm({ isEdit }) {
     // Initialize form state with default values
@@ -7,7 +11,8 @@ export default function DoctorForm({ isEdit }) {
         address: 'Rehab Medical Center',
         area: 'New Cairo',
         governorate: 'Cairo',
-        numCases: '100'
+        numCases: '100',
+        speciality: 'Cardiologist'
     });
 
     // Function to handle changes in form inputs
@@ -27,7 +32,8 @@ export default function DoctorForm({ isEdit }) {
                 <h3>Doctor Details</h3>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="clinicArea"><FaUser /> Clinic Area</label>
+                        <label htmlFor="clinicArea"><FaClinicMedical />&nbsp;
+                            Clinic Area</label>
                         <input
                             type="text"
                             id="clinicArea"
@@ -37,8 +43,10 @@ export default function DoctorForm({ isEdit }) {
                             readOnly={!isEdit}
                         />
                     </div>
+
+
                     <div className="form-group">
-                        <label htmlFor="clinicAddress"><FaUser /> Clinic Address</label>
+                        <label htmlFor="clinicAddress"><FaClinicMedical /> &nbsp; Clinic Address</label>
                         <input
                             type="text"
                             id="clinicAddress"
@@ -49,7 +57,8 @@ export default function DoctorForm({ isEdit }) {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="clinicGovernorate"><FaUser /> Clinic Governorate</label>
+                        <label htmlFor="clinicGovernorate"><FaClinicMedical />&nbsp;
+                            Clinic Governorate</label>
                         <input
                             type="text"
                             id="clinicGovernorate"
@@ -60,7 +69,20 @@ export default function DoctorForm({ isEdit }) {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="proBonoCases"><FaUser /> Number of Pro Bono Cases</label>
+                        <label htmlFor="clinicAddress"><LuHeartPulse /> &nbsp;
+                            Speciality</label>
+                        <input
+                            type="text"
+                            id="clinicAddress"
+                            name="address"
+                            value={formData.speciality}
+                            onChange={handleChange}
+                            readOnly={!isEdit}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="proBonoCases"><MdOutlineSick />&nbsp;
+                            Number of Pro Bono Cases</label>
                         <input
                             type="number"
                             id="proBonoCases"

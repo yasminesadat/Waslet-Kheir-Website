@@ -13,6 +13,7 @@ import DonorHistory from './DonorHistory';
 import DonorNavbar from './DonorNavbar';
 import DoctorForm from './DoctorForm';
 import Map from '../Map'
+import Teacherform from './Teacherform';
 function DonorProfile() {
     let user = localStorage.getItem('user');
     const [isEdit, setIsEdit] = useState(false);
@@ -153,6 +154,7 @@ function DonorProfile() {
                         <section className='statistics-section'>
                             {localStorage.getItem('user') === 'donor' && (<DonorHistory />)}
                             {localStorage.getItem('user') === 'doctor' && (<DoctorForm isEdit={isEdit} />)}
+                            {localStorage.getItem('user') === 'teacher' && (<Teacherform isEdit={isEdit} />)}
                         </section>
 
 
@@ -220,7 +222,7 @@ function DonorProfile() {
                                     readOnly={!isEdit}
                                 />
                             </div>
-                            {localStorage.getItem('user') === 'teacher' && (<div className="form-group">
+                            {/* {localStorage.getItem('user') === 'teacher' && (<div className="form-group">
                                 <label htmlFor="subjects"><FaChalkboardTeacher /> Subjects</label>
                                 <input
                                     type="text"
@@ -232,7 +234,7 @@ function DonorProfile() {
                                 />
                             </div>
                             )
-                            }
+                            } */}
                             <div className="form-group">
                                 <label htmlFor="email"><MdEmail /> Email</label>
                                 <input
