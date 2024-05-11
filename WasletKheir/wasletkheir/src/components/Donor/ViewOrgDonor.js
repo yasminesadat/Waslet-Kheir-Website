@@ -38,7 +38,7 @@ export default function ViewOrgDonor() {
             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiBx2s6hdvg0n3f0Bs3CuTK1Ty4MayooAzd5oJivQvw&s",
             title: "Resala ",
             description: "",
-            area: 'nasr city',
+            area: 'nasrcity',
             governorate: 'cairo',
             type: "charity",
             orgDetails: [
@@ -56,7 +56,7 @@ export default function ViewOrgDonor() {
             image: "https://www.myf-egypt.org/img/logo.png",
             title: "Magdy Yacoub Heart Foundation",
             description: "",
-            area: 'nasr city',
+            area: 'nasrcity',
             governorate: 'cairo',
             type: "hospital",
             orgDetails: [
@@ -129,7 +129,7 @@ export default function ViewOrgDonor() {
             title: "AlNas Hospital",
             description: "",
             type: "hospital",
-            area: 'nasr city',
+            area: 'nasrcity',
             governorate: 'giza',
             orgDetails: [
                 { label: 'Organization Type', value: 'Hospital' },
@@ -200,7 +200,7 @@ export default function ViewOrgDonor() {
             title: "Dar Al Orman Association",
             description: "",
             type: "charity",
-            area: 'nasrcity',
+            area: 'zamalek',
             governorate: 'cairo',
             orgDetails: [
                 { label: 'Organization Type', value: 'Charity' },

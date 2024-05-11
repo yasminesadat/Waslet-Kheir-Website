@@ -9,26 +9,71 @@ import { FaUserDoctor } from "react-icons/fa6";
 
 import Icon from '../Admin/Icon';
 const { Search } = Input;
-const messages = [
+const donordata = [
+    {
+        image: "notifbell.png",
+        message: "A courier is coming to pick up your donation to 57357 Hospital for medical supplies,Click to know more ",
+        detailPage: "./Notif2",
+        receivedTime: "1 minute ago"
+    },
+    {
+        image: "notifbell.png",
+        message: "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
+        detailPage: "",
+        receivedTime: "2 hours ago"
+    },
+    {
+        image: "notifbell.png",
+        message: "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
 
-    "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
-    "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
-    "A courier is coming to pick up your donation to 57357 Hospital for medical supplies,Click to know more ",
+        detailPage: "",
+        receivedTime: "Yesterday"
+    },
+
 
 ];
-const messageDr = [
+const teacherData = [
+    {
+        image: "notifbell.png",
+        message: "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
+        detailPage: "",
+        receivedTime: "1 minute ago "
+    },
 
-    "Your request to volunteer as a doctor is currently being processed",
-    "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
-    "Your request to volunteer as a doctor has been accepted, click here to enter additional details!"
+    {
+        image: "notifbell.png",
+        message: "Your request to volunteer as a teacher is currently being processed,Click to enter additional details!",
+        detailPage: "./DonorProfile",
+        receivedTime: "2 days ago"
+    },
+
 
 ];
-const messageTeacher = [
+const DRdata = [
 
-    "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
-    "Your request to volunteer as a teacher has been accepted "
+    {
+        image: "notifbell.png",
+        message: "You can now browse through the volunteer section and choose cases that suit you",
+        detailPage: "",
+        receivedTime: "1 minute ago "
+    },
+    {
+        image: "notifbell.png",
+        message: "Your request to volunteer as a doctor has been accepted",
+        detailPage: "./DonorProfile",
+        receivedTime: "5 minutes ago "
+    },
+    {
+        image: "notifbell.png",
+        message: "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
+
+        detailPage: "",
+        receivedTime: " 4 daysago "
+    }
+
 
 ];
+
 
 
 
@@ -97,9 +142,9 @@ export default function DonorNavbar() {
                     <div className='notification' style={{ marginTop: '9px' }}>
 
                         <div style={{ marginTop: '-8.5px' }}>
-                            {localStorage.getItem('user') === 'doctor' && (<Notif messages={messageDr} />)}
-                            {localStorage.getItem('user') === 'donor' && (<Notif messages={messages} />)}
-                            {localStorage.getItem('user') === 'teacher' && (<Notif messages={messageTeacher} />)}
+                            {localStorage.getItem('user') === 'doctor' && (<Notif data={DRdata} />)}
+                            {localStorage.getItem('user') === 'donor' && (<Notif data={donordata} />)}
+                            {localStorage.getItem('user') === 'teacher' && (<Notif data={teacherData} />)}
 
                         </div>
                     </div>

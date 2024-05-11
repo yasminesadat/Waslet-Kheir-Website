@@ -1,41 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Notifications from "react-notifications-menu";
-import Delivery from "../Donor/Notif2";
-const Notif = ({ messages }) => {
-    const [data, setData] = useState(
-        messages.map((message, index) => ({
-            image: "notifbell.png",
-            message,
-            detailPage: `/Notif${index}`,
-            receivedTime: `${index * 5}m ago`
-        }))
-    );
 
+const Notif = ({ data }) => {
     return (
-        <div >
-            <div>
-                <Notifications
-                    width='400px'
-                    data={data}
-
-                    header={{
-                        title: "Notifications",
-                        option: { text: "", onClick: () => console.log("Clicked") }
-                    }}
-                    markAsRead={(data) => {
-                        console.log(data);
-                    }}
-
-                    icon={'Bell.png'}
-                />
-            </div>
+        <div>
+            <Notifications
+                width='400px'
+                data={data}
+                header={{
+                    title: "Notifications",
+                    option: { text: "", onClick: () => console.log("Options clicked") }
+                }}
+                markAsRead={(dataItem) => {
+                    console.log("Mark as read:", dataItem);
+                }}
+                icon={'Bell.png'}
+            />
         </div>
     );
 };
 
 Notif.propTypes = {
-    messages: PropTypes.arrayOf(PropTypes.string).isRequired
+    data: PropTypes.arrayOf(PropTypes.shape({
+        image: PropTypes.string,
+        message: PropTypes.string.isRequired,
+        detailPage: PropTypes.string,
+        receivedTime: PropTypes.string
+    })).isRequired
 };
 
 export default Notif;
