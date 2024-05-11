@@ -34,7 +34,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3.5vw;
+    padding-left: 3.5vw;
+    padding-right: 6vw;
     max-width: 100vw;
     height: 100%;
   }
@@ -757,7 +758,7 @@
 
 .card4 {
   width: 230px;
-  height: 700px;
+  height: 710px;
   border: 2px solid #ffffff;
   background-color: #ffffff;
   border-radius: 5px;
@@ -895,8 +896,8 @@
   margin: auto;
   display: block;
   color: #fff;
-  background-color: #53b9cc;
-  border-color: #53b9cc;
+  background-color: #92C7CF;
+  border-color: #92C7CF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
   border-radius: 4px;
