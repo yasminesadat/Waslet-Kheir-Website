@@ -1,6 +1,6 @@
-import React , { useState }from 'react';
+import React, { useState } from 'react';
 import DonorNavbar from './DonorNavbar';
-import {useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Select } from 'antd';
 import QuantityInput from './NumberInput';
 import ClothesDetailedCard from './ClothesDetailedCard';
@@ -9,130 +9,92 @@ import ToysDetailedCard from './ToysDetailedCard';
 import MedicalSuppliesDetailedCard from './MedicalSuppliesDetailedCard';
 import SchoolSuppliesDetailedCard from './SchoolSuppliesDetailedCard';
 import Footer from '../Footer';
-
-const customStyles = {
-    control: (provided, state) => ({
-      ...provided,
-      width: 200, // Adjust the width as needed
-      marginTop: '5%',
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isSelected ? '#007bff' : 'white',
-      color: state.isSelected ? 'white' : '#000',
-      '&:hover': {
-        backgroundColor: '#007bff',
-        color: 'white',
-      },
-    }),
-  };
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 export default function DonateAction() {
   const location = useLocation();
   const [isDonationConfirmed, setIsDonationConfirmed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
-
+  const [date, setDate] = useState(new Date());
   const navigate = useNavigate();
-    const { title, text, age, gender, season,medicationValue, material, quantity, type,progress ,image} = location.state || {};
-    const renderCard = () => {
-        switch (title) {
-            case 'Jackets':
-            case 'Shirts':
-                return <ClothesDetailedCard title={title} text={text} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
-            case 'Fresh Meals':
-            case 'Fruits': 
-              return <FoodDetailedCard title={title} text={text} quantity={quantity} progress={progress} />;
-            case 'Toys': 
-              return <ToysDetailedCard title={title} text={text}  age={age} gender={gender} type={type} quantity={quantity} progress={progress}  />;
-            case 'Medical Supplies':  
-              return < MedicalSuppliesDetailedCard  title={title} type={type} medicationValue={medicationValue} text={text} progress={progress} />;
-            case 'School Stationary':
-            case 'School books':
-              return<SchoolSuppliesDetailedCard   title={title} text={text} progress={progress}/>;
-            
-            default:
-                return null; }
+  const { title, text, age, gender, season, medicationValue, material, quantity, type, progress, image } = location.state || {};
 
-    };
-    const handleConfirmDonation = () => {
-     
-        setIsLoading(true);
-        setTimeout(() => {
-          setIsLoading(false);
-          setIsDonationConfirmed(true);
-          setSuccessMessage('Thank you for your donation!');
-  
-          setTimeout(() => {
-            navigate('/DonorDonatePage');
-          }, 3000);
-        }, 2000);
-      
-     
-    };
-    return (
-        <div>
-            <DonorNavbar />
-            <br/>
-            <br/>
-            <br/>
+  const renderCard = () => {
+    switch (title) {
+      case 'Jackets':
+      case 'Shirts':
+        return <ClothesDetailedCard title={title} text={text} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+      case 'Fresh Meals':
+      case 'Fruits':
+        return <FoodDetailedCard title={title} text={text} quantity={quantity} progress={progress} />;
+      case 'Toys':
+        return <ToysDetailedCard title={title} text={text} age={age} gender={gender} type={type} quantity={quantity} progress={progress} />;
+      case 'Medical Supplies':
+        return <MedicalSuppliesDetailedCard title={title} type={type} medicationValue={medicationValue} text={text} progress={progress} />;
+      case 'School Stationary':
+      case 'School books':
+        return <SchoolSuppliesDetailedCard title={title} text={text} progress={progress} />;
+      default:
+        return null;
+    }
+  };
 
-            <div style={{marginTop:'5%' ,display:'flex'}}>
-                <div style={{flex:'1', marginLeft:'20vh', marginRight:'20vh'}}>
+  const handleConfirmDonation = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsDonationConfirmed(true);
+      setSuccessMessage('Thank you for your donation!');
+      setTimeout(() => {
+        navigate('/DonorDonatePage');
+      }, 3000);
+    }, 2000);
+  };
 
-
-            <div>
+  return (
+    <div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1200px', margin: 'auto' }}>
+        <DonorNavbar />
+        <br></br>
+        <br></br>
+        <br></br>
+        <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'space-between', width: '100%', padding: '0 2rem' }}>
+          <div style={{ flex: 1, marginRight: '2rem', padding: '20px', borderRight: '2px solid #ddd' }}>
+            <h2 style={{ marginBottom: '1rem' }}>Donation Details</h2>
+            <div style={{ marginBottom: '1rem' }}>
               <label>Select the transportation</label>
-              <Select required styles={customStyles} >      
-              <option value="Option0">Vehicle Type</option>
-              <option value="Option1">Truck</option>
-              <option value="Option2">Car</option>
-              <option value="Option3">Motorcycle</option>
+              <Select style={{ width: '100%' }} placeholder="Select a vehicle type">
+                <option value="Truck">Truck</option>
+                <option value="Car">Car</option>
+                <option value="Motorcycle">Motorcycle</option>
               </Select>
-              </div>
-
-
-              <div>
-              <label>Select the suitable timing</label>
-                hena yowgad calendar
-                <input type="datetime-local"  />
-              </div>
-
-
-             <div  >
-              <label> Please select a quantity</label>
-              <QuantityInput required />
-             </div>
-
-
-             <div>
-      {isDonationConfirmed ? (
-        <p>{successMessage}</p>
-      ) : (
-        <div>
-          <button className="donate-button" onClick={handleConfirmDonation}>
-            Confirm Donation
-          </button>
-          {isLoading && (
-            <p>
-              Loading... <span id="loaderAd"></span>
-            </p>
-          )}
-        </div>
-      )}
-    </div>
-
-
-
-              </div>
-
-
-               <div style={{flex:'1',marginLeft:'20vh', marginRight:'20vh'}}> 
-                <h1>Thank you for your contribution to this request</h1> {renderCard()}</div>  
             </div>
-
-            <br></br>
-            <Footer/>
+            <div style={{ marginBottom: '1rem', borderRadius: '5px', padding: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+              <label>Select the suitable timing</label>
+              <br></br>
+              <br></br>
+              <Calendar onChange={setDate} value={date} className="calendar" />
+            </div>
+            <div style={{ marginBottom: '1rem' }}>
+              <label>Please select a quantity</label>
+              <QuantityInput required />
+            </div>
+            <button onClick={handleConfirmDonation} style={{ alignSelf: 'flex-start', marginTop: '1rem', padding: '10px 20px', background: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+              Confirm Donation
+            </button>
+            {isLoading && <p>Loading... <span id="loaderAd"></span></p>}
+            {isDonationConfirmed && <p>{successMessage}</p>}
+          </div>
+          <div style={{ flex: 2, marginLeft: '2rem' }}>
+            <h2 style={{ marginBottom: '1rem' }}>Thank you for your contribution to this request</h2>
+            {renderCard()}
+          </div>
         </div>
-    );
+
+      </div>
+      <Footer />
+    </div>
+  );
 }
