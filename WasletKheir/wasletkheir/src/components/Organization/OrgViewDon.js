@@ -10,18 +10,26 @@ export default function OrgViewDon() {
         setSelectedOption(event.target.value);
     };
 
-    const donations = [
-        { image: 'https://i.ibb.co/DQVh3ZS/Winter-Colour-14-512.webp', title: 'Jackets', description: 'We would appreciate receiving winter jackets for our students to wear.', progress: 15 },
-        { image: 'https://i.ibb.co/0fZyMX1/toys2.png', title: 'Plushies', description: 'We would like to have plushies for our younger students.', progress: 25 },
-        { image: 'https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg', title: 'Notebooks', description: 'We are in need of notebooks for our students.', progress: 50 },
-    ];
+    const [donations, setDonations] = useState([
+        { image: 'https://i.ibb.co/PwnmDGv/school-jackets.jpg', title: 'Jackets', description: 'We would appreciate receiving winter jackets for our students to wear.', progress: 15 },
+        { image: 'https://www.buildabear.co.uk/dw/image/v2/BBNG_PRD/on/demandware.static/-/Sites-buildabear-master/default/dwa49d338d/29231221227229x20237010.jpg?sw=800&sh=800&sm=fit', title: 'Plushies', description: 'We would like to have plushies for our younger students.', progress: 25 },
+        { image: 'https://yoobi.com/cdn/shop/products/3pkSpiralNotebook-Multicolor5copy.jpg?v=1622562624', title:'Notebooks', description: 'We are in need of notebooks for our students.', progress: 50 },
+    ]);
 
-    const donations2 = [
-        { image: 'https://i.ibb.co/r5hQc0h/fruitsveg2.png', title: 'Fruits & Vegetables', description: 'We would like to receive healthy food for our students.', progress: 100 },
-        { image: 'https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg', title: 'Board Markers', description: 'We would like to have board markers for our teachers to use.', progress: 100 },
-        { image: 'https://i.ibb.co/0fZyMX1/toys2.png', title: 'Chess Boards', description: 'We would appreciate receiving chess boards for our older students to play.', progress: 100 },
+    const [donations2, setDonations2] = useState([
+        { image: 'https://www.nhlbi.nih.gov/sites/default/files/styles/16x9_crop/public/2020-08/Fruits%20and%20veggies%20-%20shutterstock_640972939.jpg?h=0b91468c&itok=PrllPUGx', title: 'Fruits & Vegetables', description: 'We would like to receive healthy food for our students.', progress: 100 },
+        { image: 'https://www.agawa-shop.com/opisy/zdjecia/3316.jpg', title: 'Board Markers', description: 'We would like to have board markers for our teachers to use.', progress: 100 },
+        { image: 'https://www.chessbazaar.com/blog/wp-content/uploads/2016/11/feature-image-scaled.jpg', title: 'Chess Boards', description: 'We would appreciate receiving chess boards for our older students to play.', progress: 100 },
+    ]);
 
-    ];
+    const handleDelete = (title) => {
+        if (selectedOption === 'ongoing') {
+            setDonations(donations.filter(donation => donation.title !== title));
+        } else {
+            setDonations2(donations2.filter(donation => donation.title !== title));
+        }
+    };
+
     return (
         <>
             <OrgNavBar2 />
@@ -43,7 +51,7 @@ export default function OrgViewDon() {
             {selectedOption === 'ongoing' && (
                 <div className="donations-container">
                     {donations.map((donation, index) => (
-                        <OrgDonCard key={index} {...donation} />
+                        <OrgDonCard key={index} {...donation} onDelete={handleDelete} />
                     ))}
                 </div>
             )}
@@ -52,7 +60,7 @@ export default function OrgViewDon() {
             {selectedOption === 'fulfilled' && (
                 <div className="donations-container">
                     {donations2.map((donation, index) => (
-                        <OrgDonCard key={index} {...donation} />
+                        <OrgDonCard key={index} {...donation} onDelete={handleDelete} />
                     ))}
                 </div>
             )}

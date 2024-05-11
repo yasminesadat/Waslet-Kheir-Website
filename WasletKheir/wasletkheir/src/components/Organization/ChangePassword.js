@@ -54,7 +54,7 @@ export default function ChangePassword() {
                                 <input type="password" id="confirmPassword" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                             </div>
                             <div className="cpButtonWrapper">
-                                <button type="submit" className='pinButton'>
+                                <button type="submit" className='pinButtonCp'>
                                     Confirm
                                 </button>
                             </div>

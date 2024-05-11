@@ -763,3 +763,9 @@
 .progress-barMariam.progress-bar-green::-ms-fill {
   background-color: #00cc00;
 }
+
+.details{
+  margin-bottom: -2%;
+  font-size: 15px;
+  font-weight: bold;
+}
