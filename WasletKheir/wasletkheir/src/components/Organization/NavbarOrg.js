@@ -76,7 +76,7 @@ export default function OrgNavBar2() {
                     </li>
                     <li>
                         <div style={{ marginTop: '-3px' }}>
-                            {/* <Notif messages={messages} /> */}
+                            <Notif messages={messages} />
                         </div>
                     </li>
 

@@ -11,9 +11,12 @@ import { FaUserDoctor, FaLocationDot } from "react-icons/fa6";
 import Footer from '../Footer';
 import DonorHistory from './DonorHistory';
 import DonorNavbar from './DonorNavbar';
+import DoctorForm from './DoctorForm';
+import Map from '../Map'
 function DonorProfile() {
     let user = localStorage.getItem('user');
     const [isEdit, setIsEdit] = useState(false);
+    const [mapLocation, setLocation] = useState('');
     const badges = [
         {
             name: "Hero of Hope",
@@ -32,6 +35,15 @@ function DonorProfile() {
         },
 
     ];
+    const badgesdr = [
+        {
+            name: "Hero of Hope",
+            image: "Hero.png",
+            description: "for doctors who show outstanding medical intervention in life-saving situations"
+        },
+
+    ];
+    const selectedBadges = user === 'doctor' ? badgesdr : badges;
     const [formData, setFormData] = useState({
         firstName: 'Hana',
         lastName: 'Mohamed',
@@ -67,6 +79,7 @@ function DonorProfile() {
     function Badge({ badge }) {
         const [showDescription, setShowDescription] = useState(false);
 
+
         return (
 
 
@@ -94,28 +107,58 @@ function DonorProfile() {
             <br />
             <div className='pageProfileDonor'>
                 <div className='rightSideProfile'>
-                    <section className="map-section">
-                        <h2>My Location</h2>
-                        <div className="map" style={{ textAlign: 'center' }}>
-                            <iframe
-                                title="google map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
-                                style={{ width: '100%', height: '300px', border: 0 }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                        </div>
-                    </section>
+                    {(localStorage.getItem('user') === 'doctor' && isEdit !== true) && (
+                        <section className="map-section">
+
+                            <h2>Clinic Location</h2>
+                            <div className="map" style={{ textAlign: 'center' }}>
+                                <iframe
+                                    title="google map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
+                                    style={{ width: '100%', height: '300px', border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </section>
+                    )}
+                    {(localStorage.getItem('user') === 'doctor' && isEdit === true) && (
+                        <section className="map-section">
+
+                            <h2>Submit your clinic Location</h2>
+                            <div className="map" style={{
+                                textAlign: 'center', opacity: '0.5', position: 'relative', overflow: 'visible'
+                            }}>
+                                <iframe
+                                    title="google map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
+                                    style={{ width: '100%', height: '300px', border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+
+                            </div>
+                            <Map location={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13812.439948317082!2d31.47988364693166!3d30.062381639874868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458187ef98f872b%3A0x569e8c6d7f481214!2sOne%20Care%20Clinics!5e0!3m2!1sen!2seg!4v1715460503244!5m2!1sen!2seg"} />
+                            {/* <div className="map" style={{ textAlign: 'center', backgroundColor: 'transparent' }}>
+
+                                <Map />
+
+                            </div> */}
+                        </section>
+                    )}
                     <div className='badgesANDstats'>
 
                         <section className='statistics-section'>
-                            <DonorHistory />
+                            {localStorage.getItem('user') === 'donor' && (<DonorHistory />)}
+                            {localStorage.getItem('user') === 'doctor' && (<DoctorForm isEdit={isEdit} />)}
                         </section>
 
 
 
                     </div>
+
                 </div>
                 <div className="profile-container">
 
@@ -124,7 +167,7 @@ function DonorProfile() {
 
                         <div className="profile-info">
                             <div className="profile-name">
-                                <h2>{formData.firstName} {formData.lastName}</h2>
+                                <h1 style={{ fontSize: '25px' }}>{formData.firstName} {formData.lastName}</h1>
                             </div>
                             <div className="profile-button">
                                 <button className={isEdit ? 'savebuttonsmall' : 'editbuttonsmall'} onClick={toggleEdit}>{buttonText}</button>
@@ -133,7 +176,8 @@ function DonorProfile() {
                         </div>
                         <section className="badge-section">
                             <div className="badge-container">
-                                {badges.map((badge, index) => (
+
+                                {selectedBadges.map((badge, index) => (
                                     <Badge key={index} badge={badge} />
                                 ))}
                             </div>
@@ -166,7 +210,7 @@ function DonorProfile() {
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="gender"><FaUserDoctor /> Gender</label>
+                                <label htmlFor="gender"><FaUser />  Gender</label>
                                 <input
                                     type="text"
                                     id="gender"
@@ -176,7 +220,7 @@ function DonorProfile() {
                                     readOnly={!isEdit}
                                 />
                             </div>
-                            {user === 'teacher' && <div className="form-group">
+                            {localStorage.getItem('user') === 'teacher' && (<div className="form-group">
                                 <label htmlFor="subjects"><FaChalkboardTeacher /> Subjects</label>
                                 <input
                                     type="text"
@@ -187,6 +231,7 @@ function DonorProfile() {
                                     readOnly={!isEdit}
                                 />
                             </div>
+                            )
                             }
                             <div className="form-group">
                                 <label htmlFor="email"><MdEmail /> Email</label>

@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './Organization/Org.css'
+import CloseButton from './Organization/CloseButton'
 export default function GoogleMap({ location }) {
     const [open, setOpen] = useState(false); // used to describe state of map 
     const [showMessage, setShowMessage] = useState(false); // show a message when its successfu;;
 
     const openModal = () => setOpen(true);
-
+    const closeModal = () => setOpen(false);
     const handleMapClick = () => {
         setShowMessage(true);
         alert("location pinned successfully");
@@ -19,6 +20,7 @@ export default function GoogleMap({ location }) {
             <button type='button' className='pinButton' onClick={openModal}>Pin Location on Map</button>
             <Popup
                 open={open}
+
                 closeOnDocumentClick={false}
                 onClose={() => {
                     setShowMessage(false);
@@ -30,6 +32,7 @@ export default function GoogleMap({ location }) {
                 contentStyle={{ width: "auto", maxWidth: "600px", height: "auto" }}  // Set max-width for the popup
             >
                 <div style={{ textAlign: 'center' }}>
+                    <div onClick={closeModal}>< CloseButton /> </div>
                     <iframe
                         title="google map"
                         src={location}

@@ -24,9 +24,25 @@ const DonorHistory = () => {
             id: 3,
             donorName: 'Hana',
             amount: 75,
-            imageUrl: 'https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-6/342385850_906320190624441_485583250602084843_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGjnc17uayXsESZmgWUQd-2GtOatVUGNdEa05q1VQY10VNoYiPKFez3ZxnwXkbnXM6ix0w9xeTjjNWAZBTm6S-e&_nc_ohc=nQDLPmD_kAoQ7kNvgGsI9rB&_nc_ht=scontent.fcai19-7.fna&oh=00_AfBW11fr11H5rdq4l--rzq_4Y6JqA_jSTfBqoTNz2jG86Q&oe=663F0316', // Placeholder image
-            cause: 'Puzzles and Teddy Bears',
+            imageUrl: 'https://www.logotypes101.com/logos/219/34CB77E3CBCE830DED2804B880F31BA2/magdi_yacoub_eng%20[Converted].png',
+            cause: 'Medicines',
             date: '2024-03-25'
+        },
+        {
+            id: 3,
+            donorName: 'Hana',
+            amount: 5,
+            imageUrl: 'https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-6/347810544_2532255760255478_5981346294340596192_n.png?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE1kF195Bm_ih2XPhMW_sGGlBuI4rpvevGUG4jium968e4MrinKJGm5hSs1pgiBn2jf1lLAwPOmP2Ik-JRm4hBD&_nc_ohc=PRtStQvg2ZQQ7kNvgFUyPsJ&_nc_ht=scontent.fcai19-7.fna&oh=00_AYBjpdLkNjgZJ2z_c4rbrM-V3wsmRd2jMmP_eRnxvnOmJw&oe=66457594',
+            cause: 'Teddy Bears',
+            date: '2024-02-17'
+        },
+        {
+            id: 3,
+            donorName: 'Hana',
+            amount: 5,
+            imageUrl: 'https://pbs.twimg.com/profile_images/1659160666748452866/SYguRc1N_400x400.jpg',
+            cause: 'Medical Equipment',
+            date: '2023-012-25'
         }
     ];
 
@@ -45,9 +61,9 @@ const DonorHistory = () => {
                     <List.Item>
                         <Card style={{ width: '100%' }}>
                             <List.Item.Meta
-                                avatar={<Avatar src={donation.imageUrl} shape='square' size={70} />} // Setting size to 100px
-                                title={`Donation for: ${donation.cause}`}
-                                description={`Date: ${donation.date}`}
+                                avatar={<Avatar src={donation.imageUrl} shape='square' size={75} />} // Setting size to 100px
+                                title={<span style={{ fontSize: '20px' }}>Donation for: {donation.cause}</span>}
+                                description={<span style={{ fontSize: '18px' }}>Date: {donation.date}</span>}
                             />
                         </Card>
                     </List.Item>

@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Input } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faFileInvoice, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faFileInvoice, faUsers, faUserDoctor, faChalkboardUser } from '@fortawesome/free-solid-svg-icons';
 import Notif from '../Organization/Notif';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { FaUserDoctor } from "react-icons/fa6";
+
 import Icon from '../Admin/Icon';
 const { Search } = Input;
 const messages = [
@@ -12,7 +14,19 @@ const messages = [
     "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
     "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
     "A courier is coming to pick up your donation to 57357 Hospital for medical supplies,Click to know more ",
-    "Your request to volunteer as a doctor has been accepted "
+
+];
+const messageDr = [
+
+    "Your request to volunteer as a doctor is currently being processed",
+    "The courier has arrived to pick up your fresh food for the donation to Nour al Amal Orphanage",
+    "Your request to volunteer as a doctor has been accepted, click here to enter additional details!"
+
+];
+const messageTeacher = [
+
+    "The courier has arrived to pick up your winter clothes for the donation to Misr El Kheir Foundation",
+    "Your request to volunteer as a teacher has been accepted "
 
 ];
 
@@ -42,6 +56,24 @@ export default function DonorNavbar() {
                             <span>Home</span>
                         </Link>
                     </li>
+                    {localStorage.getItem('user') === 'doctor' && (
+                        <li className="navbar-item">
+
+                            <Link to="/medicalPage" className="navbar-link">
+                                <FontAwesomeIcon icon={faUserDoctor} color="white" className='home-icon' />
+                                <span>Volunteer</span>
+                            </Link>
+                        </li>
+                    )}
+                    {localStorage.getItem('user') === 'teacher' && (
+                        <li className="navbar-item">
+
+                            <Link to="/TeachingPage" className="navbar-link">
+                                <FontAwesomeIcon icon={faChalkboardUser} color="white" className='home-icon' />
+                                <span>Volunteer</span>
+                            </Link>
+                        </li>
+                    )}
 
 
                     <li className="navbar-item dropdown">
@@ -59,17 +91,16 @@ export default function DonorNavbar() {
                                     Donation Requests
                                 </Link>
                             </li>
-                            <li>
-                                <Link to="/ViewServicesDonor" className="dropdown-link">
-                                    Services Requests
-                                </Link>
-                            </li>
+
                         </ul>
                     </li>
                     <div className='notification' style={{ marginTop: '9px' }}>
 
                         <div style={{ marginTop: '-8.5px' }}>
-                            {/* <Notif messages={messages} /> */}
+                            {localStorage.getItem('user') === 'doctor' && (<Notif messages={messageDr} />)}
+                            {localStorage.getItem('user') === 'donor' && (<Notif messages={messages} />)}
+                            {localStorage.getItem('user') === 'teacher' && (<Notif messages={messageTeacher} />)}
+
                         </div>
                     </div>
                     <li className="navbar-item dropdown">
