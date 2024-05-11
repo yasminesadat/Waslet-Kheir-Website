@@ -19,18 +19,20 @@ export default function DonateAction() {
   const [successMessage, setSuccessMessage] = useState('');
   const [date, setDate] = useState(new Date());
   const navigate = useNavigate();
-  const { title, text, age, gender, season, medicationValue, material, quantity, type, progress, image } = location.state || {};
+  const { title, text, age, gender, season, medicationValue, material, quantity, type, progress, image ,category, 
+    patientName,blood,hospitalAddress, hospitalName,government,area,use,
+    bookName, author, language,edition,summary,stationaryType, } = location.state || {};
 
   const renderCard = () => {
     switch (title) {
       case 'Jackets':
       case 'Shirts':
-        return <ClothesDetailedCard title={title} text={text} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+        return <ClothesDetailedCard category={category} title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
       case 'Fresh Meals':
       case 'Fruits':
         return <FoodDetailedCard title={title} text={text} quantity={quantity} progress={progress} />;
       case 'Toys':
-        return <ToysDetailedCard title={title} text={text} age={age} gender={gender} type={type} quantity={quantity} progress={progress} />;
+        return <ToysDetailedCard  category={category} title={title} age={age} gender={gender} type={type} image={image} quantity={quantity} text={text} progress={progress}  />;
       case 'Medical Supplies':
         return <MedicalSuppliesDetailedCard title={title} type={type} medicationValue={medicationValue} text={text} progress={progress} />;
       case 'School Stationary':

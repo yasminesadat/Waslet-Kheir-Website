@@ -12,7 +12,7 @@ const FoodCard = ({  title, text, quantity,image,  progress, type}) => {
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate(); 
   const handleDonate = () => {
-    const details = { title, text, quantity,  progress, type};
+    const details = { title, text, quantity,image,  progress, type};
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
   };
