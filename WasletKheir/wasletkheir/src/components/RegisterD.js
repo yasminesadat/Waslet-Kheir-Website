@@ -10,6 +10,7 @@ import NavBarLogoTitle from './NavBarLogoTitle';
 import { FaUserDoctor } from "react-icons/fa6";
 import { FaHospitalUser } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
+import {message} from "antd";
 
 
 
@@ -23,18 +24,6 @@ function RegisterD() {
     const [selectedOption, setSelectedOption] = useState('');
     const [showUploadDr, setShowUploadDr] = useState(false);
     const [showUploadTeacher, setShowUploadTeacher] = useState(false);
-    // const fs = require('fs');
-    // const fileInput = document.querySelector('input[type="file"]');
-    // fileInput.addEventListener('change', (event) => {
-    // const file = event.target.files[0];
-    // const oldPath="";
-    // const newPath="";
-    // fs.rename(oldPath, newPath, function (err) {
-    //     if (err) throw err;
-    //     console.log('File moved successfully');
-    //   });
-    // });
-    
 
     const navigate = useNavigate();
     const openPopUp = () => {
@@ -80,7 +69,7 @@ function RegisterD() {
     const handleClick = (event) => {
         event.preventDefault();
         if (pass1 !== pass2) {
-            alert("password dont match");
+            message.error("Passwords do not match");
         }
         else {
             setIsLoading(true);

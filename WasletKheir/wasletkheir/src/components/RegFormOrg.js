@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faLock, faMapMarker, faUsers } from '@fortawesome/free-solid-svg-icons';
 import GoogleMap from './Map';
 import NavBarLogoTitle from './NavBarLogoTitle';
+import { message } from 'antd';
 
 
 function Form() {
@@ -39,6 +40,7 @@ function Form() {
         setFormSubmitted(true);
         if (password !== confirmPassword) {
             setPasswordMatch(false);
+            message.error('Passwords do not match');
         } else {
             setIsLoading(true);
 
@@ -169,7 +171,6 @@ function Form() {
                                 </div>
                                 <GoogleMap location="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110497.17550589156!2d31.182106716406256!3d30.06448150000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e451b2a3603%3A0xfca80e4ff9d274dc!2sMersal%20Foundation!5e0!3m2!1sen!2seg!4v1714426159716!5m2!1sen!2seg" />
                                 <br />
-                                {formSubmitted && !passwordMatch && <p style={{ color: 'red' }}>Passwords do not match</p>}
 
                                 <button type="submit" disabled={isLoading || isRegistered} className={isRegistered ? 'greenButton' : 'NormalButton'}>
                                     {isLoading ? 'Loading...' : isRegistered ? 'Registered!' : 'Register'}
