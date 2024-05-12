@@ -1330,49 +1330,57 @@ input[type="submit"]:hover {
     flex-wrap: wrap;
     gap: 2%;
     justify-content: center;
-  }
-  
-  .donation-box {
+}
+
+.donation-box {
     width: 38%;
     padding: 5%;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .donor-icon {
+}
+
+.donor-icon {
     width: 20%;
-    height: 0; 
-    padding-bottom: 20%; 
+    height: 0;
+    padding-bottom: 20%;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 5%;
     position: relative;
-    
-  }
-  
-  .donor-icon img {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
+
+}
+
+.donor-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-  }
-  
-  .donor-name {
+}
+
+.donor-name {
     font-weight: bold;
     margin-bottom: 5%;
     font-size: 1.2vw;
-  }
-  
-  .donor-detail span {
+}
+
+.donor-detail span {
     font-weight: bold;
   }
   
   .donor-detail {
     margin-bottom: 0;
-    font-size: 1vw;
-  }
+    font-size: 1vw;}
+
+
+
+.donations-containerHANA {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 5%;
+    padding: 0 5%;
+}

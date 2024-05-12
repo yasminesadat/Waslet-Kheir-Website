@@ -44,13 +44,14 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                     <button className="donate-button" onClick={handleVolunteer}>Volunteer</button>
                     <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
                     <Modal
+                        footer={null}
                         open={isModalOpen}
                         onOk={handleOk}
                         onCancel={handleCancel}
-                        bodyStyle={{ height: '500px', overflowY: 'auto' }}  // Enable vertical scrolling
-                    >                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                        bodyStyle={{ height: '400px', overflowY: 'auto' }}  // Enable vertical scrolling
+                    >                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
                             <Avatar size={55} icon={<UserOutlined />} />
-                            <span style={{ fontSize: '20px', marginLeft: '12px' }}>{organizationName}</span>
+                            <span style={{ fontSize: '20px', marginLeft: '12px' , fontWeight:'bold'}}>{organizationName}</span>
                             <Progress
                                 type="circle"
                                 percent={progress}
@@ -60,19 +61,19 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                             />
                         </div>
                         <Divider style={{ marginTop: '3%', marginBottom: '-1.5%' }} />
-                        <div className='details'>
+                        <div className='details' style={{margin:'2%'}}>
                             <p>Patient Name: {patientName}</p>
                             <p>Age: {age}</p>
                             <p>Gender: {gender}</p>
                             <p>Weight: {weight}</p>
                             <p>Medical Speciality: {medicalSpecialty}</p>
                             <p>Description:{caseDescriptionLong}</p>
-                            <p>Progress: {progress}% Donated</p>
+                            <p>Progress: {progress}% </p>
                             <p>Location:</p>
                             <iframe
                                 title="google map"
                                 src={location}
-                                style={{ width: '250px', height: '250px', border: 0 }}
+                                style={{ width: '250px', height: '220px', border: 0 }}
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
@@ -83,7 +84,7 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                 <div className="progress-container">
                     <progress className={`progress-bar ${progressBarClass}`} style={{ marginBottom: '10%' }} value={progress} max="100"></progress>
                     <div className={`status ${statusClass}`}>Status: {status}</div>
-                    <h3 style={{ marginTop: '-8%', fontSize: '13px' }}>{progress}% Donated</h3>
+                    <h3 style={{ marginTop: '-8%', fontSize: '13px' }}>{progress}% </h3>
                 </div>
             </div>
         </div>

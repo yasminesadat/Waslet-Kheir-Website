@@ -15,6 +15,7 @@ import DoctorForm from './DoctorForm';
 import Map from '../Map'
 import Teacherform from './Teacherform';
 import {message} from 'antd';
+import { Link } from 'react-router-dom';
 
 function DonorProfile() {
     let user = localStorage.getItem('user');
@@ -158,6 +159,12 @@ function DonorProfile() {
                             {localStorage.getItem('user') === 'doctor' && (<DoctorForm isEdit={isEdit} />)}
                             {localStorage.getItem('user') === 'teacher' && (<Teacherform isEdit={isEdit} />)}
                         </section>
+                        <div className='actions'>
+                    <Link to='/'>
+                        <button className='deleteButton' style={{marginLeft:'30%', width:'140px', marginTop:'4%'}}>Delete Account</button>
+                    </Link>
+
+                </div>
 
 
 
@@ -340,13 +347,11 @@ function DonorProfile() {
 
 
                     </div>
-
+                    
 
 
                 </div >
-
-
-
+                
 
             </div>
 

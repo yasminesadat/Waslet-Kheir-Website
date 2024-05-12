@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faUsers, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 import Icon from '../Admin/Icon';
 import { useNavigate, useLocation } from 'react-router-dom';
+import Notif from './Notif';
 
 export default function OrgNavBar2() {
 
@@ -51,7 +52,7 @@ export default function OrgNavBar2() {
                     <p style={{color:'#2e5359'}}>Waslet Kheir</p>
                 </Link>
                 
-                <ul className="navbar-menu">
+                <ul className="navbar-menu" style={{marginTop:'1.5%'}}>
                     <li className="navbar-item">
                         <Link to="/OrgMain2" className="navbar-link">
                             <FontAwesomeIcon icon={faHome} color="white" className='home-icon' />

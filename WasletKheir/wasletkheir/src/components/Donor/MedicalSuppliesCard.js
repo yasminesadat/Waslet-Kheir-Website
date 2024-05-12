@@ -46,7 +46,7 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal footer = {null}  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px',overflowY: 'auto'}}>
+          <Modal footer = {null}  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'360px',overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center',margin:'2%' }}>
           <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
           <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight:'bold' }}>{orgName}</span>
@@ -75,6 +75,11 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
               </a>
             </Dropdown> */}
           <p>Type: {title}</p>
+          {type ===  MedicalSuppliesTypes.MedicalDevices && (
+        <>
+            <p>Device Type: X-Ray machine</p>
+        </>
+         )}
           <p>Description: {orgName}{text}</p>
           <p>Use: {use}</p>
           <div>
@@ -84,6 +89,8 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
         </>
          )}
             <p>Quantity: {quantity}</p>
+            <p>Progress: {progress}% </p>
+
             <p>Image: </p>
             <img src={image} alt="Your Image" style={{ width: '310px', height:'200px' }} /> 
           </div>

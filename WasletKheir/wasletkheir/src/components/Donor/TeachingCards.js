@@ -43,14 +43,15 @@ const TeachingCards = ({ title, numStudents, address, location, subject, organiz
                     <button className="donate-button" onClick={handleVolunteer}>Volunteer</button>
                     <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
                     <Modal
+                        footer={null}
                         open={isModalOpen}
                         onOk={handleOk}
                         onCancel={handleCancel}
-                        bodyStyle={{ height: '500px', overflowY: 'auto' }}  // Enable vertical scrolling
+                        bodyStyle={{ height: '400px', overflowY: 'auto' }}  // Enable vertical scrolling
                     >
-                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', height: '20%' }}>
+                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', height: '20%', margin:'2%' }}>
                             <Avatar size={55} icon={<UserOutlined />} />
-                            <span style={{ fontSize: '20px', marginLeft: '12px' }}>{organizationName}</span>
+                            <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight:'bold' }}>{organizationName}</span>
                             <Progress
                                 type="circle"
                                 percent={progress}
@@ -60,17 +61,17 @@ const TeachingCards = ({ title, numStudents, address, location, subject, organiz
                             />
                         </div>
                         <Divider style={{ marginTop: '3%', marginBottom: '-1.5%' }} />
-                        <div className='details'>
+                        <div className='details' style={{margin:'2%'}}>
                             <p>Number of Students: {numStudents}</p>
                             <p>Address: {address}</p>
                             <p>Subjects: {subject}</p>
                             <p>Description: {descriptionGrade}</p>
-                            <p>Progress: {progress}% Donated</p>
+                            <p>Progress: {progress}% </p>
                             <p>Location:</p>
                             <iframe
                                 title="google map"
                                 src={location}
-                                style={{ width: '250px', height: '250px', border: 0 }}
+                                style={{ width: '250px', height: '220px', border: 0 }}
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
@@ -82,7 +83,7 @@ const TeachingCards = ({ title, numStudents, address, location, subject, organiz
                 <div className="progress-container">
                     <progress className={`progress-bar ${progressBarClass}`} style={{ marginBottom: '10%' }} value={progress} max="100"></progress>
                     <div className={`status ${statusClass}`}>Status: {status}</div>
-                    <h3 style={{ marginTop: '-8%', fontSize: '13px' }}>{progress}% Donated</h3>
+                    <h3 style={{ marginTop: '-8%', fontSize: '13px' }}>{progress}% </h3>
                 </div>
             </div>
         </div>
