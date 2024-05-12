@@ -302,7 +302,7 @@ export default function ViewOrgDonor() {
                     </select>
 
                 </div>
-                <div className="donations-container">
+                <div className="donations-containerHANA">
                     {filteredOrgs.map((organization, index) => (
                         <OrgCard key={index} {...organization} />
                     ))}

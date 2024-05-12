@@ -82,7 +82,7 @@ export default function DonorNavbar() {
     const location = useLocation();
     return (
         <nav className="navbar fixed-navbar">
-            <div className="navbar-container">
+            <div className="donorNavbar-container">
                 {location.pathname !== '/Home' &&
                     <div style={{ position: 'absolute', top: '25%', left: '1%' }} onClick={() => navigate(-1)}>
                         <Icon iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back" />
@@ -93,7 +93,7 @@ export default function DonorNavbar() {
                     <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="logo-image" />
                     <p style={{color:'#2e5359'}}>Waslet Kheir</p>
                 </Link>
-                <ul className="navbar-menu">
+                <ul className="navbar-menu"  style={{marginTop:'1.5%'}}> 
 
                     <li className="navbar-item">
                         <Link to="/Home" className="navbar-link">
@@ -139,16 +139,15 @@ export default function DonorNavbar() {
 
                         </ul>
                     </li>
-                    <div className='notification' style={{ marginTop: '9px' }}>
-
-                       {/* <div style={{ marginTop: '-8.5px' }}>
+                    <div style={{ display: 'block', justifyContent: 'center' }}>
+                          
                             {localStorage.getItem('user') === 'doctor' && (<Notif data={DRdata} />)}
                             {localStorage.getItem('user') === 'donor' && (<Notif data={donordata} />)}
                             {localStorage.getItem('user') === 'teacher' && (<Notif data={teacherData} />)}
 
-                </div> */}
+                </div>
                     </div>
-                    <li className="navbar-item dropdown">
+                    <li className="navbar-item dropdown"  style={{ marginRight: '10px' }}>
                         < div className="navbar-link">
                             <FontAwesomeIcon icon={faUser} color="white" className='home-icon' />
                             Profile
@@ -176,11 +175,12 @@ export default function DonorNavbar() {
                                 borderRadius: '10px',     // Rounded edges with 20px radius
                                 padding: '5px 10px',     // Padding around the text
                                 border: 'none',           // No border (you can add one if you like)
-                                fontSize: '100%',         // Font size
+                                fontSize: '90%',         // Font size
                                 fontWeight: 'bold',       // Bold font weight
                                 cursor: 'pointer',        // Cursor indicates it's clickable
                                 outline: 'none',          // Remove focus outline
-                                // boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' // Optional: shadow for better visibility
+                                marginTop:'-4%',
+                                marginLeft:'-5%'
                             }}>Donate Now!</button>
 
                         </Link>
