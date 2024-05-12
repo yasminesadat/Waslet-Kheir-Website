@@ -2,8 +2,24 @@ import React from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
 import './Org.css';
+import DonationUser from './DonationUser';
 
 export default function OrgView2() {
+
+
+
+    const donations = [
+        {
+            donorName: 'Anonymous User',
+            quantity: 4,
+            image: 'https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png'
+        },
+        {
+            donorName: 'Mohamed Ayman',
+            quantity: 1,
+            image: 'https://cdn-icons-png.flaticon.com/512/219/219970.png'
+        },
+    ];
 
     const itemDetails = {
         name: "Plushies",
@@ -37,8 +53,19 @@ export default function OrgView2() {
                     <p className="org-item-info"><strong>Picture: </strong></p><br></br>
                     <img src={itemDetails.imageUrl} alt="Plushies" style={{ width: '30%', height: 'auto' }} className="org-item-image" />
                     <p className="org-item-info"><strong>Donation Progress:</strong> {itemDetails.donationstatus}</p>
-                    <center><Link to="/OrgViewDon" className="blue-button">Return</Link></center>
+                    <hr></hr>
+                    <center><h2 className="org-item-name">Donated By: </h2></center>
+                    <div className="donations-container">
+                    {donations.map((donation, index) => (
+                    <DonationUser key={index} {...donation} />
+                    ))}
+                    </div>
 
+                    <center>
+                        <Link to="/OrgUpd2" className="blue-button" style={{ marginRight: '10%' }}>Edit Details</Link>
+                        <Link to="/OrgViewDon" className="blue-button">Return</Link>
+                       
+                    </center>
                 </div>
             </div>
         </>

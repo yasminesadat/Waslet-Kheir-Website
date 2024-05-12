@@ -43,8 +43,8 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgN
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{}}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
           <Avatar size={55} icon={<UserOutlined />} />
           <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
           <Progress
@@ -57,7 +57,7 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgN
         </div>
           <Divider style={{marginTop:'3%', marginBottom:'-1.5%'}}/>
           
-          <div className='details'>
+          <div className='details' style={{margin:'2%'}}>
           <p>Type: {title}</p>
           <p>Description: {orgName}{text}</p>
             <p>Quantity: {quantity}</p>
