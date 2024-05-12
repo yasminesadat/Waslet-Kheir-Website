@@ -52,6 +52,8 @@ const OrgDonCard = ({ image, title, description, progress,onDelete }) => {
             window.location.href = "/OrgView3";
         else if (title === "Board Markers")
             window.location.href = "/OrgView4";
+        else if (title==="Winter Jackets For School")
+        window.location.href="/OrgView5"
 
 
     };
