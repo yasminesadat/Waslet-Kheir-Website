@@ -90,7 +90,7 @@ export default function DonorNavbar() {
                 }
 
                 <Link to="/Home" className="navbar-logo">
-                    <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
+                    <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="logo-image" />
                     Waslet Kheir
                 </Link>
                 <ul className="navbar-menu">
