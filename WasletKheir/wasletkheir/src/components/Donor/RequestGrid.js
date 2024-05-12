@@ -14,7 +14,7 @@ import MedicalCard from './MedicalCard';
 import TeachingCards from './TeachingCards';
 const selectCorrespondingCard = (data) => {
     const { title, text, type, age, gender, season, material, quantity, progress, category, image,
-        patientName, blood, hospitalAddress, hospitalName, government, area, use, medicationValue,
+        patientName, blood, hospitalAddress, hospitalName,  area, use, medicationValue,
         bookName, author, language, edition, summary, stationaryType, service, weight, caseDescription, medicalSpecialty, organizationName, caseDescriptionLong, location, governorate, numStudents, subject, address, descriptionGrade } = data;
 
     switch (category) {
@@ -29,7 +29,7 @@ const selectCorrespondingCard = (data) => {
         case DonationCategories.SchoolSupplies:
             return <SchoolSuppliesCard category={category} title={title} text={text} image={image} bookName={bookName} author={author} language={language} edition={edition} summary={summary} type={type} quantity={quantity} stationaryType={stationaryType} progress={progress} />;
         case DonationCategories.BloodDonations:
-            return <BloodCard category={category} title={title} text={text} image={image} hospitalName={hospitalName} hospitalAddress={hospitalAddress} government={government} area={area} patientName={patientName} blood={blood} progress={progress} />;
+            return <BloodCard category={category} title={title} text={text} image={image} hospitalName={hospitalName} hospitalAddress={hospitalAddress} governorate={governorate} area={area} patientName={patientName} blood={blood} progress={progress} />;
         default:
             if (service === Service.medical)
                 return <MedicalCard governorate={governorate} patientName={patientName} caseDescriptionLong={caseDescriptionLong} age={age} gender={gender} weight={weight} text={text} image={image} organizationName={organizationName} caseDescription={caseDescription} medicalSpecialty={medicalSpecialty} location={location} progress={progress} />;

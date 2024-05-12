@@ -40,7 +40,7 @@ export const DONATION_CARDS_DATA = [
     {
 
         title: "Shirts",
-        text: "Dar EL Orman needs tshirts for boys ages 1-5",
+        text: "Dar EL Orman needs Tshirts for boys ages 1-5",
         age: "1-5",
         gender: "Male",
         season: "Summer",
@@ -53,7 +53,7 @@ export const DONATION_CARDS_DATA = [
    
     {
         title: "Medical Devices",
-        text: "57357 Hospital needs an X-Ray machines for our hospital",
+        text: "57357 Hospital needs an X-Ray machine for our hospital",
         use:'To capture X-Ray images of our patients for correct diagnosis',
         quantity: 1,
         progress: 0,
@@ -83,7 +83,7 @@ export const DONATION_CARDS_DATA = [
     
     {
         title: "Antibiotics",
-        text: "We need antibiotics for our pneumonia patients",
+        text: "57357 hospital needs antibiotics for our pneumonia patients",
         use: "To treat our patients from bacterial pneumonia in their lungs",
         quantity: '20 boxes',
         progress: 50,
@@ -93,13 +93,13 @@ export const DONATION_CARDS_DATA = [
         image:"https://microbiologyinfo.com/wp-content/uploads/2018/10/featured-antibiotics-guide.jpg"
     },
     {
-        title: "57357 Hospital is in need for type A+",
-        text: "a Patient is in urgent need for 2 bags of blood",
+        title: "Type A+ Blood",
+        text: "a Patient in Air Force Specialized Hospital is in urgent need for 2 bags of blood",
         patientName:"Abdullah Ahmed",
         blood:'A+ or O+',
         hospitalAddress: "2C9M+2M2، EL, N Teseen St, Cairo Governorate",
         hospitalName: "Air Force Specialized Hospital",
-        government: "Cairo",
+        governorate: "Cairo",
         area: "New Cairo",
         progress: 50,
         category: DonationCategories.BloodDonations,
@@ -159,8 +159,8 @@ export const DONATION_CARDS_DATA = [
         patientName:"Reham Amer",
         blood:'O',
         hospitalAddress: "El-Demerdash, El Weili, Cairo Governorate 4390042",
-        hospitalName: "El Demerdash Hospital.",
-        government: "Cairo",
+        hospitalName: "Magdy Yacoub",
+        governorate: "Cairo",
         area: "Nasr City",
         progress: 20,
         category: DonationCategories.BloodDonations,
