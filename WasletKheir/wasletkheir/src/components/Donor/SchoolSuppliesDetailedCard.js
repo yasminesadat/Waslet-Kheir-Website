@@ -1,7 +1,7 @@
 import React from 'react';
 import './donor.css'
 
-const SchoolSuppliesDetailedCard = ({ title,type,quantity, text, progress,bookName, author, language,edition,summary,category,stationaryType }) => {
+const SchoolSuppliesDetailedCard = ({ title,type,quantity, text,image, progress,bookName,orgName, author, language,edition,summary,category,stationaryType }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -13,10 +13,10 @@ const SchoolSuppliesDetailedCard = ({ title,type,quantity, text, progress,bookNa
 
   return (
     <div className="cardMariam2">
-      <img className="card-imgMariam" src={"https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg"} alt={title} />
+      <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         {quantity && <p className="card-descriptionMariam">Quantity: {quantity}</p>}
         {bookName && <p className="card-descriptionMariam">Book Name: {bookName}</p>}
         {author && <p className="card-descriptionMariam">Author: {author}</p>}

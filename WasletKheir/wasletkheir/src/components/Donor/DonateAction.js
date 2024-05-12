@@ -22,20 +22,20 @@ export default function DonateAction() {
   const navigate = useNavigate();
   const { title, text, age, gender, season, medicationValue, material, quantity, type, progress, image ,category, 
     patientName,blood,hospitalAddress, hospitalName,government,area,use,
-    bookName, author, language,edition,summary,stationaryType } = location.state || {};
+    bookName, author, language,edition,summary,stationaryType,orgName } = location.state || {};
 
   const renderCard = () => {
     switch (category) {
       case DonationCategories.Clothes:
-         return <ClothesDetailedCard category={category} title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+         return <ClothesDetailedCard  category={category} title={title} orgName={orgName} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
       case DonationCategories.Food:
-        return <FoodDetailedCard category={category} title={title} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
+        return <FoodDetailedCard category={category} title={title} type={type} orgName={orgName} image={image} quantity={quantity} text={text} progress={progress} />;
       case DonationCategories.Toys:
-        return <ToysDetailedCard  category={category} title={title} age={age} gender={gender} type={type} image={image} quantity={quantity} text={text} progress={progress}  />;
+        return <ToysDetailedCard  category={category} title={title} age={age} orgName={orgName} gender={gender} type={type} image={image} quantity={quantity} text={text} progress={progress}  />;
       case DonationCategories.MedicalSupplies:
-        return <MedicalSuppliesDetailedCard category={category} title={title} image={image} text={text} use={use} type={type} quantity={quantity} medicationValue={medicationValue} progress={progress}/>;
+        return <MedicalSuppliesDetailedCard category={category} title={title} image={image}orgName={orgName} text={text} use={use} type={type} quantity={quantity} medicationValue={medicationValue} progress={progress}/>;
       case DonationCategories.SchoolSupplies:
-        return <SchoolSuppliesDetailedCard  category={category} title={title} text={text} image={image} bookName={bookName} author={author} language={language} edition={edition} summary={summary} type={type} quantity={quantity} stationaryType={stationaryType} progress={progress}  />;
+        return <SchoolSuppliesDetailedCard  category={category} title={title} text={text} orgName={orgName} image={image} bookName={bookName} author={author} language={language} edition={edition} summary={summary} type={type} quantity={quantity} stationaryType={stationaryType} progress={progress}  />;
       default:
         return null;
     }

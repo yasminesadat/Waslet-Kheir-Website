@@ -1,21 +1,21 @@
-import {React,useState} from 'react';
+import { React, useState } from 'react';
 import './donor.css'
-import { Modal, Avatar, Progress,  } from 'antd';
+import { Modal, Avatar, Progress, } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faInfo } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate  } from 'react-router-dom';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 import { Dropdown, Space, Divider } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
-const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, category}) => {
+const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, category,orgName}) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const handleDonate = () => {
-    const details = { title, text ,age, gender, type, quantity, progress,category  };
+    const details = { title, text ,age, gender, type, quantity, progress,category,orgName ,image};
       
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
@@ -38,29 +38,29 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
       <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
         <div className="button-container">
-        {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>
+          {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-          <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
-          <Progress
-            type="circle"
-            percent={progress}
-            size={70}
-            style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%) translateX(-10%)' }}
-            showInfo={false}
-          />
-        </div>
-          <Divider style={{marginTop:'3%', marginBottom:'-1.5%'}}/>
-          
-          <div className='details'>
-            <br/>
+          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{ height: '340px', overflowY: 'auto' }}>
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin: '2%' }}>
+              <Avatar size={55} icon={<UserOutlined />} />
+              <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight: 'bold' }}>Masr el kheir</span>
+              <Progress
+                type="circle"
+                percent={progress}
+                size={70}
+                style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%) translateX(-10%)' }}
+                showInfo={false}
+              />
+            </div>
+            <Divider style={{ marginTop: '3%', marginBottom: '-1.5%' }} />
+
+            <div className='details' style={{ margin: '2%' }}>
+              {/* <br/>
           <Dropdown
               trigger={['click']}
               overlay={
@@ -73,20 +73,22 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
                   <DownOutlined />
                 </Space>
               </a>
-            </Dropdown>
-            <p >Type: {title}</p>
-            <p >Description: {text}</p>
-            <p >Age: {age}</p>
-            <p >Gender: {gender}</p>
-            <p >Category: {type}</p>
-            <p >Quantity: {quantity}</p>
-          </div>
+            </Dropdown> */}
+              <p >Type: {title}</p>
+              <p >Description: {text}</p>
+              <p >Age: {age}</p>
+              <p >Gender: {gender}</p>
+              <p >Category: {type}</p>
+              <p >Quantity: {quantity}</p>
+              <p>Toy Picture: </p>
+              <img src={image} alt="Your Image" style={{ width: '290px', height: '200px' }} />
+            </div>
           </Modal>
         </div>
         <div className="progress-container">
-        <progress className={`progress-bar ${progressBarClass}`} style={{marginBottom:'10%'}} value={progress} max="100"></progress>
+          <progress className={`progress-bar ${progressBarClass}`} style={{ marginBottom: '10%' }} value={progress} max="100"></progress>
           <div className={`status ${statusClass}`}>Status: {status}</div>
-          <h3 style={{marginTop:'-8%' , fontSize:'13px'}}>{progress}% Donated </h3>
+          <h3 style={{ marginTop: '-8%', fontSize: '13px' }}>{progress}% Donated </h3>
         </div>
       </div>
     </div>

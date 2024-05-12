@@ -6,7 +6,7 @@ import { useNavigate  } from 'react-router-dom';
 import { UserOutlined } from '@ant-design/icons';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
-const FoodCard = ({  title, text, quantity,image,  progress, type, category}) => {
+const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgName}) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -15,7 +15,7 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category}) =>
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDonate = () => {
-    const details = { title, text, quantity,image,  progress, type, category};
+    const details = { title, text, quantity,image,  progress, type, category, orgName};
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
   };
@@ -36,17 +36,17 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category}) =>
       <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
         <div className="button-container">
         {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{}}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
           <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
@@ -57,9 +57,9 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category}) =>
         </div>
           <Divider style={{marginTop:'3%', marginBottom:'-1.5%'}}/>
           
-          <div className='details'>
+          <div className='details' style={{margin:'2%'}}>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
             <p>Quantity: {quantity}</p>
           </div>
           </Modal>        

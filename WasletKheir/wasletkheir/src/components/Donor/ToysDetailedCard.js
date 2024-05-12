@@ -1,7 +1,7 @@
 import React from 'react';
 import './donor.css'
 
-const ToysDetailedCard = ({title, text ,age, gender, type, quantity, progress }) => {
+const ToysDetailedCard = ({title, text ,age, gender, type, quantity, progress,orgName,image }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -11,10 +11,10 @@ const ToysDetailedCard = ({title, text ,age, gender, type, quantity, progress })
 
   return (
     <div className="cardMariam2">
-      <img className="card-imgMariam" src={"https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg"} alt={title} />
+      <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         {age && <p className="card-descriptionMariam">Age: {age}</p>}
         {gender && <p className="card-descriptionMariam">Gender: {gender}</p>}
         { quantity&&<p className="card-descriptionMariam">Quantity: {quantity}</p>}

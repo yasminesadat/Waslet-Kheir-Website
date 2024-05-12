@@ -1,3 +1,6 @@
+/*import React from "react";
+import PropTypes from "prop-types";
+import Notifications from "react-notifications-menu";
 // import React from "react";
 // import PropTypes from "prop-types";
 // import Notifications from "react-notifications-menu";
@@ -33,4 +36,6 @@
 //     })).isRequired
 // };
 
-// export default Notif;
+
+export default Notif;
+*/

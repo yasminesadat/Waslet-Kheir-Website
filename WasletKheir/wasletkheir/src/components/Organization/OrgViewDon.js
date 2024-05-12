@@ -13,7 +13,7 @@ export default function OrgViewDon() {
     const [donations, setDonations] = useState([
         { image: 'https://i.ibb.co/PwnmDGv/school-jackets.jpg', title: 'Jackets', description: 'We would appreciate receiving winter jackets for our students to wear.', progress: 15 },
         { image: 'https://www.buildabear.co.uk/dw/image/v2/BBNG_PRD/on/demandware.static/-/Sites-buildabear-master/default/dwa49d338d/29231221227229x20237010.jpg?sw=800&sh=800&sm=fit', title: 'Plushies', description: 'We would like to have plushies for our younger students.', progress: 25 },
-        { image: 'https://yoobi.com/cdn/shop/products/3pkSpiralNotebook-Multicolor5copy.jpg?v=1622562624', title:'Notebooks', description: 'We are in need of notebooks for our students.', progress: 50 },
+        { image: 'https://yoobi.com/cdn/shop/products/3pkSpiralNotebook-Multicolor5copy.jpg?v=1622562624', title: 'Notebooks', description: 'We are in need of notebooks for our students.', progress: 50 },
     ]);
 
     const [donations2, setDonations2] = useState([
@@ -38,7 +38,7 @@ export default function OrgViewDon() {
             <br></br>
             <br></br>
             <center>
-                <h1>View My Donations</h1>
+                <h1>My Donations</h1>
             </center>
             <div className="select-container">
                 <select onChange={handleSelectChange}>

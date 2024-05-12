@@ -8,14 +8,14 @@ import { SchoolTypes } from '../helpers/types';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
 
-const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName, author, language,edition,summary,category,stationaryType }) => {
+const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName,orgName, author, language,edition,summary,category,stationaryType }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate();
   const handleDonate = () => {
-    const details = {  title,type,quantity, text, progress,bookName, author, language,edition,summary,category,stationaryType};
+    const details = {  title,type,quantity, text, progress,bookName,orgName, author,image, language,edition,summary,category,stationaryType};
 
     console.log('Details:', details);
     navigate('/DonateAction', { state: details });
@@ -41,17 +41,17 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
       }} src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
         <div className="button-container">
           {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'390px',}}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px',overflowY: 'auto'}}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' , margin:'2%' }}>
           <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
@@ -62,12 +62,12 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
         </div>
           <Divider style={{marginTop:'3%', marginBottom:'-1.5%'}}/>
           
-          <div className='details'>
+          <div className='details' style={{margin:'2%'}}>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
           {type ===  SchoolTypes.SchoolBooks && (
         <>
-          <Dropdown
+          {/* <Dropdown
               trigger={['click']}
               overlay={
                 <img src={image} alt="Your Image" style={{ width: '325px', height:'275px' }} />
@@ -79,20 +79,23 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
                   <DownOutlined />
                 </Space>
               </a>
-            </Dropdown>
+            </Dropdown> */}
           <p>Summary: {summary}</p>
           <p>Book Name: {bookName}</p>
           <p>Author: {author}</p>
           <p>Language: {language}</p>
           <p>Edition: {edition}</p>
+          <p>Quantity: {quantity}</p>
+          <p>Book Picture: </p>
+          <img src={image} alt="Your Image" style={{ width: '270px', height:'250px' }} /> 
         </>
          )}
           {type === SchoolTypes.SchoolStationary && (
             <>
               <p>Stationary Type: {stationaryType}</p>
+              <p>Quantity: {quantity}</p>
             </>
           )}
-            <p>Quantity: {quantity}</p>
           </div>
           </Modal> 
         </div>

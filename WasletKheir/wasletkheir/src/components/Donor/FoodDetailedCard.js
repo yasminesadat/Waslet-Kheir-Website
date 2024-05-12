@@ -3,7 +3,7 @@ import './donor.css'
 
 
 
-const FoodDetailedCard = ({   title, text, quantity, progress, type }) => {
+const FoodDetailedCard = ({   title, text, quantity, progress, type,orgName,image }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -13,10 +13,10 @@ const FoodDetailedCard = ({   title, text, quantity, progress, type }) => {
 
   return (
     <div className="cardMariam2">
-      <img className="card-imgMariam" src={"https://cdn.iconscout.com/icon-pack/preview-mockup/food-1-1-3695.png?f=webp&h=240&modified_at=1507627043"} alt={title} />
+      <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <p className="card-descriptionMariam">Quantity: {quantity}</p>
         <br></br>
         

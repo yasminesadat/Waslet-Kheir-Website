@@ -12,15 +12,15 @@ const { Search } = Input;
 const bloodDonationsData = DONATION_CARDS_DATA.filter((card) => card.category === DonationCategories.BloodDonations)
 const areaOptions = bloodDonationsData.map((card) => { return { "value": card.area, "label": card.area } })
 const hospitalOptions = bloodDonationsData.map((card) => { return { "value": card.hospitalName, "label": card.hospitalName } })
-const filteredGovernmentOptions = bloodDonationsData.map((card) => card.government)
-let governateOptions = [...new Set(filteredGovernmentOptions)].map((government)  => { return { "value": government, "label": government } })
+const filteredGovernorateOptions = bloodDonationsData.map((card) => card.governorate)
+let governorateOptions = [...new Set(filteredGovernorateOptions)].map((governorate)  => { return { "value": governorate, "label": governorate } })
 
 export default function BloodDonationsPage() {
   const [showNavbar, setShowNavbar] = useState(false);
   const [value, setValue] = useState('');
   const [filteredData, setFilteredData] = useState(bloodDonationsData);
   const [nameFilter, setNameFilter] = useState([]);
-  const [governateFilter, setGovernateFilter] = useState([]);
+  const [governorateFilter, setGovernorateFilter] = useState([]);
   const [areaFilter, setAreaFilter] = useState([]);
 
   useEffect(() => {
@@ -33,12 +33,12 @@ export default function BloodDonationsPage() {
       data = data.filter((element) => nameFilter.includes(element.hospitalName))
 
     }
-    if (governateFilter.length > 0) {
-      data = data.filter((element) => governateFilter.includes(element.government))
+    if (governorateFilter.length > 0) {
+      data = data.filter((element) => governorateFilter.includes(element.governorate))
 
     }
     setFilteredData(data)
-  }, [areaFilter, value, nameFilter, governateFilter])
+  }, [areaFilter, value, nameFilter, governorateFilter])
 
   // when any change happens in namefilter it changes 
   // useEffect(() => {
@@ -139,12 +139,12 @@ export default function BloodDonationsPage() {
           />
           <Select
             mode="multiple"
-            placeholder="Governate"
-            value={governateFilter}
+            placeholder="Governorate"
+            value={governorateFilter}
             onChange={(value) => {
-              setGovernateFilter(value)
+              setGovernorateFilter(value)
             }}
-            options={governateOptions}
+            options={governorateOptions}
             style={{ width: '200px', maxWidth: '200px', maxHeight: '200px', margin: '6%' }}
           />
         </div>

@@ -12,13 +12,13 @@ import styled from 'styled-components'; // Import styled-components
 
 import './donor.css'
 const CustomMenu = styled(Menu)`
-  background-color: #f0f2f5; 
+  background-color: #ffffff; 
 `;
 const { Sider } = Layout;
 
 const CustomMenuItem = styled(Menu.Item)`
   &&&:hover {
-    background-color: #007bff; // Using &&& to increase specificity
+    background-color: #ffffff; // Using &&& to increase specificity
   }
 `;
 

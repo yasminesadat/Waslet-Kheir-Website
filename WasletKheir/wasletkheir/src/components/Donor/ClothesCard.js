@@ -8,7 +8,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
 
-const ClothesCard = ({ title, text,age,image, gender, season, material,quantity, progress, category  }) => {
+const ClothesCard = ({ title, text,age,image, gender, season, material,quantity, progress, category, orgName  }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -17,18 +17,12 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDonate = () => {
-    const details = { title, text, age, gender, season, material, quantity, progress,category };
+    const details = { title, text, age, gender, season, material, quantity, progress,category,orgName,image };
 
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
   };
 
-  const handleDetails = () => {
-    const details = { title, text, age,image, gender, season, material, quantity, progress, category };
-
-    console.log('Details:', details); 
-    navigate('/InfoPage', { state: details }); 
-  };
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -46,17 +40,17 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
       <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
         <div className="button-container">
         {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-          <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px'}}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' , margin:'2%'}}> 
+          <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src="https://arab.org/wp-content/uploads/2019/05/mersal-foundation.jpg" />
+          <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight:'bold' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
@@ -67,9 +61,9 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
         </div>
           <Divider style={{marginTop:'3%', marginBottom:'-1.5%'}}/>
           
-          <div className='details'>
+          <div className='details' style={{margin:'2%'}}>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
             <p>Age: {age}</p>
             <p>Gender: {gender}</p>
             <p>Season: {season}</p>
