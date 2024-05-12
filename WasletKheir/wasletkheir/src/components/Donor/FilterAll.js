@@ -12,7 +12,7 @@ import styled from 'styled-components'; // Import styled-components
 
 import './donor.css'
 const CustomMenu = styled(Menu)`
-  background-color: #ffffff; 
+  background-color: #f2f2f2; 
 `;
 const { Sider } = Layout;
 

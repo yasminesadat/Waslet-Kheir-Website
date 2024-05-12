@@ -8,7 +8,7 @@ import { SchoolTypes } from '../helpers/types';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
 
-const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName,orgName, author, language,edition,summary,category,stationaryType }) => {
+const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName,orgName, author, language,edition,summary,category,stationaryType ,orgPic}) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -50,8 +50,8 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
           <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px',overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' , margin:'2%' }}>
-          <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
+          <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
+          <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight:'bold' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
