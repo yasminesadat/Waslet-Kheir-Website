@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faUsers, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 import Icon from '../Admin/Icon';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Notif from './Notif';
+
 
 export default function OrgNavBar2() {
 

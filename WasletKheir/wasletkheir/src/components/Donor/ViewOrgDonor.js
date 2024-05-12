@@ -206,19 +206,14 @@ export default function ViewOrgDonor() {
     };
 
     return (
-        <div style={{ minHeight: '130vh' }}>
-            <div>
+        <div>
+            <div style={{minHeight:'100vh'}}>
                 <DonorNavbar />
                 <br></br>
                 <br></br>  <br></br>
                 <br></br>  <br></br>
                 <center><h1>Organizations</h1></center>
                 <div className="select-containersmall">
-
-
-
-
-
 
                     <select style={{ maxWidth: '300px', margin: '10px' }} onChange={(e) => handleFilterChange(e, 'type')}>
                         <option value="all">Organization Type</option>
@@ -257,6 +252,7 @@ export default function ViewOrgDonor() {
                     ))}
                 </div>
             </div >
+            <div style={{marginTop:'10%'}}></div>
             <Footer />
         </div>
     );
