@@ -98,9 +98,9 @@ export default function OrgNavBar2() {
                     </li>
                     <li>
                         
-                        <div>
+                        {/* <div>
                             <Notif data={data} />
-                        </div>
+                        </div> */}
                     </li>
 
                     <li className="navbar-item dropdown">

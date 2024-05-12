@@ -7,7 +7,7 @@ import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Avatar, Progress, Divider, Modal } from 'antd';
 import { message } from 'antd';
 
-const MedicalCard = ({ title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong, location }) => {
+const MedicalCard = ({ title, patientName, age, gender, weight, address,organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong, location }) => {
     const isFulfilled = Number(progress) === 100;
     const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
     const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -32,7 +32,7 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
     const handleCancel = () => {
         setIsModalOpen(false);
     };
-
+console.log(address);
     return (
         <div className="cardMariam">
             <img className="card-imgMariam" style={{ objectFit: 'cover', objectPosition: '0% 1%' }} src={image} alt={title} />
@@ -67,7 +67,8 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                             <p>Gender: {gender}</p>
                             <p>Weight: {weight}</p>
                             <p>Medical Speciality: {medicalSpecialty}</p>
-                            <p>Description:{caseDescriptionLong}</p>
+                            <p>Description: {caseDescriptionLong}</p>
+                            <p>Address: {address}</p>
                             <p>Progress: {progress}% </p>
                             <p>Location:</p>
                             <iframe
