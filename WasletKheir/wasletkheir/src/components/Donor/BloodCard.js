@@ -30,7 +30,7 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
       <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
         <div className="button-container">
 
