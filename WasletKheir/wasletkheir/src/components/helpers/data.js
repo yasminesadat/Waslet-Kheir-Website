@@ -18,20 +18,16 @@ export const DONATION_CARDS_DATA = [
 
     },
     {
-        title: "Type A+ Blood",
-        hospitalName:"Al Nas Hospital",
-        orgName:"Al Nas Hospital",
-        text: " is in a urgent need for 4 bags of blood for a patient",
-        patientName:"Abdullah Ahmed",
-        blood:'A+ or O+',
-        hospitalAddress: "Shubra Al Kheimah, Shubra El Kheima 1, Al-Qalyubia Governorate 6210120",
-        governorate: "Al-Qalyubia",
-        area: "Shubra Al Kheimah",
-        progress: 50,
-        category: DonationCategories.BloodDonations,
-        image:"https://th.bing.com/th/id/R.145447e11d13dc04f69f913537262d3a?rik=XRFF2sAAH5S3wQ&pid=ImgRaw&r=0",
-        orgPic: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-9/59839023_1293661097452058_3538026430166204416_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHzlB3falxPrzG9FfjIirlr5h1v8AJNX7HmHW_wAk1fsZsqR8MWu-B2NIsN3Jbpg2SZhCGNNP8efSNCnf1e0RD9&_nc_ohc=xCGmW64URg0Q7kNvgEfb9Ge&_nc_ht=scontent.fcai19-7.fna&oh=00_AfAew-pa1ajyJ8Q-0nK5FDUaJb2I8y-ZmXr9_YyievcXyA&oe=66642648",
-        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.471952259606!2d31.250278075491725!3d30.10930591549473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145841fd0f98ffeb%3A0xad8c4bf7c6349f96!2sAl%20Nas%20Hospital!5e0!3m2!1sen!2seg!4v1715254398437!5m2!1sen!2seg"
+        title: "Fresh Meals",
+        orgName:"Awlady Orphanage",
+        text: " needs fresh meals",
+        quantity: "100",
+        progress: 55,
+        category: DonationCategories.Food,
+        type: FoodTypes.freshMeals,
+        image:"https://az727718.vo.msecnd.net/75f28e2721eb4488b6b368de202c4603/images/ff89fcf94bc94fdd972a685833839d3a_2048w.jpg",
+        orgPic:"https://img1.wsimg.com/isteam/ip/298cb803-7078-4032-b25d-88a8bd8d08d0/Awlady%20logo%20wider-0001.jpg/:/rs=h:1000,cg:true,m",
+
     },
 
     {
@@ -49,17 +45,22 @@ export const DONATION_CARDS_DATA = [
 
     },
     {
-        title: "Fresh Meals",
-        orgName:"Awlady Orphanage",
-        text: " needs fresh meals",
-        quantity: "100",
-        progress: 55,
-        category: DonationCategories.Food,
-        type: FoodTypes.freshMeals,
-        image:"https://az727718.vo.msecnd.net/75f28e2721eb4488b6b368de202c4603/images/ff89fcf94bc94fdd972a685833839d3a_2048w.jpg",
-        orgPic:"https://img1.wsimg.com/isteam/ip/298cb803-7078-4032-b25d-88a8bd8d08d0/Awlady%20logo%20wider-0001.jpg/:/rs=h:1000,cg:true,m",
-
+        title: "Type A+ Blood",
+        hospitalName:"Al Nas Hospital",
+        orgName:"Al Nas Hospital",
+        text: " is in a urgent need for 4 bags of blood for a patient",
+        patientName:"Abdullah Ahmed",
+        blood:'A+ or O+',
+        hospitalAddress: "Shubra Al Kheimah, Shubra El Kheima 1, Al-Qalyubia Governorate 6210120",
+        governorate: "Al-Qalyubia",
+        area: "Shubra Al Kheimah",
+        progress: 50,
+        category: DonationCategories.BloodDonations,
+        image:"https://th.bing.com/th/id/R.145447e11d13dc04f69f913537262d3a?rik=XRFF2sAAH5S3wQ&pid=ImgRaw&r=0",
+        orgPic: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-9/59839023_1293661097452058_3538026430166204416_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHzlB3falxPrzG9FfjIirlr5h1v8AJNX7HmHW_wAk1fsZsqR8MWu-B2NIsN3Jbpg2SZhCGNNP8efSNCnf1e0RD9&_nc_ohc=xCGmW64URg0Q7kNvgEfb9Ge&_nc_ht=scontent.fcai19-7.fna&oh=00_AfAew-pa1ajyJ8Q-0nK5FDUaJb2I8y-ZmXr9_YyievcXyA&oe=66642648",
+        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.471952259606!2d31.250278075491725!3d30.10930591549473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145841fd0f98ffeb%3A0xad8c4bf7c6349f96!2sAl%20Nas%20Hospital!5e0!3m2!1sen!2seg!4v1715254398437!5m2!1sen!2seg"
     },
+    
     {
 
         title: "Shirts",

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
 import Footer from '../Footer';
+import { message } from 'antd';
 export default function OrgReqDon() {
     const [selectedOption, setSelectedOption] = useState('clothes');
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -24,6 +25,7 @@ export default function OrgReqDon() {
     const handleSubmit = (event) => {
         event.preventDefault();
         setFormSubmitted(true);
+        message.success("Donation Request Created Successfully");
         setTimeout(() => {
             setFormSubmitted(false);
         }, 4000);
@@ -64,12 +66,12 @@ export default function OrgReqDon() {
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label>
-                            Name:
-                            <input type="text" name="name" placeholder="Enter name of item" />
+                            Name:<span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="name" required placeholder="Enter name of item" />
                         </label>
                         <label>
-                            Type:
-                            <input type="text" name="type" placeholder="Enter type of clothing" />
+                            Type:<span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="type" required placeholder="Enter type of clothing" />
                         </label>
                         <label>
                             Age:
@@ -99,32 +101,32 @@ export default function OrgReqDon() {
                             </select>
                         </label>
                         <label>
-                            Material:
-                            <input type="text" name="material" placeholder="e.g., Cotton, Polyester" />
+                            Material: <span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="material" required placeholder="e.g., Cotton, Polyester" />
                         </label>
                         <label>
-                            Quantity:
-                            <input type="number" name="quantity" placeholder="1" min="1" />
+                            Quantity: <span style={{ color: 'red' }}>*</span>
+                            <input type="number" name="quantity" required placeholder="1" min="1" />
                         </label>
                         <label>
                             Description:
-                            <input type="text" name="description" placeholder="Enter description" />
+                            <input type="text" name="description"  placeholder="Enter description" />
                         </label>
                         <label>
-                            Scheduled Donation Drop-off time:
-                            <input type="datetime-local" name="description" placeholder="Enter description" />
+                            Scheduled Donation Drop-off time: <span style={{ color: 'red' }}>*</span>
+                            <input type="datetime-local" name="description" required placeholder="Enter description" />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />
                     </form>
                 </div>
             )}
-
+{/* 
             {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
-            )}
+            )} */}
 
             {/* Form for toys */}
             {selectedOption === 'toys' && (
@@ -132,8 +134,8 @@ export default function OrgReqDon() {
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label>
-                            Name:
-                            <input type="text" name="name" placeholder="Enter name of item" />
+                            Name:<span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="name" required placeholder="Enter name of item" />
                         </label>
                         <label>
                             Age:
@@ -153,7 +155,7 @@ export default function OrgReqDon() {
                             </select>
                         </label>
                         <label>
-                            Category:
+                            Category: <span style={{ color: 'red' }}>*</span>
                             <select name="toycategory">
                                 <option value="board-games">Board Games</option>
                                 <option value="stuffed-toys">Stuffed Toys</option>
@@ -164,21 +166,21 @@ export default function OrgReqDon() {
                             </select>
                         </label>
                         <label>
-                            Quantity:
-                            <input type="number" name="quantity" placeholder="1" min="1" />
+                            Quantity: <span style={{ color: 'red' }}>*</span>
+                            <input type="number" name="quantity" required placeholder="1" min="1" />
                         </label>
                         <label>
-                            Picture:
-                            <input type="file" name="picture" accept="image/*" />
+                            Picture: 
+                            <input type="file" name="picture"  accept="image/*" />
                         </label>
                         <br></br>
                         <label>
                             Description:
-                            <input type="text" name="description" placeholder="Enter description" />
+                            <input type="text" name="description"  placeholder="Enter description" />
                         </label>
                         <label>
-                            Scheduled Donation Drop-off time:
-                            <input type="datetime-local" name="description" placeholder="Enter description" />
+                            Scheduled Donation Drop-off time:<span style={{ color: 'red' }}>*</span>
+                            <input type="datetime-local" name="description" required placeholder="Enter description" />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />
@@ -186,11 +188,11 @@ export default function OrgReqDon() {
                 </div>
             )}
 
-            {formSubmitted && (
+            {/* {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
-            )}
+            )} */}
 
 
 
@@ -203,11 +205,11 @@ export default function OrgReqDon() {
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label>
-                            Name:
-                            <input type="text" name="name" placeholder="Enter name of item" />
+                            Name:<span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="name" required placeholder="Enter name of item" />
                         </label>
                         <label>
-                            Type:
+                            Type: <span style={{ color: 'red' }}>*</span>
                             <select name="food-type" onChange={handleFoodTypeChange}>
                                 <option value="canned">Canned Foods</option>
                                 <option value="fruitveg">Fruits & Vegetables</option>
@@ -216,16 +218,16 @@ export default function OrgReqDon() {
                             </select>
                         </label>
                         <label>
-                            {foodType === 'fruitveg' ? 'Quantity (in kg)' : 'Quantity (by amount)'}:
-                            <input type="number" name="quantity" placeholder="1" min="1" required />
+                            {foodType === 'fruitveg' ? 'Quantity (in kg)' : 'Quantity (by amount)'}: <span style={{ color: 'red' }}>*</span>
+                            <input type="number" name="quantity" required placeholder="1" min="1"  />
                         </label>
                         <label>
                             Description:
-                            <input type="text" name="description" placeholder="Enter description" required />
+                            <input type="text" name="description"  placeholder="Enter description"  />
                         </label>
                         <label>
-                            Scheduled Donation Drop-off time:
-                            <input type="datetime-local" name="description" placeholder="Enter description" required />
+                            Scheduled Donation Drop-off time: <span style={{ color: 'red' }}>*</span>
+                            <input type="datetime-local" name="description" required placeholder="Enter description"  />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />
@@ -233,11 +235,11 @@ export default function OrgReqDon() {
                 </div>
             )}
 
-            {formSubmitted && (
+            {/* {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
-            )}
+            )} */}
 
             {/* Form for medical supplies */}
             {selectedOption === 'medicalsupplies' && (
@@ -245,11 +247,11 @@ export default function OrgReqDon() {
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label>
-                            Name:
-                            <input type="text" name="name" placeholder="Enter name of item" />
+                            Name: <span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="name" required placeholder="Enter name of item" />
                         </label>
                         <label>
-                            Type:
+                            Type: <span style={{ color: 'red' }}>*</span>
                             <select name="age">
                                 <option value="medicine">Medicine</option>
                                 <option value="medeq">Medical Equipment</option>
@@ -257,21 +259,23 @@ export default function OrgReqDon() {
                             </select>
                         </label>
                         <label>
-                            Picture:
-                            <input type="file" name="picture" accept="image/*" />
+                            Picture: 
+
+                
+                            <input type="file" name="picture"  accept="image/*" />
                         </label>
                         <br></br>
                         <label>
-                            Quantity:
-                            <input type="number" name="quantity" placeholder="1" min="1" />
+                            Quantity: <span style={{ color: 'red' }}>*</span>
+                            <input type="number" name="quantity" required placeholder="1" min="1" />
                         </label>
                         <label>
                             Description:
-                            <input type="text" name="description" placeholder="Enter description" />
+                            <input type="text" name="description"  placeholder="Enter description" />
                         </label>
                         <label>
-                            Scheduled Donation Drop-off time:
-                            <input type="datetime-local" name="description" placeholder="Enter description" />
+                            Scheduled Donation Drop-off time: <span style={{ color: 'red' }}>*</span>
+                            <input type="datetime-local" required name="description" placeholder="Enter description" />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />
@@ -279,11 +283,11 @@ export default function OrgReqDon() {
                 </div>
             )}
 
-            {formSubmitted && (
+            {/* {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
-            )}
+            )} */}
 
             {/* Form for school supplies */}
             {selectedOption === 'schoolsupplies' && (
@@ -291,11 +295,11 @@ export default function OrgReqDon() {
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label>
-                            Name:
-                            <input type="text" name="name" placeholder="Enter name of item" />
+                            Name: <span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="name" required placeholder="Enter name of item" />
                         </label>
                         <label>
-                            Type:
+                            Type: <span style={{ color: 'red' }}>*</span>
                             <select name="suptype" onChange={handleTypeChange}>
                                 <option value="stationary">Stationary</option>
                                 <option value="books">Books</option>
@@ -305,34 +309,34 @@ export default function OrgReqDon() {
                             <>
                                 <label>
                                     Author:
-                                    <input type="text" name="author" placeholder="Enter author's name" />
+                                    <input type="text" name="author"  placeholder="Enter author's name" />
                                 </label>
                                 <label>
-                                    Language:
-                                    <input type="text" name="language" placeholder="Enter book's language" />
+                                    Language: <span style={{ color: 'red' }}>*</span>
+                                    <input type="text" name="language" required placeholder="Enter book's language" />
                                 </label>
                                 <label>
                                     Edition:
-                                    <input type="text" name="language" placeholder="Enter book's edition" />
+                                    <input type="text" name="language"  placeholder="Enter book's edition" />
                                 </label>
                                 <label>
-                                    Picture:
-                                    <input type="file" name="picture" />
+                                    Picture: 
+                                    <input type="file"  name="picture" />
                                 </label>
                                 <br></br>
                             </>
                         )}
                         <label>
-                            Quantity:
-                            <input type="number" name="quantity" placeholder="1" min="1" />
+                            Quantity: <span style={{ color: 'red' }}>*</span>
+                            <input type="number" name="quantity" required placeholder="1" min="1" />
                         </label>
                         <label>
                             Description:
                             <input type="text" name="description" placeholder="Enter description" />
                         </label>
                         <label>
-                            Scheduled Donation Drop-off time:
-                            <input type="datetime-local" name="description" placeholder="Enter description" />
+                            Scheduled Donation Drop-off time: <span style={{ color: 'red' }}>*</span>
+                            <input type="datetime-local" name="description" required placeholder="Enter description" />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />
@@ -340,11 +344,11 @@ export default function OrgReqDon() {
                 </div>
             )}
 
-            {formSubmitted && (
+            {/* {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
-            )}
+            )} */}
 
             {/* Form for blood donations */}
             {selectedOption === 'blooddonations' && (
@@ -352,24 +356,24 @@ export default function OrgReqDon() {
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label>
-                            Patient Name:
-                            <input type="text" name="name" placeholder="Enter name of patient" />
+                            Patient Name: <span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="name" required placeholder="Enter name of patient" />
                         </label>
                         <label>
-                            Hospital Name:
-                            <input type="text" name="name" placeholder="Enter name of hospital" />
+                            Hospital Name: <span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="name" required placeholder="Enter name of hospital" />
                         </label>
                         <label>
-                            Hospital Governorate:
-                            <input type="text" name="type" placeholder="Enter location of hospital" />
+                            Hospital Governorate: <span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="type" required placeholder="Enter location of hospital" />
                         </label>
                         <label>
-                            Hospital Area:
-                            <input type="text" name="type" placeholder="Enter area of hospital" />
+                            Hospital Area: <span style={{ color: 'red' }}>*</span>
+                            <input type="text" name="type" required placeholder="Enter area of hospital" />
                         </label>
 
                         <label>
-                            Blood Type:
+                            Blood Type: <span style={{ color: 'red' }}>*</span>
                             <select name="blood">
                                 <option value="o-">O-</option>
                                 <option value="o+">O+</option>
@@ -382,24 +386,24 @@ export default function OrgReqDon() {
                             </select>
                         </label>
                         <label>
-                            Description:
+                            Description: 
                             <input type="text" name="description" placeholder="Enter description" />
                         </label>
-                        <label>
+                        {/* <label>
                             Scheduled Donation Drop-off time:
-                            <input type="datetime-local" name="description" placeholder="Enter description" />
-                        </label>
+                            <input type="datetime-local" name="description" required placeholder="Enter description" />
+                        </label> */}
                         <br></br>
                         <input type="submit" value="Submit" />
                     </form>
                 </div>
             )}
 
-            {formSubmitted && (
+            {/* {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
-            )}
+            )} */}
             <Footer></Footer>
         </>
     );

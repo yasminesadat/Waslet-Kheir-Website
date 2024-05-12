@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
+import { message } from 'antd';
 import Footer from '../Footer';
 export default function OrgReqServ() {
     const [selectedOption, setSelectedOption] = useState('teacher');
@@ -18,6 +19,7 @@ export default function OrgReqServ() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        message.success("Service Request Created Successfully");
         setFormSubmitted(true);
         setTimeout(() => {
             setFormSubmitted(false);
@@ -50,20 +52,20 @@ export default function OrgReqServ() {
                     <form onSubmit={handleSubmit}>
                         <label>
                             Number of Students:
-                            <input type="number" name="name" placeholder="1" />
+                            <input type="number" name="name" required placeholder="1" />
                         </label>
                         <label>
                             Address:
-                            <input type="text" name="type" placeholder="Enter address" />
+                            <input type="text" name="type" required placeholder="Enter address" />
                         </label>
                         <label>
                             Subjects:
-                            <input type="text" name="material" placeholder="Enter desired subjects" />
+                            <input type="text" name="material" required placeholder="Enter desired subjects" />
                         </label>
 
                         <label>
                             Description:
-                            <input type="text" name="description" placeholder="Enter description and required teaching time slots" />
+                            <input type="text" name="description" required placeholder="Enter description and required teaching time slots" />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />
@@ -71,7 +73,7 @@ export default function OrgReqServ() {
                 </div>
             )}
 
-            {formSubmitted && (
+           {/* {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
@@ -84,7 +86,7 @@ export default function OrgReqServ() {
                     Donation Request Created Successfully
                 </div>
             )}
-
+        */}
             {/* Form for doctor services */}
             {selectedOption === 'doctor' && (
                 <div className="main-request-container">
@@ -92,11 +94,11 @@ export default function OrgReqServ() {
                     <form onSubmit={handleSubmit}>
                         <label>
                             Patient Name:
-                            <input type="text" name="name" placeholder="Enter patient name" />
+                            <input type="text" name="name" required placeholder="Enter patient name" />
                         </label>
                         <label>
                             Patient Age:
-                            <input type="number" name="type" placeholder="Enter age" />
+                            <input type="number" name="type" required placeholder="Enter age" />
                         </label>
                         <label>
                             Patient Gender:
@@ -107,20 +109,20 @@ export default function OrgReqServ() {
                         </label>
                         <label>
                             Patient Weight:
-                            <input type="number" name="type" placeholder="Enter weight" />
+                            <input type="number"required name="type" placeholder="Enter weight" />
                         </label>
                         <label>
                             Address:
-                            <input type="text" name="type" placeholder="Enter address" />
+                            <input type="text" name="type" required placeholder="Enter address" />
                         </label>
                         <label>
                             Medical Specialty:
-                            <input type="text" name="specialty" placeholder="Enter medical specialty" />
+                            <input type="text" name="specialty" required placeholder="Enter medical specialty" />
                         </label>
 
                         <label>
                             Case Description:
-                            <input type="text" name="description" placeholder="Enter case description" />
+                            <input type="text" name="description" required placeholder="Enter case description" />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />
@@ -128,11 +130,11 @@ export default function OrgReqServ() {
                 </div>
             )}
 
-            {formSubmitted && (
+           {/* {formSubmitted && (
                 <div className="success-message">
                     Service Request Created Successfully
                 </div>
-            )}
+            )}*/}
 
                 <Footer></Footer>
 

@@ -38,11 +38,11 @@ export default function OrgUpd1() {
         <br />
         <form onSubmit={handleSubmit}>
           <label>
-            Name:
+            Name:<span style={{ color: 'red' }}>*</span>
             <input type="text" name="name" placeholder="Jackets" />
           </label>
           <label>
-            Type:
+            Type:<span style={{ color: 'red' }}>*</span>
             <input type="text" name="type" placeholder="Jacket" />
           </label>
           <label>
@@ -73,11 +73,11 @@ export default function OrgUpd1() {
             </select>
           </label>
           <label>
-            Material:
+            Material:<span style={{ color: 'red' }}>*</span>
             <input type="text" name="material" placeholder="Cotton" />
           </label>
           <label>
-            Quantity:
+            Quantity:<span style={{ color: 'red' }}>*</span>
             <input type="number" name="quantity" placeholder="60" />
           </label>
           <label>
@@ -85,7 +85,7 @@ export default function OrgUpd1() {
             <input type="text" name="description" placeholder="We would appreciate receiving winter jackets for our students to wear." />
           </label>
           <label>
-            Scheduled Donation Drop-off time:
+            Scheduled Donation Drop-off time:<span style={{ color: 'red' }}>*</span>
             <input type="datetime-local" name="scheduled-donation" />
           </label>
           <br />
