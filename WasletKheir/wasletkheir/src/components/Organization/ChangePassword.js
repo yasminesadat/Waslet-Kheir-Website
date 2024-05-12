@@ -15,16 +15,16 @@ export default function ChangePassword() {
         event.preventDefault();
 
         if (oldPassword !== '1234') {
-            message.error('Old password is incorrect.');
+            // message.error('Old password is incorrect.');
             return;
         }
 
         if (newPassword !== confirmPassword) {
-            message.error('The new passwords do not match.');
+            // message.error('The new passwords do not match.');
             return;
         }
 
-        message("Password changed successfully");
+        // message("Password changed successfully");
         setOpen(false); // Close the popup immediately after the alert
     };
 

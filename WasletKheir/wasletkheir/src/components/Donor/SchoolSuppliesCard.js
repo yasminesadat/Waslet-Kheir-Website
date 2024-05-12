@@ -80,8 +80,8 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
                 </Space>
               </a>
             </Dropdown> */}
-          <p>Summary: {summary}</p>
           <p>Book Name: {bookName}</p>
+          <p>Summary: {summary}</p>
           <p>Author: {author}</p>
           <p>Language: {language}</p>
           <p>Edition: {edition}</p>

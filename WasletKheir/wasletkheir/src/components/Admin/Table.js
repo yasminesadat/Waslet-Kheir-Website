@@ -214,6 +214,36 @@ const handleCancel = () => {
     </>
   );
 })}
+                            {selectedRowDetails.Email.indexOf('info')===0  && <div style={{  
+                              position: "absolute", 
+                              bottom: "45%", 
+                              right: "7%", 
+                              width: "30%", 
+                              height: "25%"
+                            }}>  <iframe
+                            title="google map"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13824.106906149644!2d31.4350481!3d29.9786619!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583b579cbe8515%3A0x1b8c3382fecf884!2sEgyptian%20Food%20Bank!5e0!3m2!1sen!2seg!4v1715125534942!5m2!1sen!2seg" 
+                             style={{ width: '100%', height: '100%', border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>}
+                    { selectedRowDetails.Role==='Doctor' &&<div style={{  
+                      position: "absolute", 
+                      bottom: "15%", 
+                      right: "5%", 
+                      width: "30%", 
+                      height: "25%"
+                    }}>                   <iframe
+                            title="google map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110406.59114316876!2d31.260180260583876!3d30.14552667069166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fae28324a23%3A0xd9d93042473567de!2sLaris%20clinic!5e0!3m2!1sen!2seg!4v1715126962309!5m2!1sen!2seg" 
+                            style={{ width: '100%', height: '100%', border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>}
 
    <div style={{flexDirection:"row",display:"flex",justifyContent:"center"}}>
   <button 
