@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faUsers, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 import Icon from '../Admin/Icon';
 import { useNavigate, useLocation } from 'react-router-dom';
+import Notif from './Notif';
 
 export default function OrgNavBar2() {
 
@@ -96,8 +97,7 @@ export default function OrgNavBar2() {
                         </ul>
                     </li>
                     <li>
-                        <div style={{ marginTop: '-3px' }}>
-                            {/* <Notif data={data} /> */}
+                        
                         <div>
                             <Notif data={data} />
                         </div>
