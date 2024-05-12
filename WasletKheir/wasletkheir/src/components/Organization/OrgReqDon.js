@@ -400,6 +400,7 @@ export default function OrgReqDon() {
                     Donation Request Created Successfully
                 </div>
             )}
+            <Footer></Footer>
         </>
     );
 }

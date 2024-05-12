@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer';
 
 
 
@@ -136,6 +137,7 @@ export default function OrgReqDon() {
           Toy Donation Request Created Successfully
         </div>
       )}
+      <Footer></Footer>
     </>
   );
 }

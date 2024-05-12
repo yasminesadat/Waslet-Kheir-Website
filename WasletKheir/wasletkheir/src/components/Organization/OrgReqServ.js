@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
-
+import Footer from '../Footer';
 export default function OrgReqServ() {
     const [selectedOption, setSelectedOption] = useState('teacher');
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -134,6 +134,7 @@ export default function OrgReqServ() {
                 </div>
             )}
 
+                <Footer></Footer>
 
         </>
     )

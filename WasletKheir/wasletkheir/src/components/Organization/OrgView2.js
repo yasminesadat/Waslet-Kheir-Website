@@ -3,6 +3,7 @@ import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
 import './Org.css';
 import DonationUser from './DonationUser';
+import Footer from '../Footer';
 
 export default function OrgView2() {
 
@@ -68,6 +69,7 @@ export default function OrgView2() {
                     </center>
                 </div>
             </div>
+            <Footer></Footer>
         </>
     );
 }
