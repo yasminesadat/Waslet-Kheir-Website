@@ -120,7 +120,7 @@ export default function MedicalCasesPage() {
                     />
                     <Select
                         mode="multiple"
-                        placeholder="Specialty"
+                        placeholder="Speciality"
                         value={specialtyFilter}
                         onChange={setSpecialtyFilter}
                         options={specialtyOptions}
