@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import OrgDonCard from './OrgDonCard';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
+import Footer from '../Footer';
 
 export default function OrgUpd22() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
@@ -64,7 +65,7 @@ export default function OrgUpd22() {
                     ))}
                 </div>
             )}
-
+        <Footer></Footer>
         </>
     )
 }

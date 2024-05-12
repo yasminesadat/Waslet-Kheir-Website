@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Org.css';
 import OrgNavBar2 from './NavbarOrg';
-
+import Footer from '../Footer';
 
 
 //IN THE NAME TYPE "Winter Jackets For School"
@@ -134,6 +134,7 @@ export default function OrgUpd1() {
           Donation Request Updated Successfully
         </div>
       )}
+      <Footer></Footer>
     </>
   );
 }

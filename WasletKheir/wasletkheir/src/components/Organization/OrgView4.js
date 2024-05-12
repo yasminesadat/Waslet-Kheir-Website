@@ -2,6 +2,7 @@ import React from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import { Link } from 'react-router-dom';
 import DonationUser from './DonationUser';
+import Footer from '../Footer';
 
 
 export default function OrgView4() {
@@ -66,6 +67,7 @@ export default function OrgView4() {
 
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

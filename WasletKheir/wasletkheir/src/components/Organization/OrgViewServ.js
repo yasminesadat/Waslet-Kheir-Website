@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ServicesCard from './ServicesCard';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
+import Footer from '../Footer';
 
 export default function OrgViewServ() {
     const [filter, setFilter] = useState('all');
@@ -226,6 +227,7 @@ export default function OrgViewServ() {
                     />
                 ))}
             </div>
+            <Footer></Footer>
         </>
     );
 }
