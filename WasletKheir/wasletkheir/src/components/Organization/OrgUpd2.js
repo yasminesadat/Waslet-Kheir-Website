@@ -38,7 +38,7 @@ export default function OrgReqDon() {
         <br />
         <form onSubmit={handleSubmit}>
           <label>
-            Name:
+            Name:<span style={{ color: 'red' }}>*</span>
             <input type="text" name="name" placeholder="Plushies" />
           </label>
           <label>
@@ -59,7 +59,7 @@ export default function OrgReqDon() {
             </select>
           </label>
           <label>
-            Type:
+            Type:<span style={{ color: 'red' }}>*</span>
             <select name="toycategory">
               <option value="board-games">Board Games</option>
               <option value="stuffed-toys" selected>Stuffed Toys</option>
@@ -70,7 +70,7 @@ export default function OrgReqDon() {
             </select>
           </label>
           <label>
-            Quantity:
+            Quantity:<span style={{ color: 'red' }}>*</span>
             <input type="number" name="quantity" placeholder="20" />
           </label>
           <label>
@@ -86,7 +86,7 @@ export default function OrgReqDon() {
             <input type="text" name="description" placeholder="We would like to have plushies for our younger students." />
           </label>
           <label>
-            Scheduled Donation Drop-off time:
+            Scheduled Donation Drop-off time:<span style={{ color: 'red' }}>*</span>
             <input type="datetime-local" name="description" placeholder="Enter description" />
           </label>
           <br />
