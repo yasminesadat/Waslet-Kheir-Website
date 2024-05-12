@@ -7,7 +7,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { MedicalSuppliesTypes } from '../helpers/types';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
-const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, text, progress,category,orgName }) => {
+const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, text, progress,category,orgName,orgPic }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -48,8 +48,8 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
           <Modal footer = {null}  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px',overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center',margin:'2%' }}>
-          <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
+          <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
+          <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight:'bold' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}

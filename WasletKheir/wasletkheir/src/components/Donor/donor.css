@@ -805,7 +805,11 @@
 }
 
 
+.custom-avatar-clothes img {
+  width: 94%; 
+  height: 35%; 
+}
 .custom-avatar img {
-  width: 98%; 
-  height: 80%; 
+  width: 97%; 
+  height: 75%; 
 }
