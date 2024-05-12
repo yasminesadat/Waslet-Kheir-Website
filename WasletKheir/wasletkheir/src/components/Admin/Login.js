@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useNavigate} from "react-router-dom";
 import './App.css';
+import { message } from 'antd';
 
 export default function WelcomePage() {
     const [username, setUsername] = useState('');
@@ -13,7 +14,7 @@ function handleSubmit(e) {
     if (username === 'admin' && password === '123') {
         navigate("/Admin");
     } else {    
-        alert("Incorrect username or password");
+        message.error('Invalid username or password');
     }
    
 }

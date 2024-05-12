@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
-import { Modal ,Button} from 'antd';
+import { Modal ,Button,message} from 'antd';
 
 
 export default function WelcomePage() {
@@ -27,8 +27,7 @@ export default function WelcomePage() {
     } else if (email === 'org@gmail.com' && password === '1234') {
       navigate("/OrgMain2");
     } else {
-
-      alert('Invalid username or password');
+      message.error('Invalid email or password');
     }
 
   }
@@ -36,9 +35,10 @@ export default function WelcomePage() {
   function handleForgotPassword(e){
     e.preventDefault();
     if (email1.trim() === ''){
-      alert('Please enter your email address');
+      message.error('Please enter your email address');
   }
   else{
+    message.success('An email has been sent to your email address');
     setIsModalOpen(false);
   }
 }

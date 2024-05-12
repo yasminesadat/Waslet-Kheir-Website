@@ -939,3 +939,7 @@
     transform: rotate(360deg);
   }
 }
+
+.ant-message {
+  font-size: 1.25em;
+}
