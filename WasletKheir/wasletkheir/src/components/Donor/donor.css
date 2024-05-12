@@ -17,6 +17,16 @@
   color: #61dafb;
 }
 
+.donorNavbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3.5vw;
+  padding-right: 0.5vw;
+  max-width: 100vw;
+  height: 100%;
+  
+}
 
 
 
