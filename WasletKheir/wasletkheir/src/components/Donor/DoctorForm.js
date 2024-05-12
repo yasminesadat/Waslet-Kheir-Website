@@ -85,6 +85,7 @@ export default function DoctorForm({ isEdit }) {
                             Number of Pro Bono Cases</label>
                         <input
                             type="number"
+                            min="1"
                             id="proBonoCases"
                             name="numCases"
                             value={formData.numCases}

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { FaChalkboardTeacher, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import {message} from "antd";
 
 export default function TeacherForm() {
     const [formData, setFormData] = useState({
-        subjects: '',
         numStudents: '',
         numClasses: ''
     });
-    const [title, setTitle] = useState('Click here to enter your teaching details');
+    const [title, setTitle] = useState('Click here to enter missing teacher details');
     const [button, setButtonAppear] = useState(true);
     const [tempFormData, setTempFormData] = useState({
-        subjects: '',
         numStudents: '',
         numClasses: ''
     });
@@ -27,8 +26,13 @@ export default function TeacherForm() {
 
     const handleConfirm = () => {
         setFormData(tempFormData);
+        if(tempFormData.numStudents === '' || tempFormData.numClasses === '') {
+            return;
+        }
+        else{
         setTitle('Your teaching details');
         setButtonAppear(false);
+        }
     };
 
     const toggleForm = () => {
@@ -54,17 +58,15 @@ export default function TeacherForm() {
                     <form style={{ width: '100%' }} onSubmit={(e) => e.preventDefault()}>
                         <div className="form-group" style={{ marginBottom: '10px', width: '100%' }}>
                             <label htmlFor="subjects" style={{ display: 'block', marginBottom: '5px' }}>
-                                <FaChalkboardTeacher /> Subjects <span style={{ color: 'red' }}>*</span>
+                                <FaChalkboardTeacher /> Subjects
                             </label>
                             <input
                                 type="text"
                                 id="subjects"
                                 name="subjects"
-                                value={tempFormData.subjects}
-                                onChange={handleInputChange}
-                                required
+                                value={"English , Biology"}
+                                readOnly
                                 style={{ width: 'calc(100% - 16px)', padding: '8px', border: '1px solid #ccc', boxSizing: 'border-box' }}
-                                placeholder="Enter the subjects that you teach"
                             />
                         </div>
                         <div className="form-group" style={{ marginBottom: '10px', width: '100%' }}>
@@ -72,7 +74,8 @@ export default function TeacherForm() {
                                 <FaChalkboardTeacher /> Number of Students <span style={{ color: 'red' }}>*</span>
                             </label>
                             <input
-                                type="text"
+                                type="number"
+                                min="1"
                                 id="numStudents"
                                 name="numStudents"
                                 value={tempFormData.numStudents}
@@ -87,7 +90,8 @@ export default function TeacherForm() {
                                 <FaChalkboardTeacher /> Number of Classes <span style={{ color: 'red' }}>*</span>
                             </label>
                             <input
-                                type="text"
+                                type="number"
+                                min="1"
                                 id="numClasses"
                                 name="numClasses"
                                 value={tempFormData.numClasses}
@@ -98,7 +102,7 @@ export default function TeacherForm() {
                             />
                         </div>
                         {button && (
-                            <button onClick={handleConfirm} style={{ padding: '10px 20px', backgroundColor: '#4D869C', color: 'white', fontSize: '16px', cursor: 'pointer', border: 'none', borderRadius: '4px', marginTop: '10px' }}>
+                            <button onClick={handleConfirm} type="submit" style={{ padding: '10px 20px', backgroundColor: '#4D869C', color: 'white', fontSize: '16px', cursor: 'pointer', border: 'none', borderRadius: '4px', marginTop: '10px' }}>
                                 Confirm
                             </button>
                         )}

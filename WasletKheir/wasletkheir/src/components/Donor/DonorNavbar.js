@@ -12,7 +12,7 @@ const { Search } = Input;
 const donordata = [
     {
         image: "notifbell.png",
-        message: "A courier is coming to pick up your donation to 57357 Hospital for medical supplies,Click to know more ",
+        message: "A courier is coming to pick up your donation to 57357 Hospital for medical supplies. Click to know more ",
         detailPage: "./Notif2",
         receivedTime: "1 minute ago"
     },
@@ -42,7 +42,7 @@ const teacherData = [
 
     {
         image: "notifbell.png",
-        message: "Your request to volunteer as a teacher is currently being processed,Click to enter additional details!",
+        message: "Your request to volunteer as a teacher has been accepted. Click to proceed with filling needed details!",
         detailPage: "./DonorProfile",
         receivedTime: "2 days ago"
     },
@@ -59,7 +59,7 @@ const DRdata = [
     },
     {
         image: "notifbell.png",
-        message: "Your request to volunteer as a doctor has been accepted",
+        message: "Your doctor profile is now active.",
         detailPage: "./DonorProfile",
         receivedTime: "5 minutes ago "
     },
@@ -141,12 +141,12 @@ export default function DonorNavbar() {
                     </li>
                     <div className='notification' style={{ marginTop: '9px' }}>
 
-                     {/*   <div style={{ marginTop: '-8.5px' }}>
+                       <div style={{ marginTop: '-8.5px' }}>
                             {localStorage.getItem('user') === 'doctor' && (<Notif data={DRdata} />)}
                             {localStorage.getItem('user') === 'donor' && (<Notif data={donordata} />)}
                             {localStorage.getItem('user') === 'teacher' && (<Notif data={teacherData} />)}
 
-                </div>*/}
+                </div>
                     </div>
                     <li className="navbar-item dropdown">
                         < div className="navbar-link">

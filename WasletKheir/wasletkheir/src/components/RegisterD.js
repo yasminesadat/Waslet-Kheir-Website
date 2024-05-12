@@ -13,7 +13,6 @@ import { GiTeacher } from "react-icons/gi";
 
 
 
-
 function RegisterD() {
     const [isLoading, setIsLoading] = useState(false);
     const [pass1, setpass1] = useState('');
@@ -101,7 +100,17 @@ function RegisterD() {
                         <div>
                             <form onSubmit={handleClick}>
                                 <div className="row clearfix">
-                                    <div className="col_half">
+                                    
+                                    <div className="input_field select_option">
+                                    <select id='role' value={selectedOption} onChange={handleDonorTypeChoice}>
+                                        <option value="">Choose your role</option>
+                                        <option value="reg">Regular Donor</option>
+                                        <option value="Doctor">Doctor</option>
+                                        <option value="Teacher">Teacher</option>
+                                    </select>
+                                    <div className="select_arrow" style={{marginRight:'2%'}}></div>
+                                </div>
+                                <div className="col_half">
                                         <div className="input_field">
                                             <span><FaUser className='fa' />
                                             </span>
@@ -154,15 +163,7 @@ function RegisterD() {
                                     <input type="text" name="area" placeholder="Area" required />
                                 </div>
 
-                                <div className="input_field select_option">
-                                    <select id='role' value={selectedOption} onChange={handleDonorTypeChoice}>
-                                        <option value="">Choose your role</option>
-                                        <option value="reg">Regular Donor</option>
-                                        <option value="Doctor">Doctor</option>
-                                        <option value="Teacher">Teacher</option>
-                                    </select>
-                                    <div className="select_arrow"></div>
-                                </div>
+                                
 
                                 <div className="input_field select_option">
                                     <select name="governorate">
@@ -207,11 +208,6 @@ function RegisterD() {
                                             <input type="text" name="Medicalspeciality" placeholder="Medical Speciality" required />
                                         </div>
                                         <div className="input_field">
-                                            <span><FaUserDoctor className='fa' />
-                                            </span>
-                                            <input type="number" name="YearsOfExp" placeholder="Years of Experience" required />
-                                        </div>
-                                        <div className="input_field">
                                             <span><FaHospitalUser className='fa' />
                                             </span>
                                             <input type="text" name="Clinicloc" placeholder="Clinic Location" required />
@@ -222,6 +218,8 @@ function RegisterD() {
                                             <br></br>
                                             <input type="file" required />
                                         </div>
+                                        <GoogleMap location="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13824.106906149644!2d31.4350481!3d29.9786619!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583b579cbe8515%3A0x1b8c3382fecf884!2sEgyptian%20Food%20Bank!5e0!3m2!1sen!2seg!4v1715125534942!5m2!1sen!2seghttps://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110406.59114316876!2d31.260180260583876!3d30.14552667069166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fae28324a23%3A0xd9d93042473567de!2sLaris%20clinic!5e0!3m2!1sen!2seg!4v1715126962309!5m2!1sen!2seg" />
+                                  <br></br>
                                     </div>
 
                                 )}
