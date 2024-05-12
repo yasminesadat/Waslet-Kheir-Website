@@ -14,7 +14,12 @@ export default function OrgView3() {
         {
             donorName: 'Jana Mohamed',
             quantity: 2,
-            image: 'https://cdn.icon-icons.com/icons2/3150/PNG/512/user_profile_female_icon_192701.png'
+            image: 'https://cdn.icon-icons.com/icons2/3150/PNG/512/user_profile_female_icon_192701.png',
+            gender:'Female',
+            email:'jana123@gmail.com',
+            phoneNumber:'01233357896',
+            address: '12 El Maadi Street, Maadi, Cairo, Egypt'
+
         },
         {
             donorName: 'Anonymous User',

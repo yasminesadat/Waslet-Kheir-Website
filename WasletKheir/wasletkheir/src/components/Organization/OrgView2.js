@@ -18,7 +18,11 @@ export default function OrgView2() {
         {
             donorName: 'Mohamed Ayman',
             quantity: 1,
-            image: 'https://cdn-icons-png.flaticon.com/512/219/219970.png'
+            image: 'https://cdn-icons-png.flaticon.com/512/219/219970.png',
+            gender:'Male',
+            email:'moayman@gmail.com',
+            phoneNumber:'01243244949',
+            address: '15 Nile Corniche, Zamalek, Cairo, Egypt'
         },
     ];
 

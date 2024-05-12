@@ -161,7 +161,7 @@ function DonorProfile() {
                         </section>
                         <div className='actions'>
                     <Link to='/'>
-                        <button className='deleteButton' style={{marginLeft:'30%', width:'140px', marginTop:'4%'}}>Delete Account</button>
+                        <button className='deleteButton' style={{marginLeft:'30%', width:'140px', marginTop:'4%',marginBottom:'4%'}}>Delete Account</button>
                     </Link>
 
                 </div>
