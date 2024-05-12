@@ -55,7 +55,7 @@ export default function DonateAction() {
 
   return (
     <div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1200px', margin: 'auto' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '1200px', margin: 'auto' ,marginTop:'10vh'}}>
         <DonorNavbar />
         <br></br>
         <br></br>
@@ -87,7 +87,7 @@ export default function DonateAction() {
             {isLoading && <p>Loading... <span id="loaderAd"></span></p>}
             {isDonationConfirmed && <p>{successMessage}</p>}
           </div>
-          <div style={{ flex: 2, marginLeft: '2rem' }}>
+          <div style={{ flex: 1, marginLeft: '2rem' }}>
             <h2 style={{ marginBottom: '1rem' }}>Thank you for your contribution to this request</h2>
             {renderCard()}
           </div>
