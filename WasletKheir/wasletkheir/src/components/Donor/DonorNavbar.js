@@ -59,7 +59,7 @@ const DRdata = [
     },
     {
         image: "notifbell.png",
-        message: "Your doctor profile is now active.",
+        message: "Your request to volunteer as a doctor has been accepted. Click to proceed with filling needed details!",
         detailPage: "./DonorProfile",
         receivedTime: "5 minutes ago "
     },
@@ -140,13 +140,13 @@ export default function DonorNavbar() {
                         </ul>
                     </li>
                     <div className='notification' style={{ marginTop: '9px' }}>
-{/* 
+
                        <div style={{ marginTop: '-8.5px' }}>
                             {localStorage.getItem('user') === 'doctor' && (<Notif data={DRdata} />)}
                             {localStorage.getItem('user') === 'donor' && (<Notif data={donordata} />)}
                             {localStorage.getItem('user') === 'teacher' && (<Notif data={teacherData} />)}
 
-                </div> */}
+                </div>
                     </div>
                     <li className="navbar-item dropdown">
                         < div className="navbar-link">

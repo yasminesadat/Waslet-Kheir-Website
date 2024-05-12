@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaChalkboardTeacher, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import {message} from "antd";
 
-export default function TeacherForm() {
+export default function TeacherForm({isEdit}) {
     const [formData, setFormData] = useState({
         numStudents: '',
         numClasses: ''
@@ -78,6 +78,7 @@ export default function TeacherForm() {
                                 min="1"
                                 id="numStudents"
                                 name="numStudents"
+                                readOnly={!isEdit && !button}
                                 value={tempFormData.numStudents}
                                 onChange={handleInputChange}
                                 required
@@ -94,6 +95,7 @@ export default function TeacherForm() {
                                 min="1"
                                 id="numClasses"
                                 name="numClasses"
+                                readOnly={!isEdit && !button}
                                 value={tempFormData.numClasses}
                                 onChange={handleInputChange}
                                 required
