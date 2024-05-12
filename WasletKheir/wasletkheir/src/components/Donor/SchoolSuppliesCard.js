@@ -48,7 +48,7 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px',overflowY: 'auto'}}>
+          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px',overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' , margin:'2%' }}>
           <Avatar size={55} icon={<UserOutlined />} />
           <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>

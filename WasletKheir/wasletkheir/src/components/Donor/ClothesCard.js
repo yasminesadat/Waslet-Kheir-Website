@@ -47,7 +47,7 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px'}}>
+          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' , margin:'2%'}}> 
           <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src="https://arab.org/wp-content/uploads/2019/05/mersal-foundation.jpg" />
           <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight:'bold' }}>{orgName}</span>

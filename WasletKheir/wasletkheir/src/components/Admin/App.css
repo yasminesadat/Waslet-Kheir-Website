@@ -945,3 +945,9 @@
 .ant-message {
   font-size: 1.25em;
 }
+
+.correct{
+  color:#27bd52;
+  font-size: 14px;
+  text-align: center;
+}

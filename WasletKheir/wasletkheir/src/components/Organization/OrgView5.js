@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Org.css';
 import DonationUser from './DonationUser';
 
-export default function OrgView1() {
+export default function OrgView5() {
 
 
 
@@ -27,7 +27,7 @@ export default function OrgView1() {
     
 
     const itemDetails = {
-        name: "Jackets",
+        name: "Winter Jackets For School",
         category: "Clothes",
         age: "8-12 years",
         gender: "Unisex",
@@ -70,7 +70,7 @@ export default function OrgView1() {
 
                     <center>
                         <Link to="/OrgUpd1" className="blue-button" style={{ marginRight: '10%' }}>Edit Details</Link>
-                        <Link to="/OrgViewDon" className="blue-button">Return</Link>
+                        <Link to="/OrgUpd11" className="blue-button">Return</Link>
                        
                     </center>
 

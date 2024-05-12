@@ -49,6 +49,7 @@ import DonateAction from './components/Donor/DonateAction';
 import MedicalCasesPage from './components/Donor/MedicalCasesPage';
 import TeachingRequests from './components/Donor/TeachingRequests';
 import Servicestry2 from './components/Organization/Servicestry2';
+import OrgView5 from './components/Organization/OrgView5';
 function App() {
   return (
     <Router>
@@ -79,6 +80,7 @@ function App() {
         <Route path="/OrgDel2" element={<OrgDel2 />} />
         <Route path="/OrgDel3" element={<OrgDel3 />} />
         <Route path="/OrgDel4" element={<OrgDel4 />} />
+        <Route path="/OrgView5" element={<OrgView5 />} />
         {/* admin routes */}
 
         <Route path="/AdminLogin" element={<AdminLogin />} />
