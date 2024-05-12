@@ -3,6 +3,8 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './Organization/Org.css'
 import CloseButton from './Organization/CloseButton'
+import { message } from 'antd';
+
 export default function GoogleMap({ location }) {
     const [open, setOpen] = useState(false); // used to describe state of map 
     const [showMessage, setShowMessage] = useState(false); // show a message when its successfu;;
@@ -11,7 +13,7 @@ export default function GoogleMap({ location }) {
     const closeModal = () => setOpen(false);
     const handleMapClick = () => {
         setShowMessage(true);
-        alert("location pinned successfully");
+        message.success("Location pinned successfully");
         setOpen(false);
     };
 
