@@ -4,10 +4,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Card from '../Card';
 import Card2 from '../Card2';
 import Footer from '../Footer';
-import { UserOutlined } from '@ant-design/icons';
-import { Avatar } from 'antd';
-import { MdEmail } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
 import DonorNavbar from './DonorNavbar';
 
 import '../App.css';
