@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Notif from './Notif';
+import Notif from './Notif';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faUsers, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
@@ -97,10 +97,9 @@ export default function OrgNavBar2() {
                         </ul>
                     </li>
                     <li>
-                        
-                        <div>
+                        <div style={{ marginTop: '-3px' }}>
                             <Notif data={data} />
-                        </div>
+                        </div> 
                     </li>
 
                     <li className="navbar-item dropdown">

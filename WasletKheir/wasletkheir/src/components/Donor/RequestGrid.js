@@ -32,7 +32,7 @@ const selectCorrespondingCard = (data) => {
             return <BloodCard map={map} orgPic={orgPic}  orgName={orgName} category={category} title={title} text={text} image={image} hospitalName={hospitalName} hospitalAddress={hospitalAddress} governorate={governorate} area={area} patientName={patientName} blood={blood} progress={progress} />;
         default:
             if (service === Service.medical)
-                return <MedicalCard orgName={orgName} governorate={governorate} patientName={patientName} caseDescriptionLong={caseDescriptionLong} age={age} gender={gender} weight={weight} text={text} image={image} organizationName={organizationName} caseDescription={caseDescription} medicalSpecialty={medicalSpecialty} location={location} progress={progress} />;
+                return <MedicalCard orgName={orgName} governorate={governorate} patientName={patientName} address={address} caseDescriptionLong={caseDescriptionLong} age={age} gender={gender} weight={weight} text={text} image={image} organizationName={organizationName} caseDescription={caseDescription} medicalSpecialty={medicalSpecialty} location={location} progress={progress} />;
             else if (service == Service.teaching)
                 return <TeachingCards orgName={orgName} governorate={governorate} area={area} location={location} address={address} numStudents={numStudents} subject={subject} image={image} organizationName={organizationName} descriptionGrade={descriptionGrade} progress={progress} />;
 
