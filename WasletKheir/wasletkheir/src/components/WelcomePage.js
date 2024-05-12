@@ -99,7 +99,7 @@ export default function WelcomePage() {
           <Link to="/AdminLogin">Go to Admin</Link>
         </div>
 
-        <img src="https://i.ibb.co/R45gdfG/image-removebg-preview-1.png" alt="Waslet Kheir" className="welcome-page-logo" />
+        <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="welcome-page-logo" />
       </div>
 
       <div className="vertical-line"></div>

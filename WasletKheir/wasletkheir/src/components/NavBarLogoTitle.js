@@ -20,8 +20,8 @@ export default function NavBarLogoTitle() {
                     </div>
                 }
                 <Link to="/" className="navbar-logo">
-                    <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
-                    Waslet Kheir
+                <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="logo-image" />
+                    <p style={{color:'#2e5359'}}>Waslet Kheir</p>
                 </Link>
 
 

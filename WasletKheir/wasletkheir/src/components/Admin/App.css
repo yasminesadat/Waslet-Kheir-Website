@@ -358,12 +358,18 @@
   top: 0;
   width: 50%;
   height: 100vh;
-  background-image: url('https://w0.peakpx.com/wallpaper/728/32/HD-wallpaper-ios-9-blur-abstract-apple-blue-colorful-ios-9-iphone-thumbnail.jpg');
+  /* background-image: url('https://www.freepik.com/532f72b6-79ac-4e8f-acdc-8d888a953879'); */
+  background-image: url('bg2.jpeg');
+  background-image:cross-fade();
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-size: 100%;
+  background-color: rgba(77, 54, 54, 0.5); 
+  /* background-size: 100%; */
+
 }
 
 .left-side-text {
@@ -944,4 +950,10 @@
 
 .ant-message {
   font-size: 1.25em;
+}
+
+.correct{
+  color:#27bd52;
+  font-size: 14px;
+  text-align: center;
 }

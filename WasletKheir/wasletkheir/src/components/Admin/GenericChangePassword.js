@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { message } from 'antd';
 const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
   const [oldPassword, setOldPassword] = useState(defaultPassword);
   const [newPassword, setNewPassword] = useState('');
@@ -30,20 +30,23 @@ const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
       setConfirmPasswordError(false); 
     }
 
-    setSuccessMessage('Password changed successfully.');
+    setSuccessMessage('Password changed successfully');
     
+    setTimeout(() => {
+      setSuccessMessage('');
       setTimeout(() => {
-        setSuccessMessage('');
+       
         navigate(redirectLink);
       }, 3000);
-    
-  }
+      message.success('Password changed successfully');
+    }, 2000);
+  };
   
   return (
     <div className="mainDivAd">
       <div className="cardStyleAd">
         <form onSubmit={handleSubmit} name="signupForm" id="signupForm">
-          <img className='lockLogoAd' src="lock-fill.svg" id="lockLogo" alt="Lock Logo"/>
+          <img className='lockLogoAd' src="https://i.ibb.co/K9GV7DL/icons8-lock-64.png" id="lockLogo" alt="Lock Logo"/>
           <h2 className="formTitleAd">
           
             Change Account Password
@@ -69,7 +72,7 @@ const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
             </button>
             
           </div>
-          {successMessage && <p className="correct">{successMessage} <span id="loaderAd"></span></p>}
+          {successMessage && <p className="correct"> <span id="loaderAd"></span></p>}
         </form>
       </div>
     </div>

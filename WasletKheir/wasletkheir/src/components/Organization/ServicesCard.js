@@ -48,7 +48,7 @@ const ServicesCard = ({ image, avatar, title, description, serviceDetails, conta
         let title = "";
         let icon = null;
         let details = [];
-
+    
         switch (backContent) {
             case 'delete':
                 return (
@@ -91,14 +91,14 @@ const ServicesCard = ({ image, avatar, title, description, serviceDetails, conta
         }
         return (
             <>
-                <Meta
-                    avatar={icon}
-                    title={title}
-                />
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+                    <Meta
+                        avatar={icon}
+                        title={title}
+                    />
+                    <Button onClick={handleCancel}>Back</Button>
+                </div>
                 {renderDetails(details)}
-                <Button style={{ marginTop: 16 }} onClick={handleCancel}>
-                    Back
-                </Button>
             </>
         );
     };
@@ -122,8 +122,9 @@ const ServicesCard = ({ image, avatar, title, description, serviceDetails, conta
                             maxWidth: 400,
                             backfaceVisibility: 'hidden',
                             fontSize: '18px',
-                            color: 'black'
+                            color: 'black',
                         }}
+                        bodyStyle={{height:'120px'}}
                         cover={
                             <img
                                 alt="example"
@@ -152,7 +153,9 @@ const ServicesCard = ({ image, avatar, title, description, serviceDetails, conta
                             position: 'absolute',
                             top: 0,
                             left: 0,
+                            overflowY: 'auto'
                         }}
+                        bodyStyle={{height:'390px'}}
                     >
                         {renderBackContent()}
                     </Card>

@@ -41,8 +41,8 @@ function handleSubmit(e) {
     <div className="user-option">
         <a href="/">Login as a User</a>
     </div>
-   
-    <img src="https://i.ibb.co/R45gdfG/image-removebg-preview-1.png" alt="Waslet Kheir" className="welcome-page-logo" />
+    
+    <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="welcome-page-logo" />
     <div className="left-side-image">
     <div className="left-side-text">Waslet Kheir</div>
     <div className="subtext">Connecting the World</div>
