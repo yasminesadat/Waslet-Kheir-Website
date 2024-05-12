@@ -14,6 +14,8 @@ import DonorNavbar from './DonorNavbar';
 import DoctorForm from './DoctorForm';
 import Map from '../Map'
 import Teacherform from './Teacherform';
+import {message} from 'antd';
+
 function DonorProfile() {
     let user = localStorage.getItem('user');
     const [isEdit, setIsEdit] = useState(false);

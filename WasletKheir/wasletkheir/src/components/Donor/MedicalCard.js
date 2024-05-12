@@ -5,17 +5,17 @@ import { UserOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Avatar, Progress, Divider, Modal } from 'antd';
-import Map from '../Map.js'
+import { message } from 'antd';
+
 const MedicalCard = ({ title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong }) => {
     const isFulfilled = Number(progress) === 100;
     const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
     const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
     const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
-    const navigate = useNavigate();
 
     const handleVolunteer = () => {
 
-        alert('thank you for volunteering')
+        message.success('Thank you for volunteering')
     };
 
     const [isModalOpen, setIsModalOpen] = useState(false);

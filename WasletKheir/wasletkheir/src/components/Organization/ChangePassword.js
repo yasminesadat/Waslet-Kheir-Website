@@ -5,6 +5,7 @@ import CloseButton from './CloseButton';
 import './Org.css';
 import { FaLock } from "react-icons/fa";
 
+
 export default function ChangePassword() {
     const [oldPassword, setOldPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
@@ -14,16 +15,16 @@ export default function ChangePassword() {
         event.preventDefault();
 
         if (oldPassword !== '1234') {
-            alert('Old password is incorrect.');
+            message.error('Old password is incorrect.');
             return;
         }
 
         if (newPassword !== confirmPassword) {
-            alert('The new passwords do not match.');
+            message.error('The new passwords do not match.');
             return;
         }
 
-        alert("Password changed successfully");
+        message("Password changed successfully");
         setOpen(false); // Close the popup immediately after the alert
     };
 
