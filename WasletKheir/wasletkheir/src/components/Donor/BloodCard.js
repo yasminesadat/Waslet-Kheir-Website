@@ -8,7 +8,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
 import { message } from 'antd';
-const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName, governorate, area, progress,image, category,orgName }) => {
+const BloodCard = ({ title,map, text,patientName,blood,hospitalAddress, hospitalName, governorate, area, progress,image, category,orgName, orgPic }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -27,7 +27,7 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
     setIsModalOpen(false);
   };
   const handleButtonClick =()=>{
-      message.success("a notification was sent to the hospital successfully");
+      message.success("A notification was sent to the hospital successfully!");
   }
   return (
     <div className="cardMariam">
@@ -39,11 +39,11 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
         <div className="button-container">
 
           {/* <button className="donate-button">Donate</button> */}
-          <button className="view-details-button-donor"  onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
+          <button className="view-details-button-donor"  onClick={showModal} style={{marginLeft:'90%'}}><FontAwesomeIcon icon={faInfo} /></button>
           <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px', overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
-          <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
+          <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
+          <span style={{ fontSize: '20px', marginLeft: '12px' , fontWeight:'bold'}}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
@@ -89,14 +89,15 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
             <p>Loaction: </p>
             <iframe
                 title="google map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110498.99855352928!2d31.337858116406252!3d30.062848400000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145819abf3cb2013%3A0xa3ef9e387e234105!2sGroup%2044!5e0!3m2!1sen!2seg!4v1714755042487!5m2!1sen!2seg"
+                src={map}
                 style={{ width: '60%', height: '220px', border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             </div>
-            <button className="donate-button" onClick={handleButtonClick}>Donate</button>
+            <button className="donate-button" style={{marginLeft:'2%'}} onClick={handleButtonClick}>Donate</button>
+
 
           </Modal>
         </div>

@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { Dropdown, Space, Divider } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
-const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, category,orgName}) => {
+const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, category,orgName,orgPic}) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -47,7 +47,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
           <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{ height: '340px', overflowY: 'auto' }}>
             <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin: '2%' }}>
-              <Avatar size={55} icon={<UserOutlined />} />
+            <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
               <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight: 'bold' }}>{orgName}</span>
               <Progress
                 type="circle"

@@ -6,7 +6,7 @@ import { useNavigate  } from 'react-router-dom';
 import { UserOutlined } from '@ant-design/icons';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
-const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgName}) => {
+const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgName,orgPic}) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -45,8 +45,8 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgN
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
           <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
-          <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
+          <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
+          <span style={{ fontSize: '20px', marginLeft: '12px' , fontWeight:'bold' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
