@@ -217,15 +217,15 @@ export default function OrgReqDon() {
                         </label>
                         <label>
                             {foodType === 'fruitveg' ? 'Quantity (in kg)' : 'Quantity (by amount)'}:
-                            <input type="number" name="quantity" placeholder="1" min="1" />
+                            <input type="number" name="quantity" placeholder="1" min="1" required />
                         </label>
                         <label>
                             Description:
-                            <input type="text" name="description" placeholder="Enter description" />
+                            <input type="text" name="description" placeholder="Enter description" required />
                         </label>
                         <label>
                             Scheduled Donation Drop-off time:
-                            <input type="datetime-local" name="description" placeholder="Enter description" />
+                            <input type="datetime-local" name="description" placeholder="Enter description" required />
                         </label>
                         <br></br>
                         <input type="submit" value="Submit" />

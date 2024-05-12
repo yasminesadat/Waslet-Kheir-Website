@@ -83,7 +83,7 @@ export default function OrgViewServ() {
             type: "medical",
             contactInfo: [
                 { label: 'Status', value: 'Waiting for doctor request approval' }
-               
+
 
             ],
             serviceDetails: [
@@ -104,7 +104,7 @@ export default function OrgViewServ() {
             type: "teaching",
             contactInfo: [
                 { label: 'Status', value: 'Waiting for teaching request approval' }
-            
+
 
             ],
             serviceDetails: [
@@ -116,7 +116,7 @@ export default function OrgViewServ() {
                 { label: 'Google Map Marker', value: '' },
             ],
         }
-]);
+    ]);
 
     const handleStatusChange = (event) => {
         setStatus(event.target.value);
@@ -136,7 +136,7 @@ export default function OrgViewServ() {
         }
     };
     const filteredServices = status === 'ongoing' ? servicesOng : services;
-    
+
     const filteredServicesByFilter = filteredServices.filter(service => {
         if (filter === 'all') {
             return true;
@@ -152,14 +152,14 @@ export default function OrgViewServ() {
             <br />
             <br />
             <center>
-                <h1>View My Services</h1>
+                <h1> My Requested Services</h1>
             </center>
-            <div className="select-container">
-                <select onChange={handleStatusChange}>
+            <div className="select-containersmall">
+                <select style={{ width: '300px', marginRight: '10px' }} onChange={handleStatusChange}>
                     <option value="ongoing">Ongoing</option>
                     <option value="fulfilled">Fulfilled</option>
                 </select>
-                <select onChange={handleFilterChange}>
+                <select style={{ width: '300px' }} onChange={handleFilterChange}>
                     <option value="all">All</option>
                     <option value="teaching">Teaching</option>
                     <option value="medical">Medical</option>
@@ -168,9 +168,9 @@ export default function OrgViewServ() {
 
             <div className="donations-container">
                 {filteredServicesByFilter.map((service, index) => (
-                    <ServicesCard 
-                        key={index} 
-                        {...service} 
+                    <ServicesCard
+                        key={index}
+                        {...service}
                         onDelete={() => handleDeleteService(service)}
                     />
                 ))}

@@ -15,7 +15,7 @@ import './Org.css';
 const { Meta } = Card;
 const { Text } = Typography;
 
-const ServicesCard = ({ image, avatar, title, description, serviceDetails, contactInfo, type, onDelete}) => {
+const ServicesCard = ({ image, avatar, title, description, serviceDetails, contactInfo, type, onDelete }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [backContent, setBackContent] = useState(null);
 
@@ -89,7 +89,6 @@ const ServicesCard = ({ image, avatar, title, description, serviceDetails, conta
             default:
                 return null;
         }
-
         return (
             <>
                 <Meta
