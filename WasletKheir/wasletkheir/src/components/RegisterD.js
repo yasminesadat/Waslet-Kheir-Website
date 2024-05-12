@@ -23,7 +23,18 @@ function RegisterD() {
     const [selectedOption, setSelectedOption] = useState('');
     const [showUploadDr, setShowUploadDr] = useState(false);
     const [showUploadTeacher, setShowUploadTeacher] = useState(false);
-
+    // const fs = require('fs');
+    // const fileInput = document.querySelector('input[type="file"]');
+    // fileInput.addEventListener('change', (event) => {
+    // const file = event.target.files[0];
+    // const oldPath="";
+    // const newPath="";
+    // fs.rename(oldPath, newPath, function (err) {
+    //     if (err) throw err;
+    //     console.log('File moved successfully');
+    //   });
+    // });
+    
 
     const navigate = useNavigate();
     const openPopUp = () => {

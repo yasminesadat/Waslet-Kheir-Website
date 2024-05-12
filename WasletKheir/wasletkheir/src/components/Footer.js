@@ -9,11 +9,7 @@ const Footer = () => {
           <li>Phone: +204387332984</li>
           <li>Email: <a href="mailto:help@ctrlshiftelite.com"> help@ctrlshiftelite.com </a></li>
         </ul>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="mailto:help@ctrlshiftelite.com">Contact</a></li>
-        </ul>
+        
       </div>
 
       <div className="footer-section">

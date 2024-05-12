@@ -178,57 +178,6 @@ export default function ViewOrgDonor() {
             ],
             location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27630.056686209682!2d31.206089979101574!3d30.0438261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840b86acf1e95%3A0xd1c627c198eaca21!2zQ2h1cmNoIG9mIHRoZSBCbGVzc2VkIFZpcmdpbiBNYXJ5IGFuZCBTYWludCBKb2huIGluIEJhYiBFbCBMb3VxIC0g2YPZhtmK2LPYqSDYp9mE2LPZitiv2Kkg2KfZhNi52LDYsdin2KEg2YXYsdmK2YUg2Ygg2YXYp9ix2YrZiNit2YbYpyDYqNio2KfYqCDYp9mE2YTZiNmC!5e0!3m2!1sen!2seg!4v1715275324670!5m2!1sen!2seg"
         },
-        {
-            image: "https://alshams.com.eg/wp-content/uploads/2019/11/Azhar-University.jpg",
-            title: "Azhar University",
-            description: "",
-            area: 'nasrcity',
-            governorate: 'cairo',
-            type: "school",
-            orgDetails: [
-                { label: 'Organization Type', value: 'School' },
-                { label: 'Contact Number', value: '+0222636192' },
-                { label: 'Email', value: 'www.azhar@edu.eg' },
-                { label: 'Address', value: 'Al Mokhaym Al Daem' },
-                { label: 'Area', value: 'Nasr City' },
-                { label: 'Governorate', value: 'Cairo' },
-            ],
-            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.947680356629!2d31.331235182919762!3d30.06703415283053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f5fbfdb10f9%3A0x5fa33ed996112843!2sAl-Azhar%20University!5e0!3m2!1sen!2seg!4v1715275358959!5m2!1sen!2seg"
-        },
-        {
-            image: "https://www.dar-alorman.com/imgs/ormanb-logo.png",
-            title: "Dar Al Orman Association",
-            description: "",
-            type: "charity",
-            area: 'zamalek',
-            governorate: 'cairo',
-            orgDetails: [
-                { label: 'Organization Type', value: 'Charity' },
-                { label: 'Contact Number', value: '+0222636192' },
-                { label: 'Email', value: 'info@alorman.org' },
-                { label: 'Address', value: '7 Abbas El-Akkad' },
-                { label: 'Area', value: 'Nasr City' },
-                { label: 'Governorate', value: 'Cairo' },
-            ],
-            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.947680356629!2d31.331235182919762!3d30.06703415283053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e65c5c6db47%3A0x5771b11558409c4!2sDar%20Al%20Orman%20Association!5e0!3m2!1sen!2seg!4v1715275341418!5m2!1sen!2seg"
-        },
-        {
-            image: "https://sanadorphans.org/storage/settings/January2024/vMGNGY5ZMqNBl1luAdiF.png",
-            title: "Sanad Orphanage",
-            description: "",
-            area: 'heliopolis',
-            governorate: 'cairo',
-            type: "orphanage",
-            orgDetails: [
-                { label: 'Organization Type', value: 'Orphanage' },
-                { label: 'Contact Number', value: '+2023456789' },
-                { label: 'Email', value: 'info@sanadorphans.org' },
-                { label: 'Address', value: 'Baron Palace' },
-                { label: 'Area', value: 'Heliopolis' },
-                { label: 'Governorate', value: 'Cairo' },
-            ],
-            location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.2626746956466!2d31.32636817549097!3d30.086662616569374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e2229cbc89f%3A0x7728f47eab7d5044!2sWataneya%20society!5e0!3m2!1sen!2seg!4v1715446662755!5m2!1sen!2seg"
-        },
 
 
     ];
@@ -257,8 +206,8 @@ export default function ViewOrgDonor() {
     };
 
     return (
-        <>
-            <div style={{ minHeight: '230vh' }}>
+        <div style={{ minHeight: '130vh' }}>
+            <div>
                 <DonorNavbar />
                 <br></br>
                 <br></br>  <br></br>
@@ -309,6 +258,6 @@ export default function ViewOrgDonor() {
                 </div>
             </div >
             <Footer />
-        </>
+        </div>
     );
 }
