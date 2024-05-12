@@ -115,7 +115,6 @@ export default function FoodPage() {
           />
           {typeFilter == MedicalSuppliesTypes.Medication &&
               <Select
-              mode="multiple"
               placeholder="Select area of use"
               value={medicationValue}
               onChange={(value) => {

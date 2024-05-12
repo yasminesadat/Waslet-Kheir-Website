@@ -57,7 +57,7 @@ const BloodCard = ({ title,map, text,patientName,blood,hospitalAddress, hospital
           </Modal>
 
           <button className="view-details-button-donor"  onClick={showModal} ><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px', overflowY: 'auto'}}>
+          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'360px', overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
           <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
           <span style={{ fontSize: '20px', marginLeft: '12px' , fontWeight:'bold'}}>{orgName}</span>

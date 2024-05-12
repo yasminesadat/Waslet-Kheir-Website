@@ -82,7 +82,7 @@ export const DONATION_CARDS_DATA = [
         title: "Medical Devices",
         orgName:"57357 Hospital",
         text: " needs an X-Ray machine for the hospital",
-        use:'To capture X-Ray images of their patients for correct diagnosis',
+        use:'To capture X-Ray images of the patients for correct diagnosis',
         quantity: 1,
         progress: 0,
         category: DonationCategories.MedicalSupplies,
@@ -94,7 +94,7 @@ export const DONATION_CARDS_DATA = [
     {
         title: "Fruits and Vegetables",
         orgName:"Mersal",
-        text: " need various types of fruits and vegetables for children",
+        text: " needs various types of fruits and vegetables for children",
         quantity: "20 kg",
         progress: 65,
         type: FoodTypes.FruitsVegetables,

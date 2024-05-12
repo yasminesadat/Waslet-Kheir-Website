@@ -47,7 +47,7 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px'}}>
+          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'360px', }}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' , margin:'2%'}}> 
           <Avatar className="custom-avatar-clothes" size={55} icon={<UserOutlined />} src={orgPic} />
           <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight:'bold' }}>{orgName}</span>
@@ -69,6 +69,8 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
             <p>Season: {season}</p>
             <p>Material: {material}</p>
             <p>Quantity: {quantity}</p>
+            <p>Progress: {progress}% </p>
+
           </div>
           </Modal>
         </div>
