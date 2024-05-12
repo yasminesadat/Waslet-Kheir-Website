@@ -803,3 +803,9 @@
       bottom: -50px;
   }
 }
+
+
+.custom-avatar img {
+  width: 98%; 
+  height: 80%; 
+}

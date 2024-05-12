@@ -64,6 +64,8 @@
 
   .navbar-link:hover {
     color: #4D869C;
+    cursor: pointer;
+
   }
 }
 
