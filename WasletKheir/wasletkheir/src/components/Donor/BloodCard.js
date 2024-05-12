@@ -14,10 +14,15 @@ const BloodCard = ({ title,map, text,patientName,blood,hospitalAddress, hospital
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModal1Open, setIsModal1Open] = useState(false);
 
   const showModal = () => {
     setIsModalOpen(true);
   };
+  const showModal1 = () => {
+    setIsModal1Open(true);
+  };
+  
 
   const handleOk = () => {
     setIsModalOpen(false);
@@ -25,6 +30,7 @@ const BloodCard = ({ title,map, text,patientName,blood,hospitalAddress, hospital
 
   const handleCancel = () => {
     setIsModalOpen(false);
+    setIsModal1Open(false);
   };
   const handleButtonClick =()=>{
       message.success("A notification was sent to the hospital successfully!");
@@ -38,8 +44,19 @@ const BloodCard = ({ title,map, text,patientName,blood,hospitalAddress, hospital
         <br></br>
         <div className="button-container">
 
-          {/* <button className="donate-button">Donate</button> */}
-          <button className="view-details-button-donor"  onClick={showModal} style={{marginLeft:'90%'}}><FontAwesomeIcon icon={faInfo} /></button>
+          <button className="donate-button" onClick={showModal1}> Location</button>
+          <Modal footer = {null} open={isModal1Open} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px', overflowY: 'auto'}}>
+            <iframe
+                title="google map"
+                src={map}
+                style={{marginTop:'2%', width: '100%', height: '95%', border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </Modal>
+
+          <button className="view-details-button-donor"  onClick={showModal} ><FontAwesomeIcon icon={faInfo} /></button>
           <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px', overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
           <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
@@ -84,7 +101,7 @@ const BloodCard = ({ title,map, text,patientName,blood,hospitalAddress, hospital
             </Dropdown>   */}
             {/* </p>                    */}
             <p>Hospital address: {hospitalAddress}</p>
-            <p>Area: {area}</p>
+            <p>Hospital area: {area}</p>
             <p>Governorate: {governorate}</p>
             <p>Loaction: </p>
             <iframe

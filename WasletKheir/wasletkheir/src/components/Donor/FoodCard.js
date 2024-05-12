@@ -58,7 +58,7 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgN
           <Divider style={{marginTop:'3%', marginBottom:'-1.5%'}}/>
           
           <div className='details' style={{margin:'2%'}}>
-          <p>Type: {title}</p>
+          <p>Item Name: {title}</p>
           <p>Description: {orgName}{text}</p>
             <p>Quantity: {quantity}</p>
           </div>
