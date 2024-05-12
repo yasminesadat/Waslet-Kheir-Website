@@ -399,11 +399,11 @@ export default function OrgReqDon() {
                 </div>
             )}
 
-            {/* {formSubmitted && (
+            {formSubmitted && (
                 <div className="success-message">
                     Donation Request Created Successfully
                 </div>
-            )} */}
+            )}
             <Footer></Footer>
         </>
     );
