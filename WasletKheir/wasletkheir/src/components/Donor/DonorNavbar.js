@@ -104,7 +104,7 @@ export default function DonorNavbar() {
                     {localStorage.getItem('user') === 'doctor' && (
                         <li className="navbar-item">
 
-                            <Link to="/medicalPage" className="navbar-link">
+                            <Link to="/MedicalCasesPage" className="navbar-link">
                                 <FontAwesomeIcon icon={faUserDoctor} color="white" className='home-icon' />
                                 <span>Volunteer</span>
                             </Link>
@@ -113,7 +113,7 @@ export default function DonorNavbar() {
                     {localStorage.getItem('user') === 'teacher' && (
                         <li className="navbar-item">
 
-                            <Link to="/TeachingPage" className="navbar-link">
+                            <Link to="/TeachingRequests" className="navbar-link">
                                 <FontAwesomeIcon icon={faChalkboardUser} color="white" className='home-icon' />
                                 <span>Volunteer</span>
                             </Link>

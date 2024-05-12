@@ -8,13 +8,14 @@ import MedicalSuppliesCard from './MedicalSuppliesCard';
 import SchoolSuppliesCard from './SchoolSuppliesCard';
 import BloodCard from './BloodCard';
 import FoodCard from './FoodCard';
-
+import { Service } from '../helpers/servicetypes';
 import './donor.css'
-
+import MedicalCard from './MedicalCard';
+import TeachingCards from './TeachingCards';
 const selectCorrespondingCard = (data) => {
     const { title, text, type, age, gender, season, material, quantity, progress, category, image,
-        patientName,blood,hospitalAddress, hospitalName,government,area,use,medicationValue,
-        bookName, author, language,edition,summary,stationaryType, } = data;
+        patientName, blood, hospitalAddress, hospitalName, government, area, use, medicationValue,
+        bookName, author, language, edition, summary, stationaryType, service, weight, caseDescription, medicalSpecialty, organizationName, caseDescriptionLong, location, governorate, numStudents, subject, address, descriptionGrade } = data;
 
     switch (category) {
         case DonationCategories.Clothes:
@@ -30,7 +31,13 @@ const selectCorrespondingCard = (data) => {
         case DonationCategories.BloodDonations:
             return <BloodCard category={category} title={title} text={text} image={image} hospitalName={hospitalName} hospitalAddress={hospitalAddress} government={government} area={area} patientName={patientName} blood={blood} progress={progress} />;
         default:
-            return <RequestCard category={category} title={title} text={text} image={image} progress={progress} />;
+            if (service === Service.medical)
+                return <MedicalCard governorate={governorate} patientName={patientName} caseDescriptionLong={caseDescriptionLong} age={age} gender={gender} weight={weight} text={text} image={image} organizationName={organizationName} caseDescription={caseDescription} medicalSpecialty={medicalSpecialty} location={location} progress={progress} />;
+            else if (service == Service.teaching)
+                return <TeachingCards governorate={governorate} area={area} location={location} address={address} numStudents={numStudents} subject={subject} image={image} organizationName={organizationName} descriptionGrade={descriptionGrade} progress={progress} />;
+            else
+                return
+        // add default case here i guess
     }
 };
 
