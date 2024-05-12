@@ -33,6 +33,7 @@ export default function OrgUpd22() {
 
     return (
         <>
+        <div className="ziad-main-content">
             <OrgNavBar2 />
             <br></br>
             <br></br>
@@ -65,6 +66,7 @@ export default function OrgUpd22() {
                     ))}
                 </div>
             )}
+            </div>
         <Footer></Footer>
         </>
     )

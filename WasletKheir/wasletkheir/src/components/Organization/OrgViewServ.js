@@ -208,6 +208,7 @@ export default function OrgViewServ() {
 
     return (
         <>
+        <div className="ziad-main-content">
             <OrgNavBar2 />
             <br />
             <br />
@@ -236,6 +237,7 @@ export default function OrgViewServ() {
                         onDelete={() => handleDeleteService(service)}
                     />
                 ))}
+            </div>
             </div>
             <Footer></Footer>
         </>

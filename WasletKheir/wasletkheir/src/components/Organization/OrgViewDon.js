@@ -32,6 +32,7 @@ export default function OrgViewDon() {
 
     return (
         <>
+        <div className="ziad-main-content">
             <OrgNavBar2 />
             <br></br>
             <br></br>
@@ -64,6 +65,7 @@ export default function OrgViewDon() {
                     ))}
                 </div>
             )}
+            </div>
          <Footer></Footer>
         </>
     )

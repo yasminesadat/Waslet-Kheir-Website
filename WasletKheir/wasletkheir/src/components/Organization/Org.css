@@ -1384,3 +1384,6 @@ input[type="submit"]:hover {
     gap: 5%;
     padding: 0 5%;
 }
+.ziad-main-content{
+    min-height: calc(100vh - 10vh);
+}
