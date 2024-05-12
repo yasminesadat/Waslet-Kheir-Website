@@ -99,7 +99,7 @@ export default function OrgNavBar2() {
                     <li>
                         <div style={{ marginTop: '-3px' }}>
                             <Notif data={data} />
-                        </div> */}
+                        </div> 
                     </li>
 
                     <li className="navbar-item dropdown">
