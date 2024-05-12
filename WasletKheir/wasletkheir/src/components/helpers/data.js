@@ -31,7 +31,7 @@ export const DONATION_CARDS_DATA = [
     },
 
     {
-        title: "Toys",
+        title: "Teddy Bears",
         orgName: "Resala",
         text: " wants some stuffed toys for the kids",
         age: "3-7",
@@ -45,12 +45,12 @@ export const DONATION_CARDS_DATA = [
 
     },
     {
-        title: "Type A+ Blood",
+        title: "Type A+ or O+ Blood",
         hospitalName:"Al Nas Hospital",
         orgName:"Al Nas Hospital",
         text: " is in a urgent need for 4 bags of blood for a patient",
         patientName:"Abdullah Ahmed",
-        blood:'A+ or O+',
+        blood:'A+',
         hospitalAddress: "Shubra Al Kheimah, Shubra El Kheima 1, Al-Qalyubia Governorate 6210120",
         governorate: "Al-Qalyubia",
         area: "Shubra Al Kheimah",
@@ -149,7 +149,7 @@ export const DONATION_CARDS_DATA = [
 
     },
     {
-        title: "Cars",
+        title: "Remote Control Cars",
         text: " wants to give the kids car toys",
         orgName:"Resala",
         age: "3-10",

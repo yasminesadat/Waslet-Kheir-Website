@@ -144,6 +144,8 @@ export default function DonorNavbar() {
                             {localStorage.getItem('user') === 'doctor' && (<Notif data={DRdata} />)}
                             {localStorage.getItem('user') === 'donor' && (<Notif data={donordata} />)}
                             {localStorage.getItem('user') === 'teacher' && (<Notif data={teacherData} />)}
+
+                </div>
                     </div>
                     <li className="navbar-item dropdown"  style={{ marginRight: '10px' }}>
                         < div className="navbar-link">
