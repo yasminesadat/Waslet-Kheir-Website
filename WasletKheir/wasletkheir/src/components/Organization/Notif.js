@@ -16,6 +16,9 @@ const Notif = ({ data }) => {
                     console.log("Mark as read:", dataItem);
                 }}
                 icon={'Bell.png'}
+                card={{
+                    width: '50px'
+                }}
             />
         </div>
     );

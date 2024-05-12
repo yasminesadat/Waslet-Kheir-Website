@@ -558,7 +558,10 @@ button.savebuttonsmall {
     /* Ensures the button is above other content in the container */
 }
 
-.pinButtonCp {
+
+
+.pinButtonCp,
+.pinButtonPop {
     border: none;
     background: #4D869C;
     padding: 10px 20px;

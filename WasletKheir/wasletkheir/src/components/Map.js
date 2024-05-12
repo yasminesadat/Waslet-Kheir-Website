@@ -17,7 +17,7 @@ export default function GoogleMap({ location }) {
 
     return (
         <div>
-            <button type='button' className='pinButton' onClick={openModal}>Pin Location on Map</button>
+            <button type='button' className='pinButtonPop' onClick={openModal}>Pin Location on Map</button>
             <Popup
                 open={open}
 
