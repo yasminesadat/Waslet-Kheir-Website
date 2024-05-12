@@ -7,7 +7,7 @@ import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Avatar, Progress, Divider, Modal } from 'antd';
 import { message } from 'antd';
 
-const MedicalCard = ({ title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong }) => {
+const MedicalCard = ({ title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong, location }) => {
     const isFulfilled = Number(progress) === 100;
     const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
     const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -41,8 +41,12 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                 <div className="button-container">
                     <button className="donate-button" onClick={handleVolunteer}>Volunteer</button>
                     <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-                    <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{ height: '390px' }}>
-                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                    <Modal
+                        open={isModalOpen}
+                        onOk={handleOk}
+                        onCancel={handleCancel}
+                        bodyStyle={{ height: '500px', overflowY: 'auto' }}  // Enable vertical scrolling
+                    >                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                             <Avatar size={55} icon={<UserOutlined />} />
                             <span style={{ fontSize: '20px', marginLeft: '12px' }}>{organizationName}</span>
                             <Progress
@@ -62,9 +66,15 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                             <p>Medical Speciality: {medicalSpecialty}</p>
                             <p>Description: {caseDescriptionLong}</p>
                             <p>Progress: {progress}% Donated</p>
-                            <p> Location
-
-                            </p>
+                            <p>Location:</p>
+                            <iframe
+                                title="google map"
+                                src={location}
+                                style={{ width: '250px', height: '250px', border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
                     </Modal>
                 </div>
