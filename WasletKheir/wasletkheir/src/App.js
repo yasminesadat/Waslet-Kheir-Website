@@ -48,6 +48,7 @@ import ViewServicesDonor from './components/Donor/ViewServicesDonor';
 import DonateAction from './components/Donor/DonateAction';
 import MedicalCasesPage from './components/Donor/MedicalCasesPage';
 import TeachingRequests from './components/Donor/TeachingRequests';
+import Servicestry2 from './components/Organization/Servicestry2';
 function App() {
   return (
     <Router>
@@ -56,6 +57,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/OrgMain2" element={<OrgMain2 />} />
         <Route path="/OrgProfile" element={<OrgProfile />} />
+        <Route path="/Servicestry2" element={<Servicestry2 />} />
         {/* organization routes */}
 
         <Route path="/RegisterD" element={<RegisterD />} />

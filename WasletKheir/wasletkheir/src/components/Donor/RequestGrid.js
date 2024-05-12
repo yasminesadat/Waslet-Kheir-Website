@@ -14,8 +14,8 @@ import MedicalCard from './MedicalCard';
 import TeachingCards from './TeachingCards';
 const selectCorrespondingCard = (data) => {
     const { title, text, type, age, gender, season, material, quantity, progress, category, image,
-        patientName, blood, hospitalAddress, hospitalName,  area, use, medicationValue,
-        bookName, author, language, edition, summary, stationaryType, service, weight, caseDescription, medicalSpecialty, organizationName, caseDescriptionLong, location, governorate, numStudents, subject, address, descriptionGrade,orgName } = data;
+        patientName, blood, hospitalAddress, hospitalName, area, use, medicationValue,
+        bookName, author, language, edition, summary, stationaryType, service, weight, caseDescription, medicalSpecialty, organizationName, caseDescriptionLong, location, governorate, numStudents, subject, address, descriptionGrade, orgName } = data;
 
     switch (category) {
         case DonationCategories.Clothes:
@@ -35,8 +35,8 @@ const selectCorrespondingCard = (data) => {
                 return <MedicalCard orgName={orgName} governorate={governorate} patientName={patientName} caseDescriptionLong={caseDescriptionLong} age={age} gender={gender} weight={weight} text={text} image={image} organizationName={organizationName} caseDescription={caseDescription} medicalSpecialty={medicalSpecialty} location={location} progress={progress} />;
             else if (service == Service.teaching)
                 return <TeachingCards orgName={orgName} governorate={governorate} area={area} location={location} address={address} numStudents={numStudents} subject={subject} image={image} organizationName={organizationName} descriptionGrade={descriptionGrade} progress={progress} />;
-            else
-                return
+
+
         // add default case here i guess
     }
 };
