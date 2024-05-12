@@ -36,7 +36,7 @@ export const MEDICAL_CASES_DATA = [
         caseDescription: "A young child is in need of treatment from asthma and lung assessment",
 
         image: "https://apicms.thestar.com.my/uploads/images/2020/12/18/978038.jpg",
-        progress: '100'
+        progress: '50'
     },
     {
         title: "Orthopedic Surgery Consultation",
