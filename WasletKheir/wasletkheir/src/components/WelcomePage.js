@@ -1,12 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
+import { Modal ,Button} from 'antd';
 
 
 export default function WelcomePage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [email1, setEmail1] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -30,6 +33,16 @@ export default function WelcomePage() {
 
   }
 
+  function handleForgotPassword(e){
+    e.preventDefault();
+    if (email1.trim() === ''){
+      alert('Please enter your email address');
+  }
+  else{
+    setIsModalOpen(false);
+  }
+}
+
 
   return (
     <div className='welcome-page-wrapper'>
@@ -50,7 +63,36 @@ export default function WelcomePage() {
         </form>
 
         <div className="account-options">
-          <a href="#">Forgot password?</a>
+        
+        <a href="#" onClick={(e) => {
+         e.preventDefault();
+         setIsModalOpen(true);
+         }}>Forgot password?</a>
+
+        <Modal
+        title="Password Recovery"
+        open={isModalOpen}
+        onOk={() => setIsModalOpen(false)}
+        onCancel={() => setIsModalOpen(false)}
+        footer={[
+          <Button key="back" onClick={() => setIsModalOpen(false)} style={{borderColor:'rgb(106, 106, 215)'}}className='forgotpass-button'>
+            Cancel
+          </Button>,
+          <Button key="submit" type="primary" style={{backgroundColor:'rgb(106, 106, 215)'}}  onClick={(e) => {
+            handleForgotPassword(e)
+          }}>
+            Submit
+          </Button>,
+        ]}
+        >
+          <p style={{fontSize:'medium'}}>Please enter the email address that you used when
+          creating your account. An email will be sent to that
+          address with further instructions on how to reset your
+          password.</p>
+          <div style={{justifyContent:'center',display:'flex'}}>
+          <input required type="email" name="email1" placeholder='Email' value={email1} onChange={(e) => setEmail1(e.target.value)} className="input" autoComplete="off" />
+          </div>
+        </Modal>
           Don't have an account?
           <Link to="/RegisterD" >Register here as a Donor</Link>
           <Link to="/RegisterO">Register here as an Organization</Link>

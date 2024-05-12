@@ -873,6 +873,10 @@
   margin: auto;
 }
 
+.forgotpass-button:hover {
+  color: rgb(106, 106, 215)!important;
+}
+
 .inputAd {
   height: 40px;
   font-size: 16px;
