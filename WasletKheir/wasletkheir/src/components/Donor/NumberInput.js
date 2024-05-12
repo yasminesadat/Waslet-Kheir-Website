@@ -30,7 +30,7 @@ import AddIcon from '@mui/icons-material/Add';
 });
 
 export default function QuantityInput() {
-  return <NumberInput aria-label="Quantity Input" min={1} max={99} />;
+  return <NumberInput aria-label="Quantity Input" placeholder={1} min={1} max={99} />;
 }
 
 const blue = {
