@@ -43,7 +43,7 @@ const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
     <div className="mainDivAd">
       <div className="cardStyleAd">
         <form onSubmit={handleSubmit} name="signupForm" id="signupForm">
-          <img className='lockLogoAd' src="lock-fill.svg" id="lockLogo" alt="Lock Logo"/>
+          <img className='lockLogoAd' src="https://i.ibb.co/K9GV7DL/icons8-lock-64.png" id="lockLogo" alt="Lock Logo"/>
           <h2 className="formTitleAd">
           
             Change Account Password
