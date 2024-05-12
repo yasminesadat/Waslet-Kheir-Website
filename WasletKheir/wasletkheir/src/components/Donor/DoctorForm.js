@@ -3,15 +3,17 @@ import { FaUser } from 'react-icons/fa';
 import { FaClinicMedical } from "react-icons/fa";
 import { LuHeartPulse } from "react-icons/lu";
 import { MdOutlineSick } from "react-icons/md";
+import {message} from "antd";
 
 
 export default function DoctorForm({ isEdit }) {
+    const [button, setButtonAppear] = useState(true);
     // Initialize form state with default values
     const [formData, setFormData] = useState({
         address: 'Rehab Medical Center',
         area: 'New Cairo',
         governorate: 'Cairo',
-        numCases: '100',
+        numCases: '1',
         speciality: 'Cardiologist'
     });
 
@@ -24,9 +26,16 @@ export default function DoctorForm({ isEdit }) {
         }));
     };
 
+    const handleConfirm = () => {
+        message.success("Information Updated Successfully");
+        setButtonAppear(false);
+        }
+    
+
+
     return (
         <div style={{
-            width: '100%', maxWidth: '900px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginRight: '20%'
+            width: '100%', maxWidth: '900px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginRight: '20%',marginTop:'-17%'
         }}>
             <section className={"user-details" + (isEdit ? " glowing-border" : "")} style={{ width: '100%', marginRight: '10%' }}>
                 <h3>Doctor Details</h3>
@@ -77,12 +86,12 @@ export default function DoctorForm({ isEdit }) {
                             name="address"
                             value={formData.speciality}
                             onChange={handleChange}
-                            readOnly={!isEdit}
+                            readOnly
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="proBonoCases"><MdOutlineSick />&nbsp;
-                            Number of Pro Bono Cases</label>
+                            Number of Pro Bono Cases{button&&<span style={{ color: 'red' }}>*</span>}</label>
                         <input
                             type="number"
                             min="1"
@@ -93,6 +102,12 @@ export default function DoctorForm({ isEdit }) {
                             readOnly={!isEdit}
                         />
                     </div>
+                    {button && (
+                            <button onClick={handleConfirm} type="submit" style={{ padding: '10px 20px', backgroundColor: '#4D869C', color: 'white', fontSize: '16px', cursor: 'pointer', border: 'none', borderRadius: '4px', display:'block'}}>
+                                Confirm
+                            </button>
+                        )}
+                        
                 </form>
             </section>
         </div>

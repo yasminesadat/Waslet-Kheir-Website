@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import OrgDonCard from './OrgDonCard';
 import OrgNavBar2 from './NavbarOrg';
 import './Org.css';
-
+import Footer from '../Footer';
 export default function OrgViewDon() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const handleSelectChange = (event) => {
@@ -64,7 +64,7 @@ export default function OrgViewDon() {
                     ))}
                 </div>
             )}
-
+         <Footer></Footer>
         </>
     )
 }
