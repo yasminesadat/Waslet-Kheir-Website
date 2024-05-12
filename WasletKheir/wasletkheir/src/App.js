@@ -46,6 +46,7 @@ import InfoPage from './components/Donor/InfoPage';
 import ViewOrgDonor from './components/Donor/ViewOrgDonor';
 import ViewServicesDonor from './components/Donor/ViewServicesDonor';
 import DonateAction from './components/Donor/DonateAction';
+import MedicalCasesPage from './components/Donor/MedicalCasesPage';
 
 function App() {
   return (
@@ -105,6 +106,7 @@ function App() {
         <Route path="/Notif2" element={<Delivery />} />
         <Route path="/ViewServicesDonor" element={<ViewServicesDonor />} />
         <Route path="/DonateAction" element={<DonateAction />} />
+        <Route path="/MedicalCasesPage" element={<MedicalCasesPage />} />
 
         {/* <Route path="/DonateAction" component={DonateAction} /> */}
 
