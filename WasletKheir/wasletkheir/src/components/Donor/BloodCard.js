@@ -7,7 +7,7 @@ import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
-const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName, government, area, progress,image, category,orgName }) => {
+const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName, governorate, area, progress,image, category,orgName }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -81,7 +81,7 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
             </p>                   
              <p>Hospital address: {hospitalAddress}</p>
             <p>Area: {area}</p>
-            <p>Governorate: {government}</p>
+            <p>Governorate: {governorate}</p>
             </div>
 
 
