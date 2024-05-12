@@ -64,7 +64,7 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
           
           <div className='details'>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
           {type ===  SchoolTypes.SchoolBooks && (
         <>
           <Dropdown

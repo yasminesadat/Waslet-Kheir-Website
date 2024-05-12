@@ -75,7 +75,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
               </a>
             </Dropdown>
             <p >Type: {title}</p>
-            <p >Description: {text}</p>
+            <p >Description: {orgName}{text}</p>
             <p >Age: {age}</p>
             <p >Gender: {gender}</p>
             <p >Category: {type}</p>

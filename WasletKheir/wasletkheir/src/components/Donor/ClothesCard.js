@@ -63,7 +63,7 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
           
           <div className='details'>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
             <p>Age: {age}</p>
             <p>Gender: {gender}</p>
             <p>Season: {season}</p>

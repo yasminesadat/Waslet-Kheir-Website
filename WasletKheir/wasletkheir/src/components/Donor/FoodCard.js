@@ -59,7 +59,7 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgN
           
           <div className='details'>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
             <p>Quantity: {quantity}</p>
           </div>
           </Modal>        

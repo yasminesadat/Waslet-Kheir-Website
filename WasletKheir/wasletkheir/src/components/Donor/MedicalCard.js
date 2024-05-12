@@ -60,7 +60,7 @@ const MedicalCard = ({ title, patientName, age, gender, weight,orgName, organiza
                             <p>Gender: {gender}</p>
                             <p>Weight: {weight}</p>
                             <p>Medical Speciality: {medicalSpecialty}</p>
-                            <p>Description: {caseDescriptionLong}</p>
+                            <p>Description:{caseDescriptionLong}</p>
                             <p>Progress: {progress}% Donated</p>
                             <p> Location
 
