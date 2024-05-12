@@ -11,7 +11,11 @@ export default function OrgView4() {
         {
             donorName: 'Jana Mohamed',
             quantity: 12,
-            image: 'https://cdn.icon-icons.com/icons2/3150/PNG/512/user_profile_female_icon_192701.png'
+            image: 'https://cdn.icon-icons.com/icons2/3150/PNG/512/user_profile_female_icon_192701.png',
+            gender:'Female',
+            email:'jana123@gmail.com',
+            phoneNumber:'01233357896',
+            address: '12 El Maadi Street, Maadi, Cairo, Egypt'
         },
         {
             donorName: 'Anonymous User',
@@ -26,7 +30,12 @@ export default function OrgView4() {
         {
             donorName: 'Omar Abdullah',
             quantity: 5,
-            image: 'https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-user-circle-icon.png'
+            image: 'https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-user-circle-icon.png',
+            gender:'Male',
+            email:'omarAbdullah34@gmail.com',
+            phoneNumber:'01742292990',
+            address: '15 Nile Corniche, Zamalek, Cairo, Egypt'
+            
         },
     ];
 

@@ -1368,8 +1368,11 @@ input[type="submit"]:hover {
     font-size: 1.2vw;
   }
   
-  .donor-quantity {
+  .donor-detail span {
+    font-weight: bold;
+  }
+  
+  .donor-detail {
     margin-bottom: 0;
-    color: #666;
     font-size: 1vw;
   }

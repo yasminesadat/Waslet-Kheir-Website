@@ -11,17 +11,29 @@ export default function OrgView1() {
 
 
     
-
+    // donorName, image, quantity, gender, email, phoneNumber, address
     const donations = [
         {
             donorName: 'Michael Smith',
             quantity: 5,
-            image: 'https://cdn-icons-png.freepik.com/512/219/219986.png'
+            image: 'https://cdn-icons-png.freepik.com/512/219/219986.png',
+            gender:'Male',
+            email:'mike@gmail.com',
+            phoneNumber:'01233254243',
+            address: '8 El Nozha Street, Nasr City, Cairo, Egypt'
+
+
+            
+            
         },
         {
             donorName: 'Alexa James',
             quantity: 4,
-            image: 'https://cdn-icons-png.flaticon.com/512/219/219969.png'
+            image: 'https://cdn-icons-png.flaticon.com/512/219/219969.png',
+            gender:'Female',
+            email:'alexa@gmail.com',
+            phoneNumber:'01133254846',
+            address: '32 El Nasr Street, Downtown, Alexandria, Egypt'
         },
     ];
 
