@@ -19,7 +19,7 @@ export default function MedicalCasesPage() {
 
     // Extract unique filter options from data
     const organizationOptions = Array.from(new Set(MEDICAL_CASES_DATA.map(item => item.organizationName))).map(organization => ({ value: organization, label: organization }));
-    const governorateOptions = Array.from(new Set(MEDICAL_CASES_DATA.map(item => item.government))).map(government => ({ value: government, label: government }));
+    const governorateOptions = Array.from(new Set(MEDICAL_CASES_DATA.map(item => item.governorate))).map(governorate => ({ value: governorate, label: governorate }));
     const areaOptions = Array.from(new Set(MEDICAL_CASES_DATA.map(item => item.area))).map(area => ({ value: area, label: area }));
     const specialtyOptions = Array.from(new Set(MEDICAL_CASES_DATA.map(item => item.medicalSpecialty))).map(specialty => ({ value: specialty, label: specialty }));
 
@@ -29,7 +29,7 @@ export default function MedicalCasesPage() {
             data = data.filter(item => organizationFilter.includes(item.organizationName));
         }
         if (governorateFilter.length > 0) {
-            data = data.filter(item => governorateFilter.includes(item.government));
+            data = data.filter(item => governorateFilter.includes(item.governorate));
         }
         if (areaFilter.length > 0) {
             data = data.filter(item => areaFilter.includes(item.area));

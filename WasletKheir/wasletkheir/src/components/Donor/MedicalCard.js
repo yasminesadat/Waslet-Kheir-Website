@@ -5,8 +5,8 @@ import { UserOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Avatar, Progress, Divider, Modal } from 'antd';
-
-const MedicalCard = ({ title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, image, progress }) => {
+import Map from '../Map.js'
+const MedicalCard = ({ title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong }) => {
     const isFulfilled = Number(progress) === 100;
     const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
     const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -14,9 +14,8 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
     const navigate = useNavigate();
 
     const handleVolunteer = () => {
-        const details = { title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, progress };
-        console.log('Details:', details);
-        navigate('/VolunteerAction', { state: details });
+
+        alert('thank you for volunteering')
     };
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,9 +59,12 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                             <p>Age: {age}</p>
                             <p>Gender: {gender}</p>
                             <p>Weight: {weight}</p>
-                            <p>Medical Specialty: {medicalSpecialty}</p>
-                            <p>Description: {caseDescription}</p>
+                            <p>Medical Speciality: {medicalSpecialty}</p>
+                            <p>Description: {caseDescriptionLong}</p>
                             <p>Progress: {progress}% Donated</p>
+                            <p> Location
+
+                            </p>
                         </div>
                     </Modal>
                 </div>
