@@ -17,7 +17,7 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDonate = () => {
-    const details = { title, text, age, gender, season, material, quantity, progress,category,orgName };
+    const details = { title, text, age, gender, season, material, quantity, progress,category,orgName,image };
 
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
