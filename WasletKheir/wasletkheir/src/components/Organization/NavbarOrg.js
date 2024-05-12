@@ -51,7 +51,7 @@ export default function OrgNavBar2() {
                     <p style={{color:'#2e5359'}}>Waslet Kheir</p>
                 </Link>
                 
-                <ul className="navbar-menu">
+                <ul className="navbar-menu" style={{marginTop:'1.5%'}}>
                     <li className="navbar-item">
                         <Link to="/OrgMain2" className="navbar-link">
                             <FontAwesomeIcon icon={faHome} color="white" className='home-icon' />
@@ -96,7 +96,7 @@ export default function OrgNavBar2() {
                         </ul>
                     </li>
                     <li>
-                        <div style={{ marginTop: '-3px' }}>
+                        <div>
                             <Notif data={data} />
                         </div>
                     </li>
