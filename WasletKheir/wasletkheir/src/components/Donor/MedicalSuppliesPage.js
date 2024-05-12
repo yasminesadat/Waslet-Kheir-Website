@@ -104,7 +104,6 @@ export default function FoodPage() {
           <p style={{ marginLeft: '8%' }}>Filter by</p>
           <Divider className="divider-filter" orientation="center" orientationMargin="0" style={{ margin: '6%' }} />
           <Select
-            mode="multiple"
             placeholder="Type of Medical Supplies"
             value={typeFilter}
             onChange={(value) => {
