@@ -8,7 +8,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
 
-const ClothesCard = ({ title, text,age,image, gender, season, material,quantity, progress, category  }) => {
+const ClothesCard = ({ title, text,age,image, gender, season, material,quantity, progress, category, orgName  }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -17,18 +17,12 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDonate = () => {
-    const details = { title, text, age, gender, season, material, quantity, progress,category };
+    const details = { title, text, age, gender, season, material, quantity, progress,category,orgName };
 
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
   };
 
-  const handleDetails = () => {
-    const details = { title, text, age,image, gender, season, material, quantity, progress, category };
-
-    console.log('Details:', details); 
-    navigate('/InfoPage', { state: details }); 
-  };
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -56,7 +50,7 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
           <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
           <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
@@ -69,7 +63,7 @@ const ClothesCard = ({ title, text,age,image, gender, season, material,quantity,
           
           <div className='details'>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
             <p>Age: {age}</p>
             <p>Gender: {gender}</p>
             <p>Season: {season}</p>

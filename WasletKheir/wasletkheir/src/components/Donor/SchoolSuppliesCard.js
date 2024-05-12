@@ -8,7 +8,7 @@ import { SchoolTypes } from '../helpers/types';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
 
-const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName, author, language,edition,summary,category,stationaryType }) => {
+const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName,orgName, author, language,edition,summary,category,stationaryType }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -51,7 +51,7 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
           <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'390px',}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
           <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
@@ -64,7 +64,7 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
           
           <div className='details'>
           <p>Type: {title}</p>
-          <p>Description: {text}</p>
+          <p>Description: {orgName}{text}</p>
           {type ===  SchoolTypes.SchoolBooks && (
         <>
           <Dropdown

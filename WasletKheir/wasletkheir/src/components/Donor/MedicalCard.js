@@ -48,7 +48,7 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                         bodyStyle={{ height: '500px', overflowY: 'auto' }}  // Enable vertical scrolling
                     >                        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                             <Avatar size={55} icon={<UserOutlined />} />
-                            <span style={{ fontSize: '20px', marginLeft: '12px' }}>{organizationName}</span>
+                            <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
                             <Progress
                                 type="circle"
                                 percent={progress}
@@ -64,7 +64,7 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                             <p>Gender: {gender}</p>
                             <p>Weight: {weight}</p>
                             <p>Medical Speciality: {medicalSpecialty}</p>
-                            <p>Description: {caseDescriptionLong}</p>
+                            <p>Description:{caseDescriptionLong}</p>
                             <p>Progress: {progress}% Donated</p>
                             <p>Location:</p>
                             <iframe

@@ -16,7 +16,7 @@ const SchoolSuppliesDetailedCard = ({ title,type,quantity, text, progress,bookNa
       <img className="card-imgMariam" src={"https://t3.ftcdn.net/jpg/03/65/19/54/360_F_365195462_y5gKpvyI19DN2n8seBOjjX2uO1gQimnW.jpg"} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         {quantity && <p className="card-descriptionMariam">Quantity: {quantity}</p>}
         {bookName && <p className="card-descriptionMariam">Book Name: {bookName}</p>}
         {author && <p className="card-descriptionMariam">Author: {author}</p>}

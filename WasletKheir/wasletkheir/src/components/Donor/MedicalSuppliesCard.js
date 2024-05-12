@@ -7,7 +7,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { MedicalSuppliesTypes } from '../helpers/types';
 import { DownOutlined } from '@ant-design/icons';
 import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
-const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, text, progress,category }) => {
+const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, text, progress,category,orgName }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -49,7 +49,7 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
           <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
           <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}
