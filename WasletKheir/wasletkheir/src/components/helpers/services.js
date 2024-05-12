@@ -171,7 +171,7 @@ export const TEACHING_CASES_DATA = [
         governorate: 'Alexandria',
         service: Service.teaching,
         location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.747855764766!2d31.243393475490485!3d30.072761217228788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458406205dc4cbd%3A0x54f4a93f6f9d44f7!2sSweet%20Home%20Language%20School!5e0!3m2!1sen!2seg!4v1715513596227!5m2!1sen!2seg", descriptionGrade: "Program aimed at enhancing English language skills among middle school students through interactive learning methods.",
-        progress: '100'
+        progress: '0'
     },
     {
         title: "Computer Science Workshop",
