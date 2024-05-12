@@ -37,9 +37,9 @@ export default function AdminDocNavBar() {
             <Icon  iconSrc="https://i.ibb.co/mHFpvP2/image.png" altText="Go Back"/>   
             </div>
            
-             <Link to="Admin" className="navbar-logo">
-             <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
-              Waslet Kheir
+             <Link to="/Admin" className="navbar-logo">
+             <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="logo-image" />
+                    <p style={{color:'#2e5359'}}>Waslet Kheir</p>
              </Link>
               <ul className="navbar-menu">
               <li style={{ marginRight: '40%' }}></li> 

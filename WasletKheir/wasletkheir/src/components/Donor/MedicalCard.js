@@ -14,8 +14,10 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
     const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
 
     const handleVolunteer = () => {
-
-        message.success('Thank you for volunteering')
+        if(status==='Ongoing')
+            message.success('Thank you for volunteering')
+        else
+        message.warning('This service request has been fulfilled');
     };
 
     const [isModalOpen, setIsModalOpen] = useState(false);

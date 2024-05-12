@@ -18,8 +18,8 @@ export default function AdminNavBar() {
                 </div>
             }
                               <Link to="/Admin" className="navbar-logo">
-                    <img src="https://i.ibb.co/ZWh2bBD/logo-with-text.png" alt="Waslet Kheir" className="logo-image" />
-                    {/* Waslet Kheir  */}
+                              <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="logo-image" />
+                    <p style={{color:'#2e5359'}}>Waslet Kheir</p>
                 </Link>
                 <ul className="navbar-menu">
           <li className="navbar-item">

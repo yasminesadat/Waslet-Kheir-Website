@@ -47,9 +47,10 @@ export default function OrgNavBar2() {
                     </div>
                 }
                 <Link to="/OrgMain2" className="navbar-logo">
-                    <img src="https://i.ibb.co/n16ZNjJ/image-removebg-preview.png" alt="Waslet Kheir" className="logo-image" />
-                    Waslet Kheir
+                <img src="https://i.ibb.co/7bQ6pjm/logo.png" alt="Waslet Kheir" className="logo-image" />
+                    <p style={{color:'#2e5359'}}>Waslet Kheir</p>
                 </Link>
+                
                 <ul className="navbar-menu">
                     <li className="navbar-item">
                         <Link to="/OrgMain2" className="navbar-link">
