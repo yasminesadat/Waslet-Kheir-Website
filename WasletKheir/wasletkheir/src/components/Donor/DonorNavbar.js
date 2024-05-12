@@ -113,7 +113,7 @@ export default function DonorNavbar() {
                     {localStorage.getItem('user') === 'teacher' && (
                         <li className="navbar-item">
 
-                            <Link to="/TeachingPage" className="navbar-link">
+                            <Link to="/TeachingRequests" className="navbar-link">
                                 <FontAwesomeIcon icon={faChalkboardUser} color="white" className='home-icon' />
                                 <span>Volunteer</span>
                             </Link>

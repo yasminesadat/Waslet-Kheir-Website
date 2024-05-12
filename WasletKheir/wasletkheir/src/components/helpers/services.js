@@ -59,3 +59,50 @@ export const MEDICAL_CASES_DATA = [
         progress: '0'
     }
 ];
+
+export const TEACHING_CASES_DATA = [
+    {
+        title: "Math Tutoring Needed",
+        numStudents: 15,
+        subject: "Mathematics",
+        service: Service.teaching,
+        image: "https://compote.slate.com/images/8e50f2e5-7fc9-44d3-86c9-652aa3de4aec.jpg",
+        organizationName: "Cairo High School",
+        address: "123 Learning St, Cairo, Egypt",
+        area: 'Maadi',
+        governorate: 'Cairo',
+        location: 'https://www.google.com/maps/embed?pb=...',  // An example Google Maps embed link
+        descriptionGrade: "Urgent need for a math tutor for a group of middle school students.",
+        educationLevel: "Middle School",
+        progress: 50
+    },
+    // {
+    //     title: "Science Lab Assistance",
+    //     numStudents: 20,
+    //     subject: "Science",
+    //     image: "https://www.example.com/images/science-lab.jpg",
+    //     organizationName: "Luxor Education Center",
+    //     address: "456 Discovery Lane, Luxor, Egypt",
+    //     area: 'Central',
+    //     governorate: 'Luxor',
+    //     service: Service.teaching,
+    //     location: '',
+    //     descriptionGrade: "Help needed to run the science lab for high school students.",
+    //     progress: '0'
+    // },
+    // {
+    //     title: "Primary Reading Support",
+    //     numStudents: 30,
+    //     subject: "Reading",
+    //     image: "https://www.example.com/images/reading-session.jpg",
+    //     organizationName: "Alexandria Primary School",
+    //     address: "789 Storybook Rd, Alexandria, Egypt",
+    //     area: 'Downtown',
+    //     governorate: 'Alexandria',
+    //     service: Service.teaching,
+    //     location: '',
+    //     descriptionGrade: "Reading support required for primary school students.",
+
+    //     progress: '0'
+    // }
+];

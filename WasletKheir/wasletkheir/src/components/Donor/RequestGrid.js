@@ -11,11 +11,11 @@ import FoodCard from './FoodCard';
 import { Service } from '../helpers/servicetypes';
 import './donor.css'
 import MedicalCard from './MedicalCard';
-
+import TeachingCards from './TeachingCards';
 const selectCorrespondingCard = (data) => {
     const { title, text, type, age, gender, season, material, quantity, progress, category, image,
         patientName, blood, hospitalAddress, hospitalName, government, area, use, medicationValue,
-        bookName, author, language, edition, summary, stationaryType, service, weight, caseDescription, medicalSpecialty, organizationName, caseDescriptionLong, location, governorate } = data;
+        bookName, author, language, edition, summary, stationaryType, service, weight, caseDescription, medicalSpecialty, organizationName, caseDescriptionLong, location, governorate, numStudents, subject, address, descriptionGrade } = data;
 
     switch (category) {
         case DonationCategories.Clothes:
@@ -33,6 +33,11 @@ const selectCorrespondingCard = (data) => {
         default:
             if (service === Service.medical)
                 return <MedicalCard governorate={governorate} patientName={patientName} caseDescriptionLong={caseDescriptionLong} age={age} gender={gender} weight={weight} text={text} image={image} organizationName={organizationName} caseDescription={caseDescription} medicalSpecialty={medicalSpecialty} location={location} progress={progress} />;
+            else if (service == Service.teaching)
+                return <TeachingCards governorate={governorate} area={area} location={location} address={address} numStudents={numStudents} subject={subject} image={image} organizationName={organizationName} descriptionGrade={descriptionGrade} progress={progress} />;
+            else
+                return
+        // add default case here i guess
     }
 };
 
