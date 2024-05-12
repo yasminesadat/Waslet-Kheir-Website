@@ -48,7 +48,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
           <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{ height: '340px', overflowY: 'auto' }}>
             <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin: '2%' }}>
               <Avatar size={55} icon={<UserOutlined />} />
-              <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight: 'bold' }}>Masr el kheir</span>
+              <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight: 'bold' }}>{orgName}</span>
               <Progress
                 type="circle"
                 percent={progress}
@@ -75,7 +75,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
               </a>
             </Dropdown> */}
               <p >Type: {title}</p>
-              <p >Description: {text}</p>
+              <p >Description: {orgName}{text}</p>
               <p >Age: {age}</p>
               <p >Gender: {gender}</p>
               <p >Category: {type}</p>

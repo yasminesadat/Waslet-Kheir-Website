@@ -7,6 +7,7 @@ import { Modal, Avatar, Progress,Divider, Dropdown , Space } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { message } from 'antd';
 const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName, governorate, area, progress,image, category,orgName }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
@@ -25,6 +26,9 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+  const handleButtonClick =()=>{
+      message.success("a notification was sent to the hospital successfully");
+  }
   return (
     <div className="cardMariam">
       <img className="card-imgMariam" src={image} alt={title} />
@@ -34,9 +38,9 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
         <br></br>
         <div className="button-container">
 
-          <button className="donate-button">Donate</button>
+          {/* <button className="donate-button">Donate</button> */}
           <button className="view-details-button-donor"  onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px', overflowY: 'auto'}}>
+          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'340px', overflowY: 'auto'}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin:'2%' }}>
           <Avatar size={55} icon={<UserOutlined />} />
           <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
@@ -53,7 +57,7 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
           <div className='details' style={{margin:'2%'}}> 
          
           <p>Type: {title}</p>
-          <p>Description: {text}</p> 
+          <p>Description: {orgName}{text}</p> 
           <p>Patient name: {patientName}</p>
           <p>Patient's blood type: {blood}</p>
           <p>Hospital name: {hospitalName}</p>
@@ -92,7 +96,7 @@ const BloodCard = ({ title, text,patientName,blood,hospitalAddress, hospitalName
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             </div>
-
+            <button className="donate-button" onClick={handleButtonClick}>Donate</button>
 
           </Modal>
         </div>
