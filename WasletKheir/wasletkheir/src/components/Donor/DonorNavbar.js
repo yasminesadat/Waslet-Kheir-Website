@@ -141,9 +141,9 @@ export default function DonorNavbar() {
                     </li>
                     <div style={{ display: 'block', justifyContent: 'center' }}>
                           
-                            {localStorage.getItem('user') === 'doctor' && (<Notif data={DRdata} />)}
+                            {/* {localStorage.getItem('user') === 'doctor' && (<Notif data={DRdata} />)}
                             {localStorage.getItem('user') === 'donor' && (<Notif data={donordata} />)}
-                            {localStorage.getItem('user') === 'teacher' && (<Notif data={teacherData} />)}
+                            {localStorage.getItem('user') === 'teacher' && (<Notif data={teacherData} />)} */}
                     </div>
                     <li className="navbar-item dropdown"  style={{ marginRight: '10px' }}>
                         < div className="navbar-link">
@@ -187,6 +187,5 @@ export default function DonorNavbar() {
             </div>
         </nav>
 
-
-    );
+);
 }
