@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import PropTypes from "prop-types";
 import Notifications from "react-notifications-menu";
 
@@ -34,3 +34,4 @@ Notif.propTypes = {
 };
 
 export default Notif;
+*/
