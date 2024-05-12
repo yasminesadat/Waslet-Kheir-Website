@@ -24,7 +24,7 @@ const MyCard = ({ image, title, description }) => {
 
 function AdminPage() {
 
-  const formatter = (value) => <CountUp end={value} separator="," />;
+  const formatter = (value,duration) => <CountUp end={value} duration={600} separator="," />;
 
   return (
 
@@ -38,7 +38,7 @@ function AdminPage() {
           <MyCard
             image="icons8-donation-64.png"
             title="Total Donations"
-            description={<Statistic title="last year" value={49505} formatter={formatter} />}
+            description={<Statistic title="last year" value={49505}  formatter={formatter} />}
           />
           <br />
           <MyCard

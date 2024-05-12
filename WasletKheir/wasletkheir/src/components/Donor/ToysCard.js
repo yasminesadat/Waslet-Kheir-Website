@@ -45,7 +45,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
           <button className="view-details-button-donor"><FontAwesomeIcon icon={faInfo} /> </button> */}
           <button className="donate-button" onClick={handleDonate}>Donate</button>
           <button className="view-details-button-donor" onClick={showModal}><FontAwesomeIcon icon={faInfo} /></button>
-          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{ height: '340px', overflowY: 'auto' }}>
+          <Modal footer = {null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{ height: '360px', overflowY: 'auto' }}>
             <div style={{ position: 'relative', display: 'flex', alignItems: 'center', margin: '2%' }}>
             <Avatar className="custom-avatar" size={55} icon={<UserOutlined />} src={orgPic} />
               <span style={{ fontSize: '20px', marginLeft: '12px', fontWeight: 'bold' }}>{orgName}</span>
@@ -80,6 +80,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
               <p >Gender: {gender}</p>
               <p >Category: {type}</p>
               <p >Quantity: {quantity}</p>
+              <p>Progress: {progress}% </p>
               <p>Toy Picture: </p>
               <img src={image} alt="Your Image" style={{ width: '290px', height: '200px' }} />
             </div>
