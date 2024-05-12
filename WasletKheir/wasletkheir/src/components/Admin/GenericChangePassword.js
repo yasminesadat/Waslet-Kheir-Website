@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { message } from 'antd';
 const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
   const [oldPassword, setOldPassword] = useState(defaultPassword);
   const [newPassword, setNewPassword] = useState('');
@@ -30,14 +30,17 @@ const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
       setConfirmPasswordError(false); 
     }
 
-    setSuccessMessage('Password changed successfully.');
+    setSuccessMessage('Password changed successfully');
     
+    setTimeout(() => {
+      setSuccessMessage('');
       setTimeout(() => {
-        setSuccessMessage('');
+       
         navigate(redirectLink);
       }, 3000);
-    
-  }
+      message.success('Password changed successfully');
+    }, 2000);
+  };
   
   return (
     <div className="mainDivAd">
@@ -69,7 +72,7 @@ const ChangePasswordForm = ({ defaultPassword,redirectLink }) => {
             </button>
             
           </div>
-          {successMessage && <p className="correct">{successMessage} <span id="loaderAd"></span></p>}
+          {successMessage && <p className="correct"> <span id="loaderAd"></span></p>}
         </form>
       </div>
     </div>
