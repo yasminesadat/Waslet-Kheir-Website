@@ -5,7 +5,8 @@ import DonorNavbar from './DonorNavbar';
 import OrgCard from './OrgCard';
 import Footer from '../Footer';
 import { MdFilterListAlt } from "react-icons/md";
-
+import { Input } from 'antd';
+const { Search } = Input;
 export default function ViewOrgDonor() {
     const [selectedOption, setSelectedOption] = useState('ongoing');
     const [typeFilter, setTypeFilter] = useState('all');
@@ -245,16 +246,18 @@ export default function ViewOrgDonor() {
                         <option value="heliopolis">Heliopolis</option>
                         <option value="downtown">Downtown</option>
                     </select>
-
-                </div>
-                                    <input
-                    type="text"
-                    placeholder="Search by title..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    style={{ maxWidth: '300px', margin: '10px' }}
+                    <Search
+                        placeholder="Search"
+                        enterButton
+                        style={{ width: 200,marginTop:'1%' }}
+                        value={searchTerm} // Set the value prop to the value received from the parent
+                        onChange={(e) => setSearchTerm(e.target.value)}// onChange handler to update the value
+                        
                     />
-                                    <div className="donations-containerHANA">
+                </div>
+                                    
+                    <div className="donations-containerHANA">
+                    
                     
                     {filteredOrgs.map((organization, index) => (
                         <OrgCard key={index} {...organization} />
@@ -263,6 +266,6 @@ export default function ViewOrgDonor() {
             </div >
             <div style={{marginTop:'10%'}}></div>
             <Footer />
-        </div>
-    );
+       </div>
+);
 }
