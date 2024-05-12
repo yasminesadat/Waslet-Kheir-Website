@@ -15,7 +15,7 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate();
   const handleDonate = () => {
-    const details = {  title,type,quantity, text, progress,bookName, author, language,edition,summary,category,stationaryType};
+    const details = {  title,type,quantity, text, progress,bookName,orgName, author, language,edition,summary,category,stationaryType};
 
     console.log('Details:', details);
     navigate('/DonateAction', { state: details });
@@ -41,7 +41,7 @@ const SchoolSuppliesCard = ({ title,type,quantity,image, text, progress,bookName
       }} src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
         <div className="button-container">
           {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>

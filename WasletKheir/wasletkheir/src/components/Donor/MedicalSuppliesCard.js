@@ -14,7 +14,7 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate(); 
   const handleDonate = () => {
-    const details = { title,use,quantity, type, medicationValue,image, text, progress,category };
+    const details = { title,use,quantity, type, medicationValue,image, text, progress,category,orgName };
 
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
@@ -39,7 +39,7 @@ const MedicalSuppliesCard = ({ title,use,quantity, type, medicationValue,image, 
       <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
        <div className="button-container">
         {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>

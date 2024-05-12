@@ -15,7 +15,7 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgN
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDonate = () => {
-    const details = { title, text, quantity,image,  progress, type, category};
+    const details = { title, text, quantity,image,  progress, type, category, orgName};
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
   };
@@ -36,7 +36,7 @@ const FoodCard = ({  title, text, quantity,image,  progress, type, category,orgN
       <img className="card-imgMariam" src={image} alt={title} />
       <div className="card-contentMariam">
         <h2 className="card-title">{title}</h2>
-        <p className="card-descriptionMariam">{text}</p>
+        <p className="card-descriptionMariam">{orgName}{text}</p>
         <br></br>
         <div className="button-container">
         {/* <Link to={{ pathname: '/DonateAction', state: { title, text, age, gender, season, material, quantity, progress } }} className="donate-button">Donate</Link>

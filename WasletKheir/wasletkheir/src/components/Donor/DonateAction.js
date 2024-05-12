@@ -27,7 +27,7 @@ export default function DonateAction() {
   const renderCard = () => {
     switch (category) {
       case DonationCategories.Clothes:
-         return <ClothesDetailedCard orgName={orgName} category={category} title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+         return <ClothesDetailedCard  category={category} title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
       case DonationCategories.Food:
         return <FoodDetailedCard category={category} title={title} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
       case DonationCategories.Toys:

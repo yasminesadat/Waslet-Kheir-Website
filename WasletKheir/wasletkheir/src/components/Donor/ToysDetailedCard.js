@@ -1,7 +1,7 @@
 import React from 'react';
 import './donor.css'
 
-const ToysDetailedCard = ({title, text ,age, gender, type, quantity, progress }) => {
+const ToysDetailedCard = ({title, text ,age, gender, type, quantity, progress,orgName }) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
