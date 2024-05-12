@@ -11,7 +11,7 @@ export default function ViewOrgDonor() {
     const [typeFilter, setTypeFilter] = useState('all');
     const [governorateFilter, setGovernorateFilter] = useState('all');
     const [areaFilter, setAreaFilter] = useState('all');
-
+    const [searchTerm, setSearchTerm] = useState('');
 
     const organizations = [
         {
@@ -56,7 +56,7 @@ export default function ViewOrgDonor() {
             image: "https://www.myf-egypt.org/img/logo.png",
             title: "Magdy Yacoub Heart Foundation",
             description: "",
-            area: 'nasrcity',
+            area: 'zamalek',
             governorate: 'cairo',
             type: "hospital",
             orgDetails: [
@@ -136,7 +136,7 @@ export default function ViewOrgDonor() {
                 { label: 'Contact Number', value: '+201189456789' },
                 { label: 'Email', value: 'contact@nashospital.eg' },
                 { label: 'Address', value: '123 Al Orman St' },
-                { label: 'Area', value: 'Giza' },
+                { label: 'Area', value: 'Nasr City' },
                 { label: 'Governorate', value: 'Cairo' },
 
             ],
@@ -186,7 +186,8 @@ export default function ViewOrgDonor() {
         const typeMatches = typeFilter === 'all' || organization.type === typeFilter;
         const governorateMatches = governorateFilter === 'all' || organization.governorate === governorateFilter;
         const areaMatches = areaFilter === 'all' || organization.area === areaFilter;
-        return typeMatches && governorateMatches && areaMatches;
+        const titleMatches = organization.title.toLowerCase().includes(searchTerm.toLowerCase());
+        return typeMatches && governorateMatches && areaMatches && titleMatches;
     });
 
     const handleFilterChange = (event, filterType) => {
@@ -246,7 +247,15 @@ export default function ViewOrgDonor() {
                     </select>
 
                 </div>
-                <div className="donations-containerHANA">
+                                    <input
+                    type="text"
+                    placeholder="Search by title..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    style={{ maxWidth: '300px', margin: '10px' }}
+                    />
+                                    <div className="donations-containerHANA">
+                    
                     {filteredOrgs.map((organization, index) => (
                         <OrgCard key={index} {...organization} />
                     ))}
