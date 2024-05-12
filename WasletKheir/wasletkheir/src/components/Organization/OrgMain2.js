@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useRef }  from 'react';
 import OrgNavBar2 from './NavbarOrg';
 import Footer from '../Footer';
 import CountUp from 'react-countup';
@@ -11,7 +11,7 @@ import './Org.css';
 
 function AboutBox() {
     return (
-        <div className="about-box">
+        <div id="about-box" className="about-box">
             <h2 >About Us</h2>
             <p style={{ fontFamily: 'poppins', color: 'black', fontSize: '20px' }}>We aim to improve lives through the generosity of our
                 donors. Every donation contributes to making the world
@@ -66,6 +66,12 @@ const OrgMain2 = () => {
         cursor: 'pointer'
     };
 
+
+    const aboutBoxRef = useRef(null);
+
+    const handleDiscoverMoreClick = () => {
+        aboutBoxRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
     return (
         <div className='OrgMainAll'>
             <OrgNavBar2 />
@@ -74,7 +80,7 @@ const OrgMain2 = () => {
                 <div className="content">
                     <h1>Welcome to Waslet kheir</h1>
                     <p>Lend the helping hand, get involved</p>
-                    <button>Discover More</button>
+                    <button onClick={handleDiscoverMoreClick}>Discover More</button>
                 </div>
             </div>
             {/* <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; text-align: center;">
@@ -112,8 +118,9 @@ const OrgMain2 = () => {
                     <p style={{ fontSize: '26px', color: '#666' }}>volunteers are available to help you</p>
                 </div>
 
-            </div>
-            <AboutBox />
+            </div >
+            <div ref={aboutBoxRef}> 
+            <AboutBox /></div>
             <DonationImpact />
             <Testimonials />
             <Footer></Footer>
