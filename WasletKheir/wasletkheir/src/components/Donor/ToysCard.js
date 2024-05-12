@@ -8,14 +8,14 @@ import { useNavigate  } from 'react-router-dom';
 import { Dropdown, Space, Divider } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 
-const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, category}) => {
+const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, category,orgName}) => {
   const isFulfilled = Number(progress) === 100;
   const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
   const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
   const progressBarClass = isFulfilled ? 'progress-bar-green' : '';
   const navigate = useNavigate(); 
   const handleDonate = () => {
-    const details = { title, text ,age, gender, type, quantity, progress,category  };
+    const details = { title, text ,age, gender, type, quantity, progress,category };
       
     console.log('Details:', details); 
     navigate('/DonateAction', { state: details }); 
@@ -48,7 +48,7 @@ const ToysCard = ({ title, text ,age, gender, type, quantity,image, progress, ca
           <Modal  open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{height:'380px',}}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
           <Avatar size={55} icon={<UserOutlined />} />
-          <span style={{ fontSize: '20px', marginLeft: '12px' }}>Masr el kheir</span>
+          <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
           <Progress
             type="circle"
             percent={progress}

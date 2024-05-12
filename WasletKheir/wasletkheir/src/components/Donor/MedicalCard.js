@@ -7,7 +7,7 @@ import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { Avatar, Progress, Divider, Modal } from 'antd';
 import { message } from 'antd';
 
-const MedicalCard = ({ title, patientName, age, gender, weight, organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong }) => {
+const MedicalCard = ({ title, patientName, age, gender, weight,orgName, organizationName, medicalSpecialty, caseDescription, image, progress, caseDescriptionLong }) => {
     const isFulfilled = Number(progress) === 100;
     const status = isFulfilled ? 'Fulfilled' : 'Ongoing';
     const statusClass = isFulfilled ? 'status-fulfilled' : 'status-ongoing';
@@ -44,7 +44,7 @@ const MedicalCard = ({ title, patientName, age, gender, weight, organizationName
                     <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} bodyStyle={{ height: '390px' }}>
                         <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                             <Avatar size={55} icon={<UserOutlined />} />
-                            <span style={{ fontSize: '20px', marginLeft: '12px' }}>{organizationName}</span>
+                            <span style={{ fontSize: '20px', marginLeft: '12px' }}>{orgName}</span>
                             <Progress
                                 type="circle"
                                 percent={progress}

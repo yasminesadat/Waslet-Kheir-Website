@@ -3,9 +3,9 @@ import { DonationCategories, MedicalSuppliesTypes, SchoolTypes, FoodTypes } from
 export const DONATION_CARDS_DATA = [
 
     {
-
         title: "Jackets",
-        text: "Mersal is looking for jackets for kids",
+        orgName:"Mersal",
+        text: ' is looking for jackets for kids',
         age: "7-12",
         gender: "Female",
         season: "Winter",
@@ -18,7 +18,8 @@ export const DONATION_CARDS_DATA = [
    
     {
         title: "Fresh Meals",
-        text: "Awlady orphanage needs fresh meals",
+        orgName:"Awlady Orphanage",
+        text: " needs fresh meals",
         quantity: "100",
         progress: 55,
         category: DonationCategories.Food,
@@ -28,7 +29,8 @@ export const DONATION_CARDS_DATA = [
 
     {
         title: "Toys",
-        text: "Resala wants some stuffed toys for the kids",
+        orgName: "Resala",
+        text: " wants some stuffed toys for the kids",
         age: "3-7",
         gender: "Unisex",
         type: "Stuffed Toys",
@@ -40,7 +42,8 @@ export const DONATION_CARDS_DATA = [
     {
 
         title: "Shirts",
-        text: "Dar EL Orman needs Tshirts for boys ages 1-5",
+        orgName:"Dar EL Orman",
+        text: ' needs Tshirts for boys ages 1-5',
         age: "1-5",
         gender: "Male",
         season: "Summer",
@@ -53,7 +56,8 @@ export const DONATION_CARDS_DATA = [
    
     {
         title: "Medical Devices",
-        text: "57357 Hospital needs an X-Ray machine for our hospital",
+        orgName:"57357 Hospital",
+        text: " needs an X-Ray machine for our hospital",
         use:'To capture X-Ray images of our patients for correct diagnosis',
         quantity: 1,
         progress: 0,
@@ -63,7 +67,8 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "Fruits and Vegetables",
-        text: "Mersal need various types of fruits and vegetables for children",
+        orgName:"Mersal",
+        text: " need various types of fruits and vegetables for children",
         quantity: "20 kg",
         progress: 65,
         type: FoodTypes.FruitsVegetables,
@@ -72,7 +77,8 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "Medical Equipment",
-        text: "Al Nas Hospital wants syringes and masks",
+        orgName:"Al Nas Hospital",
+        text: " wants syringes and masks",
         use:"To use during medical procedures for infection control",
         quantity: 100,
         progress: 0,
@@ -83,7 +89,8 @@ export const DONATION_CARDS_DATA = [
     
     {
         title: "Antibiotics",
-        text: "57357 hospital needs antibiotics for our pneumonia patients",
+        orgName:"57357 hospital",
+        text: " needs antibiotics for our pneumonia patients",
         use: "To treat our patients from bacterial pneumonia in their lungs",
         quantity: '20 boxes',
         progress: 50,
@@ -94,11 +101,12 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "Type A+ Blood",
-        text: "a Patient in Air Force Specialized Hospital is in urgent need for 2 bags of blood",
+        hospitalName:"Air Force Specialized Hospital",
+        orgName:"Air Force Specialized Hospital",
+        text: "a Patient is in urgent need for 4 bags of blood",
         patientName:"Abdullah Ahmed",
         blood:'A+ or O+',
-        hospitalAddress: "2C9M+2M2، EL, N Teseen St, Cairo Governorate",
-        hospitalName: "Air Force Specialized Hospital",
+        hospitalAddress: "EL, N Teseen St, Cairo Governorate",
         governorate: "Cairo",
         area: "New Cairo",
         progress: 50,
@@ -107,7 +115,8 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "Arabic School books",
-        text: "Sanad orphanage wants Arabic selah el telmeez to help 6th grade students",
+        orgName:"Sanad orphanage",
+        text: " wants Arabic selah el telmeez to help 6th grade students",
         bookName: 'Selah el Telmeez',
         author: 'Mr. Hamdy Mostafa',
         language: 'Arabic',
@@ -122,7 +131,8 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "Cars",
-        text: "Resala wants to give the kids car toys",
+        text: " wants to give the kids car toys",
+        orgName:"Resala",
         age: "3-10",
         gender: "Boys",
         type: "Cars",
@@ -133,7 +143,8 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "School Stationary",
-        text: "Awlady orphanage is looking for pencils for kids in the orphanage",
+        orgName:"Awlady Orphanage",
+        text: " is looking for coloring pencils for kids",
         quantity: '200',
         stationaryType: 'pencils',
         progress: 60,
@@ -144,7 +155,9 @@ export const DONATION_CARDS_DATA = [
    
     {
         title: "Heart Medication",
-        text: "a patient in Al Nas Hospital needs statin urgently",
+        hospitalName:"Al Nas Hospital",
+        orgName:"Al Nas Hospital",
+        text: "a patient needs statin urgently",
         use: "To lower our patient's risk of heart-stroke by lowering his cholesterol levels",
         quantity: '5 Boxes',
         progress: 0,
@@ -155,11 +168,12 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "Type O+ Blood",
-        text: "a Patient in Magdy Yacoub Hospital is in urgent need for 4 bags of blood",
+        text: "a Patient is in urgent need for 4 bags of blood",
         patientName:"Reham Amer",
         blood:'O',
-        hospitalAddress: "El-Demerdash, El Weili, Cairo Governorate 4390042",
+        hospitalAddress: "El Weili, Cairo Governorate 4390042",
         hospitalName: "Magdy Yacoub",
+        orgName: "Magdy Yacoub",
         governorate: "Cairo",
         area: "Nasr City",
         progress: 20,
@@ -168,7 +182,8 @@ export const DONATION_CARDS_DATA = [
     },
     {
         title: "Baked Goods",
-        text: "Mersal needs various types of fresh baked goods",
+        orgName:"Mersal",
+        text: " needs various types of fresh baked goods",
         quantity: "60",
         progress: 10,
         type: FoodTypes.BakedGoods,

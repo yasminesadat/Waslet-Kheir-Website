@@ -22,12 +22,12 @@ export default function DonateAction() {
   const navigate = useNavigate();
   const { title, text, age, gender, season, medicationValue, material, quantity, type, progress, image ,category, 
     patientName,blood,hospitalAddress, hospitalName,government,area,use,
-    bookName, author, language,edition,summary,stationaryType } = location.state || {};
+    bookName, author, language,edition,summary,stationaryType,orgName } = location.state || {};
 
   const renderCard = () => {
     switch (category) {
       case DonationCategories.Clothes:
-         return <ClothesDetailedCard category={category} title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
+         return <ClothesDetailedCard orgName={orgName} category={category} title={title} image={image} text={text} type={type} age={age} gender={gender} season={season} material={material} quantity={quantity} progress={progress} />;
       case DonationCategories.Food:
         return <FoodDetailedCard category={category} title={title} type={type} image={image} quantity={quantity} text={text} progress={progress} />;
       case DonationCategories.Toys:
